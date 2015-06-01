@@ -1,0 +1,95 @@
+#notif-list .unread {
+    background-color: #dcf9ff;
+}
+
+#header #notif-list a .mark-read {
+    color: #777;
+    margin-right: -5px;
+    padding-left: 0px;
+
+    &:after {
+        font-family: "FontAwesome";
+        content: "\f10c";
+        padding: 4px 1rem;
+        position: relative;
+        top: 0px;
+    }
+
+    &:hover:after {
+        content: "\f111";
+    }
+}
+
+.notifications {
+    .relTime {
+        color: #555;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .lv-title>a {
+        font-size: 14px;
+    }
+
+    .listview {
+        .lv-item .lv-small {
+            color: #333;
+            white-space: normal;
+        }
+
+        .lv-footer {
+            margin-top: 10px;
+
+            hr {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .user-picture {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        padding: 0 !important;
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .notifications .listview.lv-lg .lv-item .media-body>a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .notifications .listview.lv-lg .lv-item .media-body>a {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: @screen-xs-min) {
+    .notifications .listview.lv-lg .lv-item {
+          padding: 10px 35px 10px 25px;
+    }   
+}
+
+@media (max-width: @screen-sm-max) {
+    .notifications .listview.lv-lg .lv-item {
+          padding: 10px 35px 10px 25px;
+    }   
+}
+
+.notifications {
+    .no-notifs {
+        cursor: default;
+        color: #000;
+        text-align: center;
+    }
+}
+
+.listview a.lv-item.no-notifs:hover {
+    background: none;
+    color: #000;
+}

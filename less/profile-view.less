@@ -1,0 +1,96 @@
+.profile-view {
+	text-align:center;
+
+	.pv-header {
+		position:relative;
+		height:5px;
+		width:100%;
+		background-repeat:no-repeat;
+		-webkit-background-size:cover;
+		-moz-background-size:cover;
+		-o-background-size:cover;
+		background-size:cover;
+		background-position:center;
+
+		>.pv-main {
+			border-radius:50%;
+			width:130px;
+			position:absolute;
+			height:130px;
+			bottom:-50px;
+			left:50%;
+			margin-left:-65px;
+			-webkit-transition:all;
+			-moz-transition:all;
+			-o-transition:all;
+			transition:all;
+			-webkit-transition-duration:300ms;
+			transition-duration:300ms;
+		}
+	}
+
+	.pv-body {
+		margin-top:70px;
+		padding:0 20px 20px;
+
+		>h2 {
+			margin:0;
+			line-height:100%;
+			font-size:20px;
+			font-weight:400
+		}
+
+		>small {
+			display:block;
+			color:#8E8E8E;
+			margin:10px 0 15px;
+		}
+
+		.pv-contact {
+			padding:0;
+			list-style:none;
+
+			>li {
+			    display: inline-block;
+			    margin: 0 5px;
+
+			    >.md {
+				    line-height: 100%;
+				    vertical-align: text-bottom;
+				    font-size: 22px;
+				}
+			}
+		}
+
+		.pv-follow {
+			list-style:none;
+		    margin: 20px -20px;
+		    padding: 10px;
+		    background-color: #F7F7F7;
+		    border-top: 1px solid #EEE;
+		    border-bottom: 1px solid #EEE;
+
+		    >li {
+		    	display: inline-block;
+			    padding: 0 10px;
+			}
+		}
+	}
+
+	.profile-info {
+		display: block;
+	}
+
+	.profile-label {
+		font-size: 12px;
+		margin-top: 10px;
+	}
+
+	.card-header {
+		text-align: left;
+	}
+}
+
+.card.profile-view {
+	margin-top: 70px;
+}

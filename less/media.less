@@ -1,0 +1,28 @@
+.media {
+	overflow:visible;
+
+	&:before {
+		content:" ";
+		display:table;
+	}
+
+	&:after {
+		content:" ";
+		display:table;
+		clear:both;
+	}
+
+	>.pull-left {
+		padding-right:15px;
+	}
+
+	>.pull-right {
+		padding-left:15px;
+	}
+}
+
+.media-body {
+	zoom:1;
+	display:block;
+	width:auto;
+}

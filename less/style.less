@@ -1,0 +1,93 @@
+@import url(//fonts.googleapis.com/css?family=Roboto:100,300,700,900,500);
+
+body {
+	font-family:roboto;
+	font-size:14px;
+	line-height:1.42857143;
+	color:#5e5e5e;
+	background-color:#EEEEEE;
+	font-weight:400;
+	padding-top:65px;
+}
+
+*, button, input, i, a {
+	-webkit-font-smoothing:antialiased;
+}
+
+*, :active, :hover {
+	outline:0!important;
+	-webkit-tap-highlight-color:rgba(0,0,0,0)!important;
+}
+
+p {
+	margin-bottom:20px;
+}
+
+small {
+	font-size:11px;
+}
+
+h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h4 small, .h4 small, h5 small, .h5 small, h6 small, .h6 small {
+	font-size:12px;
+}
+
+ul, li {
+	list-style: none;
+}
+
+#main {
+	position:relative
+}
+
+#toggle-width {
+	margin-left: 50px;
+	margin-bottom: 5px;
+}
+
+#content {
+	-webkit-transition: opacity 150ms linear;
+	-moz-transition: opacity 150ms linear;
+	-ms-transition: opacity 150ms linear;
+	-o-transition: opacity 150ms linear;
+	transition: opacity 150ms linear;
+
+	&.ajaxifying {
+		-moz-opacity: 0;
+		opacity: 0;
+		-ms-filter:~"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+}
+
+a:hover, a:active, a:focus, a:visited {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.container.footer {
+	text-align: center;
+	font-size: 14px;
+}
+
+@media (min-width: @screen-sm-min) {
+	body #content {
+		padding:15px 0px;
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+	body #content {
+		padding:15px;
+	}
+}
+
+@media (min-width: @screen-lg-min) {
+	body.sw-toggled #content {
+		padding:30px 0 30px 160px;
+	}
+}
+
+@media (min-width: @screen-lg-min) {
+	body.sw-toggled #content>.container {
+		width:~"calc(100% - 30px)";
+	}
+}

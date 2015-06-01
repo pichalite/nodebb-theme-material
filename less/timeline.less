@@ -1,0 +1,153 @@
+.timeline {
+    position: relative;
+    margin: 0;
+
+    .frame {
+        position: relative;
+        margin: 0;
+        float: left;
+        width: 50%;
+        clear: both;
+        line-height: inherit;
+        text-align: right;
+        margin-top: 10px;
+
+        .timeline-badge {
+            position: absolute;
+            top: 10px;
+            right: -13px;
+            z-index: 3;
+            width: 26px;
+            height: 26px;
+            background-color: #337ab7;
+            border: 1px solid #286090;
+            border-radius: 13px;
+            font-size: 14px;
+            line-height: 26px;
+            text-align: center;
+            color: #fff;
+
+            i {
+                position: relative;
+                top: -1px;
+            }
+        }
+
+        .timeline-date {
+            display: block;
+            font-style: italic;
+            font-size: 14px;
+            margin: 10px 30px 0 30px;
+        }
+
+        .timeline-content {
+            position: relative;
+            font-size: 14px;
+            padding: 20px 0;
+        }
+
+        &:nth-child(2n) {
+            float: right;
+            text-align: left;
+
+            .timeline-badge {
+                left: -13px;
+            }
+
+            .timeline-content {
+                margin-left: 30px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &.single { 
+        .frame {
+            width: 100%;
+            text-align: left;
+
+            .timeline-badge {
+                left: 7px;
+                margin-left: 0;
+            }
+
+            .timeline-content {
+                margin-left: 50px;
+            }
+
+            .timeline-date {
+                margin: 10px 20px 0 50px;
+            }
+
+            &:nth-child(2n) {
+                float: left;
+            }
+        }
+
+        &:before {
+            left: 20px;
+        }
+
+        .status {
+            font-size: 12px;
+        }
+
+        .lv-actions {
+            .reply-button {
+                vertical-align: top;
+            }
+
+            .thread-tools {
+                vertical-align: top;
+
+                .dropdown-toggle {
+                    border-radius: 2px;
+                    padding: 7px 5px;
+                    font-size: 14px;
+                }
+            }
+
+            .post-count, .view-count {
+                font-size: 12px;
+                text-align: center;
+                padding-right: 10px;
+            }
+
+            &.actions {
+                z-index: inherit;
+            }
+        }
+
+        .actions>li>a>i {
+            font-size: 16px;
+        }
+    }
+
+    &:before, &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    &:before {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        margin-left: -1px;
+        background-color: #eee;
+        content: " ";
+    }  
+}
+
+.timeline-content { 
+    img {
+        max-width: 100%;
+    }
+
+    >p {
+        margin: 0;
+    }
+}

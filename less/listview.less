@@ -1,0 +1,263 @@
+.listview {
+	position:relative;
+
+	&:not(.lv-lg):not(.lv-message) .lv-item {
+		padding:10px 15px;
+	}
+
+	.lv-item {
+		position:relative;
+		display:block;
+		-webkit-transition:background-color;
+		-moz-transition:background-color;
+		-o-transition:background-color;
+		transition:background-color;
+		-webkit-transition-duration:300ms;
+		transition-duration:300ms;
+
+		.lv-small {
+			font-size:12px;
+			overflow:hidden;
+			text-overflow:ellipsis;
+			white-space:nowrap;
+			display:block;width:100%;
+		}
+
+		.checkbox {
+			margin: 2px 0px 0px 0px;
+		}
+
+		&.media {
+			margin:0;
+		}
+
+		.lv-actions {
+			position:absolute;
+
+			@media (min-width: @screen-xs-min) {
+				right:25px;
+				height:30px;
+				margin-top:-15px;
+				top:50%;
+			}
+
+			@media (max-width: @screen-sm-max) {
+				right:7px;
+				top:-10px;
+			}
+		}
+	}
+
+	.lv-title {
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		display:block;
+		margin-bottom: 5px;
+	}
+
+	a.lv-item:hover {
+		background:#ECF9FF;
+	}
+
+	.lv-img {
+		width:40px;
+		height:40px;
+		border-radius:50%;
+	}
+
+	.lv-header {
+		text-align:center;
+		padding:15px 10px 13px;
+		line-height:100%;
+		border-bottom:1px solid #F0F0F0;
+		font-weight:500;
+		color:#4C4C4C;
+
+		.actions {
+			position:absolute;
+			top:6px;
+			right:8px;
+			z-index:10;
+		}
+	}
+
+	.lv-header-alt {
+		background:#f8f8f8;
+		padding:12px;
+		border-bottom:1px solid #EEE;
+
+		@media (max-width: @screen-xs-max) {
+			padding: 10px 8px;
+		}
+
+		&:before {
+			content:" ";
+			display:table;
+		}
+
+		&:after {
+			content:" ";
+			display:table;
+			clear:both;
+		}
+
+		.lv-actions {
+			z-index:3;
+			float:right;
+			position:relative;
+
+			>li {
+				>a {
+					margin:0 3px;
+				}
+
+				>span {
+				  margin: 0 10px;
+				}
+			}
+		}
+
+		.title {
+			padding-left: 10px;
+		}
+	}
+
+	.lv-footer {
+		display:block;
+		text-align:center;
+		padding:7px 10px 8px;
+		border-top:1px solid #F0F0F0;
+		line-height:100%;
+		margin-top:20px;
+		color:#828282;
+		min-height: 50px;
+
+		.lv-actions {
+			position:absolute;
+
+			@media (min-width: @screen-xs-min) {
+				right:25px;
+				height:30px;
+				margin-top:-15px;
+				top: ~"calc(100% - 25px)";
+			}
+
+			@media (max-width: @screen-sm-max) {
+				right:7px;
+				top: ~"calc(100% - 25px)";
+			}
+		}
+
+		.lv-small {
+			font-size:12px;
+			overflow:hidden;
+			text-overflow:ellipsis;
+			white-space:nowrap;
+			display:block;width:100%
+		}
+	}
+
+	a.lv-footer:hover {
+		color:#050505;
+	}
+
+	&.lv-bordered .lv-item:not(:last-child) {
+		border-bottom:1px solid #f0f0f0;
+	}
+
+	.lv-attrs {
+		list-style:none;
+		padding:0;
+		margin:5px 0 0;
+
+		>li {
+			display:inline-block;
+			padding:2px 10px 3px;
+			font-size:12px;
+			margin-top:5px;
+			margin-right:2px;
+			border-radius: 10px;
+
+			&:not(.info):not(.primary):not(.warning):not(.danger) {
+				border:1px solid #dedede;
+				background:#fff;
+				color:#5e5e5e;
+			}
+
+			&.info {
+				border:1px solid #00bcd4;
+				background:#00bcd4;
+				color:#fff;
+			}
+
+			&.primary {
+				border:1px solid #2196f3;
+				background:#2196f3;
+				color:#fff;
+			}
+
+			.warning {
+				border:1px solid #ff9800;
+				background:#ff9800;
+				color:#fff;
+			}
+
+			.danger {
+				border:1px solid #f44336;
+				background:#f44336;
+				color:#fff;
+			}
+
+			>a {
+				display:block;
+			}
+		}
+	}
+
+	&:not(.lv-message) .lv-title {
+		color:#000;
+	}
+
+}
+
+@media (max-width: @screen-xs-max) {
+	.listview.lv-lg .lv-item {
+		padding:10px 15px 10px 15px;
+	}
+}
+
+@media (min-width: @screen-sm-min) {
+	.listview.lv-lg .lv-item {
+		padding:10px 25px 10px 25px;
+	}
+}
+
+@media (min-width: @screen-xs-min) {
+	.listview .lv-item .timeline-date .lv-actions {
+		top: 20px;
+		right: -15px;
+	}
+	.listview .lv-item .timeline-date .lv-actions .moderator-tools>span {
+		display: block;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.listview .lv-item .lv-actions.post-bar {
+		right: -5px;
+	}
+}
+
+.lv-actions>ul {
+	font-size:14px
+}
+
+.lv-item.media.unread {
+	  border-left: 2px solid #2196f3;
+}
+
+@media (max-width: @screen-xs-max) {
+	.listview .lv-title, .listview .lv-item .lv-small {
+		white-space: inherit;
+	}	
+}

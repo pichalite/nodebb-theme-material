@@ -1,0 +1,77 @@
+.groups {
+	.input-group {
+		#search-button {
+			padding-left: 0px;
+		}
+	}
+
+	.fg-line {
+		padding-right: 0px;
+	}
+
+	&.list {
+		.members {
+			padding-left: 0;
+
+			img {
+				width:32px;
+			}
+
+			li {
+				display: inline;
+			}
+		}
+
+		.group-cover {
+			min-height: 150px;
+		}
+
+		.list-cover:hover {
+			cursor: pointer;
+		}
+
+		.card-footer {
+			text-align: center;
+		}
+	}
+
+	&.details {
+		.members img, .pending img {
+			width: 32px;
+		}
+	}
+}
+
+.group-details {
+	h2 {
+		margin-top: 0px;
+		font-size: 25px;
+	}
+
+	button {
+		margin-top: -30px;
+	}
+}
+
+[component="groups/activity"] {
+	&.card-body.card-padding {
+		padding-top: 0px;
+	}
+}
+
+
+@media (max-width: @screen-xs-max) {
+	.row.groups .col-lg-8 {
+		margin-top: 10px;
+	}
+
+	.row.groups .col-xs-5 {
+		padding-right: 0px;
+  		padding-left: 0px;
+	}
+
+	.row.groups .col-xs-7 {
+  		padding-left: 0px;
+	}	
+}
+

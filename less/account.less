@@ -1,0 +1,74 @@
+@media screen and (min-width: @screen-sm-min) {
+	.account .card .card-header:not(.ch-alt) {
+		padding-top:15px;
+		padding-left: 26px;
+		padding-bottom: 5px;
+	}
+}
+
+.account .card {
+	.card-body {
+		.checkbox>label {
+			font-size: 14px;
+		}
+
+		.select>label {
+			font-size: 14px;
+			font-weight: normal;
+		}
+	}
+}
+
+.account-username-box {
+	margin-bottom: 10px;
+}
+
+.status {
+	&.online {
+		color: #060;
+	}
+
+	&.away {
+		color: #cc0;
+	}
+
+	&.dnd {
+		color: #900;
+	}
+
+	&.offline {
+		color: gray;
+	}
+}
+
+@media (max-width: @screen-xs-max) {
+	.profile-view {
+		margin-top: 50px;
+	}
+}
+
+.edit-account, .user-topics, .user-watched-topics, .user-posts, .user-groups, .favourites, .user-following, .user-followers {
+	margin-top: 60px;
+}
+
+.edit-account .input-group {
+	margin-left: -10px;
+	margin-bottom: 20px;
+
+	label {
+		font-size: 14px;
+		font-weight: normal;
+	}
+}
+
+.user-profile-picture {
+	width:128px;
+	height:128px;
+	border-radius: 50%;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+	.user-recent-posts {
+		margin-top: 18px;
+	}
+}

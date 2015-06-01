@@ -1,0 +1,272 @@
+.topic {
+	.post-tools {
+		text-transform: lowercase;
+		margin: 3px;
+		font-size: 12px;
+		padding-left: 10px;
+
+		a {
+			margin-right: 10px;
+		}
+
+		i {
+			margin-right: 2px;
+		}
+
+		@media (max-width: @screen-xs-max) {
+			display: block;
+		}
+	}
+
+	.topic-title {
+		font-size: 18px;
+		@media (max-width: @screen-sm-max) {
+			font-size: 16px;
+		}
+	}	
+}
+
+.browsing-users {
+  	text-transform: uppercase;
+  	color: #777;
+  	font-size: 11px;
+  	margin: 0px;
+}
+
+.thread_active_users a img {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+}
+
+.thread_active_users.active-users>div {
+	display: inherit;
+	margin-left: 2px;
+	text-transform: none;
+}
+
+.lv-item.media.deleted, .timeline.single.deleted .timeline-content {
+	opacity: 0.3;
+}
+
+.tools-title {
+	margin-left: 10px;
+	font-size: 11px;
+}
+
+.votes {
+	.upvoted, .downvoted {
+		i {
+			color: #2196f3;
+		}
+	}
+}
+
+[component="topic"] {
+	&.lv-item.media {
+		padding-top: 0px;
+	}
+}
+
+[component="posts"] {
+	&.card-body.card-padding {
+		padding-top: 0px;
+	}
+}
+
+
+.topic .card {
+	background-color: inherit;
+	box-shadow: none;
+
+	.lv-header-alt {
+		background-color: #fff;
+		border: 1px solid #e4e5e7;
+	}
+
+	.lv-actions.actions {
+		>li>span>i {
+			font-size: 16px;
+		}
+	}
+
+	.lv-body {
+		padding: 0px;
+
+		.post-block {
+		    position: relative;
+		    margin: 30px 0;
+		}
+
+		.post-block:after {
+		    content: "";
+		    display: table;
+		    clear: both
+		}
+
+		.post-block:first-child {
+		    margin-top: 0
+		}
+
+		.post-block:last-child {
+		    margin-bottom: 0
+		}
+
+		.poster-avatar {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		}
+
+		.post-content {
+		    position: relative;
+		    background: white;
+		    border-radius: 2px;
+		    border: 1px solid #e4e5e7;
+
+		    @media (min-width: @screen-sm-min) {
+		        margin-left: 60px;
+		    }
+
+		    p {
+			    margin: 15px 0 0 0;
+			    line-height: 1.6
+			}
+
+			&:after, &:before {
+			    right: 100%;
+			    top: 20px;
+			    border: solid transparent;
+			    content: " ";
+			    height: 0;
+			    width: 0;
+			    position: absolute;
+			    pointer-events: none
+			}
+
+			&:after {
+			    border-color: transparent;
+			    border-right-color: #fff;
+			    border-width: 10px;
+			    margin-top: -10px
+			}
+
+			&:before {
+			    border-color: transparent;
+			    border-right-color: #e4e5e7;
+			    border-width: 11px;
+			    margin-top: -11px
+			}
+		}
+
+		.post-body {
+			padding: 10px 15px;
+		}
+
+		.post-actions {
+
+			@media (max-width: @screen-xs-max) {
+				margin-right: -10px;
+			}
+
+			>li {
+				display: inline-block;
+
+				>a {
+					padding: 0px 5px;
+					color: #666;
+
+					@media (max-width: @screen-xs-max) {
+						padding: 0 2px;
+					}
+
+					>i {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+
+		.post-signature {
+			font-size: 12px;
+			border-top: 1px dashed #ccc;
+			width: 70%;
+			margin-top: 30px;
+
+			p {
+				margin-bottom: 10px;
+			}
+		}
+
+		.deleted {
+			opacity: 0.5;
+
+			a {
+				cursor: default;
+			}
+		}
+
+		.user-picture {
+			width: 40px;
+			height: 40px;
+			border-radius: 2px;
+		}
+
+		.post-edit {
+			position: relative;
+			top: -10px;
+			margin-right: 10px;
+		}
+
+		.post-bar {
+			@media (min-width: @screen-sm-min) {
+				padding: 15px 0px 20px 0px;
+				margin: 20px 0px 0px 60px;
+				border-top: 1px solid #d3d4d5;
+	  			border-bottom: 1px solid #d3d4d5;
+	  		}
+
+	  		@media (max-width: @screen-xs-max) {
+	  			margin-top: 20px;
+	  			padding-bottom: 20px;
+	  		}
+  			
+			.post-count, .view-count {
+				text-align: center;
+				padding: 0px 5px;
+			}
+
+			.tags {
+				display: inline-block;
+				padding-top: 10px;
+
+				.tag-container {
+					background-color: #fff;
+				}
+			}
+
+			.postbar-actions {
+				>li, >span {
+					display: inline-block;
+				}
+
+				.loading-indicator {
+					padding: 10px 10px 0px 0px;
+				}
+
+				.reply-button {
+					vertical-align: text-bottom;
+				}
+
+				.thread-tools {
+					vertical-align: text-bottom;
+
+					.dropdown-toggle {
+						border-radius: 2px;
+						padding: 7px;
+					}
+				}
+			}
+		}
+	}
+}
