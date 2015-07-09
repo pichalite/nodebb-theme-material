@@ -16,7 +16,7 @@
 <!-- ELSE -->
 
 <!-- IF !privileges.topics:reply -->
-<button href="/login?next=topic/{slug}" class="btn btn-md btn-primary">[[topic:guest-login-reply]]</button>
+<a href="{config.relative_path}/login" class="btn btn-md btn-primary">[[topic:guest-login-reply]]</a>
 <!-- ENDIF !privileges.topics:reply -->
 
 <!-- ENDIF loggedIn -->
