@@ -12,9 +12,35 @@
 		i {
 			margin-right: 2px;
 		}
+	}
 
+	.post-time {
 		@media (max-width: @screen-xs-max) {
-			display: block;
+			display: inline-block;
+			font-size: 12px;
+		}
+	}
+
+	.post-header {
+		i {
+			@media (max-width: @screen-xs-max) {
+				font-size: 12px;
+			}
+		}
+
+		strong {
+			@media (max-width: @screen-xs-max) {
+				font-size: 13px;
+			}
+		}
+
+		.post-user-picture {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			margin-left: -5px;
+			margin-right: 5px;
+			margin-top: 5px;
 		}
 	}
 
@@ -96,6 +122,10 @@
 		.post-block {
 		    position: relative;
 		    margin: 30px 0;
+
+		    @media (max-width: @screen-xs-max) {
+				margin: 20px 0;
+			}
 		}
 
 		.post-block:after {
@@ -133,15 +163,17 @@
 			    line-height: 1.6
 			}
 
-			&:after, &:before {
-			    right: 100%;
-			    top: 20px;
-			    border: solid transparent;
-			    content: " ";
-			    height: 0;
-			    width: 0;
-			    position: absolute;
-			    pointer-events: none
+			@media (min-width: @screen-sm-min) {
+				&:after, &:before {
+				    right: 100%;
+				    top: 20px;
+				    border: solid transparent;
+				    content: " ";
+				    height: 0;
+				    width: 0;
+				    position: absolute;
+				    pointer-events: none
+				}
 			}
 
 			&:after {
@@ -182,6 +214,9 @@
 
 					>i {
 						font-size: 16px;
+						@media (max-width: @screen-xs-max) {
+							font-size: 14px;
+						}
 					}
 				}
 			}
@@ -226,12 +261,13 @@
 
 	  		@media (max-width: @screen-xs-max) {
 	  			margin-top: 20px;
-	  			padding-bottom: 20px;
+	  			padding-bottom: 30px;
 	  		}
   			
 			.post-count, .view-count {
 				text-align: center;
 				padding: 0px 5px;
+				vertical-align: sub;
 			}
 
 			.tags {
