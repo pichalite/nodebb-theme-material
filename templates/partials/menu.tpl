@@ -26,9 +26,6 @@
                         <!-- IF navigation.iconClass -->
                         <i class="fa fa-fw {navigation.iconClass}"></i>
                         <!-- ENDIF navigation.iconClass -->
-                        <!-- IF navigation.text -->
-                        {navigation.text}
-                        <!-- ENDIF navigation.text -->
                     </a>
                 </li>
                 <!-- ENDIF function.displayMenuItem -->
