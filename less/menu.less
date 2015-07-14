@@ -41,6 +41,39 @@
 }
 
 
+.header-menu {
+	list-style:none;
+	padding:3px;
+
+	>li {
+		display:inline-block;
+		vertical-align: -webkit-baseline-middle;
+
+		@media (max-width: @screen-xs-max) {
+			position:static!important;
+		}
+
+		>a {
+			min-width:40px;
+			background-position:center;
+			background-repeat:no-repeat;
+			position:relative;
+			z-index:1;
+			color: #fff;
+		    padding: 6px 10px;
+		    font-size: 14px;
+
+		    &:hover, &:active, &:focus {
+				text-decoration:none;
+			}
+		}
+
+		&:before {
+			top:-1px!important;
+		}
+	}
+}
+
 .top-menu {
 	list-style:none;
 	padding:3px;
@@ -258,3 +291,8 @@
 	transition: width .6s ease;
 }
 
+#user-header-picture {
+	@media (max-width: @screen-xs-max) {
+		margin-top: -5px;
+	}
+}

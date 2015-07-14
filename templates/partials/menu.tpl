@@ -2,7 +2,7 @@
 <header id="header">
     <ul class="header-inner">
         <li id="menu-trigger" data-trigger="#sidebar">
-            <div class="line-wrap">
+            <div class="line-wrap <!-- IF menuInHeader -->visible-xs<!-- ENDIF menuInHeader -->">
                 <div class="line top"></div>
                 <div class="line center"></div>
                 <div class="line bottom"></div>
@@ -15,6 +15,27 @@
 			</a>
 			<!-- ENDIF showSiteTitle -->
         </li>
+
+        <!-- IF menuInHeader -->
+        <li class="hidden-xs">
+            <ul class="header-menu"> 
+                <!-- BEGIN navigation -->
+                <!-- IF function.displayMenuItem, @index -->
+                <li class="{navigation.class}">
+                    <a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}" target="{navigation.properties.target}">
+                        <!-- IF navigation.iconClass -->
+                        <i class="fa fa-fw {navigation.iconClass}"></i>
+                        <!-- ENDIF navigation.iconClass -->
+                        <!-- IF navigation.text -->
+                        {navigation.text}
+                        <!-- ENDIF navigation.text -->
+                    </a>
+                </li>
+                <!-- ENDIF function.displayMenuItem -->
+                <!-- END navigation -->
+            </ul>
+        </li>
+        <!-- ENDIF menuInHeader -->
 
         <li class="pull-right">
         <ul class="top-menu">
@@ -141,13 +162,13 @@
             </li>
             <!-- ELSE -->
             <!-- IF allowRegistration -->
-            <li>
+            <li class="hidden-xs">
                 <a href="{relative_path}/register">
 					<span>[[global:register]]</span>
 				</a>
             </li>
             <!-- ENDIF allowRegistration -->
-            <li>
+            <li class="hidden-xs">
             	<a href="{relative_path}/login">
 					<span>[[global:login]]</span>
 				</a>
@@ -159,7 +180,7 @@
     
 </header>
 </div>
-<section id="main">
+<section id="main" class="<!-- IF menuInHeader -->visible-xs<!-- ENDIF menuInHeader -->">
     <aside id="sidebar">
         <div class="sidebar-inner">
             <div class="si-inner">
@@ -169,7 +190,28 @@
                             <input id="tw-switch" type="checkbox" hidden="hidden">
                             <label for="tw-switch" class="ts-helper"></label>
                         </div>
-                    </li>        
+                    </li>
+                    <!-- IF !loggedIn -->  
+                    <!-- IF allowRegistration -->
+                    <li class="visible-xs">
+                        <a href="{relative_path}/register">
+                            <i class="fa fa-pencil fa-fw"></i> [[global:register]]
+                        </a>
+                    </li>
+                    <!-- ENDIF allowRegistration -->
+                    <li class="visible-xs">
+                        <a href="{relative_path}/login">
+                            <i class="fa fa-sign-in fa-fw"></i> [[global:login]]
+                        </a>
+                    </li>
+                    <!-- ENDIF !loggedIn -->
+
+                    <li class="visible-xs">
+                        <a href="{relative_path}/search">
+                            <i class="fa fa-search fa-fw"></i> [[global:search]]
+                        </a>
+                    </li>
+
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">

@@ -1,6 +1,17 @@
 {
 	"id": "nodebb-theme-material",
-	"hooks": [],
+	"library": "./lib/theme.js",
+	"hooks": [
+		{
+			"hook": "static:app.load", "method": "init"
+		},
+		{
+			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
+		},
+		{
+			"hook": "filter:config.get", "method": "getConfig"
+		}
+	],
 	"scripts": [
 		"lib/material.js",
 		"lib/vendor/waves.min.js"
