@@ -21,7 +21,6 @@
 				</div>
 				<span id="search-button" class="input-group-addon last"><i class="fa fa-search"></i></span>
 			</div>
-			
 		</div>
 	</div>
 </div>
