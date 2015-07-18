@@ -40,5 +40,5 @@
 <body>
     <!-- IMPORT partials/menu.tpl -->
 
-	<div class="container" id="content">
+	<div class="container" id="content" component="header">
 	<!-- IMPORT partials/noscript/warning.tpl -->
