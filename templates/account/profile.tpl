@@ -82,7 +82,7 @@
 
 					<!-- IF websiteName -->
 					<div class="profile-label">[[user:website]]</div>
-					<div><a href="{website}">{websiteName}</a></div>
+					<div><a href="{websiteLink}">{websiteName}</a></div>
 					<!-- ENDIF websiteName -->
 
 					<!-- IF location -->

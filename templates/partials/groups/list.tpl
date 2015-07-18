@@ -2,7 +2,7 @@
 <div class="col-lg-4 col-md-6 col-sm-12" data-slug="{groups.slug}">
     <div class="card">
         <div class="card-header ch-alt">
-            <div>{groups.name}</div>
+            <div>{groups.displayName}</div>
             <small>{groups.description}</small>
         </div>
         <div class="card-body group-cover list-cover" style="<!-- IF groups.cover:url -->background-image: url({groups.cover:url});<!-- ENDIF groups.cover:url -->">

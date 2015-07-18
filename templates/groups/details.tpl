@@ -7,11 +7,16 @@
 				<!-- IF group.hidden --><span class="label label-info">[[groups:details.hidden]]</span>&nbsp;<!-- ENDIF group.hidden -->
 			</div>
 			<div class="card-body card-padding group-details">
-				<div><h2>{group.name}</h2></div>
+				<div><h2>{group.displayName}</h2></div>
 				<div><p>{group.descriptionParsed}</p></div>
+				<!-- IF isAdmin -->
+				<div class="pull-right">
+					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a>
+				</div>
+				<!-- ENDIF isAdmin -->
 				<!-- IF loggedIn -->
 				<div class="pull-right">
-					{function.membershipBtn, group}
+					{function.membershipBtn, group}&nbsp;
 				</div>
 				<!-- ENDIF loggedIn -->
 			</div>
@@ -20,8 +25,11 @@
 			<div class="card-header ch-alt">
 				<i class="fa fa-users"></i> [[groups:details.members]]
 			</div>
-			<div class="card-body card-padding">
-				<table component="groups/members" class="table table-striped table-hover members">
+			<div class="card-body card-padding group-members">
+				<div class="fg-line">
+				<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
+				</div>
+				<table component="groups/members" class="table table-striped table-hover members" data-nextstart="{group.membersNextStart}">
 					<!-- BEGIN members -->
 					<tr data-uid="{group.members.uid}">
 						<td>
@@ -73,7 +81,7 @@
 					<!-- ENDIF group.pending.length -->
 			</div>
 			<div class="card-body card-padding">
-				<table component="groups/members" class="table table-striped table-hover pending">
+				<table component="groups/pending" class="table table-striped table-hover pending">
 					<!-- BEGIN pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
@@ -114,7 +122,7 @@
 					<div class="form-group">
 						<div class="fg-line">
 						<label for="name">[[groups:details.group_name]]</label>
-						<input class="form-control" name="name" id="name" type="text" value="{group.name}" />
+						<input class="form-control" name="name" id="name" type="text" value="{group.displayName}" />
 						</div>
 					</div>
 					<div class="form-group">
@@ -131,7 +139,7 @@
 					</div>
 					<div class="form-group user-title-option">
 						<label>[[groups:details.badge_preview]]</label><br />
-						<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa {group.icon} icon"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.name}<!-- ENDIF group.userTitle --></span>
+						<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa {group.icon} icon"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.displayName}<!-- ENDIF group.userTitle --></span>
 
 						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
 						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_colour]]</button>
