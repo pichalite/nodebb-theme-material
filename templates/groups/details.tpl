@@ -65,6 +65,7 @@
 			</div>
 		</div>
 		<!-- IF group.isOwner -->
+		<!-- IF group.private -->
 		<div class="card">
 			<div class="card-header ch-alt">
 				<i class="fa fa-clock-o"></i> [[groups:details.pending]]
@@ -82,6 +83,10 @@
 			</div>
 			<div class="card-body card-padding">
 				<table component="groups/pending" class="table table-striped table-hover pending">
+					<!-- IF !group.pending.length -->
+					<div class="alert alert-info">[[groups:pending.none]]</div>
+					<!-- ENDIF !group.pending.length -->
+					
 					<!-- BEGIN pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
@@ -106,6 +111,7 @@
 				</table>
 			</div>
 		</div>
+		<!-- ENDIF group.private -->
 		<!-- ENDIF group.isOwner -->
 		<div widget-area="left"></div>
 	</div>
