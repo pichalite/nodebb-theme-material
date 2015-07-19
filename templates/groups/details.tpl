@@ -65,21 +65,20 @@
 			</div>
 		</div>
 		<!-- IF group.isOwner -->
-		<!-- IF group.private -->
 		<div class="card">
 			<div class="card-header ch-alt">
 				<i class="fa fa-clock-o"></i> [[groups:details.pending]]
 				<!-- IF group.pending.length -->
-					<div class="btn-group pull-right">
-						<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							[[global:more]] <span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="#" data-ajaxify="false" data-action="acceptAll">[[groups:pending.accept_all]]</a></li>
-							<li><a href="#" data-ajaxify="false" data-action="rejectAll">[[groups:pending.reject_all]]</a></li>
-						</ul>
-					</div>
-					<!-- ENDIF group.pending.length -->
+				<div class="btn-group pull-right">
+					<button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+						[[global:more]] <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#" data-ajaxify="false" data-action="acceptAll">[[groups:pending.accept_all]]</a></li>
+						<li><a href="#" data-ajaxify="false" data-action="rejectAll">[[groups:pending.reject_all]]</a></li>
+					</ul>
+				</div>
+				<!-- ENDIF group.pending.length -->
 			</div>
 			<div class="card-body card-padding">
 				<table component="groups/pending" class="table table-striped table-hover pending">
@@ -98,7 +97,7 @@
 						<td>
 							<div class="btn-group pull-right">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									More <span class="caret"></span>
+									[[global:more]] <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu" role="menu">
 									<li><a href="#" data-ajaxify="false" data-action="accept">[[groups:pending.accept]]</a></li>
@@ -111,7 +110,42 @@
 				</table>
 			</div>
 		</div>
-		<!-- ENDIF group.private -->
+
+		<div class="card">
+			<div class="card-header ch-alt">
+				<i class="fa fa-gift"></i> [[groups:details.invited]]
+			</div>
+			<div class="card-body card-padding members-invited">
+				<div class="fg-line">
+				<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
+				</div>
+				<table component="groups/invited" class="table table-striped table-hover invited">
+					<!-- IF !group.invited.length -->
+					<div class="alert alert-info">[[groups:invited.none]]</div>
+					<!-- ENDIF !group.invited.length -->
+					<!-- BEGIN invited -->
+					<tr data-uid="{group.invited.uid}">
+						<td>
+							<a href="{config.relative_path}/user/{group.invited.userslug}"><img src="{group.invited.picture}" /></a>
+						</td>
+						<td class="member-name">
+							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
+						</td>
+						<td>
+							<div class="btn-group pull-right">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									[[global:more]] <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#" data-ajaxify="false" data-action="rescindInvite">[[groups:invited.uninvite]]</a></li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+					<!-- END invited -->
+				</table>
+			</div>
+		</div>
 		<!-- ENDIF group.isOwner -->
 		<div widget-area="left"></div>
 	</div>
