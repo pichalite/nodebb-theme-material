@@ -11,25 +11,31 @@
                 
                     <div class="pv-contact">
                         <!-- IF !isSelf -->
-							<br/>
-							<!-- IF !config.disableChat -->
-							<a id="chat-btn" href="#" class="btn btn-primary btn-sm">[[user:chat]]</a>
-							<!-- ENDIF !config.disableChat -->
- 							<a id="follow-btn" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
- 							<a id="unfollow-btn" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
-							<!-- ENDIF !isSelf -->
+						<br/>
+						<!-- IF !config.disableChat -->
+						<a id="chat-btn" href="#" class="btn btn-primary btn-sm">[[user:chat]]</a>
+						<!-- ENDIF !config.disableChat -->
+							<a id="follow-btn" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
+							<a id="unfollow-btn" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
+							<!-- IF isAdmin -->
+							<br/><br/>
 
-							<!-- IF banned -->
-							<div class="text-center">
-								<span class="label label-danger">[[user:banned]]</span>
-							</div>
-							<!-- ENDIF banned -->
-							<!-- IF aboutme -->
-							<hr/>
-							<div component="aboutme" class="text-center">
-							{aboutme}
-							</div>
-							<!-- ENDIF aboutme -->
+							<a id="banAccountBtn" href="#" class="btn btn-danger btn-sm <!-- IF banned -->hide<!-- ENDIF banned -->">[[user:ban_account]]</a>
+							<a id="unbanAccountBtn" href="#" class="btn btn-danger btn-sm <!-- IF !banned -->hide<!-- ENDIF !banned -->">[[user:unban_account]]</a>
+							<a id="deleteAccountBtn" href="#" class="btn btn-danger btn-sm">[[user:delete_account]]</a><br/><br/>
+							<!-- ENDIF isAdmin -->
+						<!-- ENDIF !isSelf -->
+
+						<div id="banLabel" class="text-center <!-- IF !banned -->hide<!-- ENDIF !banned -->">
+							<span class="label label-danger">[[user:banned]]</span>
+						</div>
+						
+						<!-- IF aboutme -->
+						<hr/>
+						<div component="aboutme" class="text-center">
+						{aboutme}
+						</div>
+						<!-- ENDIF aboutme -->
                     </div>
                     
                     <ul class="pv-follow">
@@ -76,7 +82,7 @@
 
 					<!-- IF websiteName -->
 					<div class="profile-label">[[user:website]]</div>
-					<div><a href="{website}">{websiteName}</a></div>
+					<div><a href="{websiteLink}">{websiteName}</a></div>
 					<!-- ENDIF websiteName -->
 
 					<!-- IF location -->
@@ -140,7 +146,7 @@
 					<i class="fa fa-edit"></i> [[global:recentposts]]
 				</div>
 				<!-- IF !posts.length -->
-				<span>[[user:has_no_posts]]</span>
+				<div class="alert alert-info">[[user:has_no_posts]]</div>
 				<!-- ENDIF !posts.length -->
 				<!-- IMPORT partials/posts_list.tpl -->
 			</div>

@@ -4,14 +4,18 @@
 		<li class=""><a href="{config.relative_path}/users/latest">[[users:latest_users]]</a></li>
 		<li class=""><a href="{config.relative_path}/users/sort-posts">[[users:top_posters]]</a></li>
 		<li class=""><a href="{config.relative_path}/users/sort-reputation">[[users:most_reputation]]</a></li>
-		<!-- IF loggedIn -->
+		<li class=""><a href='{config.relative_path}/users/map'>[[users:map]]</a></li>
+		<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
 		<li class=""><a href="{config.relative_path}/users/search">[[users:search]]</a></li>
-		<!-- ENDIF loggedIn -->
+		<!-- ENDIF function.displayUserSearch -->
+		<!-- IF inviteOnly -->
+		<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
+		<!-- ENDIF inviteOnly -->
 	</ul>
 
 	<br />
 
-	<div class="search {search_display} well">
+	<div class="search {search_display}">
 		<div class="input-group">
 			<div class="fg-line">
 			<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>

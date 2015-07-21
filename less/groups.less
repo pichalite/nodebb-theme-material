@@ -36,8 +36,9 @@
 	}
 
 	&.details {
-		.members img, .pending img {
+		.members img, .pending img, .invited img {
 			width: 32px;
+			height: 32px;
 		}
 	}
 }
@@ -48,7 +49,7 @@
 		font-size: 25px;
 	}
 
-	button {
+	button, a {
 		margin-top: -30px;
 	}
 }
@@ -56,6 +57,12 @@
 [component="groups/activity"] {
 	&.card-body.card-padding {
 		padding-top: 0px;
+	}
+}
+
+.group-members, .members-invited {
+	.fg-line {
+		margin-bottom: 10px;
 	}
 }
 
