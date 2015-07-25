@@ -56,6 +56,14 @@
             </span>
         </div>
         
+        <!-- BEGIN regFormEntry -->
+        <div class="input-group">
+            <div id="register-{regFormEntry.styleName}">
+                {{regFormEntry.html}}
+            </div>
+        </div>
+        <!-- END regFormEntry -->
+
         <!-- IF termsOfUse -->
         <div class="checkbox">
             <label>
