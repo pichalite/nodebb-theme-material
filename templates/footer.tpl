@@ -12,6 +12,26 @@
 			<button type="button" class="btn btn-default next"><i class="fa fa-fw fa-angle-down"></i></button>
 		</div>
 	</div>
+
+	<div class="popup-chat hidden">
+		<div class="popup-chat-header">
+			Chat Box
+			<div class="pull-right">
+				<a href="#" class="sminimize"><i class="fa fa-chevron-down"></i></a> 
+				<a href="#" class="sclose"><i class="fa fa-times"></i></a>
+			</div>
+		</div>
+		<div class="popup-chat-content">
+			<ul class="nav nav-tabs">
+			</ul>
+			<div class="tab-content">
+			</div>
+			<div class="popup-chat-footer fg-line">
+				<textarea id="chat-message-input" rows="1" placeholder="Type message and press enter" name="chat-message" class="form-control"></textarea>
+			</div>
+		</div>
+	</div>
+
 	<div class="alert-window alert-left-top"></div>
 	<div class="alert-window alert-left-bottom"></div>
 	<div class="alert-window alert-right-top"></div>
