@@ -17,8 +17,8 @@
 		<div class="popup-chat-header">
 			Chat Box
 			<div class="pull-right">
-				<a href="#" class="sminimize"><i class="fa fa-chevron-down"></i></a> 
-				<a href="#" class="sclose"><i class="fa fa-times"></i></a>
+				<a href="#" class="popup-chat-minimize"><i class="fa fa-chevron-down"></i></a> 
+				<a href="#" class="popup-chat-close"><i class="fa fa-times"></i></a>
 			</div>
 		</div>
 		<div class="popup-chat-content">
