@@ -69,13 +69,22 @@
 
 			<div class="lv-actions actions hidden-xs">
                 <ul>
-                    <!-- IF topics.unreplied -->
+                <!-- IF topics.unreplied -->
 				<li class="lv-small">[[category:no_replies]]</li>
 				<!-- ELSE -->
-				<li class="lv-small"><a href="<!-- IF topics.teaser.user.userslug -->{config.relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->"><img class="user-picture" src="{topics.teaser.user.picture}" title="{topics.teaser.user.username}"></a>
-				<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-					[[global:replied_ago, <span class="timeago" title="{topics.teaser.timestamp}"></span>]]
-				</a></li>
+				<!-- IF topics.teaser.index -->
+				<li class="lv-small">
+					<a href="<!-- IF topics.teaser.user.userslug -->{config.relative_path}/user/{topics.teaser.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.teaser.user.userslug -->">
+						<img class="user-picture" src="{topics.teaser.user.picture}" title="{topics.teaser.user.username}">
+					</a>
+					<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+						[[global:replied_ago, <span class="timeago" title="{topics.teaser.timestamp}"></span>]]
+					</a>
+				</li>
+				<!-- ENDIF topics.teaser.index -->
+				<!-- IF !topics.teaser.index -->
+				<li class="lv-small">[[category:no_replies]]</li>
+				<!-- ENDIF !topics.teaser.index -->
 				<!-- ENDIF topics.unreplied -->
                 </ul>
             </div>
