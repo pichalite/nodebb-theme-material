@@ -1,6 +1,6 @@
 <div class="categories row display-animation">
 	<!-- BEGIN categories -->
-	<div class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-4 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
+	<div class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="new-card" style="{function.generateCategoryBackground}">
 			<div class="new-card-body">
 				<ul class="category-counts pull-right">
