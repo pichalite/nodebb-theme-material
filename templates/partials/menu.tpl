@@ -104,10 +104,10 @@
 
             <!-- IF !disableChat -->
             <li class="chats dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chat_dropdown" title="[[global:header.chats]]">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chats_dropdown" title="[[global:header.chats]]">
                     <i component="chat/icon" class="fa fa-comment-o fa-fw"></i>
                 </a>
-                <div class="dropdown-menu pull-right" aria-labelledby="chat_dropdown">
+                <div class="dropdown-menu pull-right" aria-labelledby="chats_dropdown">
                     <div class="listview">
                         <div class="lv-body c-overflow" id="chat-list">
                             <a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a> 

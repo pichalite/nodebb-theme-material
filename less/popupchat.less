@@ -1,0 +1,143 @@
+.popup-chat {
+	width: 250px;
+	z-index: 40;
+	position: fixed;
+	bottom: 0px;
+	right: 10px;
+	box-shadow: 0 1px 20px rgba(0,0,0,0.15);
+}
+
+.popup-chat .popup-chat-header {
+	line-height: 40px;
+	height: 40px;
+	cursor: pointer;
+	font-size: 14px;
+	padding-left: 10px;
+	background: #4285f4;
+	color: #fff;	
+	border: 0px;
+}
+
+.popup-chat .popup-chat-header i{
+	margin-right: 10px;
+	font-size: 12px;
+	color: #fff;
+}
+
+.popup-chat .popup-chat-content{
+	margin: 0px;
+	padding: 0px;
+	background: #fff;
+}
+
+.popup-chat-content .nav-tabs{
+	border-bottom: 1px solid #e5e5e5 !important;
+	margin-bottom: 0px !important;
+}
+
+.popup-chat-content .nav-tabs > li > a{
+	margin: 0px !important;
+	color: #888 !important;
+	border-radius: 0px;
+	padding: 5px 10px;
+
+	img {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.popup-chat-content .nav-tabs > li:first-child > a {
+	border-left: none;
+	&:focus, &:active, &:hover, &:visited {
+		border-left: none;
+	}
+}
+
+.popup-chat-content .nav-tabs > li.active > a{
+	color: #ccc !important;
+}
+
+.popup-chat-content .tab-content{
+	padding: 10px;
+	min-height: 250px;
+	max-height: 250px;
+	overflow-y: auto;
+}
+
+.popup-chat-content .popup-chat-footer {
+	padding-top: 10px;
+	margin-bottom: 5px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+
+	#chat-message-input {
+		padding: 0px 5px;
+	}
+}
+
+.popup-chat-content .tab-content {
+
+	.chat-message img {
+		width: 25px;
+		height: 25px;
+	}
+
+	.media { 
+
+		margin-top: 5px;
+		.pull-left {
+			padding-right: 5px
+		}
+
+		.pull-right {
+			padding-left: 5px;
+		}
+	}
+
+	.lv-item {
+
+		&.bg-primary {
+			background:#fff;
+		}
+
+		&:not(.active):hover {
+			background:#fff;
+			cursor:pointer;
+		}
+	}
+
+	.tab-pane .lv-item {
+
+		.chat-item {
+			max-width: initial;
+			padding: 3px 5px 3px 5px;
+		}
+
+		&.right {
+			text-align:right;
+
+			.lv-avatar {
+				margin-right:0;
+				margin-left:15px;
+			}
+
+			.chat-item {
+				background:#eee;
+			}
+		}
+
+		&:not(.right) .chat-item {
+			background:#00BCD4;
+			color:#fff;
+		}
+	}
+
+	.timeago {
+		display:block;
+		color:#B3B3B3;
+		margin-top:5px;
+		font-style: italic;
+
+	}
+}
