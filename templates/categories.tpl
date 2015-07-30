@@ -1,4 +1,4 @@
-<div class="row">
+<div class="categories row display-animation">
 	<!-- BEGIN categories -->
 	<div class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-4 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="new-card" style="{function.generateCategoryBackground}">

@@ -72,3 +72,63 @@
         }
     }
 }
+
+/*-- Display animation -------------------------------- */
+.display-animation > * {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.display-animation > .animated {
+    -webkit-animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+    -o-animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+    animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+}
+.no-js .display-animation > * {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+@keyframes display {
+    from {
+    -webkit-transform: scale(0);
+    }
+    to {
+    -webkit-transform: scale(1);
+    }
+}
+@-o-keyframes display {
+    from {
+    -webkit-transform: scale(0);
+    }
+    to {
+    -webkit-transform: scale(1);
+    }
+}
+@-ms-keyframes display {
+    from {
+    -webkit-transform: scale(0);
+    }
+    to {
+    -webkit-transform: scale(1);
+    }
+}
+@-moz-keyframes display {
+    from {
+    -webkit-transform: scale(0);
+    }
+    to {
+    -webkit-transform: scale(1);
+    }
+}
+@-webkit-keyframes display {
+    from {
+    -webkit-transform: scale(0);
+    }
+    to {
+    -webkit-transform: scale(1);
+    }
+}
