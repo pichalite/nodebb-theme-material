@@ -6,7 +6,10 @@
 				<label>Display menu in header
 					<input id="menuInHeader" type="checkbox" data-field="menuInHeader" />
 				</label>
-				
+				<br />
+				<label>Remove animation on categories page
+					<input id="removeCategoriesAnimation" type="checkbox" data-field="removeCategoriesAnimation" />
+				</label>
 			</form>
 		</div>
 	</div>
