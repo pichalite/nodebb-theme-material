@@ -75,14 +75,14 @@
                         </div>
                         <button type="submit" class="btn btn-default hide">[[global:search]]</button>
                     </div>
-                    <button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
+                    <button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw"></i></button>
                 </form>
             </li>
             <!-- ENDIF searchEnabled -->
 			
 			<!-- IF loggedIn -->
             <li class="notifications dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown" title="[[global:header.notifications]]">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
                     <i class="notification-icon fa fa-fw fa-bell-o" data-content="0"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg pull-right">
@@ -104,7 +104,7 @@
 
             <!-- IF !disableChat -->
             <li class="chats dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chats_dropdown" title="[[global:header.chats]]">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chats_dropdown">
                     <i component="chat/icon" class="fa fa-comment-o fa-fw"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-md pull-right" aria-labelledby="chats_dropdown">
@@ -121,7 +121,7 @@
             
             <!-- ENDIF !disableChat -->
             <li id="user_label" class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown" title="[[global:header.profile]]">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown">
                     <img id="user-header-picture" class="user-picture" src="{user.picture}"/>
                 </a>
                 <ul id="user-control-list" class="dropdown-menu pull-right" aria-labelledby="user_dropdown">
