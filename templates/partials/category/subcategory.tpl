@@ -1,3 +1,4 @@
+<!-- IF !config.subCategoriesAsCards -->
 <div class="subcategory">
 	<!-- IF children.length -->
 	<div class="card">
@@ -46,3 +47,52 @@
 	</div>
 	<!-- ENDIF children.length -->
 </div>
+<!-- ENDIF !config.subCategoriesAsCards -->
+
+<!-- IF config.subCategoriesAsCards -->
+<!-- IF children.length -->
+<div class="row">
+	<!-- BEGIN children -->
+	<div class="<!-- IF children.class -->{children.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF children.class -->">
+		<div class="new-card" style="{function.generateCategoryBackground}">
+			<div class="new-card-body">
+				<ul class="category-counts pull-right">
+                    <li>
+                        <i class="fa fa-book"></i><span class="human-readable-number" title="{children.totalTopicCount}"></span>
+                    </li>
+                    <li>
+                        <i class="fa fa-pencil"></i><span class="human-readable-number" title="{children.totalPostCount}"></span>
+                    </li>
+                </ul>
+				<h4>
+                	<!-- IF children.link -->
+					<a href="{children.link}" itemprop="url" target="_blank">
+					<!-- ELSE -->
+					<a href="{config.relative_path}/category/{children.slug}" itemprop="url">
+					<!-- ENDIF children.link-->
+					{children.name} <!-- IF children.icon -->
+							<i class="fa {children.icon} fa-fw"></i>
+							<!-- ENDIF children.icon --></a>
+				</h4>
+				<small>{children.description}</small>
+			</div>
+			<div class="new-card-footer">
+				<!-- BEGIN posts -->				
+				<div component="category/posts">
+					<div class="pull-left hidden-xs user-avatar">
+				    	<a href="{config.relative_path}/user/{children.posts.user.userslug}">
+				        	<img class="user-picture" src="{children.posts.user.picture}" title="{children.posts.user.username}">
+				    	</a>
+					</div>
+					<div class="topic-title">
+						<a href="{config.relative_path}/topic/{children.posts.topic.slug}">{children.posts.topic.title}</a>
+					</div>
+				</div>
+				<!-- END posts -->
+			</div>
+		</div>
+	</div>
+	<!-- END children -->
+</div>
+<!-- ENDIF children.length -->
+<!-- ENDIF config.subCategoriesAsCards -->

@@ -10,6 +10,10 @@
 				<label>Remove animation on categories page
 					<input id="removeCategoriesAnimation" type="checkbox" data-field="removeCategoriesAnimation" />
 				</label>
+				<br />
+				<label>Display subcategories as cards on category page
+					<input id="subCategoriesAsCards" type="checkbox" data-field="subCategoriesAsCards" />
+				</label>
 			</form>
 		</div>
 	</div>
