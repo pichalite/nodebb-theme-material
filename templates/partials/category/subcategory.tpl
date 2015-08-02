@@ -55,27 +55,24 @@
 	<!-- BEGIN children -->
 	<div class="<!-- IF children.class -->{children.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF children.class -->">
 		<div class="new-card" style="{function.generateCategoryBackground}">
-			<div class="new-card-body">
-				<ul class="category-counts pull-right">
-                    <li>
-                        <i class="fa fa-book"></i><span class="human-readable-number" title="{children.totalTopicCount}"></span>
-                    </li>
-                    <li>
-                        <i class="fa fa-pencil"></i><span class="human-readable-number" title="{children.totalPostCount}"></span>
-                    </li>
-                </ul>
-				<h4>
-                	<!-- IF children.link -->
-					<a href="{children.link}" itemprop="url" target="_blank">
-					<!-- ELSE -->
-					<a href="{config.relative_path}/category/{children.slug}" itemprop="url">
-					<!-- ENDIF children.link-->
-					{children.name} <!-- IF children.icon -->
-							<i class="fa {children.icon} fa-fw"></i>
-							<!-- ENDIF children.icon --></a>
-				</h4>
-				<small>{children.description}</small>
-			</div>
+			<a href="<!-- IF children.link -->{children.link}<!-- ELSE -->{config.relative_path}/category/{children.slug}<!-- ENDIF children.link-->" itemprop="url" <!-- IF children.link -->target="_blank"<!-- ENDIF children.link-->>
+				<div class="new-card-body">
+					<ul class="category-counts pull-right">
+	                    <li>
+	                        <i class="fa fa-book"></i><span class="human-readable-number" title="{children.totalTopicCount}"></span>
+	                    </li>
+	                    <li>
+	                        <i class="fa fa-pencil"></i><span class="human-readable-number" title="{children.totalPostCount}"></span>
+	                    </li>
+	                </ul>
+					<h4>
+						{children.name} <!-- IF children.icon -->
+								<i class="fa {children.icon} fa-fw"></i>
+								<!-- ENDIF children.icon -->
+					</h4>
+					<small>{children.description}</small>
+				</div>
+			</a>
 			<div class="new-card-footer">
 				<!-- BEGIN posts -->				
 				<div component="category/posts">
