@@ -65,8 +65,6 @@
         <!-- END regFormEntry -->
 
         <!-- IF termsOfUse -->
-        <strong>[[register:terms_of_use]]</strong>
-        <textarea readonly class="form-control" rows="4">{termsOfUse}</textarea>
         <div class="checkbox">
             <label>
                 <input type="checkbox" name="agree-terms" id="agree-terms">
