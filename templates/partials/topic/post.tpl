@@ -52,7 +52,7 @@
                 </div>
 
                  <!-- IF posts.user.signature -->
-                <div class="post-signature hidden-xs">{posts.user.signature}</div>
+                <div component="post/signature" data-uid="{posts.user.uid}" class="post-signature hidden-xs">{posts.user.signature}</div>
                 <!-- ENDIF posts.user.signature -->
 
                 <small component="post/editor" class="pull-right post-edit <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->">[[global:last_edited_by_ago, <strong><a href="{config.relative_path}/user/{posts.editor.userslug}">{posts.editor.username}</a></strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small>

@@ -3,13 +3,16 @@
 		<div class="modal-content listview lv-message">
 			<div class="modal-header">
 				<button type="button" class="close hidden-xs" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
-				<h4>[[modules:chat.chatting_with]] <i component="user/status" class="fa fa-circle status offline" title="[[global:offline]]"></i></h4>
+				<h4><i component="user/status" class="fa fa-circle status offline" title="[[global:offline]]"></i>
+					[[modules:chat.chatting_with]] 
+					<span class="user-typing hide"><i class="fa fa-keyboard-o fa-fw"></i></span>
+				</h4>
 			</div>
 			<div class="modal-body">
 				<span class="since-bar">
 				<a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
-				<ul id="chat-content" class="lv-body">
-					<span class="user-typing hide"><i class="fa fa-pencil"></i> <span class="text"></span></span>
+				<ul class="chat-content" class="lv-body">
+					
 				</ul>
 
 				<div class="chat-footer input-group">

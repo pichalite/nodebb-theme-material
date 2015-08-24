@@ -65,6 +65,7 @@
         <!-- END regFormEntry -->
 
         <!-- IF termsOfUse -->
+        <div class="tos">{termsOfUse}</div>
         <div class="checkbox">
             <label>
                 <input type="checkbox" name="agree-terms" id="agree-terms">
