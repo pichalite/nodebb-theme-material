@@ -5,7 +5,7 @@
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-header-alt">
 			<div class="lv-title">
-				Subcategories
+				[[global:subcategories]]
 			</div>
 			</div>
 			<div class="lv-body">

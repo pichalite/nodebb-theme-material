@@ -23,7 +23,7 @@
 					</div>
 					<div class="media-body">
 						<div class="lv-title">
-						<a href="{notifications.path}">{notifications.bodyShort}</a>
+						<a component="notifications/item/link" href="{notifications.path}">{notifications.bodyShort}</a>
 						</div>
 						<small class="timeago" title="{notifications.datetimeISO}"></small>
 					</div>

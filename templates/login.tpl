@@ -46,7 +46,10 @@
                 &nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
                 <!-- ENDIF showResetLink -->
             </div>
-            <!-- IF alternate_logins -->
+            
+        </div>
+    </form>
+    <!-- IF alternate_logins -->
             <div class="login-options">
                 <ul class="alternate-auth">
                 <!-- BEGIN authentication -->
@@ -55,6 +58,4 @@
                 </ul>
             </div>
             <!-- ENDIF alternate_logins -->
-        </div>
-    </form>
 </div>
