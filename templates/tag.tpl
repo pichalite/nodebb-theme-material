@@ -3,7 +3,7 @@
 
 	<!-- IF !topics.length -->
 	<div class="alert alert-warning">
-		<strong>[[tags:no_tag_topics]]</strong>
+		[[tags:no_tag_topics]]
 	</div>
 	<!-- ENDIF !topics.length -->
 
@@ -16,5 +16,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- IMPORT partials/variables/tag.tpl -->

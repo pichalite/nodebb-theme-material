@@ -17,5 +17,3 @@
 		<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 </div>
-
-<!-- IMPORT partials/variables/account.tpl -->

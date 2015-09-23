@@ -1,11 +1,9 @@
-
 <div class="notifications">
-	<h2>[[notifications:title]]</h2>
+	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="alert alert-info <!-- IF notifications.length -->hidden<!-- ENDIF notifications.length -->">
 		[[notifications:no_notifs]]
 	</div>
-
 
 	<div class="card">
 		<div class="listview lv-bordered lv-lg">
@@ -32,7 +30,6 @@
 			</div>
 		</div>
 	</div>
-
 </div>
 
 

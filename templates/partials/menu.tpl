@@ -2,21 +2,21 @@
 <header id="header">
     <ul class="header-inner">
         <li id="menu-trigger" data-trigger="#sidebar">
-            <div class="line-wrap <!-- IF menuInHeader -->visible-xs<!-- ENDIF menuInHeader -->">
+            <div class="line-wrap <!-- IF config.menuInHeader -->visible-xs<!-- ENDIF config.menuInHeader -->">
                 <div class="line top"></div>
                 <div class="line center"></div>
                 <div class="line bottom"></div>
             </div>
         </li>
     	<li class="logo">
-			<!-- IF showSiteTitle -->
+			<!-- IF config.showSiteTitle -->
 			<a href="{relative_path}/">
 				{title}
 			</a>
-			<!-- ENDIF showSiteTitle -->
+			<!-- ENDIF config.showSiteTitle -->
         </li>
 
-        <!-- IF menuInHeader -->
+        <!-- IF config.menuInHeader -->
         <li class="hidden-xs">
             <ul class="header-menu"> 
                 <!-- BEGIN navigation -->
@@ -32,7 +32,7 @@
                 <!-- END navigation -->
             </ul>
         </li>
-        <!-- ENDIF menuInHeader -->
+        <!-- ENDIF config.menuInHeader -->
 
         <li class="pull-right">
         <ul class="top-menu">
@@ -64,7 +64,7 @@
                     <i class="fa fa-check"></i>
                 </a>
             </li>
-            <!-- IF searchEnabled -->
+            <!-- IF config.searchEnabled -->
             <li>
                 <form id="search-form" class="hidden-xs" role="search" method="GET" action="">
                     <div class="hide" id="search-fields">
@@ -78,12 +78,12 @@
                     <button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
                 </form>
             </li>
-            <!-- ENDIF searchEnabled -->
+            <!-- ENDIF config.searchEnabled -->
 			
-			<!-- IF loggedIn -->
-            <li class="notifications dropdown">
+			<!-- IF config.loggedIn -->
+            <li class="notifications dropdown" component="notifications">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
-                    <i class="notification-icon fa fa-fw fa-bell-o" data-content="0"></i>
+                    <i class="fa fa-fw fa-bell-o" component="notifications/icon" data-content="0"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg pull-right">
                     <div class="listview">
@@ -102,14 +102,14 @@
                 </div>
             </li>
 
-            <!-- IF !disableChat -->
+            <!-- IF !config.disableChat -->
             <li class="chats dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chat_dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chat_dropdown" component="chat/dropdown">
                     <i component="chat/icon" class="fa fa-comment-o fa-fw"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-md pull-right" aria-labelledby="chat_dropdown">
                     <div class="listview">
-                        <div class="lv-body c-overflow" id="chat-list">
+                        <div class="lv-body c-overflow chat-list" component="chat/list">
                             <a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a> 
                         </div>
                         <div class="lv-footer">
@@ -118,16 +118,16 @@
                     </div>
                 </div>
             </li>
-            
-            <!-- ENDIF !disableChat -->
+            <!-- ENDIF !config.disableChat -->
+
             <li id="user_label" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown">
-                    <img id="user-header-picture" class="user-picture" src="{user.picture}"/>
+                    <img component="header/userpicture" id="user-header-picture" class="user-picture" src="{user.picture}" alt="{user.username}"/>
                 </a>
-                <ul id="user-control-list" class="dropdown-menu pull-right" aria-labelledby="user_dropdown">
+                <ul id="user-control-list" component="header/usercontrol" class="dropdown-menu pull-right" aria-labelledby="user_dropdown">
                     <li>
-                        <a id="user-profile-link" href="{relative_path}/user/{user.userslug}">
-                            <i class="fa fa-fw fa-circle status {user.status}"></i> <span id="user-header-name">{user.username}</span>
+                        <a component="header/profilelink" id="user-profile-link" href="{relative_path}/user/{user.userslug}">
+                            <i class="fa fa-fw fa-circle status {user.status}"></i> <span component="header/username" id="user-header-name">{user.username}</span>
                         </a>
                     </li>
                     <li role="presentation" class="divider"></li>
@@ -152,7 +152,7 @@
                         </a>
                     </li>
                     <li role="presentation" class="divider"></li>
-                    <li id="logout-link">
+                    <li component="user/logout">
                         <a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
                     </li>
                 </ul>
@@ -170,7 +170,7 @@
 					<span>[[global:login]]</span>
 				</a>
             </li>
-            <!-- ENDIF loggedIn -->
+            <!-- ENDIF config.loggedIn -->
             </ul>
         </li>
     </ul>
@@ -188,7 +188,7 @@
                             <label for="tw-switch" class="ts-helper"></label>
                         </div>
                     </li>
-                    <!-- IF !loggedIn -->  
+                    <!-- IF !config.loggedIn -->  
                     <!-- IF allowRegistration -->
                     <li class="visible-xs">
                         <a href="{relative_path}/register">
@@ -201,7 +201,7 @@
                             <i class="fa fa-sign-in fa-fw"></i> [[global:login]]
                         </a>
                     </li>
-                    <!-- ENDIF !loggedIn -->
+                    <!-- ENDIF !config.loggedIn -->
 
                     <li class="visible-xs">
                         <a href="{relative_path}/search">

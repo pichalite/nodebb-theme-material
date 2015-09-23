@@ -1,4 +1,4 @@
-
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="card" id="chat-main">
     <div class="chat-menu">   
         <div class="chat-block">

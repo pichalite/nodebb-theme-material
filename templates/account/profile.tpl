@@ -146,7 +146,7 @@
 					<i class="fa fa-edit"></i> [[global:recentposts]]
 				</div>
 				<!-- IF !posts.length -->
-				<div class="alert alert-info">[[user:has_no_posts]]</div>
+				<div class="alert alert-warning">[[user:has_no_posts]]</div>
 				<!-- ENDIF !posts.length -->
 				<!-- IMPORT partials/posts_list.tpl -->
 			</div>
@@ -158,6 +158,3 @@
 	<div id="user-action-alert" class="alert alert-success hide"></div>
 
 </div>
-
-<!-- IMPORT partials/variables/account.tpl -->
-<!-- IMPORT partials/variables/account/profile.tpl -->

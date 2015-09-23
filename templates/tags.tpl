@@ -3,7 +3,7 @@
 
 	<!-- IF !tags.length -->
 	<div class="alert alert-warning">
-		<strong>[[tags:no_tags]]</strong>
+		[[tags:no_tags]]
 	</div>
 	<!-- ELSE -->
 	<div class="form-group">

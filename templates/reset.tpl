@@ -1,18 +1,17 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
-
 <div class="alert alert-info">
 	[[reset_password:enter_email]]
 </div>
 
 <div class="well">
-	<div class="alert alert-success" id="success" style="display:none">
+	<div class="alert alert-success hide" id="success">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
-		<strong>[[reset_password:password_reset_sent]]</strong>
+		[[reset_password:password_reset_sent]]
 	</div>
-	<div class="alert alert-danger" id="error" style="display:none">
+	<div class="alert alert-danger hide" id="error">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
-		<strong>[[reset_password:invalid_email]]</strong>
+		[[reset_password:invalid_email]]
 	</div>
 	<form onsubmit="return false;">
 		<div class="form-group">

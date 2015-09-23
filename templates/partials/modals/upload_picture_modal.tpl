@@ -3,12 +3,12 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<h4 id="myModalLabel">[[user:upload_picture]]</h4>
+				<h4 id="upload-picture">[[user:upload_picture]]</h4>
 			</div>
 			<div class="modal-body">
 				<form id="uploadForm" action="" method="post" enctype="multipart/form-data">
 					<div class="form-group">
-						<label for="userPhoto">[[user:upload_a_picture]]</label>
+						<label for="userPhotoInput">[[user:upload_a_picture]]</label>
 						<input type="file" id="userPhotoInput" name="files[]">
 						<p class="help-block">[[user:image_spec]] (<span id="file-size-block" class="hide"></span>)</p>
 					</div>

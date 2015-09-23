@@ -1,5 +1,6 @@
 
 <!-- IMPORT partials/account_menu.tpl -->
+
 <div class="favourites">
 	<!-- IF !posts.length -->
 		<div class="alert alert-warning">[[topic:favourites.has_no_favourites]]</div>
@@ -12,6 +13,9 @@
 		</div>
 	</div>
 	<!-- ENDIF !posts.length -->
-</div>
 
-<!-- IMPORT partials/variables/account.tpl -->
+	<!-- IF config.usePagination -->
+		<!-- IMPORT partials/paginator.tpl -->
+	<!-- ENDIF config.usePagination -->
+
+</div>

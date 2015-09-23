@@ -1,7 +1,7 @@
 <!-- IMPORT partials/account_menu.tpl -->
 <div class="account edit-account">
 	<div class="row">
-		<div class="col-md-2" style="text-align: center; margin-bottom:20px;">
+		<div class="col-md-2">
 			<div class="account-picture-block text-center">
 				<img id="user-current-picture" class="user-profile-picture" src="{picture}" /><br /><br />
 				<a id="changePictureBtn" href="#" class="btn btn-primary">[[user:change_picture]]</a>
@@ -25,12 +25,14 @@
 			<div class="card">
 				<form class="form-horizontal" role="form">
 				<div class="card-body card-padding">
+					<!-- IF !username:disableEdit -->
 					<div class="form-group">
 	                    <div class="fg-line">
 	                    	<label>[[user:username]]</label>
 	                        <input class="form-control" type="text" id="inputUsername" placeholder="[[user:username]]" value="{username}">
 	                    </div>
 	                </div>
+	                <!-- ENDIF !username:disableEdit -->
 
 	                <div class="form-group">
 	                    <div class="fg-line">
@@ -96,7 +98,7 @@
 		</div>
 
 		<div class="col-md-5">
-			<div class="card" style="vertical-align:top;">
+			<div class="card">
 				<form class='form-horizontal'>
 				<div class="card-body card-padding">	
 					<!-- IF isSelf -->
@@ -117,7 +119,7 @@
 							<input class="form-control" type="password" id="inputNewPassword" placeholder="[[user:password]]" value="">
 						</div>
 						<span class="input-group-addon last">
-							<span id="password-notify"><i class="fa fa-circle-o"></i></span>
+							<span id="password-notify"><span class="success hide"><i class="fa fa-check"></i></span><span class="error hide"></span><span class="default"><i class="fa fa-circle-o"></i></span></span>
 						</span>
 					</div>
 
@@ -127,7 +129,7 @@
 							<input class="form-control" type="password" id="inputNewPasswordAgain" placeholder="[[user:confirm_password]]" value="">
 						</div>
 						<span class="input-group-addon">
-							<span id="password-confirm-notify"><i class="fa fa-circle-o"></i></span>
+							<span id="password-confirm-notify"><span class="success hide"><i class="fa fa-check"></i></span><span class="error hide"></span><span class="default"><i class="fa fa-circle-o"></i></span></span>
 						</span>
 					</div>
 					<div class="form-actions">
@@ -142,6 +144,3 @@
 	<!-- IMPORT partials/modals/change_picture_modal.tpl -->
 	<!-- IMPORT partials/modals/upload_picture_from_url_modal.tpl -->
 </div>
-
-<!-- IMPORT partials/variables/account.tpl -->
-<!-- IMPORT partials/variables/account/edit.tpl -->

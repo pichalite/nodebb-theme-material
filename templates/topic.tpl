@@ -59,4 +59,3 @@
 	<!-- IMPORT partials/move_post_modal.tpl -->
 </div>
 <!-- IMPORT partials/noscript/paginator.tpl -->
-<!-- IMPORT partials/variables/topic.tpl -->

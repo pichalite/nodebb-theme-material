@@ -3,7 +3,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<h4 id="myModalLabel">[[user:change_picture]]</h4>
+				<h4 id="change-picture">[[user:change_picture]]</h4>
             </div>
             <div class="modal-body">
                 <div id="gravatar-box">
@@ -23,8 +23,9 @@
 					<br/>
 					<a id="uploadPictureBtn" href="#">[[user:upload_new_picture]]</a> <br/>
 					<!-- IF config.hasImageUploadPlugin -->
-					<a id="uploadFromUrlBtn" href="#">[[user:upload_new_picture_from_url]]</a>
+					<a id="uploadFromUrlBtn" href="#">[[user:upload_new_picture_from_url]]</a><br/>
 					<!-- ENDIF config.hasImageUploadPlugin -->
+					<a id="removeUploadedPictureBtn" href="#" class="<!-- IF !uploadedpicture -->hide<!-- ENDIF !uploadedpicture -->">[[user:remove_uploaded_picture]]</a>
 					<!-- ENDIF config.allowProfileImageUploads -->
             </div>
             <div class="modal-footer">

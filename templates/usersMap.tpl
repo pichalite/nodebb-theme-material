@@ -1,10 +1,10 @@
 <div class="users">
+	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<ul class="nav nav-pills tab-nav">
-		<li class=""><a href="{config.relative_path}/users/online">[[global:online]]</a></li>
-		<li class=""><a href="{config.relative_path}/users/latest">[[users:latest_users]]</a></li>
-		<li class=""><a href="{config.relative_path}/users/sort-posts">[[users:top_posters]]</a></li>
-		<li class=""><a href="{config.relative_path}/users/sort-reputation">[[users:most_reputation]]</a></li>
-		<li class="active"><a href="{config.relative_path}/users/map">[[users:map]]</a></li>
+		<li><a href="{config.relative_path}/users/online">[[global:online]]</a></li>
+		<li><a href="{config.relative_path}/users/sort-posts">[[users:top_posters]]</a></li>
+		<li><a href="{config.relative_path}/users/sort-reputation">[[users:most_reputation]]</a></li>
+		<li><a href="{config.relative_path}/users/map">[[users:map]]</a></li>
 		<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
 		<li><a href="{config.relative_path}/users/search">[[users:search]]</a></li>
 		<!-- ENDIF function.displayUserSearch -->

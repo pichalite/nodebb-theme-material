@@ -1,3 +1,4 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="pull-right account-username-box" data-userslug="{userslug}" data-uid="{uid}">
 	<ul class="nav nav-pills">
 		<!-- IF showHidden -->

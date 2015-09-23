@@ -21,17 +21,12 @@
     		<div class="lv-title" component="topic/header">
     			<strong><i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i></strong>
-				<!-- IF !topics.deleted -->
-				<a href="{config.relative_path}/topic/{topics.slug}"><span class="topic-title">{topics.title}</span>
-				</a>
-				<!-- ELSE -->
-				<!-- IF privileges.editable -->
+				<!-- IF !topics.noAnchor -->
 				<a href="{config.relative_path}/topic/{topics.slug}"><span class="topic-title">{topics.title}</span>
 				</a>
 				<!-- ELSE -->
 				<span class="topic-title">{topics.title}</span>
-				<!-- ENDIF privileges.editable -->
-				<!-- ENDIF !topics.deleted -->
+				<!-- ENDIF !topics.noAnchor -->
 			</div>
 
 			<!-- IF template.category -->
