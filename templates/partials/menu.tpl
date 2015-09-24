@@ -90,7 +90,7 @@
                         <div class="lv-header">
                             [[notifications:title]]
                         </div>
-                        <div class="lv-body c-overflow" id="notif-list">
+                        <div class="lv-body c-overflow" id="notif-list" component="notifications/list">
                             <a href="#" class="lv-item"><i class="fa fa-refresh fa-spin"></i> [[global:notifications.loading]]</a>
                         </div>
                         <div class="lv-footer">
