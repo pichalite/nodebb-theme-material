@@ -82,3 +82,94 @@
 	}	
 }
 
+[component="groups/container"] {
+	[component="groups/cover"] {
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 200px;
+		position: relative;
+		margin-bottom: 1em;
+
+		.change {
+			visibility: hidden;
+		}
+
+		&.initialised:hover {
+			.change {
+				.opacity(1);
+				visibility: visible;
+			}
+		}
+
+		&.active {
+			&:hover {
+				cursor: move;
+			}
+
+			.instructions {
+				.opacity(1);
+			}
+
+			.change {
+				display: none;
+			}
+
+			.save {
+				display: inline-block;
+			}
+		}
+
+		&.saving {
+			.save {
+				display: none;
+			}
+
+			.indicator {
+				display: inline-block;
+			}
+		}
+
+		.change, .save, .indicator {
+			display: inline-block;
+			position: absolute;
+			top: 1em;
+			right: 1em;
+			background: rgba(0, 0, 0, 0.2);
+			color: #eee;
+			padding: 0.5em;
+			border-radius: 5px;
+			font-weight: bold;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.change {
+			.opacity(0);
+			.transition(opacity .15s linear);
+		}
+
+		.save {
+			display: none;
+		}
+
+		.indicator {
+			display: none;
+		}
+
+		.instructions {
+			display: inline-block;
+			position: absolute;
+			right: 1em;
+			bottom: 1em;
+			background: rgba(0, 0, 0, 0.2);
+			color: #eee;
+			padding: 0.5em;
+			border-radius: 5px;
+			margin-top: 2em;
+			.opacity(0);
+			.transition(opacity .15s linear);
+		}
+	}
+}

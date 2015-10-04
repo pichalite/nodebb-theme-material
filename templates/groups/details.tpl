@@ -1,6 +1,16 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div component="groups/container" class="groups details row">
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-xs-12">
+		<div class="card">
+			<div class="card-body" component="groups/cover" style="background-origin: content-box; background-image: url({group.cover:url}); background-position: {group.cover:position};">
+				<div class="change">[[groups:cover-change]] <i class="fa fa-fw fa-pencil-square-o"></i></div>
+				<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
+				<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
+				<div class="instructions">[[groups:cover-instructions]]</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-5 col-xs-12">
 		<div class="card">
 			<div class="card-header ch-alt">
 				<i class="fa fa-list-ul"></i> [[groups:details.title]]
@@ -150,7 +160,7 @@
 		<!-- ENDIF group.isOwner -->
 		<div widget-area="left"></div>
 	</div>
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-lg-7 col-xs-12">
 		<!-- IF group.isOwner -->
 		<div class="card">
 			<div class="card-header ch-alt pointer" data-toggle="collapse" data-target=".options">
