@@ -55,7 +55,7 @@
 	<!-- BEGIN children -->
 	<div class="<!-- IF children.class -->{children.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF children.class -->">
 		<div class="new-card" style="{function.generateCategoryBackground}">
-			<a href="<!-- IF children.link -->{children.link}<!-- ELSE -->{config.relative_path}/category/{children.slug}<!-- ENDIF children.link-->" itemprop="url" <!-- IF children.link -->target="_blank"<!-- ENDIF children.link-->>
+			<a href="<!-- IF children.link -->{children.link}<!-- ELSE -->{config.relative_path}/category/{children.slug}<!-- ENDIF children.link-->" itemprop="url" <!-- IF children.link -->target="_blank"<!-- ENDIF children.link -->>
 				<div class="new-card-body">
 					<ul class="category-counts pull-right">
 	                    <li>

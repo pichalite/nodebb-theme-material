@@ -1,4 +1,4 @@
-#chat-main {
+/*#chat-main {
 	position:relative;
 
 	&:before {
@@ -352,4 +352,326 @@
 	padding-left: 0px;
 	padding-top: 10px;
 	padding-bottom: 20px;
+}*/
+
+#messages-main {
+  position: relative;
+}
+
+#messages-main:before,
+#messages-main:after {
+  content: " ";
+  display: table;
+}
+
+#messages-main:after {
+  clear: both;
+}
+
+#messages-main:before,
+#messages-main:after {
+  content: " ";
+  display: table;
+}
+
+#messages-main:after {
+  clear: both;
+}
+
+#messages-main .ms-block {
+  padding: 0px 20px 0;
+}
+
+#messages-main .ms-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #F8F8F8;
+  border-right: 1px solid #EEE;
+  padding-bottom: 50px;
+  height: 100%;
+  width: 240px;
+  -webkit-transition: all;
+  -o-transition: all;
+  transition: all;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+}
+
+@media (max-width: 767px) {
+  #messages-main .ms-menu {
+    height: ~"calc(100% - 58px)";
+    -webkit-transform: translate3d(-240px, 58px, 0);
+    transform: translate3d(-240px, 58px, 0);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    z-index: 1;
+  }
+
+  #messages-main .ms-menu.toggled {
+    -webkit-transform: translate3d(0, 58px, 0);
+    transform: translate3d(0, 58px, 0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+
+#messages-main .ms-menu .lv-item {
+  	padding-left: 20px;
+  	padding-right: 20px;
+}
+
+#messages-main .ms-menu .lv-item.bg-primary {
+  	background: #fff;
+
+  	.lv-small {
+  		color: #000;
+  	}
+}
+
+#messages-main .ms-menu .lv-item:not(.bg-primary):hover {
+  	background: #F2F2F2;
+  	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  #messages-main .ms-body {
+    padding-left: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  #messages-main .ms-body {
+    overflow: hidden;
+  }
+}
+
+#messages-main .ms-user:before,
+#messages-main .ms-user:after {
+  content: " ";
+  display: table;
+}
+
+#messages-main .ms-user:after {
+  clear: both;
+}
+
+#messages-main .ms-user:before,
+#messages-main .ms-user:after {
+  content: " ";
+  display: table;
+}
+
+#messages-main .ms-user:after {
+  clear: both;
+}
+
+#messages-main .ms-user > img {
+  border-radius: 50%;
+  width: 40px;
+  float: left;
+}
+
+#messages-main .ms-user > div {
+  overflow: hidden;
+  padding: 7px 5px 7px 15px;
+  font-size: 11px;
+}
+
+#messages-main #ms-compose {
+  position: fixed;
+  bottom: 120px;
+  z-index: 1;
+  right: 30px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+}
+
+#ms-menu-trigger {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  float: left;
+  margin: 1px 0 0 -7px;
+}
+
+@media (min-width: 768px) {
+  #ms-menu-trigger {
+    display: none;
+  }
+}
+
+#ms-menu-trigger .line-wrap .line {
+  background-color: #717171;
+}
+
+.card.chat-card {
+	background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+
+#messages-main {
+
+	.lvh-label {
+		color: #818181;
+		display: inline-block;
+		margin: 0;
+		font-size: 14px;
+		font-weight: normal;
+		padding: 0 6px;
+		line-height: 33px;
+		vertical-align: middle;
+		float: left;
+	}
+
+	.c-black {
+		color: #000;
+	}
+
+	.lv-body.chat-content {
+		padding-left: 0px;
+	}
+
+	ul.chats-list {
+		padding-left: 0px;
+	}
+/*
+ * For Message
+ */
+
+.lv-message .lv-item {
+  padding: 20px;
+}
+
+.lv-message .lv-item.right {
+  text-align: right;
+}
+
+.lv-message .lv-item.right .lv-avatar {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+.lv-message .lv-item:not(.right) .ms-item {
+  	background: #00BCD4;
+  	color: #fff;
+}
+
+.lv-message .lv-item.right .ms-item {
+  background: #eee;
+}
+
+.lv-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #FFF;
+  text-align: center;
+  line-height: 34px;
+  font-size: 15px;
+  margin-right: 15px;
+  padding: 0 !important;
+  text-transform: uppercase;
+}
+
+.lv-avatar > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+.ms-item {
+  padding: 7px 12px 9px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .ms-item {
+    max-width: 70%;
+  }
+}
+
+.ms-date {
+  display: block;
+  color: #B3B3B3;
+  margin-top: 7px;
+}
+
+.ms-date > i {
+  font-size: 11px;
+  line-height: 100%;
+}
+
+.ms-reply {
+  position: relative;
+  margin: 0 !important;
+}
+
+.ms-reply textarea {
+  width: 100%;
+  font-size: 13px;
+  border: 0;
+  padding: 10px 8px;
+  resize: none;
+  height: 40px;
+}
+
+	.ms-reply button {
+	  	position: absolute;
+	  	top: 0;
+	  	right: 0;
+	  	border: 0;
+	  	height: 100%;
+	  	width: 60px;
+	  	font-size: 25px;
+	  	background: #F5F5F5;
+	  	color: #2196f3;
+	}
+
+	.ms-reply button:hover {
+	  	background: #f2f2f2;
+	}
+
+	.listview .lv-header-alt {
+		padding: 14px;
+	}
+
+	.lv-actions {
+		font-size: 18px;
+		padding: 5px;
+		color: #999;
+
+		&:hover {
+			cursor: pointer;
+			color: #333;
+		}
+	}
+
+}
+
+.m-t-20 {
+    margin-top: 20px !important;
+}
+
+.ms-body.expanded-chat ul {
+	margin-bottom: 0px;
+}
+
+#messages-main .lv-item.media .ms-item > p {
+	margin: 0px;
+}
+
+#messages-main .listview.lv-message .lv-body {
+	max-height: 315px;
+	min-height: 315px;
+	overflow-x: auto; 
+}
+
+#messages-main .listview .lv-footer {
+	padding: 5px 10px;
 }

@@ -44,7 +44,13 @@
 					<!-- BEGIN members -->
 					<tr data-uid="{group.members.uid}">
 						<td>
-							<a href="{config.relative_path}/user/{group.members.userslug}"><img src="{group.members.picture}" /></a>
+							<a href="{config.relative_path}/user/{group.members.userslug}">
+								<!-- IF group.members.picture -->
+								<img src="{group.members.picture}" />
+								<!-- ELSE -->
+								<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
+								<!-- ENDIF group.members.picture -->
+							</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a> <i title="[[groups:owner]]" class="fa fa-star text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>
@@ -100,7 +106,13 @@
 					<!-- BEGIN pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
-							<a href="{config.relative_path}/user/{group.pending.userslug}"><img src="{group.pending.picture}" /></a>
+							<a href="{config.relative_path}/user/{group.pending.userslug}">
+								<!-- IF group.pending.picture -->
+								<img src="{group.pending.picture}" />
+								<!-- ELSE -->
+								<div class="user-icon" style="background-color: {group.pending.icon:bgColor};">{group.pending.icon:text}</div>
+								<!-- ENDIF group.pending.picture -->
+							</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
@@ -137,7 +149,13 @@
 					<!-- BEGIN invited -->
 					<tr data-uid="{group.invited.uid}">
 						<td>
-							<a href="{config.relative_path}/user/{group.invited.userslug}"><img src="{group.invited.picture}" /></a>
+							<a href="{config.relative_path}/user/{group.invited.userslug}">
+								<!-- IF group.invited.picture -->
+								<img src="{group.invited.picture}" />
+								<!-- ELSE -->
+								<div class="user-icon" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
+								<!-- ENDIF group.invited.picture -->
+							</a>
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
@@ -164,8 +182,8 @@
 		<!-- IF group.isOwner -->
 		<div class="card">
 			<div class="card-header ch-alt pointer" data-toggle="collapse" data-target=".options">
-					<i class="fa fa-caret-down pull-right"></i>
-					<i class="fa fa-cogs"></i> [[groups:details.owner_options]]			
+				<i class="fa fa-caret-down pull-right"></i>
+				<i class="fa fa-cogs"></i> [[groups:details.owner_options]]			
 			</div>
 
 			<div class="card-body card-padding options collapse">
@@ -208,14 +226,14 @@
 					<hr />
 					<div class="checkbox">
 						<label>
-							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->> 
+							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->> 
 							<i class="input-helper"></i>
 							[[groups:details.userTitleEnabled]]
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private-->> 
+							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->> 
 							<i class="input-helper"></i>
 							[[groups:details.private]]
 						</label>
@@ -223,7 +241,7 @@
 					<small class="help-block">[[groups:details.private_help]]</small>
 					<div class="checkbox">
 	                    <label>
-	                        <input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden-->>
+	                        <input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->>
 	                        <i class="input-helper"></i>
 	                        [[groups:details.hidden]]
 	                    </label>

@@ -4,7 +4,6 @@
 		<li><a href="{config.relative_path}/users/online">[[global:online]]</a></li>
 		<li><a href="{config.relative_path}/users/sort-posts">[[users:top_posters]]</a></li>
 		<li><a href="{config.relative_path}/users/sort-reputation">[[users:most_reputation]]</a></li>
-		<li><a href="{config.relative_path}/users/map">[[users:map]]</a></li>
 		<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
 		<li><a href="{config.relative_path}/users/search">[[users:search]]</a></li>
 		<!-- ENDIF function.displayUserSearch -->
@@ -30,7 +29,7 @@
 		<!-- IMPORT partials/users_list.tpl -->
 		<!-- IF anonymousUserCount -->
 		<li class="users-box anon-user">
-			<img class="user-picture" src="{defaultGravatar}" />
+			<div class="user-icon">G</div>
 			<br/>
 			<div class="user-info">
 				<span id="online_anon_count">{anonymousUserCount}</span>

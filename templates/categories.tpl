@@ -2,7 +2,11 @@
 	<!-- BEGIN categories -->
 	<div class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="new-card" style="{function.generateCategoryBackground}">
-			<a href="<!-- IF categories.link -->{categories.link}<!-- ELSE -->{config.relative_path}/category/{categories.slug}<!-- ENDIF categories.link-->" itemprop="url" <!-- IF categories.link -->target="_blank"<!-- ENDIF categories.link-->>
+			<!-- IF categories.link -->
+				<a href="{categories.link}" itemprop="url" target="_blank" >
+			<!-- ELSE -->
+				<a href="{config.relative_path}/category/{categories.slug}" itemprop="url" >
+			<!-- ENDIF categories.link -->
 				<div class="new-card-body">
 					<ul class="category-counts pull-right">
 	                    <li>
@@ -25,7 +29,11 @@
 				<div component="category/posts">
 					<div class="pull-left hidden-xs user-avatar">
 				    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
-				        	<img class="user-picture" src="{categories.posts.user.picture}" title="{categories.posts.user.username}">
+				        	<!-- IF categories.posts.user.picture -->
+		                    <img src="{categories.posts.user.picture}" alt="{categories.posts.user.username}" />
+		                    <!-- ELSE -->
+		                    <div class="user-icon" style="background-color: {categories.posts.user.icon:bgColor};">{categories.posts.user.icon:text}</div>
+		                    <!-- ENDIF categories.posts.user.picture -->
 				    	</a>
 					</div>
 					<div class="topic-title">
