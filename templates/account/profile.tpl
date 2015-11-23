@@ -4,9 +4,9 @@
 		<div class="card-body cover" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
 			<!-- IF isSelf -->
 			<div class="controls">
-				<span class="upload"><i class="fa fa-fw fa-4x fa-upload"></i></span>
-				<span class="resize"><i class="fa fa-fw fa-4x fa-arrows"></i></span>
-				<span class="remove"><i class="fa fa-fw fa-4x fa-times"></i></span>
+				<span class="upload"><i class="fa fa-fw fa-3x fa-upload"></i></span>
+				<span class="resize"><i class="fa fa-fw fa-3x fa-arrows"></i></span>
+				<span class="remove"><i class="fa fa-fw fa-3x fa-times"></i></span>
 			</div>
 			<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 			<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
@@ -16,12 +16,11 @@
 		<div class="card-footer">
 			<div class="profile-pic">
 	        <div class="user-icon profile-header-img" style="<!-- IF picture -->background-image: url({picture});  background-size: cover; background-repeat: no-repeat; background-position: center center;<!-- ELSE -->background-color: {icon:bgColor};<!-- ENDIF picture -->"><!-- IF !picture -->{icon:text}<!-- ENDIF !picture -->
+	        	
+	        	<div class="option profile"><a href="{config.relative_path}/user/{userslug}"><i class="fa fa-user"></i></a></div>
 	        	<!-- IF showHidden -->
-		        <div class="option love"><a href="{config.relative_path}/user/{userslug}/edit"><i class="fa fa-edit"></i></a></div>
-		        <!-- ENDIF showHidden -->
-		        <div class="option reply"><a href="{config.relative_path}/user/{userslug}"><i class="fa fa-user"></i></a></div>
-		        <!-- IF showHidden -->
-		        <div class="option delete"><a href="{config.relative_path}/user/{userslug}/settings"><i class="fa fa-gear"></i></a></div>
+		        <div class="option edit"><a href="{config.relative_path}/user/{userslug}/edit"><i class="fa fa-edit"></i></a></div>
+		        <div class="option settings"><a href="{config.relative_path}/user/{userslug}/settings"><i class="fa fa-gear"></i></a></div>
 		        <!-- ENDIF showHidden -->
 		        <div class="close"><i class="fa fa-close"></i></div>
 	        </div>

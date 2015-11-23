@@ -354,6 +354,63 @@
 	padding-bottom: 20px;
 }*/
 
+.chat-list {
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px 10px 0px 10px;
+
+    li {
+    	margin-bottom: 10px;
+
+    	a {
+    		color: inherit;
+
+    		.status {
+    			background-color: inherit;
+    			vertical-align: inherit;
+    			position: absolute;
+			    left: 35px;
+
+    			&.online {
+					color: #060;
+				}
+
+				&.away {
+					color: #cc0;
+				}
+
+				&.dnd {
+					color: #900;
+				}
+
+				&.offline {
+					color: gray;
+				}
+    		}
+    	}
+    }
+
+    img {
+	    border-radius: 50%;
+	    width: 32px;
+	    height: 32px;
+	    margin-right: 10px;
+	}
+
+	.user-icon {
+		width: 32px;
+	    height: 32px;
+	    line-height: 32px;
+		margin-right: 10px;
+	}
+}
+
+.chats .listview .lv-footer {
+	margin-top: 0px;
+    min-height: inherit;
+}
+
 #messages-main {
   position: relative;
 }
