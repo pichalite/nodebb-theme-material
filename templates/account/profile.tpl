@@ -15,10 +15,7 @@
 
 		<div class="card-footer">
 			<div class="profile-pic">
-			<!-- IF picture -->
-	        <img src="{picture}" class="user-icon profile-header-img" />
-	        <!-- ELSE -->
-	        <div class="user-icon profile-header-img" style="background-color: {icon:bgColor};">{icon:text}
+	        <div class="user-icon profile-header-img" style="<!-- IF picture -->background-image: url({picture});  background-size: cover; background-repeat: no-repeat; background-position: center center;<!-- ELSE -->background-color: {icon:bgColor};<!-- ENDIF picture -->"><!-- IF !picture -->{icon:text}<!-- ENDIF !picture -->
 	        	<!-- IF showHidden -->
 		        <div class="option love"><a href="{config.relative_path}/user/{userslug}/edit"><i class="fa fa-edit"></i></a></div>
 		        <!-- ENDIF showHidden -->
@@ -75,9 +72,6 @@
 	<div class="row">
 		<div class="col-md-4">
 			<div class="card">
-				<div class="card-header ch-alt">
-					
-				</div>
 				<div class="card-body card-padding">
 					<!-- IF email -->
 					<div class="profile-label">[[user:email]] <i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> <strong>{email}</strong></div>
