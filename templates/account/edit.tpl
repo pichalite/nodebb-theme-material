@@ -1,5 +1,6 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="account edit-account">
-	<!-- IMPORT partials/account_menu.tpl -->
+	<!-- IMPORT partials/account/header.tpl -->
 	<div class="row">
 		<div class="col-md-2">
 			<div class="account-picture-block text-center">

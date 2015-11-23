@@ -1,5 +1,6 @@
-<!-- IMPORT partials/account_menu.tpl -->
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="users account user-followers">
+	<!-- IMPORT partials/account/header.tpl -->
 	<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
 		<!-- IMPORT partials/users_list.tpl -->
 	</ul>

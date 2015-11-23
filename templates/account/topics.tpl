@@ -1,11 +1,16 @@
-<!-- IMPORT partials/account_menu.tpl -->
+<!-- IMPORT partials/breadcrumbs.tpl -->
 
-<div class="user-topics">
+<div class="account user-topics">
+	<!-- IMPORT partials/account/header.tpl -->
+
 	<!-- IF !topics.length -->
 	<div class="alert alert-warning">[[user:has_no_topics]]</div>
 	<!-- ELSE -->
 	<div class="category">
 		<div class="card">
+			<div class="card-header ch-alt">
+				[[pages:{template.name}, {username}]]
+			</div>
 			<div class="listview lv-bordered lv-lg">
 				<!-- IMPORT partials/topics_list.tpl -->
 			</div>

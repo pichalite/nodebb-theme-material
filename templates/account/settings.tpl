@@ -1,5 +1,6 @@
-<!-- IMPORT partials/account_menu.tpl -->
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="account settings">
+	<!-- IMPORT partials/account/header.tpl -->
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="card">
