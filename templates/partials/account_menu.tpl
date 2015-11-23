@@ -1,8 +1,8 @@
-<div class="btn-group">
-	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-		Account Menu  <span class="caret"></span>
+<div class="btn-group account-fab">
+	<button type="button" class="btn btn-primary btn-icon dropdown-toggle" data-toggle="dropdown">
+		<i class="fa fa-ellipsis-v"></i>
 	</button>
-	<ul class="dropdown-menu" role="menu">
+	<ul class="dropdown-menu pull-right" role="menu">
 		<li><a href="{config.relative_path}/user/{userslug}/following"><i class="fa fa-fw fa-users"></i> [[user:following]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/followers"><i class="fa fa-fw fa-users"></i> [[user:followers]]</a></li>
 		<li class="divider"></li>
