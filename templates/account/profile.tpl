@@ -74,18 +74,73 @@
 			<div class="card">
 				<div class="card-body card-padding">
 					<!-- IF email -->
-					<div class="profile-label">[[user:email]] <i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> <strong>{email}</strong></div>
+					<div class="profile-label">[[user:email]]</div>
+					<div><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</div>
 					<!-- ENDIF email -->
 
+					<!-- IF fullname -->
+					<div class="profile-label">[[user:fullname]]</div>
+					<div>{fullname}</div>
+					<!-- ENDIF fullname -->
+
 					<!-- IF websiteName -->
-					<div class="profile-label">[[user:website]] <a href="{websiteLink}"><strong>{websiteName}</strong></a></div>
+					<div class="profile-label">[[user:website]]</div>
+					<div><a href="{websiteLink}">{websiteName}</a></div>
 					<!-- ENDIF websiteName -->
 
-					<div class="profile-label">[[user:joined]] <strong class="timeago" title="{joindateISO}"></strong></div>
+					<!-- IF location -->
+					<div class="profile-label">[[user:location]]</div>
+					<div>{location}</div>
+					<!-- ENDIF location -->
 
-					<div class="profile-label">[[user:lastonline]] <strong class="timeago" title="{lastonlineISO}"></strong></div>
+					<!-- IF age -->
+					<div class="profile-label">[[user:age]]</div>
+					<div>{age}</div>
+					<!-- ENDIF age -->
+
+					<div class="profile-label">[[user:joined]]</div>
+					<div class="timeago account-bio-value" title="{joindateISO}"></div>
+
+					<div class="profile-label">[[user:lastonline]]</div>
+					<div class="timeago account-bio-value" title="{lastonlineISO}"></div>
+
+					<!-- IF !disableSignatures -->
+					<!-- IF signature -->
+					<hr/>
+					<div class="profile-label">[[user:signature]]</div>
+					<div class="post-signature">
+						<span id='signature'>{signature}</span>
+					</div>
+					<!-- ENDIF signature -->
+					<!-- ENDIF !disableSignatures -->
 				</div>
 			</div>
+
+			<!-- IF aboutme -->
+			<div class="card">
+				<div class="card-header ch-alt">
+					<i class="fa fa-info"></i> [[user:aboutme]]
+				</div>
+				<div class="card-body card-padding">
+					<div component="aboutme" class="text-center">
+					{aboutme}
+					</div>
+				</div>
+			</div>
+			<!-- ENDIF aboutme -->
+
+			<!-- IF ips.length -->
+			<div class="card">
+				<div class="card-header ch-alt">
+					<i class="fa fa-laptop"></i> [[global:recentips]]
+				</div>
+				<div class="card-body card-padding">
+				<!-- BEGIN ips -->
+					<div>{ips.ip}</div>
+				<!-- END ips -->
+				</div>
+			</div>
+			<!-- ENDIF ips.length -->
 		</div>
 		<div class="col-md-8 user-recent-posts">
 			<div class="card">
