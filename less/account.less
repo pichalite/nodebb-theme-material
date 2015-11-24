@@ -85,7 +85,7 @@
 .user-icon.profile-header-img {
 	position: absolute;
     left: 46px;
-    top: -35px;
+    top: -90px;
     height: 120px;
     width: 120px;
     font-size: 5rem;
@@ -95,12 +95,12 @@
 .user-profile-view {
 	.card-footer {
 		position: relative;
-		padding: 20px 20px 30px 180px;
+		padding: 20px 20px 20px 180px;
 
 		.status {
 			left: 143px;
 		    position: absolute;
-		    top: 50px;
+		    top: 0px;
 		    border: 1px solid #fff;
 		    height: 18px;
 		    width: 18px;
@@ -109,9 +109,12 @@
 
 		.user-info {
 			float: left;
-			margin-top: -20px;
+			position: absolute;
+    		top: -50px;
+
 
 			h3 {
+				color: #fff;
 				font-size: 20px;
 			}
 
@@ -121,7 +124,7 @@
 
 			@media (max-width: @screen-xs-max) {
 			    position: absolute;
-			    top: 100px;
+			    top: 10px;
 			    left: 46px;
 			    min-width: 120px;
 			}

@@ -10,7 +10,7 @@
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header ch-alt">
-					[[pages:{template.name}, {username}]]
+					<i class="fa fa-fw fa-pencil"></i> [[pages:{template.name}, {username}]]
 				</div>
 				<!-- IMPORT partials/posts_list.tpl -->
 			</div>

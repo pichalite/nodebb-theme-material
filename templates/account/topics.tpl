@@ -9,7 +9,7 @@
 	<div class="category">
 		<div class="card">
 			<div class="card-header ch-alt">
-				[[pages:{template.name}, {username}]]
+				<i class="fa fa-fw fa-book"></i> [[pages:{template.name}, {username}]]
 			</div>
 			<div class="listview lv-bordered lv-lg">
 				<!-- IMPORT partials/topics_list.tpl -->

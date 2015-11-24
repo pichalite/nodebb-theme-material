@@ -57,13 +57,9 @@
 				<span class="stat-label">[[user:following]]</span>
 			</div>
 		</div>
-		<!-- ELSE -->
-		<div class="account-stats">
-		<br /> <br />
-		</div>
 		<!-- ENDIF template.account/profile -->
 		
-		<!-- IMPORT partials/account_menu.tpl -->
+		<!-- IMPORT partials/account/menu.tpl -->
 
 		<div class="user-info">
 	        <h3 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h3>

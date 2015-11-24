@@ -1,13 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="card chat-card" id="messages-main">
     <div class="ms-menu">
-        <div class="ms-block">
-            <div class="ms-user">
-                <img src="">
-                <div>Signed in as <br> m-hollaway@gmail.com</div>
-            </div>
-        </div>
-        <ul component="chat/recent" class="listview lv-user m-t-20 chats-list">
+        <ul component="chat/recent" class="listview lv-user chats-list">
             <!-- BEGIN chats -->
             <li class="lv-item media<!-- IF chats.unread --> unread<!-- ENDIF chats.unread -->" data-username="{chats.username}" data-uid="{chats.uid}">
                 <div class="lv-avatar pull-left">
