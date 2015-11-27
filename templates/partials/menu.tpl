@@ -1,5 +1,10 @@
 <div id="header-menu">
 <header id="header">
+    <div class="material-load-bar">
+      <div class="material-bar"></div>
+      <div class="material-bar"></div>
+      <div class="material-bar"></div>
+    </div>
     <ul class="header-inner">
         <li id="menu-trigger" data-trigger="#sidebar">
             <div class="line-wrap <!-- IF config.menuInHeader -->visible-xs<!-- ENDIF config.menuInHeader -->">
