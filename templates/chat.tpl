@@ -3,7 +3,7 @@
 		<div class="modal-content listview lv-message">
 			<div class="modal-header">
 				<button type="button" class="close hidden-xs" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
-				<h4><i component="user/status" class="fa fa-circle status offline" title="[[global:offline]]"></i>
+				<h4><i component="user/status" class="status offline" title="[[global:offline]]"></i>
 					[[modules:chat.chatting_with]] 
 					<span class="user-typing hide"><i class="fa fa-keyboard-o fa-fw"></i></span>
 				</h4>
