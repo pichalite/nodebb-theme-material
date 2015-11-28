@@ -112,10 +112,14 @@
 			position: absolute;
     		top: -50px;
 
-
 			h3 {
 				color: #fff;
 				font-size: 20px;
+
+				@media (max-width: @screen-xs-max) {
+					color: #000;
+					margin-top: 10px;
+				}
 			}
 
 			h4 {
@@ -124,8 +128,8 @@
 
 			@media (max-width: @screen-xs-max) {
 			    position: absolute;
-			    top: 10px;
-			    left: 46px;
+			    top: 0px;
+			    left: 170px;
 			    min-width: 120px;
 			}
 		}
@@ -260,4 +264,8 @@
 	border-radius: 50%;
 	font-size: 5rem;
 	line-height: 128px;
+}
+
+.account.change-username #change-username, .account.change-password #change-password, .account.change-email #change-email {
+	padding: 10px;
 }

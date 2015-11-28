@@ -10,13 +10,25 @@
 				<div class="user-icon user-profile-picture" style="background-color: {icon:bgColor};">{icon:text}</div>
 				<!-- ENDIF picture -->
 				<br /><br />
-				<a id="changePictureBtn" href="#" class="btn btn-primary">[[user:change_picture]]</a>
-				<br/><br/>
-				<!-- IF config.allowAccountDelete -->
-				<!-- IF isSelf -->
-				<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete_account]]</a><br/><br/>
-				<!-- ENDIF isSelf -->
-				<!-- ENDIF config.allowAccountDelete -->
+				
+				<li class="dropdown">
+					<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+						<span><i class="fa fa-fw fa-exchange"></i></span>
+						<span class="caret"></span>
+					</button>
+
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a id="changePictureBtn" href="#">[[user:change_picture]]</a></li>
+						<!-- IF !username:disableEdit -->
+						<li><a href="{config.relative_path}/user/{userslug}/edit/username">[[user:change_username]]</a></li>
+						<!-- ENDIF !username:disableEdit -->
+						<li><a href="{config.relative_path}/user/{userslug}/edit/email">[[user:change_email]]</a></li>
+						<li><a href="{config.relative_path}/user/{userslug}/edit/password">[[user:change_password]]</a></li>
+					</ul>
+				</li>
+
+				<br />
+				
 				<!-- IF config.requireEmailConfirmation -->
 				<!-- IF email -->
 				<!-- IF isSelf -->
@@ -24,6 +36,12 @@
 				<!-- ENDIF isSelf -->
 				<!-- ENDIF email -->
 				<!-- ENDIF config.requireEmailConfirmation -->
+
+				<!-- IF config.allowAccountDelete -->
+				<!-- IF isSelf -->
+				<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete_account]]</a><br/><br/>
+				<!-- ENDIF isSelf -->
+				<!-- ENDIF config.allowAccountDelete -->
 			</div>
 		</div>
 
