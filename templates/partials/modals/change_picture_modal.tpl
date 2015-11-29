@@ -19,16 +19,20 @@
 	<!-- END pictures -->
 </div>
 
-<div class="btn-group-justified" role="group">
-
+<div class="btn-group btn-group-justified" role="group">
 	<!-- IF config.allowProfileImageUploads -->
-	<a id="uploadPictureBtn" href="#" data-action="upload">[[user:upload_new_picture]]</a>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-default" data-action="upload">[[user:upload_new_picture]]</button>
+	</div>
 	<!-- ENDIF config.allowProfileImageUploads -->
 	<!-- IF config.hasImageUploadPlugin -->
-	<a id="uploadFromUrlBtn" href="#" data-action="upload-url">[[user:upload_new_picture_from_url]]</a><br/>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-default" data-action="upload-url">[[user:upload_new_picture_from_url]]</button>
+	</div>
 	<!-- ENDIF config.hasImageUploadPlugin -->
 	<!-- IF uploaded -->
-	<a id="removeUploadedPictureBtn" href="#" data-action="remove-uploaded">[[user:remove_uploaded_picture]]</a>
+	<div class="btn-group" role="group">
+		<button type="button" class="btn btn-default" data-action="remove-uploaded">[[user:remove_uploaded_picture]]</button>
+	</div>
 	<!-- ENDIF uploaded -->
-
 </div>
