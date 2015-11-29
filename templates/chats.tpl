@@ -20,6 +20,7 @@
         </ul>
     </div>
 
+    <!-- IF meta -->
     <div component="chat/messages" class="ms-body expanded-chat" data-uid="{meta.uid}" data-username="{meta.username}">
         <div class="listview lv-message">
             <div class="lv-header-alt clearfix">
@@ -43,13 +44,7 @@
             </div>
             
             <ul class="lv-body chat-content">
-                <!-- IF meta -->
-                <!-- IMPORT partials/chat_messages.tpl -->
-                <!-- ELSE -->
-                <div class="alert alert-info">
-                    [[modules:chat.no-messages]]
-                </div>
-                <!-- ENDIF meta -->
+            <!-- IMPORT partials/chat_messages.tpl -->
             </ul>
             
             <div class="lv-footer ms-reply">
@@ -59,4 +54,25 @@
             </div>
         </div>
     </div>
+    <!-- ELSE -->
+    <div class="ms-body expanded-chat">
+        <div class="listview lv-message">
+            <div class="lv-header-alt clearfix">
+                <div id="ms-menu-trigger" class="">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <ul class="lv-body chat-content">
+            <div class="alert alert-info">
+                [[modules:chat.no-messages]]
+            </div>
+            </ul>
+        </div>
+    </div>
+    <!-- ENDIF meta -->
+
 </div>
