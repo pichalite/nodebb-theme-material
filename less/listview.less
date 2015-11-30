@@ -226,13 +226,13 @@
 
 @media (max-width: @screen-xs-max) {
 	.listview.lv-lg .lv-item {
-		padding:10px 15px 10px 15px;
+		padding:10px 15px;
 	}
 }
 
 @media (min-width: @screen-sm-min) {
 	.listview.lv-lg .lv-item {
-		padding:10px 25px 10px 25px;
+		padding:10px 25px;
 	}
 }
 
@@ -263,4 +263,10 @@
 	.listview .lv-title, .listview .lv-item .lv-small {
 		white-space: inherit;
 	}	
+}
+
+.category, .recent {
+	.listview .lv-item .media-body .lv-title {
+    	padding-bottom: 5px;
+    }
 }

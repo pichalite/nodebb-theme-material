@@ -71,7 +71,7 @@
             <!-- IF config.searchEnabled -->
             <li>
                 <form id="search-form" class="hidden-xs" role="search" method="GET" action="">
-                    <div class="hide" id="search-fields">
+                    <div class="hidden" id="search-fields">
                         <div class="form-group">
                             <div class="fg-line">
                                 <input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">

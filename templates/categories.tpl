@@ -37,7 +37,7 @@
 				    	</a>
 					</div>
 					<div class="topic-title">
-						<a href="{config.relative_path}/topic/{categories.posts.topic.slug}">{categories.posts.topic.title}</a>
+						<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}">{categories.posts.topic.title}</a>
 					</div>
 				</div>
 				<!-- END posts -->
