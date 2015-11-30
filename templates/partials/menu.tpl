@@ -41,14 +41,13 @@
 
         <li class="pull-right">
         <ul class="top-menu">
-
             <li class="nav navbar-nav pagination-block invisible visible-lg visible-md">
                 <div class="dropdown">
                     <i class="fa fa-angle-double-up pointer fa-fw pagetop"></i>
                     <i class="fa fa-angle-up pointer fa-fw pageup"></i>
 
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span id="pagination"></span>
+                        <span class="pagination-text"></span>
                     </a>
 
                     <i class="fa fa-angle-down pointer fa-fw pagedown"></i>

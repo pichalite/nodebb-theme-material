@@ -1,5 +1,5 @@
 <div component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
-    <a component="post/anchor" name="{posts.index}"></a>
+    <a component="post/anchor" data-index="{posts.index}"></a>
     <meta itemprop="datePublished" content="{posts.relativeTime}">
     <meta itemprop="dateModified" content="{posts.relativeEditTime}">
 
@@ -50,8 +50,8 @@
                         [[global:posted_ago, <a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.relativeTime}"></span></a>]]
 
                         <span class="post-tools">
-                            <a component="post/reply" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>[[topic:reply]]</a>
-                            <a component="post/quote" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>[[topic:quote]]</a>
+                            <a component="post/reply" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>[[topic:reply]]</a>
+                            <a component="post/quote" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>[[topic:quote]]</a>
                         </span>
                     </span>
                 </div>
