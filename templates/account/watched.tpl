@@ -1,12 +1,17 @@
-<!-- IMPORT partials/account_menu.tpl -->
+<!-- IMPORT partials/breadcrumbs.tpl -->
 
-<div class="user-watched-topics">
+<div class="account user-watched-topics">
+	<!-- IMPORT partials/account/header.tpl -->
+
 	<!-- IF !topics.length -->
 		<div class="alert alert-warning">[[user:has_no_watched_topics]]</div>
 	<!-- ELSE -->
 
 	<div class="category">
 		<div class="card">
+			<div class="card-header ch-alt">
+				<i class="fa fa-fw fa-eye"></i> [[pages:{template.name}, {username}]]
+			</div>
 			<div class="listview lv-bordered lv-lg">
 				<!-- IMPORT partials/topics_list.tpl -->
 			</div>

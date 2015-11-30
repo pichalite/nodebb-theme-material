@@ -16,7 +16,7 @@
 						<a href="{config.relative_path}/user/{notifications.user.userslug}"><img class="lv-img" src="{notifications.image}" /></a>
 						<!-- ENDIF notifications.from -->
 						<!-- ELSE -->
-						<img class="lv-img" src="{notifications.image}" />
+						<a href="{config.relative_path}/user/{notifications.user.userslug}"><div class=" user-icon lv-img" style="background-color: {notifications.user.icon:bgColor};">{notifications.user.icon:text}</div></a>
 						<!-- ENDIF notifications.image -->
 					</div>
 					<div class="media-body">

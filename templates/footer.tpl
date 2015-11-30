@@ -1,9 +1,8 @@
-	</div><!--END container -->
+	</div><!-- END container -->
 
-	<div class="hide tpl-500">
-	<!-- IMPORT 500.tpl -->
+	<div class="hide">
+	<!-- IMPORT 500-embed.tpl -->
 	</div>
-	<!-- IMPORT partials/modals/upload_picture_modal.tpl -->
 
 	<div class="topic-search hidden">
 		<div class="btn-group">
@@ -12,10 +11,8 @@
 			<button type="button" class="btn btn-default next"><i class="fa fa-fw fa-angle-down"></i></button>
 		</div>
 	</div>
-	<div class="alert-window alert-left-top"></div>
-	<div class="alert-window alert-left-bottom"></div>
-	<div class="alert-window alert-right-top"></div>
-	<div class="alert-window alert-right-bottom"></div>
+	
+	<div component="toaster/tray" class="alert-window"></div>
 
 	<script>
 		require(['forum/footer']);

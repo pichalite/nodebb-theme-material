@@ -38,31 +38,28 @@
 }
 
 .status {
+
+	display: inline-block;
+	border-radius: 50%;
+	width: 11px;
+	height: 11px;
+	vertical-align: middle;
+
 	&.online {
-		color: #060;
+		background-color: #060;
 	}
 
 	&.away {
-		color: #cc0;
+		background-color: #cc0;
 	}
 
 	&.dnd {
-		color: #900;
+		background-color: #900;
 	}
 
 	&.offline {
-		color: gray;
+		background-color: gray;
 	}
-}
-
-@media (max-width: @screen-xs-max) {
-	.profile-view {
-		margin-top: 50px;
-	}
-}
-
-.edit-account, .user-topics, .user-watched-topics, .user-posts, .user-groups, .favourites, .user-following, .user-followers {
-	margin-top: 60px;
 }
 
 .edit-account .input-group {
@@ -81,8 +78,196 @@
 	border-radius: 50%;
 }
 
-@media screen and (min-width: @screen-sm-min) {
-	.user-recent-posts {
-		margin-top: 18px;
+.cover {
+	height: 200px;
+}
+
+.user-icon.profile-header-img {
+	position: absolute;
+    left: 46px;
+    top: -90px;
+    height: 120px;
+    width: 120px;
+    font-size: 5rem;
+    border: 3px solid #fff;
+}
+
+.user-profile-view {
+	.card-footer {
+		position: relative;
+		padding: 20px 20px 20px 180px;
+
+		.status {
+			left: 143px;
+		    position: absolute;
+		    top: 0px;
+		    border: 1px solid #fff;
+		    height: 18px;
+		    width: 18px;
+		    border-radius: 50%;
+		}
+
+		.user-info {
+			float: left;
+			position: absolute;
+    		top: -50px;
+
+			h3 {
+				color: #fff;
+				font-size: 20px;
+
+				@media (max-width: @screen-xs-max) {
+					color: #000;
+					margin-top: 10px;
+				}
+			}
+
+			h4 {
+				font-size: 13px;
+			}
+
+			@media (max-width: @screen-xs-max) {
+			    position: absolute;
+			    top: 0px;
+			    left: 170px;
+			    min-width: 120px;
+			}
+		}
+
+		.account-stats {
+			display: inline-block;
+			.stat {
+				text-align: center;
+				display: inline-block;
+				min-width: 100px;
+			}
+
+			.stat-label {
+				font-size: 12px;
+				color: #333;
+			}
+
+			.human-readable-number {
+				font-weight: bold;
+			}
+		}
 	}
+}
+
+.account .cover .controls .fa {
+	background-color: #333;
+	opacity: 1;
+	margin: 15px;
+	padding: 5px;
+}
+
+.account .cover {
+
+	&:hover {
+		.controls {
+			.opacity(0.8);
+		}
+	}
+
+	.controls {
+		text-align: center;
+		height: 200px;
+		line-height: 200px;
+		.opacity(0);
+		.transition(opacity .15s linear);
+		cursor: pointer;
+		pointer-events: none;
+
+		> * {
+			pointer-events: all;
+		}
+
+		.fa {
+			color: white;
+			background-color: #333;
+			opacity: 1;
+			margin: 15px;
+			padding: 5px;
+		}
+	}
+
+	&.active {
+			&:hover {
+				cursor: move;
+			}
+
+			.controls {
+				> * {
+					display: none;
+				}
+			}
+
+			.save {
+				display: inline-block;
+			}
+		}
+
+		&.saving {
+			.save {
+				display: none;
+			}
+
+			.indicator {
+				display: inline-block;
+			}
+		}
+
+		.save, .indicator {
+			display: inline-block;
+			position: absolute;
+			top: 1em;
+			right: 2em;
+			opacity: 1;
+			background-color: @brand-primary;
+			color: #eee;
+			padding: 0.5em;
+			font-weight: bold;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.save {
+			display: none;
+		}
+
+		.indicator {
+			display: none;
+		}
+}
+
+.account-fab {
+	border-radius: 50%;
+}
+
+.account .account-fab {
+	vertical-align: inherit;
+	float: right;
+	position: absolute;
+	top: -23px;
+	right: 50px;
+
+	@media (max-width: @screen-xs-max) {
+		right: 30px;
+	}	
+}
+
+.account-picture-block .user-profile-picture {
+	width:128px;
+	height:128px;
+	border-radius: 50%;
+	font-size: 5rem;
+	line-height: 128px;
+}
+
+.account.change-username #change-username, 
+.account.change-password #change-password, 
+.account.change-email #change-email {
+	padding: 10px;
 }

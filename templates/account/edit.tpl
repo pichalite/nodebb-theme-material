@@ -1,16 +1,34 @@
-<!-- IMPORT partials/account_menu.tpl -->
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="account edit-account">
+	<!-- IMPORT partials/account/header.tpl -->
 	<div class="row">
 		<div class="col-md-2">
 			<div class="account-picture-block text-center">
-				<img id="user-current-picture" class="user-profile-picture" src="{picture}" /><br /><br />
-				<a id="changePictureBtn" href="#" class="btn btn-primary">[[user:change_picture]]</a>
-				<br/><br/>
-				<!-- IF config.allowAccountDelete -->
-				<!-- IF isSelf -->
-				<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete_account]]</a><br/><br/>
-				<!-- ENDIF isSelf -->
-				<!-- ENDIF config.allowAccountDelete -->
+				<!-- IF picture -->
+				<img id="user-current-picture" class="user-profile-picture" src="{picture}" />
+				<!-- ELSE -->
+				<div class="user-icon user-profile-picture" style="background-color: {icon:bgColor};">{icon:text}</div>
+				<!-- ENDIF picture -->
+				<br /><br />
+				
+				<li class="dropdown">
+					<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
+						<span><i class="fa fa-fw fa-exchange"></i></span>
+						<span class="caret"></span>
+					</button>
+
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a id="changePictureBtn" href="#">[[user:change_picture]]</a></li>
+						<!-- IF !username:disableEdit -->
+						<li><a href="{config.relative_path}/user/{userslug}/edit/username">[[user:change_username]]</a></li>
+						<!-- ENDIF !username:disableEdit -->
+						<li><a href="{config.relative_path}/user/{userslug}/edit/email">[[user:change_email]]</a></li>
+						<li><a href="{config.relative_path}/user/{userslug}/edit/password">[[user:change_password]]</a></li>
+					</ul>
+				</li>
+
+				<br />
+				
 				<!-- IF config.requireEmailConfirmation -->
 				<!-- IF email -->
 				<!-- IF isSelf -->
@@ -18,28 +36,19 @@
 				<!-- ENDIF isSelf -->
 				<!-- ENDIF email -->
 				<!-- ENDIF config.requireEmailConfirmation -->
+
+				<!-- IF config.allowAccountDelete -->
+				<!-- IF isSelf -->
+				<a id="deleteAccountBtn" href="#" class="btn btn-danger">[[user:delete_account]]</a><br/><br/>
+				<!-- ENDIF isSelf -->
+				<!-- ENDIF config.allowAccountDelete -->
 			</div>
 		</div>
 
-		<div class="col-md-5">
+		<div class="col-md-10">
 			<div class="card">
 				<form class="form-horizontal" role="form">
 				<div class="card-body card-padding">
-					<!-- IF !username:disableEdit -->
-					<div class="form-group">
-	                    <div class="fg-line">
-	                    	<label>[[user:username]]</label>
-	                        <input class="form-control" type="text" id="inputUsername" placeholder="[[user:username]]" value="{username}">
-	                    </div>
-	                </div>
-	                <!-- ENDIF !username:disableEdit -->
-
-	                <div class="form-group">
-	                    <div class="fg-line">
-	                    	<label>[[user:email]]</label>
-	                        <input class="form-control" type="text" id="inputEmail" placeholder="[[user:email]]" value="{email}">
-	                    </div>
-	                </div>
 
 					<div class="form-group">
 						<div class="fg-line">
@@ -97,50 +106,5 @@
 			<hr class="visible-xs visible-sm"/>
 		</div>
 
-		<div class="col-md-5">
-			<div class="card">
-				<form class='form-horizontal'>
-				<div class="card-body card-padding">	
-					<!-- IF isSelf -->
-					<div class="input-group">
-						<div class="fg-line">
-							<label>[[user:current_password]]</label>
-							<input autocomplete="off" class="form-control" type="password" id="inputCurrentPassword" placeholder="[[user:current_password]]" value=""<!-- IF !hasPassword --> disabled<!-- ENDIF !hasPassword-->>
-						</div>
-						<span class="input-group-addon last">
-							<span></i></span>
-						</span>
-					</div>
-					<!-- ENDIF isSelf -->
-
-					<div class="input-group">
-						<div class="fg-line">
-							<label>[[user:password]]</label>
-							<input class="form-control" type="password" id="inputNewPassword" placeholder="[[user:password]]" value="">
-						</div>
-						<span class="input-group-addon last">
-							<span id="password-notify"><span class="success hide"><i class="fa fa-check"></i></span><span class="error hide"></span><span class="default"><i class="fa fa-circle-o"></i></span></span>
-						</span>
-					</div>
-
-					<div class="input-group">
-						<div class="fg-line">
-							<label>[[user:confirm_password]]</label>
-							<input class="form-control" type="password" id="inputNewPasswordAgain" placeholder="[[user:confirm_password]]" value="">
-						</div>
-						<span class="input-group-addon">
-							<span id="password-confirm-notify"><span class="success hide"><i class="fa fa-check"></i></span><span class="error hide"></span><span class="default"><i class="fa fa-circle-o"></i></span></span>
-						</span>
-					</div>
-					<div class="form-actions">
-						<a id="changePasswordBtn" href="#" class="btn btn-primary"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_password]]</a>
-					</div>
-				</div>
-				</form>
-			</div>
-		</div>
 	</div>
-
-	<!-- IMPORT partials/modals/change_picture_modal.tpl -->
-	<!-- IMPORT partials/modals/upload_picture_from_url_modal.tpl -->
 </div>

@@ -1,13 +1,18 @@
 <!-- BEGIN users -->
 <li class="users-box registered-user" data-uid="{users.uid}">
-	<a href="{config.relative_path}/user/{users.userslug}"><img class="user-picture" src="{users.picture}" /></a>
+	<a href="{config.relative_path}/user/{users.userslug}">
+		<!-- IF users.picture -->
+		<img class="user-picture" src="{users.picture}" />
+		<!-- ELSE -->
+		<div class="user-icon user-picture" style="background-color: {users.icon:bgColor};">{users.icon:text}</div>
+		<!-- ENDIF users.picture -->
+	</a>
 	<br/>
 	<div class="user-info">
-		<span>
-			<i component="user/status" class="fa fa-circle status {users.status}" title="[[global:{users.status}]]"></i>
+		<div>
+			<i component="user/status" class="status {users.status}" title="[[global:{users.status}]]"></i>
 			<a href="{config.relative_path}/user/{users.userslug}"> {users.username}</a>
-		</span>
-		<br/>
+		</div>
 
 		<!-- IF route_users:joindate -->
 		<div title="joindate" class="joindate">
