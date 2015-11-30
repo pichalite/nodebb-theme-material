@@ -3,6 +3,37 @@
 		<i class="fa fa-ellipsis-v"></i>
 	</button>
 	<ul class="dropdown-menu pull-right" role="menu">
+		<!-- IF !isSelf -->
+		<!-- IF !config.disableChat -->
+		<li>
+			<a component="account/chat" href="#"><i class="fa fa-fw fa-comment-o"></i> [[user:chat_with, {username}]]</a>
+		</li>
+		<li class="divider"></li>
+		<!-- ENDIF !config.disableChat -->
+		<!-- ENDIF !isSelf -->
+		<li>
+			<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile"><i class="fa fa-fw fa-user"></i> [[user:profile]]</a>
+		</li>
+		<!-- IF showHidden -->
+		<li><a href="{config.relative_path}/user/{userslug}/settings"><i class="fa fa-fw fa-edit"></i> [[user:settings]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/edit"><i class="fa fa-fw fa-gear"></i> [[user:edit]]</a></li>
+		<!-- ENDIF showHidden -->
+
+		<!-- IF !isSelf -->
+		<!-- IF isAdmin -->
+		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
+			<a component="account/ban" href="#"><i class="fa fa-fw fa-ban"></i> [[user:ban_account]]</a>
+		</li>
+		<li class="<!-- IF !banned -->hide<!-- ENDIF !banned -->">
+			<a component="account/unban" href="#"><i class="fa fa-fw fa-ban"></i> [[user:unban_account]]</a>
+		</li>
+		<li>
+			<a component="account/delete" href="#" class=""><i class="fa fa-fw fa-trash-o"></i> [[user:delete_account]]</a>
+		</li>
+		<!-- ENDIF isAdmin -->
+		<!-- ENDIF !isSelf -->
+
+		<li class="divider"></li>
 		<li><a href="{config.relative_path}/user/{userslug}/following"><i class="fa fa-fw fa-users"></i> [[user:following]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/followers"><i class="fa fa-fw fa-users"></i> [[user:followers]]</a></li>
 		<li class="divider"></li>
