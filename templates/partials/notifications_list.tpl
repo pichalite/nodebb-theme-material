@@ -4,8 +4,8 @@
 <!-- ENDIF !notifications.length -->
 
 <!-- BEGIN notifications -->
-<a class="lv-item {notifications.readClass}" href="{config.relative_path}{notifications.path}">
-    <div class="media" data-nid="{notifications.nid}">
+<a class="lv-item" href="{config.relative_path}{notifications.path}">
+    <div class="media {notifications.readClass}" data-nid="{notifications.nid}">
         <div class="pull-left">
             <!-- IF notifications.image -->
 			<!-- IF notifications.from -->
