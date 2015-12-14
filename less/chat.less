@@ -7,6 +7,10 @@
     li {
     	margin-bottom: 10px;
 
+    	&.unread {
+    		background-color: #dcf9ff;
+    	}
+
     	a {
     		color: inherit;
 
@@ -106,8 +110,8 @@
 		}
 
 		.lv-item {
-		  	padding-left: 20px;
-		  	padding-right: 20px;
+		  	padding-left: 15px;
+		  	padding-right: 15px;
 
 			&.bg-primary {
 			  	background: #fff;
@@ -120,6 +124,30 @@
 			&:not(.bg-primary):hover {
 			  	background: #F2F2F2;
 			  	cursor: pointer;
+			}
+
+			.lv-avatar {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+
+				.user-icon {
+					font-size: 2rem;
+				}
+
+				> img {
+					width: 40px;
+					height: 40px;
+				}
+			}
+
+			.status {
+				width: 12px;
+				height: 12px;
+				position: absolute;
+			    left: 45px;
+			    top: 35px;
+			    border: 1px solid #fff;
 			}
 		}
 	}
@@ -222,28 +250,35 @@
 	}
 
 	.lv-avatar {
-		width: 35px;
-		height: 35px;
+		width: 32px;
+		height: 32px;
 		border-radius: 50%;
 		color: #FFF;
 		text-align: center;
-		line-height: 34px;
-		font-size: 15px;
+		line-height: 32px;
+		font-size: 13px;
 		margin-right: 15px;
 		padding: 0 !important;
 		text-transform: uppercase;
 
 		> img {
-			width: 35px;
-			height: 35px;
+			width: 32px;
+			height: 32px;
 			border-radius: 50%;
 			vertical-align: top;
+		}
+
+		.user-icon {
+			width: inherit;
+			height: inherit;
+			line-height: inherit;
+			font-size: 1.5rem;
 		}
 	}
 
 	.lv-message {
 		.lv-item {
-			padding: 10px;
+			padding: 1px 10px;
 
 			&.right {
 				text-align: right;
@@ -256,18 +291,39 @@
 				.ms-item {
 					background: #eee;
 				}
+
+				[component="chat/message/body"] {
+
+					.chat-edit {
+						position: absolute;
+					    left: 50px;
+					    padding: 4px;
+					    font-size: 12px;
+					}
+				}
 			}
 
-			&:not(.right) .ms-item {
-			  	background: #00BCD4;
-			  	color: #fff;
+			&:not(.right) {
+				.ms-item {
+				  	background: #00BCD4;
+				  	color: #fff;
+				}
+
+				[component="chat/message/body"] {
+					.chat-edit {
+						position: absolute;
+					    right: 50px;
+					    padding: 4px;
+					    font-size: 12px;
+					}
+				}
 			}
 
 		}
 	}
 
 	.ms-item {
-		padding: 7px 12px 9px;
+		padding: 5px 10px 7px;
 		border-radius: 2px;
 		display: inline-block;
 
@@ -279,7 +335,7 @@
 	.ms-date {
 		display: block;
 		color: #B3B3B3;
-		margin-top: 7px;
+		margin: 2px 0px;
 
 		> i {
 			font-size: 11px;
@@ -299,7 +355,8 @@
 		&.lv-message .lv-body {
 			max-height: 315px;
 			min-height: 315px;
-			overflow-x: auto; 
+			overflow-x: auto;
+			padding: 10px;
 		}
 	}
 
@@ -318,6 +375,25 @@
 		margin: 0px;
 	}
 
+	[data-break="true"] {
+		margin-top: 5px;
+	}
+
+	[component="chat/message/body"] {
+		.chat-controls {
+			position: absolute;
+		    left: 70px;
+		    display: none;
+		}
+	}
+
+	[component="chat/message"] {
+		&:hover {
+			.chat-controls {
+	    		display: block;
+	    	}
+	    }
+	}
 
 }  /* end #messages-main */
 
@@ -374,13 +450,18 @@
 
 	.lv-message .lv-item {
 
-		padding: 10px;
+		padding: 1px 0px;
 
 		&.right {
 			text-align: right;
 
 			.ms-item {
 				background: #eee;
+			}
+
+			.lv-avatar {
+				margin-right: 0;
+				margin-left: 15px;
 			}
 		}
 
@@ -410,11 +491,35 @@
 			border-radius: 50%;
 			vertical-align: top;
 		}
+
+		&[data-break="true"] {
+			margin-top: 10px;
+		}
+	}
+
+	.lv-avatar {
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		color: #FFF;
+		text-align: center;
+		line-height: 34px;
+		font-size: 15px;
+		margin-right: 15px;
+		padding: 0 !important;
+		text-transform: uppercase;
+
+		> img {
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			vertical-align: top;
+		}
 	}
 
 	.timeago {
 		display: inline-block;
-		margin-top: 5px;
+		margin-bottom: 5px;
 	}
 
 	.chat-content {

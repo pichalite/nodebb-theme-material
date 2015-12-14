@@ -8,15 +8,6 @@
 						<div class="title">
 							<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 							<ul class="lv-actions actions hidden-xs">
-								<li>
-									<span class="browsing-users">
-										[[category:browsing]]
-										<span component="topic/browsing/list" class="thread_active_users active-users"></span>
-									</span>
-									<small class="hidden">
-										<i class="fa fa-users"></i> <span component="topic/browsing/count" class="user-count"></span>
-									</small>
-								</li>
 								<!-- IMPORT partials/topic/sort.tpl -->
 								<li>
 								    <span component="topic/follow" class="hidden-xs <!-- IF isFollowing -->hidden<!-- ENDIF isFollowing -->">

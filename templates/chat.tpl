@@ -2,6 +2,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content listview lv-message">
 			<div class="modal-header">
+				<button id="chat-close-btn" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
 				<button type="button" class="close hidden-xs" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
 				<h4><i component="user/status" class="status offline" title="[[global:offline]]"></i>
 					[[modules:chat.chatting_with]] 
@@ -11,7 +12,7 @@
 			<div class="modal-body">
 				<span class="since-bar">
 				<a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
-				<ul class="chat-content" class="lv-body">
+				<ul class="chat-content" component="chat/messages" class="lv-body">
 					
 				</ul>
 
@@ -21,7 +22,6 @@
 					</div>
 					<div class="input-group-btn">
 						<button id="chat-message-send-btn" class="btn btn-link btn-primary" href="#" type="button">[[modules:chat.send]]</button>
-						<button id="chat-close-btn" class="btn btn-link btn-warning" data-dismiss="modal" aria-hidden="true">[[global:close]]</button>
 					</div>
 				</div>
 			</div>

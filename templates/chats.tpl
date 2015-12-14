@@ -3,19 +3,7 @@
     <div class="ms-menu">
         <ul component="chat/recent" class="listview lv-user chats-list">
             <!-- BEGIN chats -->
-            <li class="lv-item media<!-- IF chats.unread --> unread<!-- ENDIF chats.unread -->" data-username="{chats.username}" data-uid="{chats.uid}">
-                <div class="lv-avatar pull-left">
-                    <!-- IF chats.picture -->
-                    <img src="{chats.picture}">
-                    <!-- ELSE -->
-                    <div class="user-icon" style="background-color: {chats.icon:bgColor};">{chats.icon:text}</div>
-                    <!-- ENDIF chats.picture -->
-                </div>
-                <div class="media-body">
-                    <div class="lv-title">{chats.username}</div>
-                    <div class="lv-small">{chats.teaser.content} </div>
-                </div>
-            </li>
+            <!-- IMPORT partials/chat_contact.tpl -->
             <!-- END chats -->
         </ul>
     </div>
