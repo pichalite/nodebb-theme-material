@@ -2,7 +2,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content listview lv-message">
 			<div class="modal-header">
-				<button id="chat-close-btn" type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+				<button id="chat-close-btn" type="button" class="close" data-dismiss="modal"><span aria-hidden="true"><i class="fa fa-close"></i></span></button>
 				<button type="button" class="close hidden-xs" data-action="maximize"><span aria-hidden="true"><i class="fa fa-expand"></i></span><span class="sr-only">[[modules:chat.maximize]]</span></button>
 				<h4><i component="user/status" class="status offline" title="[[global:offline]]"></i>
 					[[modules:chat.chatting_with]] 

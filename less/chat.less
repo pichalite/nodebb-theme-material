@@ -54,6 +54,8 @@
 	    line-height: 32px;
 		margin-right: 10px;
 	}
+
+
 }
 
 .chats .listview .lv-footer {
@@ -463,11 +465,31 @@
 				margin-right: 0;
 				margin-left: 15px;
 			}
+
+			[component="chat/message/body"] {
+				.chat-edit {
+					position: absolute;
+				    left: 50px;
+				    padding: 4px;
+				    font-size: 12px;
+				}
+			}
 		}
 
-		&:not(.right) .ms-item {
-			background: #00BCD4;
-			color: #fff;
+		&:not(.right) {
+			.ms-item {
+				background: #00BCD4;
+				color: #fff;
+			}
+
+			[component="chat/message/body"] {
+				.chat-edit {
+					position: absolute;
+				    right: 50px;
+				    padding: 4px;
+				    font-size: 12px;
+				}
+			}
 		}
 
 		.ms-item {
@@ -483,6 +505,7 @@
 		.ms-date {
 			display: block;
 			color: #B3B3B3;
+			margin: 2px 0px;
 		}
 
 		.lv-avatar > img {
@@ -515,11 +538,14 @@
 			border-radius: 50%;
 			vertical-align: top;
 		}
+
+		.user-icon {
+			font-size: 1.5rem;
+		}
 	}
 
 	.timeago {
 		display: inline-block;
-		margin-bottom: 5px;
 	}
 
 	.chat-content {
@@ -533,5 +559,30 @@
 
 	.status {
 		font-size: 14px;
+	}
+
+	[component="chat/message/body"] {
+		.chat-controls {
+			position: absolute;
+		    left: 70px;
+		    display: none;
+		}
+	}
+
+	[component="chat/message"] {
+		&:hover {
+			.chat-controls {
+	    		display: block;
+	    	}
+	    }
+	}
+
+	.modal-header {
+	    padding: 10px 20px;
+
+	    .close {
+	        margin-top: 10px;
+	        padding: 0px 5px;
+	    }
 	}
 }
