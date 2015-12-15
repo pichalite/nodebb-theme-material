@@ -19,6 +19,7 @@
 <li class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
 
+<!-- IF !posts.deleted -->
 <li>
 	<a component="post/favourite" href="#" data-favourited="{posts.favourited}">[[topic:favourite]]
 	<span component="post/favourite-count" class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
@@ -40,3 +41,4 @@
 <!-- IF !posts.selfPost -->
 <li><a component="post/flag" href="#">[[topic:flag_title]]</a></li>
 <!-- ENDIF !posts.selfPost -->
+<!-- ENDIF !posts.deleted -->
