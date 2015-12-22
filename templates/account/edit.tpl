@@ -13,7 +13,7 @@
 				
 				<li class="dropdown">
 					<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button">
-						<span><i class="fa fa-fw fa-exchange"></i></span>
+						<span>Options</span>
 						<span class="caret"></span>
 					</button>
 
