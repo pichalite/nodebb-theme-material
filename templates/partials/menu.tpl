@@ -6,14 +6,14 @@
     </div>
 <header id="header">
     <ul class="header-inner">
-        <li id="menu-trigger" data-trigger="#sidebar">
-            <div class="line-wrap <!-- IF config.menuInHeader -->visible-xs<!-- ENDIF config.menuInHeader -->">
+        <li id="menu-trigger" data-trigger="#sidebar" <!-- IF config.menuInHeader -->class="menu-header"<!-- ENDIF config.menuInHeader -->>
+            <div class="line-wrap">
                 <div class="line top"></div>
                 <div class="line center"></div>
                 <div class="line bottom"></div>
             </div>
         </li>
-    	<li class="logo">
+    	<li class="logo <!-- IF config.menuInHeader -->menu-in-header<!-- ENDIF config.menuInHeader -->">
 			<!-- IF config.showSiteTitle -->
 			<a href="{relative_path}/">
 				{title}

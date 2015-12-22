@@ -28,12 +28,18 @@
 }
 
 .header-inner {
-	list-style:none;
-	padding:15px 0;
+	list-style: none;
+	padding: 15px 0;
 
 	>li {
-		display:inline-block;
-		vertical-align:top;
+		display: inline-block;
+		vertical-align: top;
+
+		&.menu-header {
+			@media (min-width: @screen-sm-min) {
+				display: none;
+			}
+		}
 
 		&:not(:last-child) {
 			margin-right:-2px;
@@ -49,6 +55,20 @@
 
 		&:hover, &:active, &:focus {
 			text-decoration: none;
+		}
+	}
+
+	.logo.menu-in-header {
+		@media (min-width: @screen-md-min) {
+			margin-left: 50px;
+		}
+
+		@media (max-width: @screen-sm-max) {
+			margin-left: 15px;
+		}
+
+		@media (max-width: @screen-xs-max) {
+			margin-left: 0px;
 		}
 	}
 }
