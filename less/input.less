@@ -15,8 +15,6 @@ input:active, input:focus {
 	box-shadow:none;
 	border:0;
 	border-bottom:1px solid #e0e0e0;
-	-webkit-appearance:none;
-	-moz-appearance:none;
 	appearance:none;
 	padding:0;
 	border-radius:0;
@@ -162,11 +160,7 @@ html:not(.ie9) .select.fg-line:before {
 		height:2px;
 		width:0;
 		content:"";
-		-webkit-transition:all;
-		-moz-transition:all;
-		-o-transition:all;
 		transition:all;
-		-webkit-transition-duration:300ms;
 		transition-duration:300ms;
 	}
 
@@ -238,11 +232,7 @@ html:not(.ie9) .select.fg-line:before {
 	}
 
 	.fg-label {
-		-webkit-transition:all;
-		-moz-transition:all;
-		-o-transition:all;
 		transition:all;
-		-webkit-transition-duration:200ms;
 		transition-duration:200ms;
 		position:absolute;
 		top:10px;
@@ -287,14 +277,8 @@ html:not(.ie9) .select.fg-line:before {
 }
 
 .checkbox .input-helper:before, .radio .input-helper:before, .checkbox .input-helper:after, .radio .input-helper:after {
-    -webkit-transition: all;
-    -moz-transition: all;
-    -o-transition: all;
     transition: all;
-    -webkit-transition-duration: 250ms;
     transition-duration: 250ms;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     content: "";
@@ -316,16 +300,10 @@ html:not(.ie9) .select.fg-line:before {
 }
 
 .checkbox input:checked+.input-helper:before {
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
     transform: scale(0);
 }
 
 .checkbox input:checked+.input-helper:after {
-    -webkit-transform: scale(1) rotate(-50deg);
-    -ms-transform: scale(1) rotate(-50deg);
-    -o-transform: scale(1) rotate(-50deg);
     transform: scale(1) rotate(-50deg);
     opacity: 1;
     filter: alpha(opacity=100);
@@ -340,9 +318,6 @@ html:not(.ie9) .select.fg-line:before {
 .checkbox .input-helper:after {
     opacity: 0;
     filter: alpha(opacity=0);
-    -webkit-transform: scale(0) rotate(80deg);
-    -ms-transform: scale(0) rotate(80deg);
-    -o-transform: scale(0) rotate(80deg);
     transform: scale(0) rotate(80deg);
     width: 22px;
     height: 9px;
@@ -386,9 +361,6 @@ html:not(.ie9) .select.fg-line:before {
 }
 
 .radio input:checked+.input-helper:after {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
 }
 
@@ -406,9 +378,6 @@ html:not(.ie9) .select.fg-line:before {
 	border-radius:50%;
 	top:3px;
 	left:4px;
-	-webkit-transform:scale(0);
-	-ms-transform:scale(0);
-	-o-transform:scale(0);
 	transform:scale(0);
 }
 
@@ -422,17 +391,12 @@ html:not(.ie9) .select.fg-line:before {
 	display:inline-block;
 	vertical-align:top;
 	-webkit-touch-callout:none;
-	-webkit-user-select:none;
-	-khtml-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;
 	user-select:none;
 
 	.ts-label {
 		display:inline-block;
 		margin:0 20px 0 0;
 		vertical-align:top;
-		-webkit-transition:color .56s cubic-bezier(0.4,0,.2,1);
 		transition:color .56s cubic-bezier(0.4,0,.2,1);
 	}
 
@@ -443,7 +407,6 @@ html:not(.ie9) .select.fg-line:before {
 		height:16px;
 		border-radius:8px;
 		background:rgba(0,0,0,.26);
-		-webkit-transition:background .28s cubic-bezier(0.4,0,.2,1);
 		transition:background .28s cubic-bezier(0.4,0,.2,1);
 		vertical-align:middle;
 		cursor:pointer;
@@ -458,7 +421,6 @@ html:not(.ie9) .select.fg-line:before {
 			background:#fafafa;
 			box-shadow:0 2px 8px rgba(0,0,0,.28);
 			border-radius:50%;
-			webkit-transition:left .28s cubic-bezier(0.4,0,.2,1), background .28s cubic-bezier(0.4,0,.2,1), box-shadow .28s cubic-bezier(0.4,0,.2,1);
 			transition:left .28s cubic-bezier(0.4,0,.2,1), background .28s cubic-bezier(0.4,0,.2,1), box-shadow .28s cubic-bezier(0.4,0,.2,1);
 		}
 	}

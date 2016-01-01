@@ -6,9 +6,6 @@
 		height:5px;
 		width:100%;
 		background-repeat:no-repeat;
-		-webkit-background-size:cover;
-		-moz-background-size:cover;
-		-o-background-size:cover;
 		background-size:cover;
 		background-position:center;
 
@@ -20,11 +17,7 @@
 			bottom:-50px;
 			left:50%;
 			margin-left:-65px;
-			-webkit-transition:all;
-			-moz-transition:all;
-			-o-transition:all;
 			transition:all;
-			-webkit-transition-duration:300ms;
 			transition-duration:300ms;
 		}
 	}
@@ -113,8 +106,7 @@
 		border-radius: 50%;
 		position: absolute;
 		top: ~"calc(80% - 3px)";
-		-webkit-transition: 0.3s cubic-bezier(0.41, -0.86, 0.76, 1.89);
-		      transition: 0.3s cubic-bezier(0.41, -0.86, 0.76, 1.89);
+		transition: 0.3s cubic-bezier(0.41, -0.86, 0.76, 1.89);
 		display: -webkit-box;
 		display: -webkit-flex;
 		display: -ms-flexbox;
@@ -143,11 +135,8 @@
         a {
 			font-size: 18px;
 			color: #fff;
-			-webkit-transform: scale(0);
-			  -ms-transform: scale(0);
-			      transform: scale(0);
-			-webkit-transition: 0.5s cubic-bezier(0.41, -2, 0.76, 2);
-			      transition: 0.5s cubic-bezier(0.41, -2, 0.76, 2);
+			transform: scale(0);
+			transition: 0.5s cubic-bezier(0.41, -2, 0.76, 2);
         }
 
         &.open {
@@ -157,29 +146,20 @@
 			z-index: 99;
 
 			&.profile {
-				-webkit-transform: translate(-55px, 15px);
-				  -ms-transform: translate(-55px, 15px);
-				      transform: translate(-55px, 15px);
+				transform: translate(-55px, 15px);
 			}
 
 			&.edit {
-				-webkit-transform: translate(-10px, 35px);
-				  -ms-transform: translate(-10px, 35px);
-				      transform: translate(-10px, 35px);
+				transform: translate(-10px, 35px);
         	}
 
         	&.settings {
-				-webkit-transform: translate(35px, 15px);
-				  -ms-transform: translate(35px, 15px);
-				      transform: translate(35px, 15px);
+				transform: translate(35px, 15px);
         	}
 
         	a {
-				-webkit-transform: scale(1);
-				  -ms-transform: scale(1);
-				      transform: scale(1);
-				-webkit-transition: 0.5s cubic-bezier(0.41, -2, 0.76, 2);
-				      transition: 0.5s cubic-bezier(0.41, -2, 0.76, 2);
+				transform: scale(1);
+				transition: 0.5s cubic-bezier(0.41, -2, 0.76, 2);
         	}
         }
 	}
@@ -208,17 +188,12 @@
 		i {
 			color: #fff;
 			font-size: 20px;
-			-webkit-transform: scale(0);
-			  -ms-transform: scale(0);
-			      transform: scale(0);
+			transform: scale(0);
         }
 
         &.open i {
-          -webkit-transform: scale(1);
-              -ms-transform: scale(1);
-                  transform: scale(1);
-          -webkit-transition: 0.5s cubic-bezier(0.41, -2, 0.76, 2);
-                  transition: 0.5s cubic-bezier(0.41, -2, 0.76, 2);
+          transform: scale(1);
+          transition: 0.5s cubic-bezier(0.41, -2, 0.76, 2);
         }
 	}
 }

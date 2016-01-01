@@ -16,26 +16,14 @@
 		height:45px;
 		border-radius:50%;
 		background:rgba(255,255,255,.22);
-		-webkit-transition:all;
-		-moz-transition:all;
-		-o-transition:all;
 		transition:all;
-		-webkit-transition-duration:300ms;
 		transition-duration:300ms;
-		-webkit-backface-visibility:hidden;
-		-moz-backface-visibility:hidden;
 		backface-visibility:hidden;
-		-webkit-transform:scale(0);
-		-ms-transform:scale(0);
-		-o-transform:scale(0);
 		transform:scale(0);
 		z-index:0;
 	}
 
 	&.open:before {
-		-webkit-transform:scale(1);
-		-ms-transform:scale(1);
-		-o-transform:scale(1);
 		transform:scale(1);
 	}
 }
@@ -158,7 +146,8 @@
 		margin:-12px 30px 0 0;
 	}
 	.top-menu #toggle-width .toggle-switch .ts-helper {
-		height:11px;width:33px;
+		height:11px;
+		width:33px;
 	}
 	.top-menu #toggle-width .toggle-switch .ts-helper:before {
 		width:20px;
@@ -183,22 +172,14 @@
 .line-wrap {
     width: 18px;
     height: 12px;
-    -webkit-transition: all;
-    -moz-transition: all;
-    -o-transition: all;
     transition: all;
-    -webkit-transition-duration: 300ms;
     transition-duration: 300ms;
     margin: 10px 20px;
 
     .line {
 	    width: 18px;
 	    height: 2px;
-	    -webkit-transition: all;
-	    -moz-transition: all;
-	    -o-transition: all;
 	    transition: all;
-	    -webkit-transition-duration: 300ms;
 	    transition-duration: 300ms;
 	}
 
@@ -208,21 +189,16 @@
 }
 
 .open .line-wrap {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
     transform: rotate(180deg);
 
     .line.top {
 	    width: 12px;
 	    transform: translateX(8px) translateY(1px) rotate(45deg);
-	    -webkit-transform: translateX(8px) translateY(1px) rotate(45deg);
 	}
 
 	.line.bottom {
 	    width: 12px;
 	    transform: translateX(8px) translateY(-1px) rotate(-45deg);
-	    -webkit-transform: translateX(8px) translateY(-1px) rotate(-45deg);
 	}
 }
 
@@ -237,11 +213,8 @@
 	left: -5px;
 	top: -11px;
 	font-size: 11px;
-	-webkit-animation-name: wobble;
 	animation-name: wobble;
-	-webkit-animation-duration: 500ms;
 	animation-duration: 500ms;
-	-webkit-animation-fill-mode: both;
 	animation-fill-mode: both;
 	font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -279,10 +252,7 @@
 	color: #fff;
 	text-align: center;
 	background-color: #337ab7;
-	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
 	box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
-	-webkit-transition: width .6s ease;
-	-o-transition: width .6s ease;
 	transition: width .6s ease;
 }
 

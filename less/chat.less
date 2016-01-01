@@ -89,22 +89,17 @@
 		border-right: 1px solid #EEE;
 		height: 100%;
 		width: 240px;
-		-webkit-transition: all;
-		-o-transition: all;
 		transition: all;
-		-webkit-transition-duration: 250ms;
 		transition-duration: 250ms;
 
 		@media (max-width: 767px) {
 			height: ~"calc(100% - 58px)";
-		    -webkit-transform: translate3d(-240px, 58px, 0);
 		    transform: translate3d(-240px, 58px, 0);
 		    opacity: 0;
 		    filter: alpha(opacity=0);
 		    z-index: 1;
 
 		    &.toggled {
-			    -webkit-transform: translate3d(0, 58px, 0);
 			    transform: translate3d(0, 58px, 0);
 			    opacity: 1;
 			    filter: alpha(opacity=100);
@@ -402,10 +397,6 @@
 
 #ms-menu-trigger {
 	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 	float: left;
 	margin: 1px 0 0 -7px;
