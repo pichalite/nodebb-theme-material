@@ -3,7 +3,7 @@
 	<div class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="new-card" style="{function.generateCategoryBackground}">
 			<!-- IF categories.link -->
-				<a href="{categories.link}" itemprop="url" target="_blank" >
+				<a href="{categories.link}" itemprop="url" target="_self" >
 			<!-- ELSE -->
 				<a href="{config.relative_path}/category/{categories.slug}" itemprop="url" >
 			<!-- ENDIF categories.link -->
