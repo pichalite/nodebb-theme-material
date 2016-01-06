@@ -15,7 +15,7 @@
         <div class="input-group fg-float">
             <span class="input-group-addon"><i class="fa fa-fw fa-envelope"></i></span>
             <div class="fg-line">
-                <input class="form-control" type="text" name="email" id="email" autocorrect="off" autocapitalize="off" />
+                <input class="form-control" type="email" name="email" id="email" autocorrect="off" autocapitalize="off" />
             </div>
             <label class="fg-label">[[register:email_address_placeholder]]</label>
             <span class="input-group-addon">
