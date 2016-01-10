@@ -11,6 +11,10 @@
 	    vertical-align: top;
 	    font-size: 14px;
 
+	    @media (max-width: @screen-xs-max) {
+			font-size: 11px;
+		}
+
 	    >a {
 			display:inline-block;
 			color:#7a7a7a;
@@ -85,4 +89,7 @@
 
 .nav>li>a {
 	padding: 10px 10px;
+	@media (max-width: @screen-xs-max) {
+		padding: 8px 8px;	
+	}
 }

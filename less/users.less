@@ -3,24 +3,29 @@
 
     .users-box {
         display: inline-block;
-        margin-top: 10px;
-        margin-bottom: 10px;
         text-align: center;
         vertical-align: top;
-        width: 100px;
+        width: 104px;
+        margin: 0px 4px 10px;
+
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+            margin: 0px 0px 10px;  
+        }
 
         .user-picture {
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
             font-size: 3rem;
+            margin: 0 auto 5px;
+            border: 2px solid #fff;
         }
     }
 
-    &.rooms {
+    .anon-user {
         .user-picture {
-            width: 32px;
-            height: 32px;
+            background-color: #aaa;
+            color: #fff;
         }
     }
 }
