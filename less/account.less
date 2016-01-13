@@ -90,12 +90,26 @@
     width: 120px;
     font-size: 5rem;
     border: 3px solid #fff;
+
+    @media (max-width: @screen-xs-max) {
+    	left: 50%;
+    	margin-left: -60px;
+    }
 }
 
 .user-profile-view {
+
 	.card-footer {
 		position: relative;
-		padding: 20px 20px 20px 180px;
+		padding: 20px 20px 20px 120px;
+
+		@media (max-width: @screen-xs-max) {
+			padding: inherit;
+
+			hr {
+				border: 1px solid #fff;
+			}
+		}
 
 		.status {
 			left: 143px;
@@ -105,12 +119,18 @@
 		    height: 18px;
 		    width: 18px;
 		    border-radius: 50%;
+
+		    @media (max-width: @screen-xs-max) {
+		    	left: 50%;
+		    	margin-left: 35px;
+		    }
 		}
 
 		.user-info {
 			float: left;
 			position: absolute;
     		top: -50px;
+    		margin-left: 60px;
 
 			h3 {
 				color: #fff;
@@ -119,40 +139,80 @@
 				@media (max-width: @screen-xs-max) {
 					color: #000;
 					margin-top: 10px;
+					font-size: 16px;
+					text-align: left;
+					margin-bottom: 2px;
 				}
 			}
 
 			h4 {
 				font-size: 13px;
+
+				@media (max-width: @screen-xs-max) {
+					font-size: 11px;
+					text-align: left;
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
 			}
 
 			@media (max-width: @screen-xs-max) {
 			    position: absolute;
-			    top: 10px;
-			    left: 170px;
-			    min-width: 120px;
+			    top: 25px;
+			    left: 15px;
+				min-width: 120px;
+				margin-left: 0px;
 			}
 		}
 
+		#follow-btn {
+		    position: absolute;
+		    left: 70px;
+		    top: 35px;
+
+		    @media (max-width: @screen-xs-max) {
+		    	right: 15px;
+		    	left: inherit;
+		    }
+		}
+
+		#unfollow-btn {
+		    position: absolute;
+		    left: 65px;
+		    top: 35px;
+
+		    @media (max-width: @screen-xs-max) {
+		    	right: 15px;
+		    	left: inherit;
+		    }
+		}	
+
 		.account-stats {
 			display: inline-block;
+
 			.stat {
 				text-align: center;
 				display: inline-block;
 				min-width: 100px;
+
+				@media (max-width: @screen-xs-max) {
+					padding: 10px 0px;
+				}
 			}
 
 			.stat-label {
-				font-size: 12px;
+				font-size: 14px;
 				color: #333;
 			}
 
 			.human-readable-number {
 				font-weight: bold;
+				font-size: 18px;
 			}
 
 			@media (max-width: @screen-xs-max) {
-				margin-top: 30px;
+				margin-top: 80px;
+				margin-bottom: 10px;
 			}
 		}
 	}

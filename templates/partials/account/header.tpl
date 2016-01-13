@@ -13,19 +13,10 @@
 
 	<div class="card-footer">
 		<div class="profile-pic">
-        <div class="user-icon profile-header-img" style="<!-- IF picture -->background-image: url({picture});  background-size: cover; background-repeat: no-repeat; background-position: center center;<!-- ELSE -->background-color: {icon:bgColor};<!-- ENDIF picture -->"><!-- IF !picture -->{icon:text}<!-- ENDIF !picture -->
-        	
-        	<div class="option profile"><a href="{config.relative_path}/user/{userslug}"><i class="fa fa-user"></i></a></div>
-        	<!-- IF showHidden -->
-	        <div class="option edit"><a href="{config.relative_path}/user/{userslug}/edit"><i class="fa fa-edit"></i></a></div>
-	        <div class="option settings"><a href="{config.relative_path}/user/{userslug}/settings"><i class="fa fa-gear"></i></a></div>
-	        <!-- ENDIF showHidden -->
-	        <div class="close"><i class="fa fa-close"></i></div>
-        </div>
-        <!-- ENDIF picture -->
-        <span component="user/status" class="status {status}" title="[[global:{status}]]"></span>
-
-        	
+	        <div class="user-icon profile-header-img" style="<!-- IF picture -->background-image: url({picture});  background-size: cover; background-repeat: no-repeat; background-position: center center;<!-- ELSE -->background-color: {icon:bgColor};<!-- ENDIF picture -->"><!-- IF !picture -->{icon:text}<!-- ENDIF !picture -->
+	        </div>
+	        <!-- ENDIF picture -->
+	        <span component="user/status" class="status {status}" title="[[global:{status}]]"></span>
         </div>
 
         <!-- IF template.account/profile -->
@@ -57,14 +48,19 @@
 				<span class="stat-label">[[user:following]]</span>
 			</div>
 		</div>
+		<!-- ELSE -->
+		<hr/>
 		<!-- ENDIF template.account/profile -->
 		
 		<!-- IMPORT partials/account/menu.tpl -->
 
 		<div class="user-info">
 	        <h3 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h3>
-			<h4 class="username visible-md visible-sm visible-lg"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h4>
+			<h4 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h4>
 		</div>
+
+		<a id="follow-btn" component="account/follow" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
+		<a id="unfollow-btn" component="account/unfollow" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
 		
 	</div>
 </div>
