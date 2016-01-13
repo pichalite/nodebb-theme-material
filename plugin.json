@@ -12,6 +12,9 @@
 			"hook": "filter:config.get", "method": "getConfig"
 		}
 	],
+	"staticDirs": {
+		"vendor": "lib/vendor"
+	},
 	"scripts": [
 		"lib/material.js",
 		"lib/vendor/waves.min.js"
