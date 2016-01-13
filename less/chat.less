@@ -435,7 +435,6 @@
 
 
 .chat-modal {
-
 	.lv-item {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -584,5 +583,43 @@
 	        margin-top: 10px;
 	        padding: 0px 5px;
 	    }
+	}
+
+	/*
+	 * Fix issues with modals working on mobile
+	 */
+	@media (max-width: 600px) {
+		position: fixed !important;
+		left: 0 !important;
+		top: 0 !important;
+		bottom: 0 !important;
+		right: 0 !important;
+
+		.modal-dialog {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: 0;
+
+			.modal-content {
+				border-radius: 0;
+				height: 100%;
+				flex-direction: column;
+				display: flex;
+
+				.modal-body {
+					flex: 1;
+					display: flex;
+					flex-direction: column;
+
+					.chat-content {
+						filter: grayscale(50%);
+						flex: 1;
+					}
+				}
+			}
+		}
 	}
 }
