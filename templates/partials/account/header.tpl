@@ -16,6 +16,7 @@
         <div class="user-icon profile-header-img" style="<!-- IF picture -->background-image: url({picture});  background-size: cover; background-repeat: no-repeat; background-position: center center;<!-- ELSE -->background-color: {icon:bgColor};<!-- ENDIF picture -->"><!-- IF !picture -->{icon:text}<!-- ENDIF !picture -->
         	
         	<div class="option profile"><a href="{config.relative_path}/user/{userslug}"><i class="fa fa-user"></i></a></div>
+        	<div class="option follow"><a><i class="fa fa-<!-- IF isFollowing -->heart<!-- ELSE -->plus<!-- ENDIF isFollowing -->"></i></a></div>
         	<!-- IF showHidden -->
 	        <div class="option edit"><a href="{config.relative_path}/user/{userslug}/edit"><i class="fa fa-edit"></i></a></div>
 	        <div class="option settings"><a href="{config.relative_path}/user/{userslug}/settings"><i class="fa fa-gear"></i></a></div>

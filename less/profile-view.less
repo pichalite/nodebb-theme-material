@@ -128,16 +128,22 @@
 		  -ms-flex-pack: center;
 		      justify-content: center;
 
+		@option-offset: 30px;
+
 		&.profile {
-          left: ~"calc((100% / 3) - 3px)";
+          	left: @option-offset;
         }
 
+		&.follow {
+			left: ~"calc(((100% - 50px) / 4) + @{option-offset})";
+		}
+
         &.edit {
-          left: ~"calc(50% - 3px)";
+			left: ~"calc((((100% - 50px) / 4) * 2) + @{option-offset})";
         }
 
         &.settings {
-          left: ~"calc(((100% / 3) * 2) - 3px)";
+			left: ~"calc((((100% - 50px) / 4) * 3) + @{option-offset})";
         }
 
         a {
@@ -157,21 +163,33 @@
 			z-index: 99;
 
 			&.profile {
-				-webkit-transform: translate(-55px, 15px);
-				  -ms-transform: translate(-55px, 15px);
-				      transform: translate(-55px, 15px);
+				-webkit-transform: translate(-50px, 11px);
+				  -ms-transform: translate(-50px, 11px);
+				      transform: translate(-50px, 11px);
 			}
 
 			&.edit {
-				-webkit-transform: translate(-10px, 35px);
-				  -ms-transform: translate(-10px, 35px);
-				      transform: translate(-10px, 35px);
+				-webkit-transform: translate(5px, 35px);
+				  -ms-transform: translate(5px, 35px);
+				      transform: translate(5px, 35px);
+
+				/* The edit icon is slightly offset from the rest */
+				i {
+					margin-left: 3px;
+					margin-top: 8px;
+				}
         	}
 
+			&.follow {
+				-webkit-transform: translate(-27px, 35px);
+					-ms-transform: translate(-27px, 35px);
+						transform: translate(-27px, 35px);
+			}
+
         	&.settings {
-				-webkit-transform: translate(35px, 15px);
-				  -ms-transform: translate(35px, 15px);
-				      transform: translate(35px, 15px);
+				-webkit-transform: translate(31px, 11px);
+				  -ms-transform: translate(31px, 11px);
+				      transform: translate(31px, 11px);
         	}
 
         	a {
