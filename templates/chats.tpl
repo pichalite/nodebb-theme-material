@@ -20,7 +20,7 @@
                     </div>
                 </div>
 
-                <div class="lvh-label hidden-xs">
+                <div class="lvh-label">
                     <span component="chat/title" class="c-black">{meta.username}</span>
                 </div>
                 
