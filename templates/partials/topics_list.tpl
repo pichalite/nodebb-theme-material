@@ -13,6 +13,9 @@
         <!-- ENDIF showSelect -->
 
 		<div class="pull-left hidden-xs">
+			<!-- IF topics.thumb -->
+			<img src="{topics.thumb}" class="lv-img" />
+			<!-- ELSE -->
         	<a href="{config.relative_path}/user/{topics.user.userslug}">
             	<!-- IF topics.user.picture -->
                 <img src="{topics.user.picture}" class="lv-img" title="{topics.user.username}" />
@@ -20,6 +23,7 @@
                 <div class="user-icon lv-img" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
                 <!-- ENDIF topics.user.picture -->
         	</a>
+        	<!-- ENDIF topics.thumb -->
     	</div>
     	<div class="media-body">
     		<div class="lv-title" component="topic/header">
