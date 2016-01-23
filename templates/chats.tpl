@@ -2,14 +2,28 @@
 <div class="card chat-card" id="messages-main">
     <div class="ms-menu">
         <ul component="chat/recent" class="listview lv-user chats-list">
-            <!-- BEGIN chats -->
-            <!-- IMPORT partials/chat_contact.tpl -->
-            <!-- END chats -->
+            <!-- BEGIN rooms -->
+            <li component="chat/recent/room" data-roomid="{rooms.roomId}" class="<!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
+
+				<div data-username="{rooms.lastUser.username}" data-uid="{rooms.lastUser.uid}">
+					<!-- IF rooms.lastUser.picture -->
+					<img class="user-img" src="{rooms.lastUser.picture}">
+					<!-- ELSE -->
+					<div class="user-icon user-img" style="background-color: {rooms.lastUser.icon:bgColor};">{rooms.lastUser.icon:text}</div>
+					<!-- ENDIF rooms.lastUser.picture -->
+					<i component="user/status" title="[[global:{rooms.lastUser.status}]]" class="fa fa-circle status {rooms.lastUser.status}"></i>
+					<span class="username">{rooms.usernames}</span>
+				</div>
+
+				<span class="teaser-content">{rooms.teaser.content}</span>
+				<span class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></span>
+			</li>
+            <!-- END rooms -->
         </ul>
     </div>
 
-    <!-- IF meta -->
-    <div component="chat/messages" class="ms-body expanded-chat" data-uid="{meta.uid}" data-username="{meta.username}">
+    <!-- IF roomId -->
+    <div component="chat/messages" class="ms-body expanded-chat" data-roomid="{roomId}">
         <div class="listview lv-message">
             <div class="lv-header-alt clearfix">
                 <div id="ms-menu-trigger" class="">
@@ -21,7 +35,10 @@
                 </div>
 
                 <div class="lvh-label">
-                    <span component="chat/title" class="c-black">{meta.username}</span>
+                    <span component="chat/title" class="c-black">[[modules:chat.chatting_with]]</span>
+                    <div class="users-tag-container">
+ 				        <input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
+ 			        </div>
                 </div>
                 
                 <div class="lv-actions actions">
@@ -61,6 +78,6 @@
             </ul>
         </div>
     </div>
-    <!-- ENDIF meta -->
+    <!-- ENDIF roomId -->
 
 </div>
