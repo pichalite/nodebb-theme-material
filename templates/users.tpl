@@ -1,29 +1,36 @@
 <div class="users">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-	<ul class="nav nav-pills tab-nav">
-		<li><a href="{config.relative_path}/users/online">[[global:online]]</a></li>
-		<li><a href="{config.relative_path}/users/sort-posts">[[users:top_posters]]</a></li>
-		<li><a href="{config.relative_path}/users/sort-reputation">[[users:most_reputation]]</a></li>
-		<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
-		<li><a href="{config.relative_path}/users/search">[[users:search]]</a></li>
-		<!-- ENDIF function.displayUserSearch -->
-		<!-- IF inviteOnly -->
-		<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
-		<!-- ENDIF inviteOnly -->
-	</ul>
-
-	<br />
-
-	<div class="search {search_display}">
-		<div class="input-group">
-			<div class="fg-line">
-			<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
-			</div>
-			<span class="input-group-addon">
-				<span id="user-notfound-notify"><i class="fa fa-search"></i></span>
-			</span>
+	<div class="row">
+		<div class="col-lg-6">
+			<ul class="nav nav-pills tab-nav">
+				<li><a href="{config.relative_path}/users/online">[[global:online]]</a></li>
+				<li><a href="{config.relative_path}/users/sort-posts">[[users:top_posters]]</a></li>
+				<li><a href="{config.relative_path}/users/sort-reputation">[[users:most_reputation]]</a></li>
+				<!-- IF inviteOnly -->
+				<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
+				<!-- ENDIF inviteOnly -->
+			</ul>
+		</div>
+		<div class="col-lg-3">
+			<!-- IF inviteOnly -->
+ 			<!-- IF loggedIn -->
+ 			<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
+ 			<!-- ENDIF loggedIn -->
+ 			<!-- ENDIF inviteOnly -->
+		</div>
+		<div class="col-lg-3">
+			<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
+			<div class="search">
+ 				<div class="input-group">
+ 					<div class="fg-line">
+ 						<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
+ 					</div>
+ 				</div>
+ 			</div>
+			<!-- ENDIF function.displayUserSearch -->
 		</div>
 	</div>
+	<br />
 
 	<ul id="users-container" class="users-container">
 		<!-- IMPORT partials/users_list.tpl -->

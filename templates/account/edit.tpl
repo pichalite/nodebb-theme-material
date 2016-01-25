@@ -22,7 +22,9 @@
 						<!-- IF !username:disableEdit -->
 						<li><a href="{config.relative_path}/user/{userslug}/edit/username">[[user:change_username]]</a></li>
 						<!-- ENDIF !username:disableEdit -->
+						<!-- IF !email:disableEdit -->
 						<li><a href="{config.relative_path}/user/{userslug}/edit/email">[[user:change_email]]</a></li>
+						<!-- ENDIF !email:disableEdit -->
 						<li><a href="{config.relative_path}/user/{userslug}/edit/password">[[user:change_password]]</a></li>
 					</ul>
 				</li>

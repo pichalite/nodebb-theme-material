@@ -4,13 +4,13 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<!-- IF !posts.length -->
-		<div class="alert alert-warning">[[user:has_no_posts]]</div>
+		<div class="alert alert-warning">{noItemsFoundKey}</div>
 	<!-- ELSE -->
 	<div class="row">
 		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header ch-alt">
-					<i class="fa fa-fw fa-pencil"></i> [[pages:{template.name}, {username}]]
+					<i class="fa fa-fw fa-pencil"></i> {title}
 				</div>
 				<!-- IMPORT partials/posts_list.tpl -->
 			</div>

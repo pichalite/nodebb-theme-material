@@ -4,6 +4,7 @@
 <li><a component="post/delete" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->"><i class="fa fa-trash-o"></i> [[topic:delete]]</a></li>
 <li><a component="post/restore" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-history"></i> [[topic:restore]]</a></li>
 <li><a component="post/purge" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-eraser"></i> [[topic:purge]]</a></li>
+<li><a component="topic/delete/posts" href="#"><i class="fa fa-trash-o"></i> [[topic:thread_tools.delete-posts]]</a></li>
 
 <!-- BEGIN posts.tools -->
 <li>
@@ -38,7 +39,9 @@
 
 <li class="divider"></li>
 
+<!-- IF config.loggedIn -->
 <!-- IF !posts.selfPost -->
 <li><a component="post/flag" href="#">[[topic:flag_title]]</a></li>
 <!-- ENDIF !posts.selfPost -->
+<!-- ENDIF config.loggedIn -->
 <!-- ENDIF !posts.deleted -->

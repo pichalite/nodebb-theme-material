@@ -3,6 +3,37 @@
 	<!-- IMPORT partials/account/header.tpl -->
 	<div class="row">
 		<div class="col-xs-12">
+
+			<!-- IF allowUserHomePage -->
+			<div class="card">
+	            <div class="card-header">
+	            	[[user:select-homepage]]
+	            </div>
+	            <div class="card-body card-padding">
+	            	<div class="form-group fg-line">
+		            	<div class="select">
+			            	<label for="dailyDigestFreq">[[user:homepage]]</label>
+							<select class="form-control" id="homePageRoute" data-property="homePageRoute">
+								<option value="none">None</option>
+								<!-- BEGIN homePageRoutes -->
+								<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
+								<!-- END homePageRoutes -->
+							</select>
+						</div>
+					</div>
+					<small>[[user:homepage_description]]</small>
+					
+					<div id="homePageCustom" class="form-group" style="display: none;">
+						<div class="fg-line">
+							<label for="homePageCustom">[[user:custom_route]]</label>
+							<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" />
+						</div>
+						<small>[[user:custom_route_help]]</small>
+					</div>
+	            </div>
+	        </div>
+			<!-- ENDIF allowUserHomePage -->
+
 			<div class="card">
 	            <div class="card-header">
 	            	[[user:browsing]]
@@ -63,12 +94,12 @@
 	            <div class="card-body card-padding">
 	            	<div class="form-group fg-line">
 		            	<div class="select">
-		            	<label for="dailyDigestFreq">[[user:digest_label]]</label>
-						<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq">
-							<!-- BEGIN dailyDigestFreqOptions -->
-							<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
-							<!-- END dailyDigestFreqOptions -->
-						</select>
+			            	<label for="dailyDigestFreq">[[user:digest_label]]</label>
+							<select class="form-control" id="dailyDigestFreq" data-property="dailyDigestFreq">
+								<!-- BEGIN dailyDigestFreqOptions -->
+								<option value="{dailyDigestFreqOptions.value}" <!-- IF dailyDigestFreqOptions.selected -->selected<!-- ENDIF dailyDigestFreqOptions.selected -->>{dailyDigestFreqOptions.name}</option>
+								<!-- END dailyDigestFreqOptions -->
+							</select>
 						</div>
 					</div>
 					<small>[[user:digest_description]]</small>
@@ -119,15 +150,15 @@
 	            <div class="card-body card-padding">
 	            	<div class="form-group fg-line">
 		            	<div class="select">
-		            	<label for="grouptitle">[[user:grouptitle]]</label>
-						<select class="form-control" id="grouptitle" data-property="groupTitle">
-							<option value="">[[user:no-group-title]]</option>
-							<!-- BEGIN userGroups -->
-							<!-- IF userGroups.userTitleEnabled -->
-							<option value="{userGroups.name}" <!-- IF userGroups.selected -->selected<!-- ENDIF userGroups.selected -->>{userGroups.userTitle}</option>
-							<!-- ENDIF userGroups.userTitleEnabled -->
-							<!-- END userGroups -->
-						</select>
+			            	<label for="grouptitle">[[user:grouptitle]]</label>
+							<select class="form-control" id="grouptitle" data-property="groupTitle">
+								<option value="">[[user:no-group-title]]</option>
+								<!-- BEGIN userGroups -->
+								<!-- IF userGroups.userTitleEnabled -->
+								<option value="{userGroups.name}" <!-- IF userGroups.selected -->selected<!-- ENDIF userGroups.selected -->>{userGroups.userTitle}</option>
+								<!-- ENDIF userGroups.userTitleEnabled -->
+								<!-- END userGroups -->
+							</select>
 						</div>
 					</div>
 	            </div>
@@ -185,15 +216,41 @@
 	            <div class="card-body card-padding">
 	            	<div class="form-group fg-line">
 		            	<div class="select">
-						<select data-property="userLang" class="form-control">
-							<!-- BEGIN languages -->
-							<option value="{languages.code}" <!-- IF languages.selected -->selected<!-- ENDIF languages.selected -->>{languages.name} ({languages.code})</option>
-							<!-- END languages -->
-						</select>
+							<select data-property="userLang" class="form-control">
+								<!-- BEGIN languages -->
+								<option value="{languages.code}" <!-- IF languages.selected -->selected<!-- ENDIF languages.selected -->>{languages.name} ({languages.code})</option>
+								<!-- END languages -->
+							</select>
 						</div>
 					</div>
 	            </div>
-	        </div>      
+	        </div> 
+
+	        <div class="card">
+	        	<div class="card-header">
+	        		[[global:sessions]]
+	        	</div>
+	        	<div class="card-body card-padding">
+	        		<ul class="list-group" component="user/sessions">
+						<!-- BEGIN sessions -->
+						<li class="list-group-item" data-uuid="{../uuid}">
+							<div class="pull-right">
+								<!-- IF !../current -->
+								<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>
+								<!-- ENDIF !../current -->
+								{function.userAgentIcons}
+								<i class="fa fa-circle text-<!-- IF ../current -->success<!-- ELSE -->muted<!-- ENDIF ../current -->"></i>
+							</div>
+							{../browser} {../version} on {../platform}<br />
+							<small class="timeago text-muted" title="{../datetimeISO}"></small>
+							<ul>
+								<li><strong>[[global:ip_address]]</strong>: {../ip}</li>
+							</ul>
+						</li>
+						<!-- END sessions -->
+					</ul>
+	        	</div>
+	        </div>   
 
 		</div>
 		<div class="col-xs-12">

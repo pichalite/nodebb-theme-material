@@ -241,6 +241,13 @@
 					<small class="help-block">[[groups:details.private_help]]</small>
 					<div class="checkbox">
 	                    <label>
+	                        <input name="disableJoinRequests" type="checkbox"<!-- IF group.disableJoinRequests --> checked<!-- ENDIF group.disableJoinRequests -->>
+	                        <i class="input-helper"></i>
+	                        [[groups:details.disableJoinRequests]]
+	                    </label>
+	                </div>
+					<div class="checkbox">
+	                    <label>
 	                        <input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->>
 	                        <i class="input-helper"></i>
 	                        [[groups:details.hidden]]

@@ -22,6 +22,16 @@
 	</li>
 
 	<!-- IMPORT partials/topic/reply-button.tpl -->
+	
+	<!-- IF loggedIn -->
+	<li class="unread-button">
+ 	<button component="topic/mark-unread" class="btn btn-md btn-default">
+ 	<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:mark_unread]]</span>
+	<span class="visible-xs-inline"><i class="fa fa-fw fa-inbox"></i></span>
+ 	</button>
+ 	</li>
+ 	<!-- ENDIF loggedIn -->
+
 	<!-- IMPORT partials/thread_tools.tpl -->
 </div>
 

@@ -86,7 +86,7 @@
 		background: #F8F8F8;
 		border-right: 1px solid #EEE;
 		height: 100%;
-		width: 240px;
+		width: 300px;
 		-webkit-transition: all;
 		-o-transition: all;
 		transition: all;
@@ -149,12 +149,16 @@
 			    top: 35px;
 			    border: 1px solid #fff;
 			}
+
+			.leave {
+				opacity: .5;
+			}
 		}
 	}
 
 	.ms-body {
 		@media (min-width: 768px) {
-			padding-left: 240px;
+			padding-left: 300px;
 		}
 
 		@media (max-width: 767px) {
@@ -393,6 +397,14 @@
 	    		display: block;
 	    	}
 	    }
+	}
+
+	.users-tag-container {
+		display: inline-block;
+
+		.bootstrap-tagsinput {
+			margin-bottom: 0px;
+		}
 	}
 
 }  /* end #messages-main */
