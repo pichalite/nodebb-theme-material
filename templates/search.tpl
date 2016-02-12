@@ -193,7 +193,7 @@
 					<div class="lv-actions">
 						<li class="lv-small">
 							<a href="{config.relative_path}/user/{posts.user.userslug}"><img class="user-picture" title="{posts.user.username}" src="{posts.user.picture}"/></a>
-							[[global:posted_in_ago, <a href="{config.relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]]
+							<a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]] <i class="fa {posts.category.icon}"></i></a> <span class="timeago" title="{posts.relativeTime}"></span>
 						</li>
 					</div>
 					</div>
