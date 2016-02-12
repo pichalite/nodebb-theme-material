@@ -7,13 +7,13 @@
 				<h4>[[modules:chat.chatting_with]]</h4>
  
  				<div class="users-tag-container inline-block">
- 					<input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
+ 					<input class="users-tag-input form-control" type="text" placeholder="enter users here" tabindex="4"/>
  				</div>
 			</div>
 			<div class="modal-body">
 				<span class="since-bar">
 				<a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
-				<ul class="chat-content" component="chat/messages" class="lv-body">
+				<ul class="chat-content lv-body" component="chat/messages">
 					
 				</ul>
 

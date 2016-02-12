@@ -39,9 +39,8 @@
                 </div>
 
                 <div class="lvh-label">
-                    <span component="chat/title" class="c-black">[[modules:chat.chatting_with]]</span>
                     <div class="users-tag-container">
- 				        <input class="users-tag-input" type="text" class="form-control" placeholder="enter users here" tabindex="4"/>
+ 				        <input class="users-tag-input form-control" type="text" placeholder="enter users here" tabindex="4"/>
  			        </div>
                 </div>
                 
@@ -51,6 +50,8 @@
                     </div>
                 </div>
             </div>
+            
+            <span class="since-bar"><a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
             
             <ul class="lv-body chat-content">
             <!-- IMPORT partials/chat_messages.tpl -->
