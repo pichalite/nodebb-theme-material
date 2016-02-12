@@ -41,7 +41,7 @@
 			<small>
             	[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> | 
             	<!-- IF topics.user.uid -->
-				<a href="{config.relative_path/user/{topics.user.userslug}"><strong>{topics.user.username}</strong></a>
+				<a href="{config.relative_path}/user/{topics.user.userslug}"><strong>{topics.user.username}</strong></a>
 				<!-- ELSE -->
 				<strong>[[global:guest]]</strong>
 				<!-- ENDIF topics.user.uid -->
