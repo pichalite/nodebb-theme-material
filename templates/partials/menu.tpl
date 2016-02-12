@@ -132,11 +132,8 @@
 
             <li id="user_label" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="user_dropdown">
-                    <!-- IF user.picture -->
-                    <img component="header/userpicture" src="{user.picture}" alt="{user.username}" class="user-picture" id="user-header-picture" />
-                    <!-- ELSE -->
-                    <div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};">{user.icon:text}</div>
-                    <!-- ENDIF user.picture -->
+                    <img component="header/userpicture" src="{user.picture}" alt="{user.username}" class="user-picture" id="user-header-picture"<!-- IF !user.picture --> style="display:none;"<!-- ENDIF !user.picture --> />
+                    <div component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor};<!-- IF user.picture -->display:none;<!-- ENDIF user.picture -->">{user.icon:text}</div>
                 </a>
                 <ul id="user-control-list" component="header/usercontrol" class="dropdown-menu pull-right" aria-labelledby="user_dropdown">
                     <li>

@@ -192,7 +192,13 @@
 					<div class="lv-footer">
 					<div class="lv-actions">
 						<li class="lv-small">
-							<a href="{config.relative_path}/user/{posts.user.userslug}"><img class="user-picture" title="{posts.user.username}" src="{posts.user.picture}"/></a>
+							<a href="{config.relative_path}/user/{posts.user.userslug}">
+								<!-- IF posts.user.picture -->
+								<img class="user-picture" title="{posts.user.username}" src="{posts.user.picture}"/>
+								<!-- ELSE -->
+								<div class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
+								<!-- ENDIF posts.user.picture -->
+							</a>
 							<a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]] <i class="fa {posts.category.icon}"></i></a> <span class="timeago" title="{posts.relativeTime}"></span>
 						</li>
 					</div>
