@@ -1,6 +1,6 @@
 <div class="card user-profile-view" data-uid="{uid}">
 	<div class="card-body cover" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
-		<!-- IF isSelf -->
+		<!-- IF showHidden -->
 		<div class="controls">
 			<span class="upload"><i class="fa fa-fw fa-3x fa-upload"></i></span>
 			<span class="resize"><i class="fa fa-fw fa-3x fa-arrows"></i></span>
@@ -8,7 +8,7 @@
 		</div>
 		<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 		<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
-		<!-- ENDIF isSelf -->
+		<!-- ENDIF showHidden -->
 	</div>
 
 	<div class="card-footer">
@@ -48,6 +48,14 @@
 				<span class="stat-label">[[user:following]]</span>
 			</div>
 		</div>
+		<!-- IF !isSelf -->
+		<!-- IF !config.disableChat -->
+		<a component="account/chat" href="#" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-comment-o"></i> Chat</a>
+		<!-- ENDIF !config.disableChat -->
+		<a id="follow-btn" component="account/follow" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
+		<a id="unfollow-btn" component="account/unfollow" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
+		<!-- ENDIF !isSelf -->
+		
 		<!-- ELSE -->
 		<hr/>
 		<!-- ENDIF template.account/profile -->
@@ -58,11 +66,6 @@
 	        <h3 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h3>
 			<h4 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h4>
 		</div>
-
-		<!-- IF !isSelf -->
-		<a id="follow-btn" component="account/follow" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
-		<a id="unfollow-btn" component="account/unfollow" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
-		<!-- ENDIF !isSelf -->
 		
 	</div>
 </div>

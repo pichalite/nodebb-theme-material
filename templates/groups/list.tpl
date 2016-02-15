@@ -19,7 +19,7 @@
 			<div class="col-xs-7 text-left pull-right">
 				<div class="input-group">
 					<div class="fg-line">
-					<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="" id="search-text">
+						<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="" id="search-text">
 					</div>
 					<span id="search-button" class="input-group-addon last"><i class="fa fa-search"></i></span>
 				</div>

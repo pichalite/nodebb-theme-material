@@ -3,6 +3,7 @@
 		text-transform: lowercase;
 		margin: 3px;
 		font-size: 12px;
+		font-weight: 500;
 		padding-left: 10px;
 
 		a {
@@ -15,6 +16,7 @@
 	}
 
 	.post-time {
+		font-size: 12px;
 		@media (max-width: @screen-xs-max) {
 			display: inline-block;
 			font-size: 12px;
@@ -51,25 +53,6 @@
 			font-size: 16px;
 		}
 	}	
-}
-
-.browsing-users {
-  	text-transform: uppercase;
-  	color: #777;
-  	font-size: 11px;
-  	margin: 0px;
-}
-
-.thread_active_users a img {
-	width: 25px;
-	height: 25px;
-	border-radius: 50%;
-}
-
-.thread_active_users.active-users>div {
-	display: inherit;
-	margin-left: 2px;
-	text-transform: none;
 }
 
 .lv-item.media.deleted, .timeline.single.deleted .timeline-content {
@@ -314,7 +297,7 @@
 }
 
 [component="post"].highlight .post-body {
-	border-bottom: 1px solid #337ab7;
+	border-bottom: 1px solid @material-primary;
 }
 
 .composer-container {

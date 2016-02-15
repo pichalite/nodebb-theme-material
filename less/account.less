@@ -105,7 +105,7 @@
 
 	.card-footer {
 		position: relative;
-		padding: 20px 20px 20px 120px;
+		padding: 20px 20px 20px 30px;
 
 		hr {
 			border: 1px solid #fff;
@@ -139,7 +139,7 @@
 			float: left;
 			position: absolute;
     		top: -50px;
-    		margin-left: 60px;
+    		margin-left: 150px;
 
 			h3 {
 				color: #fff;
@@ -168,33 +168,11 @@
 			@media (max-width: @screen-xs-max) {
 			    position: absolute;
 			    top: 25px;
-			    left: 15px;
+			    left: ~"calc(50% - 30px)";
 				min-width: 120px;
 				margin-left: 0px;
 			}
 		}
-
-		#follow-btn {
-		    position: absolute;
-		    left: 70px;
-		    top: 35px;
-
-		    @media (max-width: @screen-xs-max) {
-		    	right: 15px;
-		    	left: inherit;
-		    }
-		}
-
-		#unfollow-btn {
-		    position: absolute;
-		    left: 65px;
-		    top: 35px;
-
-		    @media (max-width: @screen-xs-max) {
-		    	right: 15px;
-		    	left: inherit;
-		    }
-		}	
 
 		.account-stats {
 			display: inline-block;
@@ -222,6 +200,16 @@
 			@media (max-width: @screen-xs-max) {
 				margin-top: 80px;
 				margin-bottom: 10px;
+			}
+		}
+		
+		[component="account/chat"], [component="account/follow"], [component="account/unfollow"] {
+			float: left;
+			margin: 15px 5px 0px;
+			
+			@media (max-width: @screen-xs-max) {
+				float: inherit;
+				margin: 0px 5px 15px 5px;
 			}
 		}
 	}

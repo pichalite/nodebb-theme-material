@@ -33,7 +33,7 @@
                 <!-- BEGIN navigation -->
                 <!-- IF function.displayMenuItem, @index -->
                 <li class="{navigation.class}">
-                    <a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}"<!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
+                    <a href="{navigation.route}" title="{navigation.title}" id="{navigation.id}"<!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
                         <!-- IF navigation.iconClass -->
                         <i class="fa fa-fw {navigation.iconClass}"></i>
                         <!-- ENDIF navigation.iconClass -->
@@ -47,7 +47,7 @@
 
         <li class="pull-right">
         <ul class="top-menu">
-            <li class="nav navbar-nav pagination-block invisible visible-lg visible-md">
+            <li class="nav navbar-nav pagination-block visible-lg visible-md">
                 <div class="dropdown">
                     <i class="fa fa-angle-double-up pointer fa-fw pagetop"></i>
                     <i class="fa fa-angle-up pointer fa-fw pageup"></i>
@@ -223,7 +223,7 @@
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
-						<a href="{relative_path}{navigation.route}" title="{navigation.title}" id="{navigation.id}" target="{navigation.properties.target}">
+						<a href="{navigation.route}" title="{navigation.title}" id="{navigation.id}" target="{navigation.properties.target}">
 							<!-- IF navigation.iconClass -->
 							<i class="fa fa-fw {navigation.iconClass}"></i>
 							<!-- ENDIF navigation.iconClass -->

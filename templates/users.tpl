@@ -5,7 +5,12 @@
 			<ul class="nav nav-pills tab-nav">
 				<li><a href="{config.relative_path}/users/online">[[global:online]]</a></li>
 				<li><a href="{config.relative_path}/users/sort-posts">[[users:top_posters]]</a></li>
+				<!-- IF !reputation:disabled -->
 				<li><a href="{config.relative_path}/users/sort-reputation">[[users:most_reputation]]</a></li>
+				<!-- ENDIF !reputation:disabled -->
+				<!-- IF isAdminOrGlobalMod -->
+				<li><a href="{config.relative_path}/users/banned">[[user:banned]]</a></li>
+				<!-- ENDIF isAdminOrGlobalMod -->
 				<!-- IF inviteOnly -->
 				<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
 				<!-- ENDIF inviteOnly -->
