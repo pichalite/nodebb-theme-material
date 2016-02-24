@@ -11,9 +11,6 @@
 				<!-- IF isAdminOrGlobalMod -->
 				<li><a href="{config.relative_path}/users/banned">[[user:banned]]</a></li>
 				<!-- ENDIF isAdminOrGlobalMod -->
-				<!-- IF inviteOnly -->
-				<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
-				<!-- ENDIF inviteOnly -->
 			</ul>
 		</div>
 		<div class="col-lg-3">

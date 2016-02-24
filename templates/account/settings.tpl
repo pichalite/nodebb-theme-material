@@ -236,7 +236,7 @@
 						<li class="list-group-item" data-uuid="{../uuid}">
 							<div class="pull-right">
 								<!-- IF !../current -->
-								<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>
+								<button class="btn btn-xs btn-danger" type="button" data-action="revokeSession">Revoke Session</button>
 								<!-- ENDIF !../current -->
 								{function.userAgentIcons}
 								<i class="fa fa-circle text-<!-- IF ../current -->success<!-- ELSE -->muted<!-- ENDIF ../current -->"></i>

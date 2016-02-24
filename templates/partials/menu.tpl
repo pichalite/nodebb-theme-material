@@ -85,7 +85,7 @@
                         </div>
                         <button type="submit" class="btn btn-default hide">[[global:search]]</button>
                     </div>
-                    <button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
+                    <button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw"></i></button>
                 </form>
             </li>
             <!-- ENDIF config.searchEnabled -->
