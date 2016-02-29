@@ -6,8 +6,7 @@
 
 <div class="register">
     <div class="register-block">
-        <div class="alert alert-danger" id="register-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <div class="alert alert-danger<!-- IF !error --> hidden<!-- ENDIF !error -->" id="register-error-notify">
             [[error:registration-error]]
             <p>{error}</p>
         </div>

@@ -25,7 +25,12 @@
 						<!-- IF !email:disableEdit -->
 						<li><a href="{config.relative_path}/user/{userslug}/edit/email">[[user:change_email]]</a></li>
 						<!-- ENDIF !email:disableEdit -->
+						<!-- IF canChangePassword -->
 						<li><a href="{config.relative_path}/user/{userslug}/edit/password">[[user:change_password]]</a></li>
+						<!-- ENDIF canChangePassword -->
+						<!-- BEGIN editButtons -->
+ 						<li><a href="{config.relative_path}{editButtons.link}">{editButtons.text}</a></li>
+ 						<!-- END editButtons -->
 					</ul>
 				</li>
 

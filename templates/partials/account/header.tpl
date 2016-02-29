@@ -50,7 +50,9 @@
 		</div>
 		<!-- IF !isSelf -->
 		<!-- IF !config.disableChat -->
+		<!-- IF !banned -->
 		<a component="account/chat" href="#" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-comment-o"></i> Chat</a>
+		<!-- ENDIF !banned -->
 		<!-- ENDIF !config.disableChat -->
 		<a id="follow-btn" component="account/follow" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
 		<a id="unfollow-btn" component="account/unfollow" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>

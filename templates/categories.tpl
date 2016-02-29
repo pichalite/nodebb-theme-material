@@ -30,9 +30,9 @@
 					<div class="pull-left hidden-xs user-avatar">
 				    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
 				        	<!-- IF categories.posts.user.picture -->
-		                    <img src="{categories.posts.user.picture}" alt="{categories.posts.user.username}" />
+		                    <img src="{categories.posts.user.picture}" alt="{categories.posts.user.username}" title="{categories.posts.user.username}"/>
 		                    <!-- ELSE -->
-		                    <div class="user-icon" style="background-color: {categories.posts.user.icon:bgColor};">{categories.posts.user.icon:text}</div>
+		                    <div class="user-icon" title="{categories.posts.user.username}" style="background-color: {categories.posts.user.icon:bgColor};">{categories.posts.user.icon:text}</div>
 		                    <!-- ENDIF categories.posts.user.picture -->
 				    	</a>
 					</div>

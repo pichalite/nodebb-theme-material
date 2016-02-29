@@ -29,13 +29,15 @@
 	</a>
 </li>
 
-<!-- IF !config.disableSocialButtons -->
+<!-- IF postSharing.length -->
 <li class="divider"></li>
 <li class="tools-title">[[topic:share_this_post]]</li>
-<li><a class="facebook-share" href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-<li><a class="twitter-share" href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-<li><a class="google-share" href="#"><i class="fa fa-google-plus"></i> Google+</a></li>
-<!-- ENDIF !config.disableSocialButtons -->
+<!-- ENDIF postSharing.length -->
+<!-- BEGIN postSharing -->
+<li role="presentation">
+	<a role="menuitem" component="share/{postSharing.id}" tabindex="-1" href="#"><span class="menu-icon"><i class="fa {postSharing.class}"></i></span> {postSharing.name}</a>
+</li>
+<!-- END postSharing -->
 
 <li class="divider"></li>
 

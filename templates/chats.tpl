@@ -1,6 +1,18 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="card chat-card" id="messages-main">
     <div class="ms-menu">
+        <div class="listview lv-message">
+            <div class="lv-header-alt clearfix">
+                <div class="form-group">
+ 					<div class="fg-line">
+ 						<input class="form-control" component="chat/search" type="text" placeholder="[[users:enter_username]]"/>
+ 					</div>
+ 				</div>
+            </div>
+        </div>
+        <ul component="chat/search/list" class="chat-search-list">
+			
+		</ul>
         <ul component="chat/recent" class="listview lv-user chats-list">
             <!-- BEGIN rooms -->
             <li component="chat/recent/room" data-roomid="{rooms.roomId}" class="lv-item media <!-- IF ../unread -->unread<!-- ENDIF ../unread -->">

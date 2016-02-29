@@ -4,7 +4,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<!-- IF !groups.length -->
-	<div class="alert alert-warning">[[groups:no_groups_found]]</div>
+	<div class="alert alert-warning text-center">[[groups:no_groups_found]]</div>
 	<!-- ELSE -->
 	<!-- IMPORT partials/groups/list.tpl -->
 	<!-- ENDIF !groups.length -->
