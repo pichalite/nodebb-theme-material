@@ -85,8 +85,18 @@
     }
 }
 
-.category .new-card {
-    height: 200px;
+.category {
+    
+    .new-card {
+        height: 200px;
+    }
+    
+    [component="topic/select"] {
+        &:before {
+			content: "";
+			display: none;
+		}
+    }
 }
 
 /*-- Display animation -------------------------------- */
