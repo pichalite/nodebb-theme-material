@@ -91,3 +91,25 @@ a:hover, a:active, a:focus, a:visited {
 		width: ~"calc(100% - 30px)";
 	}
 }
+
+.status {
+	&.online {
+		background-color: @material-success;
+		color: @material-success;
+	}
+
+	&.away {
+		background-color: @material-warning;
+		color: @material-warning;
+	}
+
+	&.dnd {
+		background-color: @material-danger;
+		color: @material-danger;
+	}
+
+	&.offline {
+		background-color: #777;
+		color: #777;
+	}
+}
