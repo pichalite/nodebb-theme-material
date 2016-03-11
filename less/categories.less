@@ -10,9 +10,9 @@
 
     .listview .lv-item .lv-actions {
         @media (max-width: @screen-sm-max) {
-                right: 7px;
-                top: 10px;
-            }
+            right: 7px;
+            top: 10px;
+        }
     }
 }
 
@@ -156,5 +156,110 @@
     }
     to {
     -webkit-transform: scale(1);
+    }
+}
+
+
+
+
+.categories {
+    .media>.pull-left {
+        padding: 0px;
+        margin-right: 15px;
+    }
+    
+    .lv-body {
+        .lv-item {
+            padding: 15px 20px 10px 20px;
+            
+            @media (max-width: @screen-sm-max) {
+                padding: 10px 5px;
+            }
+            
+            &.media {
+                .stat {
+                    text-align: center;
+                    
+                    .human-readable-number {
+                        font-weight: 500;
+                        font-size: 15px;
+                    }
+                    
+                    span {
+                        font-size: 12px;
+                    }
+                }
+                
+                .icon {
+                    font-size: 16px;
+                    line-height: 17px;
+                    padding: 13px;
+                    border-radius: 50%;
+                    margin-right: 15px;
+                    min-width: 46px;
+                    min-height: 46px;
+                }
+                
+                .category-title {
+                    font-size: 17px;
+                    line-height: 22px;
+                    font-weight: 400;
+                    
+                    .lv-small {
+                        font-weight: 400;
+                    }
+                }
+            }
+            
+            .last-post {
+                height: 53px;
+                overflow: hidden;
+            }
+            
+            [component="category/posts"] {
+                
+                .user-avatar {
+                    margin-right: 10px;
+                    margin-top: 5px;
+                    img, .user-icon {
+                        width: 24px;
+                        height: 24px;
+                        line-height: 24px;
+                        border-radius: 50%;
+                    }
+                }
+                
+                .topic-content {
+                    display: block;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    
+    .subcategories {
+        &.lv-item {
+            &.media {
+                top: 20px;
+                padding: 15px 0px 10px;
+
+                .icon {
+                    min-width: 32px;
+                    min-height: 32px;
+                    padding: 9px;
+                    line-height: 12px;
+                    font-size: 12px;
+                    margin-left: 15px;
+                }
+                
+                .category-title {
+                    font-size: 13px;
+                    
+                    .lv-small {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
     }
 }
