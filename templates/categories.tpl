@@ -152,7 +152,7 @@
 									</div>
 									<div class="media-body">
 										<div class="topic-title">
-											<a href="{config.relative_path}/topic/{categories.children.posts.topic.slug}/{categories.children.posts.index}"><small class="timeago" title="{categories.children.posts.timestampISO}"></small></a>
+											<a href="{config.relative_path}/topic/{categories.children.posts.topic.slug}/{categories.children.posts.index}"><small class="timeago" title="{categories.children.posts.timestamp}"></small></a>
 											<small class="topic-content">{categories.children.posts.content}</small>
 										</div>
 									</div>
