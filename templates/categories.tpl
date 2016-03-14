@@ -99,7 +99,7 @@
 							</div>
 							<div class="media-body">
 								<div class="topic-title">
-									<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}"><small class="timeago" title="{categories.posts.timestampISO}"></small></a>
+									<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}"><small class="timeago" title="{categories.posts.timestamp}"></small></a>
 									<small class="topic-content">{categories.posts.content}</small>
 								</div>
 							</div>
