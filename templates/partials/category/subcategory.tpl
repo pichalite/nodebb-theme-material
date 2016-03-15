@@ -5,7 +5,7 @@
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-header-alt">
 			<div class="lv-title">
-				[[category:subcategories]]
+				[[global:subcategories]]
 			</div>
 			</div>
 			<div class="lv-body">
@@ -26,7 +26,7 @@
 							<small class="lv-small">{children.description}</small>
 			    		</div>
 			    		<!-- IF !children.link -->
-			    		<div class="lv-actions hidden-xs hidden-sm">
+			    		<div class="lv-actions">
 			    			<ul>
 			    				<li>
 			    					{children.topic_count}
