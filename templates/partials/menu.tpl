@@ -123,6 +123,8 @@
                             <a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a> 
                         </div>
                         <div class="lv-footer">
+                            <a href="#" class="mark-all-read" component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a>
+                            <hr />
                             <a href="{relative_path}/chats">[[modules:chat.see_all]]</a>
                         </div>
                     </div>

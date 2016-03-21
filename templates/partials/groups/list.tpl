@@ -5,8 +5,8 @@
             <div>{groups.displayName}</div>
             <small>{groups.description}</small>
         </div>
-        <div class="card-body group-cover list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
-        </div>
+        <a href="{config.relative_path}/groups/{groups.slug}" class="card-body group-cover list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
+        </a>
         <div class="card-body card-padding">
             <ul class="members">
                 <!-- BEGIN members -->

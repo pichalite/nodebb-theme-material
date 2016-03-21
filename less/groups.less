@@ -33,8 +33,11 @@
 			min-height: 150px;
 		}
 
-		.list-cover:hover {
-			cursor: pointer;
+		.list-cover {
+			display: block;
+			&:hover {
+				cursor: pointer;
+			}
 		}
 
 		.card-footer {
@@ -92,6 +95,12 @@
 }
 
 [component="groups/container"] {
+	
+	.card.user-profile-view {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+	
 	[component="groups/cover"] {
 		background-size: cover;
 		background-repeat: no-repeat;

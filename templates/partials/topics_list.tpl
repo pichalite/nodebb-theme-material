@@ -16,7 +16,7 @@
 			<!-- IF topics.thumb -->
 			<img src="{topics.thumb}" class="lv-img" />
 			<!-- ELSE -->
-        	<a href="{config.relative_path}/user/{topics.user.userslug}">
+        	<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">
             	<!-- IF topics.user.picture -->
                 <img src="{topics.user.picture}" class="lv-img" title="{topics.user.username}" />
                 <!-- ELSE -->
@@ -44,14 +44,14 @@
 				<!-- ELSE -->
 				<strong>[[global:guest]]</strong>
 				<!-- ENDIF topics.user.uid -->
-				<span class="timeago" title="{topics.relativeTime}"></span>
+				<span class="timeago" title="{topics.timestampISO}"></span>
 			</small>
 			<!-- ENDIF template.category -->
 
 			<!-- IF !template.category -->
 			<small class="lv-small">
 				<span class="hidden-xs">[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> | </span>
-				<strong>{topics.user.username}</strong> <a href="{config.relative_path}/category/{topics.category.slug}">[[global:posted_in, {topics.category.name}]] <i class="fa {topics.category.icon}"></i></a> <span class="timeago" title="{topics.relativeTime}"></span>
+				<strong>{topics.user.username}</strong> <a href="{config.relative_path}/category/{topics.category.slug}">[[global:posted_in, {topics.category.name}]] <i class="fa {topics.category.icon}"></i></a> <span class="timeago" title="{topics.timestampISO}"></span>
 			</small>
 			<!-- ENDIF !template.category -->
 			
@@ -81,7 +81,7 @@
 		                <!-- ENDIF topics.teaser.user.picture -->
 					</a>
 					<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-						<span class="timeago" title="{topics.teaser.timestamp}"></span>
+						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					</a>
 				</li>
 				<!-- ENDIF topics.teaser.index -->

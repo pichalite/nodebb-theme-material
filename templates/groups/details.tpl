@@ -197,13 +197,13 @@
 					<div class="form-group">
 						<div class="fg-line">
 						<label for="name">[[groups:details.description]]</label>
-						<textarea class="form-control" name="description" id="description" type="text">{group.description}</textarea>
+						<textarea class="form-control" name="description" id="description" type="text" maxlength="255">{group.description}</textarea>
 						</div>
 					</div>
 					<div class="form-group user-title-option">
 						<div class="fg-line">
 						<label for="userTitle">[[groups:details.badge_text]]</label>
-						<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" value="{group.userTitle}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
+						<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" maxlength="40" value="{group.userTitle}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
 						</div>
 					</div>
 					<div class="form-group user-title-option">
@@ -238,6 +238,9 @@
 							[[groups:details.private]]
 						</label>
 					</div>
+					<!-- IF !allowPrivateGroups -->
+					<small class="help-block">[[groups:details.private_system_help]]</small>
+					<!-- ENDIF !allowPrivateGroups -->
 					<small class="help-block">[[groups:details.private_help]]</small>
 					<div class="checkbox">
 	                    <label>
@@ -277,7 +280,7 @@
 						<div class="timeline-badge">
 							<i class="fa {posts.category.icon}"></i>
 						</div>
-						<span class="timeline-date"><a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]] <i class="fa {posts.category.icon}"></i></a> <span class="timeago" title="{posts.relativeTime}"></span></span>
+						<span class="timeline-date"><a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]] <i class="fa {posts.category.icon}"></i></a> <span class="timeago" title="{posts.timestampISO}"></span></span>
 						<div class="timeline-content">
 							<p>{posts.content}</p>
 						</div>
