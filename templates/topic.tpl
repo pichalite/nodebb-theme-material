@@ -22,11 +22,13 @@
 						</div>
 					</div>
 
-					<div class="lv-body" component="topic" data-tid="{tid}">
+					<div class="lv-body">
+						<div component="topic" data-tid="{tid}">
 						<!-- BEGIN posts -->
 							<!-- IMPORT partials/topic/post.tpl -->
 						<!-- END posts -->
-
+						</div>
+						
 						<div class="post-bar">
 							<!-- IMPORT partials/post_bar.tpl -->
 						</div>
