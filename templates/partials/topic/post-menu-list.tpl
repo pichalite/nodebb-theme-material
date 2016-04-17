@@ -21,6 +21,7 @@
 <!-- ENDIF posts.display_moderator_tools -->
 
 <!-- IF !posts.deleted -->
+<!-- IF config.loggedIn -->
 <li>
 	<a component="post/favourite" href="#" data-favourited="{posts.favourited}">[[topic:favourite]]
 	<span component="post/favourite-count" class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
@@ -28,6 +29,7 @@
 	<i component="post/favourite/off" class="fa fa-heart-o <!-- IF posts.favourited -->hidden<!-- ENDIF posts.favourited -->"></i>
 	</a>
 </li>
+<!-- ENDIF config.loggedIn -->
 
 <!-- IF postSharing.length -->
 <li class="divider"></li>

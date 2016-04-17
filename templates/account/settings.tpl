@@ -54,6 +54,21 @@
 	                    </label>
 	                </div>
 	                <small class="help-block">[[user:topic_search_help]]</small>
+	                <div class="checkbox">
+	                	<label>
+	                        <input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->>
+	                        <i class="input-helper"></i>
+	                        [[user:scroll_to_my_post]]
+	                    </label>
+	                </div>
+	                <div class="checkbox">
+	                    <label>
+	                        <input type="checkbox" data-property="delayImageLoading" <!-- IF settings.delayImageLoading -->checked<!-- ENDIF settings.delayImageLoading -->>
+	                        <i class="input-helper"></i>
+	                        [[user:delay_image_loading]]
+	                    </label>
+	                </div>
+	                <small class="help-block">[[user:image_load_delay_help]]</small>
 	            </div>
 	        </div>
 
