@@ -8,7 +8,7 @@
 		<div class="col-md-12">
 			<div class="card">
 				<div class="listview lv-bordered lv-lg">
-					<div class="lv-header-alt">
+					<div class="lv-header-alt <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
 						<div class="title">
 							<div class="markread btn-group <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -49,10 +49,9 @@
 						</div>
 					</div>
 
-					<!-- IF topics.length -->
 					<!-- IMPORT partials/topics_list.tpl -->
 					<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
-					<!-- ENDIF topics.length -->
+					
 					<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">
 						[[unread:no_unread_topics]]
 					</div>
