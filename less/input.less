@@ -499,3 +499,96 @@ html:not(.ie9) .select.fg-line:before {
 	font-weight: normal;
 	font-size: 14px;
 }
+
+
+
+
+
+//topic-select
+
+[component="category/topic"] {
+	
+	.checkbox label  {
+		padding-left: 0px;
+		position: relative;
+	}
+	
+	.checkbox .select {
+	    top: 0;
+	    left: 0;
+	    margin-left: 0!important;
+	    z-index: 1;
+	    opacity: 0;
+	    filter: alpha(opacity=0);
+	    margin-top: 0;
+	}
+	
+	.checkbox .input-helper:before, .checkbox .input-helper:after {
+	    -webkit-transition: all;
+	    -moz-transition: all;
+	    -o-transition: all;
+	    transition: all;
+	    -webkit-transition-duration: 250ms;
+	    transition-duration: 250ms;
+	    -webkit-backface-visibility: hidden;
+	    -moz-backface-visibility: hidden;
+	    backface-visibility: hidden;
+	    position: absolute;
+	    content: "";
+	}
+	
+	.checkbox .input-helper:before {
+	    left: 0;
+	    border: 1px solid #ccc;
+	}
+	
+	.checkbox.disabled {
+	    opacity: .6;
+	    filter: alpha(opacity=60);
+	}
+	
+	.checkbox .select {
+	    width: 17px;
+	    height: 17px;
+	}
+	
+	&.selected {
+		.checkbox .input-helper:before {
+		    -webkit-transform: scale(0);
+		    -ms-transform: scale(0);
+		    -o-transform: scale(0);
+		    transform: scale(0);
+		}
+		
+		.checkbox .input-helper:after {
+		    -webkit-transform: scale(1) rotate(-50deg);
+		    -ms-transform: scale(1) rotate(-50deg);
+		    -o-transform: scale(1) rotate(-50deg);
+		    transform: scale(1) rotate(-50deg);
+		    opacity: 1;
+		    filter: alpha(opacity=100);
+		}
+	}
+	
+	.checkbox .input-helper:before {
+	    top: 0;
+	    width: 17px;
+	    height: 17px;
+	}
+	
+	.checkbox .input-helper:after {
+	    opacity: 0;
+	    filter: alpha(opacity=0);
+	    -webkit-transform: scale(0) rotate(80deg);
+	    -ms-transform: scale(0) rotate(80deg);
+	    -o-transform: scale(0) rotate(80deg);
+	    transform: scale(0) rotate(80deg);
+	    width: 22px;
+	    height: 9px;
+	    border-bottom: 2px solid #009688;
+	    border-left: 2px solid #009688;
+	    border-bottom-left-radius: 3px;
+	    left: -1px;
+	    top: 1px;
+	}
+}

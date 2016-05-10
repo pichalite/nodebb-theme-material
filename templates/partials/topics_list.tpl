@@ -6,7 +6,7 @@
 		<!-- IF showSelect -->
         <div class="checkbox pull-left" component="topic/select">
             <label>
-                <input type="checkbox" class="select">
+                <div class="select"></div>
                 <i class="input-helper"></i>
             </label>
         </div>
