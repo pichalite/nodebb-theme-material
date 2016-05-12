@@ -29,11 +29,11 @@
 			    		<div class="lv-actions hidden-xs hidden-sm">
 			    			<ul>
 			    				<li>
-			    					{children.topic_count}
+			    					{children.totalTopicCount}
 									<small>[[global:topics]]</small>
 			    				</li>
 			    				<li>
-			    					{children.post_count}
+			    					{children.totalPostCount}
 									<small>[[global:posts]]</small>
 			    				</li>
 			    			</ul>
