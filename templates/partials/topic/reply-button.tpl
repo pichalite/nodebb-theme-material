@@ -1,4 +1,4 @@
-<li class="reply-button">
+<li class="reply-button" component="topic/reply/container">
 <button component="topic/reply" class="btn btn-md btn-primary <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</button>
 
 <!-- IF loggedIn -->

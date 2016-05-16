@@ -85,13 +85,27 @@
 						</div>
 					</div>
 
+					<div class="form-group fg-line">
+		            	<div class="select">
+			            	<label for="grouptitle">[[user:grouptitle]]</label>
+							<select class="form-control" id="grouptitle" data-property="groupTitle">
+								<option value="">[[user:no-group-title]]</option>
+								<!-- BEGIN groups -->
+								<!-- IF groups.userTitleEnabled -->
+								<option value="{groups.name}" <!-- IF groups.selected -->selected<!-- ENDIF groups.selected -->>{groups.userTitle}</option>
+								<!-- ENDIF groups.userTitleEnabled -->
+								<!-- END groups -->
+							</select>
+						</div>
+					</div>
+
 					<div class="form-group">
 						<div class="fg-line">
 							<label>[[user:aboutme]]</label> <small><label id="aboutMeCharCountLeft"></label></small>
 							<textarea class="form-control" id="inputAboutMe" rows="5">{aboutme}</textarea>
 						</div>
 					</div>
-
+					
 					<!-- IF !disableSignatures -->
 					<div class="form-group">
 						<div class="fg-line">

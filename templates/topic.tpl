@@ -23,9 +23,12 @@
 					</div>
 
 					<div class="lv-body">
-						<div component="topic" data-tid="{tid}">
+						<div component="topic" data-tid="{tid}" data-cid="{cid}">
 						<!-- BEGIN posts -->
 							<!-- IMPORT partials/topic/post.tpl -->
+							<!-- IF !posts.index -->
+							<div class="post-bar-placeholder"></div>
+							<!-- ENDIF !posts.index -->
 						<!-- END posts -->
 						</div>
 						
