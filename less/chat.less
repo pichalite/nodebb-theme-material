@@ -725,3 +725,38 @@
 		}
 	}
 }
+
+
+
+
+/* chat modal style updates start */
+
+
+@media (min-width: @screen-md-min) {
+	.chat-modal {
+		left: auto !important;
+		right: 0px;
+		top: auto !important;
+		bottom: 0px;
+		
+		.modal-dialog {
+			width: 400px;
+			margin: 0px;
+			
+			.modal-content {
+				
+				.modal-header {
+					padding: 5px;
+				}
+				
+				.modal-body {
+					height: 100%;
+					
+					.chat-content {
+						min-height: 300px;
+					}
+				}
+			}
+		}
+	}
+}
