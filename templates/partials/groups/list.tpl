@@ -3,7 +3,6 @@
     <div class="card">
         <div class="card-header ch-alt">
             <div>{groups.displayName}</div>
-            <small>{groups.description}</small>
         </div>
         <a href="{config.relative_path}/groups/{groups.slug}" class="card-body group-cover list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->">
         </a>
