@@ -732,10 +732,10 @@
 /* chat modal style updates start */
 
 
-@media (min-width: @screen-md-min) {
+@media (min-width: @screen-sm-min) {
 	.chat-modal {
 		left: auto !important;
-		right: 0px;
+		right: 5px;
 		top: auto !important;
 		bottom: 0px;
 		
@@ -747,14 +747,26 @@
 				
 				.modal-header {
 					padding: 5px;
+					
+					.users-tag-container {
+						max-width: ~"calc(100% - 75px)";
+					}
 				}
 				
 				.modal-body {
 					height: 100%;
 					
 					.chat-content {
-						min-height: 300px;
+						min-height: 350px;
 					}
+					
+					.chat-footer {
+						padding-top: 10px;
+					}
+				}
+				
+				.ui-resizable-handle {
+					display: none !important;
 				}
 			}
 		}
