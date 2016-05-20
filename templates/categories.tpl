@@ -26,7 +26,7 @@
 				</div>
 			</a>
 			<div class="new-card-footer">
-				<!-- BEGIN posts -->				
+				<!-- BEGIN posts -->
 				<div component="category/posts">
 					<div class="pull-left hidden-xs user-avatar">
 				    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
@@ -99,7 +99,7 @@
 							</div>
 							<div class="media-body">
 								<div class="topic-title">
-									<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}"><small class="timeago" title="{categories.posts.timestamp}"></small></a>
+									<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}"><small class="timeago" title="{categories.posts.timestampISO}"></small></a>
 									<small class="topic-content">{categories.posts.content}</small>
 								</div>
 							</div>
@@ -152,7 +152,7 @@
 									</div>
 									<div class="media-body">
 										<div class="topic-title">
-											<a href="{config.relative_path}/topic/{categories.children.posts.topic.slug}/{categories.children.posts.index}"><small class="timeago" title="{categories.children.posts.timestamp}"></small></a>
+											<a href="{config.relative_path}/topic/{categories.children.posts.topic.slug}/{categories.children.posts.index}"><small class="timeago" title="{categories.children.posts.timestampISO}"></small></a>
 											<small class="topic-content">{categories.children.posts.content}</small>
 										</div>
 									</div>
