@@ -1,9 +1,17 @@
 <ul class="pagination lv-pagination hidden-xs">
-    <li class="<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
-        <a href="<!-- IF pagination.prev.active -->?{pagination.prev.qs}<!-- ELSE -->#<!-- ENDIF pagination.prev.active -->" data-page="{pagination.prev.page}" aria-label="Previous">
+    <!-- IF !pagination.prev.active -->
+    <li class="disabled">
+        <a href="#" aria-label="Previous">
             <i class="fa fa-chevron-left"></i>
         </a>
     </li>
+    <!-- ELSE -->
+    <li>
+        <a href="?{pagination.prev.qs}" data-page="{pagination.prev.page}" aria-label="Previous">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+    </li>
+    <!-- ENDIF !pagination.prev.active -->
 
     <!-- BEGIN pages -->
         <!-- IF pagination.pages.separator -->
@@ -17,28 +25,69 @@
         <!-- ENDIF pagination.pages.separator -->
     <!-- END pages -->
 
-    <li class="<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
-        <a href="<!-- IF pagination.next.active -->?{pagination.next.qs}<!-- ELSE -->#<!-- ENDIF pagination.next.active -->" data-page="{pagination.next.page}" aria-label="Next">
+    <!-- IF !pagination.next.active -->
+    <li class="disabled">
+        <a href="#" aria-label="Next">
             <i class="fa fa-chevron-right"></i>
         </a>
     </li>
+    <!-- ELSE -->
+    <li>
+        <a href="?{pagination.next.qs}" data-page="{pagination.next.page}" aria-label="Next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </li>
+    <!-- ENDIF !pagination.next.active -->
 </ul>
 
 
 <ul class="pagination lv-pagination visible-xs">
-    <li class="<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
-        <a href="<!-- IF pagination.prev.active -->?{pagination.prev.qs}<!-- ELSE -->#<!-- ENDIF pagination.prev.active -->" data-page="{pagination.prev.page}" aria-label="Previous">
+    <!-- IF !pagination.prev.active -->
+    <li class="first disabled">
+		<a href="#"><i class="fa fa-fast-backward"></i> </a>
+	</li>
+	<li class="disabled">
+        <a href="#" aria-label="Previous">
             <i class="fa fa-chevron-left"></i>
         </a>
     </li>
+	<!-- ENDIF !pagination.prev.active -->
+	
+	<!-- IF pagination.prev.active -->
+	<li class="first">
+		<a href="?page=1" data-page="1"><i class="fa fa-fast-backward"></i> </a>
+	</li>
+	<li>
+        <a href="?{pagination.prev.qs}" data-page="{pagination.prev.page}" aria-label="Previous">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+    </li>
+	<!-- ENDIF pagination.prev.active -->
+ 
     
     <li component="pagination/select-page" class="page select-page">
 		<a href="#">{pagination.currentPage} / {pagination.pageCount}</a>
 	</li>
     
-    <li class="<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
-        <a href="<!-- IF pagination.next.active -->?{pagination.next.qs}<!-- ELSE -->#<!-- ENDIF pagination.next.active -->" data-page="{pagination.next.page}" aria-label="Next">
+    <!-- IF !pagination.next.active -->
+    <li class="disabled">
+        <a href="#" aria-label="Next">
             <i class="fa fa-chevron-right"></i>
         </a>
     </li>
+    <li class="last disabled">
+		<a href="#"><i class="fa fa-fast-forward"></i> </a>
+	</li>
+	<!-- ENDIF !pagination.next.active -->
+	
+	<!-- IF pagination.next.active -->
+	<li>
+        <a href="?{pagination.next.qs}" data-page="{pagination.next.page}" aria-label="Next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </li>
+	<li class="last">
+		<a href="?page={pagination.pageCount}" data-page="{pagination.pageCount}"><i class="fa fa-fast-forward"></i> </a>
+	</li>
+	<!-- ENDIF pagination.next.active -->
 </ul>
