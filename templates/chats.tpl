@@ -1,18 +1,13 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="card chat-card" id="messages-main">
     <div class="ms-menu">
-        <div class="listview lv-message">
+        <div class="listview lv-message hidden-xs">
             <div class="lv-header-alt clearfix">
-                <div class="form-group">
- 					<div class="fg-line">
- 						<input class="form-control" component="chat/search" type="text" placeholder="[[users:enter_username]]"/>
- 					</div>
- 				</div>
+                <div class="new-chat pull-left" title="New Chat">
+                    <i class="fa fa-comments-o"></i>
+                </div>
             </div>
         </div>
-        <ul component="chat/search/list" class="chat-search-list">
-			
-		</ul>
         <ul component="chat/recent" class="listview lv-user chats-list">
             <!-- BEGIN rooms -->
             <li component="chat/recent/room" data-roomid="{rooms.roomId}" class="lv-item media <!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
@@ -37,12 +32,33 @@
             <!-- END rooms -->
         </ul>
     </div>
+     <div class="chat-search-menu">
+        <div class="listview lv-message">
+            <div class="lv-header-alt clearfix">
+                <div id="chat-search-menu-trigger">
+                    <div class="line-wrap">
+                        <div class="line top"></div>
+                        <div class="line center"></div>
+                        <div class="line bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+ 			<div class="fg-line">
+ 				<input class="form-control" component="chat/search" type="text" placeholder="[[users:enter_username]]"/>
+ 			</div>
+ 		</div>
+        <ul component="chat/search/list" class="chat-search-list">
+			
+		</ul>
+	</div>
 
     <!-- IF roomId -->
     <div component="chat/messages" class="ms-body expanded-chat" data-roomid="{roomId}">
         <div class="listview lv-message">
             <div class="lv-header-alt clearfix">
-                <div id="ms-menu-trigger" class="">
+                <div id="ms-menu-trigger">
                     <div class="line-wrap">
                         <div class="line top"></div>
                         <div class="line center"></div>
@@ -50,7 +66,7 @@
                     </div>
                 </div>
 
-                <div class="lvh-label">
+                <div class="lvh-label hidden-xs">
                     <div class="users-tag-container">
  				        <input class="users-tag-input form-control" type="text" placeholder="enter users here" tabindex="4"/>
  			        </div>
@@ -63,7 +79,7 @@
                 </div>
             </div>
             
-            <span class="since-bar"><a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
+            <span class="since-bar hidden-xs"><a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
             
             <ul class="lv-body chat-content">
             <!-- IMPORT partials/chat_messages.tpl -->
