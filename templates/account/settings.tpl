@@ -140,7 +140,7 @@
 
 	        <div class="card">
 	            <div class="card-header">
-	            	[[user:follow]]
+	            	[[topic:watch]]
 	            </div>
 	            <div class="card-body card-padding">
 	            	<div class="checkbox">

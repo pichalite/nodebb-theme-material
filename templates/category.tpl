@@ -14,7 +14,7 @@
 						<a href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 						<!-- ENDIF !loggedIn -->
 					<!-- ENDIF privileges.topics:create -->
-					<ul class="lv-actions actions">
+					<ul class="lv-actions actions" component="category/controls">
 						<!-- IMPORT partials/category/watch.tpl -->
 						<!-- IMPORT partials/category/tools.tpl -->
 						<!-- IMPORT partials/category/sort.tpl -->
