@@ -21,10 +21,12 @@
 
         <!-- IF template.account/profile -->
 		<div class="account-stats">
+			<!-- IF !reputation:disabled -->
 			<div class="stat">
 				<div class="human-readable-number" title="{reputation}">{reputation}</div>
 				<span class="stat-label">[[global:reputation]]</span>
 			</div>
+			<!-- ENDIF !reputation:disabled -->
 
 			<div class="stat">
 				<div class="human-readable-number" title="{postcount}">{postcount}</div>

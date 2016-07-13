@@ -26,7 +26,7 @@
 					<div id="homePageCustom" class="form-group" style="display: none;">
 						<div class="fg-line">
 							<label for="homePageCustom">[[user:custom_route]]</label>
-							<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" />
+							<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" value="{settings.homePageRoute}" />
 						</div>
 						<small>[[user:custom_route_help]]</small>
 					</div>
@@ -46,6 +46,7 @@
 	                        [[user:open_links_in_new_tab]]
 	                    </label>
 	                </div>
+	                <!-- IF inTopicSearchAvailable -->
 	                <div class="checkbox">
 	                    <label>
 	                        <input type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->>
@@ -54,6 +55,7 @@
 	                    </label>
 	                </div>
 	                <small class="help-block">[[user:topic_search_help]]</small>
+	                <!-- ENDIF inTopicSearchAvailable -->
 	                <div class="checkbox">
 	                	<label>
 	                        <input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->>
@@ -138,7 +140,7 @@
 
 	        <div class="card">
 	            <div class="card-header">
-	            	[[user:follow]]
+	            	[[topic:watch]]
 	            </div>
 	            <div class="card-body card-padding">
 	            	<div class="checkbox">
@@ -155,27 +157,6 @@
 	                        [[user:follow_topics_you_reply_to]]
 	                    </label>
 	                </div>
-	            </div>
-	        </div>
-
-	        <div class="card">
-	            <div class="card-header">
-	            	[[groups:groups]]
-	            </div>
-	            <div class="card-body card-padding">
-	            	<div class="form-group fg-line">
-		            	<div class="select">
-			            	<label for="grouptitle">[[user:grouptitle]]</label>
-							<select class="form-control" id="grouptitle" data-property="groupTitle">
-								<option value="">[[user:no-group-title]]</option>
-								<!-- BEGIN userGroups -->
-								<!-- IF userGroups.userTitleEnabled -->
-								<option value="{userGroups.name}" <!-- IF userGroups.selected -->selected<!-- ENDIF userGroups.selected -->>{userGroups.userTitle}</option>
-								<!-- ENDIF userGroups.userTitleEnabled -->
-								<!-- END userGroups -->
-							</select>
-						</div>
-					</div>
 	            </div>
 	        </div>
 

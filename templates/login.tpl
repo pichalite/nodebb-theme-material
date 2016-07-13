@@ -15,7 +15,7 @@
             <div class="input-group fg-float">
                 <span class="input-group-addon"><i class="fa fa-fw fa-user"></i></span>
                 <div class="fg-line">
-                    <input class="form-control" type="text" name="username" id="username" autocorrect="off" autocapitalize="off" />
+                    <input class="form-control" type="text" name="username" id="username" autocorrect="off" autocapitalize="off" value="{username}" <!-- IF username -->readonly<!-- ENDIF username -->/>
                 </div>
                 <label class="fg-label">{allowLoginWith}</label>
             </div>
