@@ -1,6 +1,6 @@
 <div class="card-body card-padding" component="posts" data-nextstart="{nextStart}">
 	<!-- BEGIN posts -->
-	<div class="timeline single <!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->">
+	<div class="timeline single<!-- IF posts.deleted --> deleted<!-- ELSE --><!-- IF posts.topic.deleted --> deleted<!-- ENDIF posts.topic.deleted --><!-- ENDIF posts.deleted -->">
 		<div class="frame">
 			<div class="timeline-badge" style="background-color:{posts.category.bgColor}; border-color:{posts.category.bgColor};">
 				<i class="fa {posts.category.icon}"></i>

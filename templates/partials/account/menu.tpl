@@ -9,6 +9,7 @@
 		<!-- IF showHidden -->
 		<li><a href="{config.relative_path}/user/{userslug}/settings"><i class="fa fa-fw fa-edit"></i> [[user:settings]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/edit"><i class="fa fa-fw fa-gear"></i> [[user:edit]]</a></li>
+		<li><a href="{config.relative_path}/user/{userslug}/info"><i class="fa fa-fw fa-lock"></i> [[user:account_info]]</a></li>
 		<!-- ENDIF showHidden -->
 
 		<!-- IF !isSelf -->

@@ -63,16 +63,6 @@
         </div>
         <!-- END regFormEntry -->
 
-        <!-- IF termsOfUse -->
-        <div class="tos">{termsOfUse}</div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" name="agree-terms" id="agree-terms">
-                <i class="input-helper"></i>
-                [[register:agree_to_terms_of_use]]
-            </label>
-        </div>
-        <!-- ENDIF termsOfUse -->
         <button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
         <input id="referrer" type="hidden" name="referrer" value="" />
         <input id="token" type="hidden" name="token" value="" />

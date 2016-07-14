@@ -61,18 +61,6 @@
 			</div>
 			<!-- ENDIF aboutme -->
 
-			<!-- IF ips.length -->
-			<div class="card">
-				<div class="card-header ch-alt">
-					<i class="fa fa-laptop"></i> [[global:recentips]]
-				</div>
-				<div class="card-body card-padding">
-				<!-- BEGIN ips -->
-					<div>{ips.ip}</div>
-				<!-- END ips -->
-				</div>
-			</div>
-			<!-- ENDIF ips.length -->
 		</div>
 		<div class="col-md-8 user-recent-posts">
 			<div class="card">

@@ -1,6 +1,6 @@
 
 <!-- IF !notifications.length -->
-<a class="no-notifs lv-item">[[notifications:no_notifs]]</a>
+<a href="#" class="no-notifs lv-item">[[notifications:no_notifs]]</a>
 <!-- ENDIF !notifications.length -->
 
 <!-- BEGIN notifications -->
