@@ -366,3 +366,18 @@
 		padding-left: 20px;
 	}
 }
+
+[component="post"].isSolved .post-body:before {
+    content: "answer";
+    position: absolute;
+    right: 0;
+    top: -20px;
+    background-color: @material-success;
+    color: #fff;
+    padding: 0px 5px;
+    
+    @media (max-width: @screen-xs-max) {
+    	right: initial;
+    	left: 0;
+    }
+}

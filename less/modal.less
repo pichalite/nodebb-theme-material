@@ -7,7 +7,7 @@
 .modal-header {
     padding: 23px 26px;
     
-    h4 {
+    h3, h4 {
         margin: 0px;
     }
 }
@@ -43,10 +43,21 @@
     }
 }
 
+.modal-footer .btn.btn-danger {
+    box-shadow: none !important;
+    color: @material-danger;
+    background-color: #fff;
+    
+    &:hover {
+        background-color: #eee;
+    }
+}
+
 .modal-footer .btn.btn-primary, .chat-footer .btn.btn-primary {
     box-shadow: none !important;
     color: @material-primary;
     background-color: #fff;
+    
     &:hover {
         background-color: #eee;
     }
@@ -56,6 +67,7 @@
     box-shadow: none !important;
     color: @material-warning;
     background-color: #fff;
+    
     &:hover {
         background-color: #eee;
     }
@@ -87,4 +99,19 @@
         height: 46px;
         border-radius: 50%;
     }
+    
+    .modal-footer {
+        .btn-link {
+            color: #0a0a0a;
+            
+            &:hover {
+                background-color: #eee;
+            }       
+        }
+    }
+}
+
+#move_thread_modal .category-list {
+    height: auto !important;
+    max-height: 500px;
 }
