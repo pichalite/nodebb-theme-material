@@ -16,5 +16,8 @@
 		"lib/material.js",
 		"lib/vendor/waves.min.js"
 	],
+	"acpScripts": [
+		"lib/admin.js"
+	],
 	"templates": "./templates"
 }

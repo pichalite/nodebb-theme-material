@@ -32,9 +32,16 @@
 	}
 }
 
-.account.settings .card .card-header {
-	font-size: 16px;
-	font-weight: 500;
+.account.settings {
+	.card .card-header {
+		font-size: 16px;
+		font-weight: 500;
+	}
+	
+	.form-control {
+		color: inherit;
+		border-bottom: @input-border-bottom;
+	}
 }
 
 .account-username-box {
@@ -97,7 +104,7 @@
 		padding: 20px 20px 20px 30px;
 
 		hr {
-			border: 1px solid #fff;
+			border: @account-hr-border;
 			margin: 0px;
 		}
 
@@ -178,7 +185,6 @@
 
 			.stat-label {
 				font-size: 14px;
-				color: #333;
 			}
 
 			.human-readable-number {

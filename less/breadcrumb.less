@@ -1,8 +1,13 @@
 .breadcrumb {
-	border: 1px solid #E5E5E5;
+	border: @breadcrumb-border;
+	background-color: @breadcrumb-bg-color;
 	border-radius: 0;
 	margin-bottom: 15px;
 	font-size: 13px;
+	
+	>.active {
+		color: @breadcrumb-active-color;
+	}
 	
 	li {
 		max-width: 100%;

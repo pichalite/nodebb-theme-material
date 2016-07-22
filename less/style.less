@@ -4,8 +4,8 @@ body {
 	font-family: roboto;
 	font-size: 14px;
 	line-height: 1.42857143;
-	color: #000;
-	background-color: #EEEEEE;
+	color: @body-color;
+	background-color: @body-bg-color;
 	font-weight: 400;
 	padding-top: 65px;
 }
@@ -56,6 +56,10 @@ ul, li {
 		opacity: 0;
 		-ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	}
+}
+
+a, a:hover, a:active, a:focus, a:visited {
+	color: @anchor-color;
 }
 
 a:hover, a:active, a:focus, a:visited {

@@ -45,6 +45,7 @@
 
 	.topic-title {
 		font-size: 18px;
+		
 		@media (max-width: @screen-sm-max) {
 			font-size: 16px;
 		}
@@ -86,8 +87,8 @@
 	box-shadow: none;
 
 	.lv-header-alt {
-		background-color: #fff;
-		border: 1px solid #e4e5e7;
+		background-color: @lv-header-alt-bg-color;
+		border: none;
 	}
 
 	.lv-actions.actions {
@@ -141,9 +142,9 @@
 
 		.post-content {
 		    position: relative;
-		    background: white;
+		    background-color: @post-content-bg-color;
 		    border-radius: 2px;
-		    border: 1px solid #e4e5e7;
+		    border: 1px solid @border-color;
 
 		    @media (min-width: @screen-sm-min) {
 		        margin-left: 60px;
@@ -169,14 +170,14 @@
 
 			&:after {
 			    border-color: transparent;
-			    border-right-color: #fff;
+			    border-right-color: @border-color;
 			    border-width: 10px;
 			    margin-top: -10px;
 			}
 
 			&:before {
 			    border-color: transparent;
-			    border-right-color: #e4e5e7;
+			    border-right-color: @border-color;
 			    border-width: 11px;
 			    margin-top: -11px;
 			}
@@ -300,9 +301,52 @@
 	border-bottom: 1px solid @material-primary;
 }
 
+.composer {
+	background-color: @composer-bg-color !important;
+	
+	.title-container .title, .tags-container .bootstrap-tagsinput {
+		background-color: @composer-bg-color !important;
+	}
+	
+	.formatting-bar .formatting-group li {
+		color: @body-color !important;
+	}
+	
+	.write-preview-container .write {
+		background-color: @composer-bg-color !important;
+		border: 1px solid @border-color !important;
+	}
+	
+	.preview.well {
+		background-color: @composer-preview-bg-color;
+		border: 1px solid @border-color !important;
+	}
+}
+
 .composer-container {
 	.btn-group {
 		box-shadow: none;
+		
+		.composer-discard {
+			box-shadow: none !important;
+			color: @body-color;
+			background-color: @composer-bg-color;
+			
+			&:hover {
+				color: @composer-bg-color;
+				background-color: @body-color;
+			}
+		}
+		
+		.btn.btn-primary {
+		    box-shadow: none !important;
+		    color: @material-primary;
+		    background-color: @composer-bg-color;
+		    
+		    &:hover {
+		        background-color: @body-color;
+		    }
+		}
 	}
 	
 	.mobile-navbar {
@@ -312,27 +356,27 @@
 			background-color: inherit;
 		}
 	}
+	
+	.form-control {
+		color: @body-color;
+	}
+	
+	.resizer {
+		.trigger {
+			background-color: @body-color !important;
+			
+			i {
+				color: @composer-bg-color !important;
+			}
+		}
+	}
+	
+	.bootstrap-tagsinput {
+		.ui-autocomplete-input {
+			color: @body-color !important;
+		}
+	}
 }
-
-.composer-container .btn.btn-default {
-    box-shadow: none !important;
-
-    &:hover {
-        background-color: #eee;
-    }
-}
-
-.composer-container .btn.btn-primary {
-    box-shadow: none !important;
-    color: @material-primary;
-    background-color: #fff;
-    
-    &:hover {
-        background-color: #eee;
-    }
-}
-
-
 
 .composer-container .btn.btn-info {
     box-shadow: none !important;

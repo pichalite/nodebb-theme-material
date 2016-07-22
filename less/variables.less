@@ -1,5 +1,58 @@
+@theme: dark;
+
 @material-primary: #2196f3;
 @material-danger: #f44336;
 @material-success: #4caf50;
 @material-warning: #ff9800;
 @material-info: #0098ab;
+
+.-(@theme);
+
+.-(default) {
+    @header-bg-color: #4285F4;
+    @body-color: #000;
+    @body-bg-color: #eee;
+    @card-bg-color: #fff;
+    @lv-header-alt-bg-color: #F8F8F8;
+    @breadcrumb-bg-color: #F5F5F5;
+    @breadcrumb-border: 1px solid #E5E5E5;
+    @breadcrumb-active-color: #777;
+    @anchor-color: #337ab7;
+    @lv-item-border: 1px solid #f0f0f0;
+    @post-content-bg-color: #fff;
+    @topic-title-color: #337ab7;
+    @nav-pills-active-color: #000;
+    @list-group-item-bg-color: #fff;
+    @account-hr-border: 1px solid #fff;
+    @input-border-bottom: 1px solid rgba(0,0,0,0.12);
+    @composer-bg-color: #fff;
+    @chat-main-bg-color: @composer-bg-color;
+    @composer-preview-bg-color: #f5f5f5;
+    @modal-text-color: #333;
+    @border-color: #eee;
+}
+
+//Dark theme
+.-(dark) {
+    @header-bg-color: #1E262B;
+    @body-color: rgba(255,255,255,.7);
+    @body-bg-color: #222c32;
+    @card-bg-color: #2b343a;
+    @lv-header-alt-bg-color: rgba(255,255,255,.04);
+    @breadcrumb-bg-color: rgba(255,255,255,0.04);
+    @breadcrumb-border: none;
+    @breadcrumb-active-color: #7c7c7c;
+    @anchor-color: #337ab7;
+    @lv-item-border: 1px solid rgba(255,255,255,.1);
+    @post-content-bg-color: initial;
+    @topic-title-color: rgba(255,255,255,.7);
+    @nav-pills-active-color: #fff;
+    @list-group-item-bg-color: initial;
+    @account-hr-border: 1px solid #2b343a;
+    @input-border-bottom: 1px solid rgba(255,255,255,0.1);
+    @composer-bg-color: @body-bg-color;
+    @chat-main-bg-color: @body-bg-color;
+    @composer-preview-bg-color: #323c42;
+    @modal-text-color: #333;
+    @border-color: rgba(255,255,255,.1);
+}
