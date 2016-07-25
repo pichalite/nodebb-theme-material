@@ -52,6 +52,20 @@
 			line-height: 32px;
 			border-radius: 50%;
 		}
+		
+		.table {
+			margin-bottom: 0px;
+			
+			>tbody {
+				>tr:not(:first-child)>td {
+					border-top: 1px solid @border-color;
+				}
+				
+				>tr:first-child>td {
+					border: none;
+				}
+			}
+		}
 	}
 }
 

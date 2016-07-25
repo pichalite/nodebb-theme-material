@@ -1,9 +1,3 @@
-<style type="text/css">
-    #header {
-        box-shadow: none;
-    }
-</style>
-
 <div class="register">
     <div class="register-block">
         <div class="alert alert-danger<!-- IF !error --> hidden<!-- ENDIF !error -->" id="register-error-notify">
@@ -11,45 +5,41 @@
             <p>{error}</p>
         </div>
         <form class="form-horizontal" role="form" action="{config.relative_path}/register" method="post">
-        <div class="input-group fg-float">
+        <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-fw fa-envelope"></i></span>
             <div class="fg-line">
-                <input class="form-control" type="email" name="email" id="email" autocorrect="off" autocapitalize="off" />
+                <input class="form-control" type="email" name="email" id="email" placeholder="[[register:email_address_placeholder]]" autocorrect="off" autocapitalize="off" />
             </div>
-            <label class="fg-label">[[register:email_address_placeholder]]</label>
             <span class="input-group-addon">
                 <span id="email-notify"><i class="fa fa-circle-o"></i></span>
             </span>
         </div>
 
-        <div class="input-group fg-float">
+        <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-fw fa-user"></i></span>
             <div class="fg-line">
-                <input class="form-control" type="text" name="username" id="username" autocorrect="off" autocapitalize="off" autocomplete="off" />
+                <input class="form-control" type="text" name="username" id="username" placeholder="[[register:username_placeholder]]" autocorrect="off" autocapitalize="off" autocomplete="off" />
             </div>
-            <label class="fg-label">[[register:username_placeholder]]</label>
             <span class="input-group-addon">
                 <span id="username-notify"><i class="fa fa-circle-o"></i></span>
             </span>
         </div>
         
-        <div class="input-group fg-float">
+        <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
             <div class="fg-line">
-                <input class="form-control" type="password" name="password" id="password" />
+                <input class="form-control" type="password" name="password" id="password" placeholder="[[register:password_placeholder]]" />
             </div>
-            <label class="fg-label">[[register:password_placeholder]]</label>
             <span class="input-group-addon">
                 <span id="password-notify"><i class="fa fa-circle-o"></i></span>
             </span>
         </div>
         
-        <div class="input-group fg-float">
+        <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
             <div class="fg-line">
-                <input class="form-control" type="password" name="password-confirm" id="password-confirm" />
+                <input class="form-control" type="password" name="password-confirm" id="password-confirm" placeholder="[[register:confirm_password_placeholder]]" />
             </div>
-            <label class="fg-label">[[register:confirm_password_placeholder]]</label>
             <span class="input-group-addon">
                 <span id="password-confirm-notify"><i class="fa fa-circle-o"></i></span>
             </span>

@@ -37,18 +37,17 @@
 					<span class="mdl-switch__label"><strong>Display subcategories as cards on category page</strong></span>
 				</label>
 			</div>
-
+			
+			<div class="form-group">
+				<label for="skinOption">Select a skin</label>
+				<select id="skinOption" name="skinOption" class="form-control">
+					<option value="default">Default</option>
+					<option value="dark">Dark</option>
+				</select>	
+			</div>
+			
 		</form>
-		
-		<div class="col-xs-6 col-md-3">
-			<select id="skin-option" class="form-control">
-				<option value="default">Default</option>
-				<option value="dark">Dark</option>
-			</select>	
-		</div>
-		<div class="col-xs-6">
-			<button id="change-skin" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Apply Skin</button>
-		</div>
+	</div>
 </div>
 	
 <button id="save" class="floating-button mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">

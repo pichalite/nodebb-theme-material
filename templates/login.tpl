@@ -1,9 +1,3 @@
-<style type="text/css">
-    #header {
-        box-shadow: none;
-    }
-</style>
-
 <div class="login">
     <form class="form-horizontal" role="form" method="post" target="login" id="login-form">
         <div class="login-block">
@@ -12,20 +6,18 @@
                 [[login:failed_login_attempt]]
                 <p>{error}</p>
             </div>
-            <div class="input-group fg-float">
+            <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-fw fa-user"></i></span>
                 <div class="fg-line">
-                    <input class="form-control" type="text" name="username" id="username" autocorrect="off" autocapitalize="off" value="{username}" <!-- IF username -->readonly<!-- ENDIF username -->/>
+                    <input class="form-control" type="text" name="username" id="username" placeholder="{allowLoginWith}" autocorrect="off" autocapitalize="off" value="{username}" <!-- IF username -->readonly<!-- ENDIF username -->/>
                 </div>
-                <label class="fg-label">{allowLoginWith}</label>
             </div>
             
-            <div class="input-group fg-float">
+            <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
                 <div class="fg-line">
-                    <input class="form-control" type="password" name="password" id="password" />
+                    <input class="form-control" type="password" name="password" id="password" placeholder="[[user:password]]" />
                 </div>
-                <label class="fg-label">[[user:password]]</label>
             </div>
             
             <div class="checkbox">

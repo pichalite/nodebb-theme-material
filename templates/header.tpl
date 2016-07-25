@@ -38,8 +38,7 @@
 	<!-- ENDIF useCustomCSS -->
 </head>
 
-<body>
-	
+<body class="{bodyClass}">
     <!-- IMPORT partials/menu.tpl -->
 
 	<div class="container" id="content">

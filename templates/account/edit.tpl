@@ -60,21 +60,21 @@
 					<div class="form-group">
 						<div class="fg-line">
 							<label>[[user:fullname]]</label>
-							<input class="form-control" type="text" id="inputFullname" placeholder="[[user:fullname]]" value="{fullname}">
+							<input class="form-control" type="text" id="inputFullname" value="{fullname}">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="fg-line">
 							<label>[[user:website]]</label>
-							<input class="form-control" type="text" id="inputWebsite" placeholder="http://..." value="{website}">
+							<input class="form-control" type="text" id="inputWebsite" value="{website}">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<div class="fg-line">
 							<label>[[user:location]]</label>
-							<input class="form-control" type="text" id="inputLocation" placeholder="[[user:location]]" value="{location}">
+							<input class="form-control" type="text" id="inputLocation" value="{location}">
 						</div>
 					</div>
 

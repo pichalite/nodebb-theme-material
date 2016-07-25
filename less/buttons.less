@@ -178,7 +178,7 @@
     }
 
     &.btn-default:hover {
-        background: #fff;
+        background: @btn-default-bg-color;
     }
 }
 
@@ -617,7 +617,7 @@ tbody.collapse.in {
     list-style: none;
     font-size: 13px;
     text-align: left;
-    background-color: #fff;
+    background-color: @dropdown-bg-color;
     border: 1px solid transparent;
     border-radius: 2px;
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
@@ -633,7 +633,7 @@ tbody.collapse.in {
         height: 1px;
         margin: 2px;
         overflow: hidden;
-        background-color: rgba(0, 0, 0, .08);
+        background-color: @border-color;
     }
 
     >li>a {
@@ -642,7 +642,7 @@ tbody.collapse.in {
         clear: both;
         font-weight: 400;
         line-height: 1.42857143;
-        color: #333;
+        color: @dropdown-color;
         white-space: nowrap;
 
         &:hover, &:focus {
@@ -1035,9 +1035,17 @@ tbody.collapse.in {
     }
 }
 
+a.btn-primary {
+    color: #fff;
+}
+
+.btn-default {
+    background-color: @btn-default-bg-color;
+}
+
 .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
     color:#333;
-    background-color:#fff;
+    background-color: @btn-default-bg-color;
     border-color:transparent;
 }
 
