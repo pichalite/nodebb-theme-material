@@ -1,5 +1,5 @@
 #header {
-	background: #4285F4;
+	background: @header-bg-color;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
 	height: 65px;
 	position: fixed;
@@ -79,5 +79,9 @@
 		@media (max-width: @screen-xs-max) {
 			margin-left: 0px;
 		}
+	}
+	
+	.dropdown-menu {
+		background-color: @dropdown-bg-color;
 	}
 }

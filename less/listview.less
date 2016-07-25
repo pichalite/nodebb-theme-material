@@ -54,7 +54,7 @@
 	}
 
 	a.lv-item:hover {
-		background: #ECF9FF;
+		background: @chat-active-bg-color;//#ECF9FF;
 	}
 
 	.lv-img {
@@ -71,7 +71,7 @@
 		line-height: 100%;
 		border-bottom: 1px solid #F0F0F0;
 		font-weight: 500;
-		color: #4C4C4C;
+		color: @body-color;
 
 		.actions {
 			position: absolute;
@@ -82,9 +82,9 @@
 	}
 
 	.lv-header-alt {
-		background: #f8f8f8;
+		background: @lv-header-alt-bg-color;
 		padding: 12px;
-		border-bottom: 1px solid #EEE;
+		border-bottom: 1px solid @border-color;
 
 		@media (max-width: @screen-xs-max) {
 			padding: 10px 8px;
@@ -126,7 +126,7 @@
 		display: block;
 		text-align: center;
 		padding: 7px 10px 8px;
-		border-top: 1px solid #F0F0F0;
+		border-top: 1px solid @border-color;
 		line-height: 100%;
 		margin-top: 20px;
 		color: #828282;
@@ -163,7 +163,7 @@
 	}
 
 	&.lv-bordered .lv-item:not(:last-child) {
-		border-bottom: 1px solid #f0f0f0;
+		border-bottom: @lv-item-border;
 	}
 
 	.lv-attrs {
@@ -216,7 +216,7 @@
 	}
 
 	&:not(.lv-message) .lv-title {
-		color: #000;
+		//color: #000;
 	}
 }
 
@@ -265,4 +265,9 @@
 	.listview .lv-item .media-body .lv-title {
     	padding-bottom: 5px;
     }
+}
+
+.list-group-item {
+	background-color: @list-group-item-bg-color;
+	border: 1px solid @border-color; 
 }

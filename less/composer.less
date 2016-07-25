@@ -1,0 +1,85 @@
+.composer {
+	background-color: @composer-bg-color !important;
+	
+	.title-container .title, .tags-container .bootstrap-tagsinput {
+		background-color: @composer-bg-color !important;
+	}
+	
+	.formatting-bar .formatting-group li {
+		color: @body-color !important;
+	}
+	
+	.write-preview-container .write {
+		background-color: @composer-bg-color !important;
+		border: 1px solid @border-color !important;
+	}
+	
+	.preview.well {
+		background-color: @composer-preview-bg-color;
+		border: 1px solid @border-color !important;
+	}
+}
+
+.composer-container {
+	.btn-group {
+		box-shadow: none;
+		
+		.composer-discard {
+			box-shadow: none !important;
+			color: @body-color;
+			background-color: @composer-bg-color;
+			
+			&:hover {
+				color: @composer-bg-color;
+				background-color: @body-color;
+			}
+		}
+		
+		.btn.btn-primary {
+		    box-shadow: none !important;
+		    color: @material-primary;
+		    background-color: @composer-bg-color;
+		    
+		    &:hover {
+		        background-color: @body-color;
+		    }
+		}
+	}
+	
+	.mobile-navbar {
+		.btn.btn-primary {
+			box-shadow: none !important;
+			color: #fff;
+			background-color: inherit;
+		}
+	}
+	
+	.form-control {
+		color: @body-color;
+	}
+	
+	.resizer {
+		.trigger {
+			background-color: @body-color !important;
+			
+			i {
+				color: @composer-bg-color !important;
+			}
+		}
+	}
+	
+	.bootstrap-tagsinput {
+		.ui-autocomplete-input {
+			color: @body-color !important;
+		}
+	}
+}
+
+.composer-container .btn.btn-info {
+    box-shadow: none !important;
+    color: #00bcd4;
+    background-color: #fff;
+    &:hover, &:active, &:focus, &:visited {
+        background-color: #eee;
+    }
+}

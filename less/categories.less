@@ -16,13 +16,13 @@
     }
 }
 
-.new-card {
+.category-card {
     margin-bottom: 15px;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
     height: 245px;
     position: relative;
 
-    .new-card-body {
+    .category-card-body {
         padding: 15px;
         height: 200px;
         color: #fff;
@@ -52,7 +52,7 @@
         }
     }
 
-    .new-card-footer {
+    .category-card-footer {
         background-color: rgba(17,17,17,.7);
         border: 0;
         position: absolute;
@@ -87,7 +87,7 @@
 
 .category {
     
-    .new-card {
+    .category-card {
         height: 200px;
     }
     
@@ -96,6 +96,12 @@
 			content: "";
 			display: none;
 		}
+    }
+}
+
+[component="category/topic"] {
+    .topic-title {
+        color: @topic-title-color;
     }
 }
 

@@ -7,13 +7,13 @@
 
 input:active, input:focus {
 	outline: 0;
-	box-shadow: none!important;
+	box-shadow: none !important;
 }
 
 .form-control {
 	box-shadow: none;
 	border: 0;
-	border-bottom: 1px solid rgba(0, 0, 0, .12);
+	border-bottom: @form-control-border;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -31,7 +31,7 @@ input:active, input:focus {
 	}
 
 	&.auto-size {
-		padding-top: 6px
+		padding-top: 6px;
 	}
 }
 
@@ -142,7 +142,7 @@ html:not(.ie9) .select.fg-line:before {
 		resize: none;
 
 		&:not(:disabled) {
-			color: #000;
+			color: @body-color;
 		}
 
 		&:disabled {
@@ -168,7 +168,7 @@ html:not(.ie9) .select.fg-line:before {
 	}
 
 	&:not([class*=has-]):after {
-		background: @material-primary;
+		background: @fg-line-color;
 	}
 
 	&.input-toggled:after {
@@ -220,16 +220,16 @@ html:not(.ie9) .select.fg-line:before {
 		z-index: 1;
 
 		&::-moz-placeholder {
-			color: #fff;
+			color: @placeholder-color;
 			opacity: 1;
 		}
 
 		&:-ms-input-placeholder {
-			color: #fff;
+			color: @placeholder-color;
 		}
 
 		&::-webkit-input-placeholder {
-			color: #fff;
+			color: @placeholder-color;
 		}
 	}
 
@@ -341,8 +341,8 @@ html:not(.ie9) .select.fg-line:before {
     transform: scale(0) rotate(80deg);
     width: 22px;
     height: 9px;
-    border-bottom: 2px solid #009688;
-    border-left: 2px solid #009688;
+    border-bottom: 2px solid @checkbox-check-color;
+    border-left: 2px solid @checkbox-check-color;
     border-bottom-left-radius: 3px;
     left: -1px;
     top: 1px;
@@ -501,9 +501,6 @@ html:not(.ie9) .select.fg-line:before {
 }
 
 
-
-
-
 //topic-select
 
 [component="category/topic"] {
@@ -585,8 +582,8 @@ html:not(.ie9) .select.fg-line:before {
 	    transform: scale(0) rotate(80deg);
 	    width: 22px;
 	    height: 9px;
-	    border-bottom: 2px solid #009688;
-	    border-left: 2px solid #009688;
+	    border-bottom: 2px solid @checkbox-check-color;
+	    border-left: 2px solid @checkbox-check-color;
 	    border-bottom-left-radius: 3px;
 	    left: -1px;
 	    top: 1px;

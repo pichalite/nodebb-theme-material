@@ -54,14 +54,14 @@
 <div class="row">
 	<!-- BEGIN children -->
 	<div class="<!-- IF children.class -->{children.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF children.class -->">
-		<div class="new-card" style="{function.generateCategoryBackground}">
+		<div class="category-card" style="{function.generateCategoryBackground}">
 			<!-- IF children.link -->
 			<a href="{children.link}" itemprop="url" target="_blank">
 			<!-- ELSE -->
 			<a href="{config.relative_path}/category/{children.slug}" itemprop="url">
 			<!-- ENDIF children.link -->			
 
-				<div class="new-card-body">
+				<div class="category-card-body">
 					<ul class="category-counts pull-right">
 	                    <li>
 	                        <i class="fa fa-book"></i><span class="human-readable-number" title="{children.totalTopicCount}"></span>
@@ -78,7 +78,7 @@
 					<small>{children.description}</small>
 				</div>
 			</a>
-			<div class="new-card-footer">
+			<div class="category-card-footer">
 				<!-- BEGIN posts -->				
 				<div component="category/posts">
 					<div class="pull-left hidden-xs user-avatar">

@@ -40,7 +40,7 @@
 				<div class="fg-line">
 				<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
 				</div>
-				<table component="groups/members" class="table table-striped table-hover members" data-nextstart="{group.membersNextStart}">
+				<table component="groups/members" class="table members" data-nextstart="{group.membersNextStart}">
 					<!-- BEGIN members -->
 					<tr data-uid="{group.members.uid}">
 						<td>
@@ -98,7 +98,7 @@
 				<!-- ENDIF group.pending.length -->
 			</div>
 			<div class="card-body card-padding">
-				<table component="groups/pending" class="table table-striped table-hover pending">
+				<table component="groups/pending" class="table pending">
 					<!-- IF !group.pending.length -->
 					<div class="alert alert-info">[[groups:pending.none]]</div>
 					<!-- ENDIF !group.pending.length -->
@@ -142,7 +142,7 @@
 				<div class="fg-line">
 				<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
 				</div>
-				<table component="groups/invited" class="table table-striped table-hover invited">
+				<table component="groups/invited" class="table invited">
 					<!-- IF !group.invited.length -->
 					<div class="alert alert-info">[[groups:invited.none]]</div>
 					<!-- ENDIF !group.invited.length -->

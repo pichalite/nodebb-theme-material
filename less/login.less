@@ -3,10 +3,10 @@
 	height: 100%;
 
 	.login-block, .register-block {
-		background: #fff;
-		box-shadow: 0 1px 11px rgba(0, 0, 0, .27);
-		-webkit-box-shadow: 0 1px 11px rgba(0, 0, 0, .27);
-		-moz-box-shadow: 0 1px 11px rgba(0, 0, 0, .27);
+		//background: @body-color;
+		//box-shadow: 0 1px 11px rgba(0, 0, 0, .27);
+		//-webkit-box-shadow: 0 1px 11px rgba(0, 0, 0, .27);
+		//-moz-box-shadow: 0 1px 11px rgba(0, 0, 0, .27);
 		border-radius: 2px;
 		padding: 25px 55px;
 		width: 500px;
@@ -73,13 +73,17 @@ div.login, div.register {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: #4285f4;
+		//background: @body-bg-color;
 		content: "";
 		z-index: 0;
 	}
 
 	.login-options, .register-options {
 		margin-top: 10px;
+	}
+	
+	.input-group-addon {
+		color: @body-color;
 	}
 }
 

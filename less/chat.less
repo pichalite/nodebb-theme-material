@@ -2,13 +2,13 @@
     max-height: 250px;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 10px 10px 0px 10px;
 
     li {
-    	margin-bottom: 10px;
+    	padding: 5px 10px;
+    	cursor: pointer;
 
-    	&.unread {
-    		background-color: #dcf9ff;
+    	&.unread, &:hover {
+    		background-color: @chat-unread-bg-color;
     	}
 
     	a {
@@ -62,8 +62,9 @@
 		position: absolute;
 		overflow: auto;
 		left: 0;
-		background: #FFF;
-		border-right: 1px solid #EEE;
+		background: @chat-main-bg-color;
+		border: 1px solid @border-color;
+		border-top: none;
 		height: 100%;
 		width: 300px;
 		-webkit-transition: all;
@@ -91,18 +92,18 @@
 		.lv-item {
 		  	padding-left: 15px;
 		  	padding-right: 15px;
-		  	border-top: 1px solid #f8f8f8;
+		  	
+		  	&:not(:last-child) {
+		  		border-bottom: 1px solid @border-color;
+		  	}
 
 			&.bg-primary {
-			  	background: #F2F2F2;;
-
-			  	.lv-small {
-			  		color: #000;
-			  	}
+			  	background: @chat-active-bg-color;
+				color: @body-color;
 			}
 
 			&:not(.bg-primary):hover {
-			  	background: #F2F2F2;
+			  	background: @chat-active-bg-color;
 			  	cursor: pointer;
 			}
 
@@ -146,8 +147,9 @@
 		position: absolute;
 		overflow: auto;
 		left: 0;
-		background: #FFF;
-		border-right: 1px solid #EEE;
+		background: @chat-main-bg-color;
+		border: 1px solid @border-color;
+		border-top: none;
 		height: 100%;
 		width: 300px;
 		-webkit-transition: all;
@@ -277,20 +279,33 @@
 		padding-left: 0px;
 		height: auto !important;
 	}
+	
+	.bootstrap-tagsinput {
+		background-color: @body-bg-color;
+		border: 1px solid @border-color;
+		
+		.ui-autocomplete-input {
+			color: @body-color !important;
+		}
+	}
 
 	.ms-reply {
 		position: relative;
 		margin: 0 !important;
 
 		textarea {
-			width: 100%;
+			width: ~"calc(100% - 70px)";
+			position: absolute;
+			left: 5px;
 			font-size: 13px;
 			border: 0;
 			padding: 10px 8px;
 			resize: none;
 			height: 40px;
+			background-color: @body-bg-color;
 			
 			@media (max-width: @screen-xs-max) {
+				width: ~"calc(100% - 60px)";
 				font-size: 12px;
 				padding: 10px 0;
 			}
@@ -304,17 +319,13 @@
 		  	height: 100%;
 		  	width: 60px;
 		  	font-size: 25px;
-		  	background: #F5F5F5;
+		  	background: @body-bg-color;
 		  	color: @material-primary;
 		  	
 		  	@media (max-width: @screen-xs-max) {
 		  		font-size: 20px;
 		  		width: 50px;
 		  	}
-
-		  	&:hover {
-			  	background: #f2f2f2;
-			}
 		}
 	}
 
@@ -358,7 +369,7 @@
 				}
 
 				.ms-item {
-					background: #eee;
+					background: @chat-message-right-bg-color;
 				}
 
 				[component="chat/message/body"] {
@@ -374,7 +385,7 @@
 
 			&:not(.right) {
 				.ms-item {
-				  	background: #00BCD4;
+				  	background: @chat-message-bg-color;
 				  	color: #fff;
 				}
 

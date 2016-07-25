@@ -2,13 +2,13 @@
 <div class="categories row <!-- IF !config.removeCategoriesAnimation --> display-animation<!-- ENDIF !config.removeCategoriesAnimation -->">
 	<!-- BEGIN categories -->
 	<div class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
-		<div class="new-card" style="{function.generateCategoryBackground}">
+		<div class="category-card" style="{function.generateCategoryBackground}">
 			<!-- IF categories.link -->
 				<a href="{categories.link}" itemprop="url" target="_blank" >
 			<!-- ELSE -->
 				<a href="{config.relative_path}/category/{categories.slug}" itemprop="url" >
 			<!-- ENDIF categories.link -->
-				<div class="new-card-body">
+				<div class="category-card-body">
 					<ul class="category-counts pull-right">
 	                    <li>
 	                        <i class="fa fa-book"></i><span class="human-readable-number" title="{categories.totalTopicCount}"></span>
@@ -25,7 +25,7 @@
 					<small>{categories.description}</small>
 				</div>
 			</a>
-			<div class="new-card-footer">
+			<div class="category-card-footer">
 				<!-- BEGIN posts -->
 				<div component="category/posts">
 					<div class="pull-left hidden-xs user-avatar">

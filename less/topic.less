@@ -45,10 +45,15 @@
 
 	.topic-title {
 		font-size: 18px;
+		
 		@media (max-width: @screen-sm-max) {
 			font-size: 16px;
 		}
-	}	
+	}
+	
+	.alert-warning {
+		background-color: @material-warning;
+	}
 }
 
 .lv-item.media.deleted, .timeline.single.deleted .timeline-content {
@@ -86,8 +91,8 @@
 	box-shadow: none;
 
 	.lv-header-alt {
-		background-color: #fff;
-		border: 1px solid #e4e5e7;
+		background-color: @lv-header-alt-bg-color;
+		border: none;
 	}
 
 	.lv-actions.actions {
@@ -141,9 +146,9 @@
 
 		.post-content {
 		    position: relative;
-		    background: white;
+		    background-color: @post-content-bg-color;
 		    border-radius: 2px;
-		    border: 1px solid #e4e5e7;
+		    border: 1px solid @border-color;
 
 		    @media (min-width: @screen-sm-min) {
 		        margin-left: 60px;
@@ -169,14 +174,14 @@
 
 			&:after {
 			    border-color: transparent;
-			    border-right-color: #fff;
+			    border-right-color: @border-color;
 			    border-width: 10px;
 			    margin-top: -10px;
 			}
 
 			&:before {
 			    border-color: transparent;
-			    border-right-color: #e4e5e7;
+			    border-right-color: @border-color;
 			    border-width: 11px;
 			    margin-top: -11px;
 			}
@@ -197,7 +202,7 @@
 
 				>a {
 					padding: 0px 5px;
-					color: #666;
+					color: @action-items-color;
 
 					@media (max-width: @screen-xs-max) {
 						padding: 0 2px;
@@ -262,7 +267,7 @@
 				padding-top: 10px;
 
 				.tag-container {
-					background-color: #fff;
+					background-color: @tag-container-bg-color;
 				}
 			}
 
@@ -297,50 +302,7 @@
 }
 
 [component="post"].highlight .post-body {
-	border-bottom: 1px solid @material-primary;
-}
-
-.composer-container {
-	.btn-group {
-		box-shadow: none;
-	}
-	
-	.mobile-navbar {
-		.btn.btn-primary {
-			box-shadow: none !important;
-			color: #fff;
-			background-color: inherit;
-		}
-	}
-}
-
-.composer-container .btn.btn-default {
-    box-shadow: none !important;
-
-    &:hover {
-        background-color: #eee;
-    }
-}
-
-.composer-container .btn.btn-primary {
-    box-shadow: none !important;
-    color: @material-primary;
-    background-color: #fff;
-    
-    &:hover {
-        background-color: #eee;
-    }
-}
-
-
-
-.composer-container .btn.btn-info {
-    box-shadow: none !important;
-    color: #00bcd4;
-    background-color: #fff;
-    &:hover, &:active, &:focus, &:visited {
-        background-color: #eee;
-    }
+	border-bottom: 1px solid @post-highlight-color;
 }
 
 .redactor-toolbar {
