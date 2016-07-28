@@ -29,7 +29,7 @@
 
         <!-- IF config.menuInHeader -->
         <li class="hidden-xs">
-            <ul class="header-menu"> 
+            <ul class="header-menu" id="main-nav"> 
                 <!-- BEGIN navigation -->
                 <!-- IF function.displayMenuItem, @index -->
                 <li class="{navigation.class}">
@@ -194,7 +194,7 @@
     <aside id="sidebar">
         <div class="sidebar-inner">
             <div class="si-inner">
-                <ul class="main-menu">
+                <ul class="main-menu" id="main-nav">
                     <li id="toggle-width" class="hidden-xs">
                         <div class="toggle-switch">
                             <input id="tw-switch" type="checkbox" hidden="hidden">

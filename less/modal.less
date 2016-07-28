@@ -3,6 +3,7 @@
     border-radius: 2px;
     border: 0;
     color: @modal-text-color;
+    background-color: @modal-bg-color;
 }
 
 .modal-header {
@@ -11,6 +12,19 @@
     h3, h4 {
         margin: 0px;
     }
+    
+    .close {
+        color: @body-color;
+    }
+    
+    .bootstrap-tagsinput {
+        background-color: @body-bg-color;
+		border: 1px solid @border-color;
+		
+		.ui-autocomplete-input {
+			color: @body-color !important;
+		}
+	}
 }
 
 .modal-body {
@@ -30,6 +44,15 @@
         height: 32px;
         border-radius: 50%;
     }
+    
+    .close {
+        color: @body-color;
+    }
+    
+    .well {
+        background-color: @body-bg-color;
+        border: 1px solid @border-color;
+    }
 }
 
 .modal-footer {
@@ -38,9 +61,11 @@
 
 .modal-footer .btn.btn-default {
     box-shadow: none !important;
+    background-color: initial;
+    color: @body-color;
 
     &:hover {
-        background-color: #eee;
+        background-color: @body-bg-color;
     }
 }
 
@@ -57,10 +82,10 @@
 .modal-footer .btn.btn-primary, .chat-footer .btn.btn-primary {
     box-shadow: none !important;
     color: @material-primary;
-    background-color: #fff;
+    background-color: initial;
     
     &:hover {
-        background-color: #eee;
+        background-color: @body-bg-color;
     }
 }
 

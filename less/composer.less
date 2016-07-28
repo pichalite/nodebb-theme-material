@@ -36,8 +36,8 @@
 			background-color: @composer-bg-color;
 			
 			&:hover {
-				color: @composer-bg-color;
-				background-color: @body-color;
+				color: @body-color;
+				background-color: @body-bg-color;
 			}
 		}
 		
@@ -47,12 +47,13 @@
 		    background-color: @composer-bg-color;
 		    
 		    &:hover {
-		        background-color: @body-color;
+		        background-color: @body-bg-color;
 		    }
 		}
 	}
 	
 	.mobile-navbar {
+		border-bottom: 1px solid @border-color;
 		.btn.btn-primary {
 			box-shadow: none !important;
 			color: #fff;
@@ -62,6 +63,7 @@
 	
 	.form-control {
 		color: @body-color;
+		background-color: @composer-bg-color;
 	}
 	
 	.resizer {

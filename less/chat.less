@@ -43,6 +43,7 @@
 
 #messages-main {
 	position: relative;
+	
 
 	&:before,
 	&:after {
@@ -63,8 +64,7 @@
 		overflow: auto;
 		left: 0;
 		background: @chat-main-bg-color;
-		border: 1px solid @border-color;
-		border-top: none;
+		border-right: 1px solid @border-color;
 		height: 100%;
 		width: 300px;
 		-webkit-transition: all;
@@ -213,6 +213,8 @@
 	}
 
 	.ms-body {
+		background-color: @chat-content-bg-color;
+		
 		@media (min-width: @screen-sm-min) {
 			padding-left: 300px;
 		}
@@ -294,7 +296,7 @@
 		margin: 0 !important;
 
 		textarea {
-			width: ~"calc(100% - 70px)";
+			width: ~"calc(100% - 60px)";
 			position: absolute;
 			left: 5px;
 			font-size: 13px;
@@ -303,6 +305,7 @@
 			resize: none;
 			height: 40px;
 			background-color: @body-bg-color;
+			color: @body-color;
 			
 			@media (max-width: @screen-xs-max) {
 				width: ~"calc(100% - 60px)";
@@ -317,10 +320,10 @@
 		  	right: 0;
 		  	border: 0;
 		  	height: 100%;
-		  	width: 60px;
+		  	width: 50px;
 		  	font-size: 25px;
-		  	background: @body-bg-color;
-		  	color: @material-primary;
+		  	background-color: initial;
+		  	color: @anchor-color;
 		  	
 		  	@media (max-width: @screen-xs-max) {
 		  		font-size: 20px;
@@ -369,7 +372,8 @@
 				}
 
 				.ms-item {
-					background: @chat-message-right-bg-color;
+					background-color: @chat-message-right-bg-color;
+					color: @chat-message-right-color;
 				}
 
 				[component="chat/message/body"] {
@@ -385,8 +389,8 @@
 
 			&:not(.right) {
 				.ms-item {
-				  	background: @chat-message-bg-color;
-				  	color: #fff;
+				  	background-color: @chat-message-bg-color;
+				  	color: @chat-message-color;
 				}
 
 				[component="chat/message/body"] {
@@ -433,6 +437,7 @@
 
 		.lv-footer {
 			padding: 5px 10px;
+			background-color: @chat-footer-bg-color;
 		}
 
 		&.lv-message .lv-body {
@@ -549,9 +554,10 @@
 
 		.chat-footer {
 			padding-top: 15px;
-			border-top: 1px solid #ddd;
+			border-top: 1px solid @border-color;
 		    margin-left: -15px;
 		    margin-right: -15px;
+		    background-color: @chat-footer-bg-color;
 		}
 	}
 
@@ -564,7 +570,6 @@
 		}
 
 		&:not(.active):hover {
-			background: #fff;
 			cursor: pointer;
 		}
 	}
@@ -577,7 +582,8 @@
 			text-align: right;
 
 			.ms-item {
-				background: #eee;
+				background: @chat-message-right-bg-color;
+				color: @chat-message-right-color;
 			}
 
 			.lv-avatar {
@@ -597,8 +603,8 @@
 
 		&:not(.right) {
 			.ms-item {
-				background: #00BCD4;
-				color: #fff;
+				background: @chat-message-bg-color;
+				color: @chat-message-color;
 			}
 
 			[component="chat/message/body"] {
@@ -681,6 +687,10 @@
 			position: absolute;
 		    left: 25px;
 		    display: none;
+		    
+		    .btn:hover {
+		    	color: #2196f3;
+		    }
 		}
 	}
 
@@ -693,12 +703,13 @@
 	}
 
 	.modal-header {
-	    padding: 5px 20px;
+	    padding: 5px 10px;
 
 	    .close {
 	        margin-top: 10px;
 	        padding: 0px 10px;
 	        font-size: 18px;
+	        text-shadow: none;
 	    }
 	}
 }
@@ -766,6 +777,7 @@
 				
 				.modal-body {
 					height: 100%;
+					padding: 10px;
 					
 					.chat-content {
 						min-height: 350px;
@@ -773,6 +785,11 @@
 					
 					.chat-footer {
 						padding-top: 10px;
+						background-color: @chat-footer-bg-color;
+						
+						#chat-message-send-btn:hover {
+							background-color: initial;
+						}
 					}
 				}
 				
