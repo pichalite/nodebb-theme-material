@@ -183,7 +183,7 @@
             padding: 15px 20px 10px 20px;
             
             @media (max-width: @screen-sm-max) {
-                padding: 10px 5px;
+                padding: 10px 0px;
             }
             
             &.media {
@@ -191,7 +191,6 @@
                     text-align: center;
                     
                     .human-readable-number {
-                        font-weight: 500;
                         font-size: 15px;
                     }
                     
@@ -213,10 +212,13 @@
                 .category-title {
                     font-size: 17px;
                     line-height: 22px;
-                    font-weight: 400;
                     
                     .lv-small {
-                        font-weight: 400;
+                        font-weight: 300;
+                        
+                        p {
+                            margin-bottom: 0px;
+                        }
                     }
                 }
             }
@@ -266,7 +268,11 @@
                     font-size: 13px;
                     
                     .lv-small {
-                        font-weight: 400;
+                        font-weight: 300;
+                        
+                        p {
+                            margin-bottom: 0px;
+                        }
                     }
                 }
             }

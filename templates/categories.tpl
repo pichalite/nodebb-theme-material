@@ -1,7 +1,7 @@
 <!-- IF !config.categoriesAsList -->
 <div class="categories row <!-- IF !config.removeCategoriesAnimation --> display-animation<!-- ENDIF !config.removeCategoriesAnimation -->">
 	<!-- BEGIN categories -->
-	<div class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
+	<div component="categories/category" data-cid="{categories.cid}" class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="category-card" style="{function.generateCategoryBackground}">
 			<!-- IF categories.link -->
 				<a href="{categories.link}" itemprop="url" target="_blank" >
@@ -55,7 +55,7 @@
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-body">
 				<!-- BEGIN categories -->
-				<div class="lv-item media row clearfix">
+				<div class="lv-item media row clearfix" component="categories/category" data-cid="{categories.cid}">
 					<div class="col-xs-12 col-sm-8 col-md-7">
 						<div class="icon pull-left" style="{function.generateCategoryBackground}">
 				        	<i class="fa fa-fw {categories.icon}"></i>
