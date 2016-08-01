@@ -23,7 +23,7 @@
 							<!-- ENDIF children.link -->
 							{children.name}
 							</a><br />
-							<small class="lv-small">{children.description}</small>
+							<small class="lv-small">{children.descriptionParsed}</small>
 			    		</div>
 			    		<!-- IF !children.link -->
 			    		<div class="lv-actions hidden-xs hidden-sm">
@@ -75,7 +75,7 @@
 								<i class="fa {children.icon} fa-fw"></i>
 								<!-- ENDIF children.icon -->
 					</h4>
-					<small>{children.description}</small>
+					<small>{children.descriptionParsed}</small>
 				</div>
 			</a>
 			<div class="category-card-footer">

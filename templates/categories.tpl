@@ -22,7 +22,7 @@
 								<i class="fa {categories.icon} fa-fw"></i>
 								<!-- ENDIF categories.icon -->
 					</h4>
-					<small>{categories.description}</small>
+					<small>{categories.descriptionParsed}</small>
 				</div>
 			</a>
 			<div class="category-card-footer">
@@ -69,7 +69,7 @@
 								<!-- ENDIF categories.link -->
 								{categories.name}
 								</a><br />
-								<small class="lv-small">{categories.description}</small>
+								<small class="lv-small">{categories.descriptionParsed}</small>
 				    		</div>
 				    	</div>
 					</div>
@@ -122,7 +122,7 @@
 										<!-- ENDIF categories.children.link -->
 										{categories.children.name}
 										</a><br />
-										<small class="lv-small">{categories.children.description}</small>
+										<small class="lv-small">{categories.children.descriptionParsed}</small>
 						    		</div>
 						    	</div>
 							</div>
