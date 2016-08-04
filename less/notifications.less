@@ -1,5 +1,22 @@
-#notif-list .unread {
-    background-color: #dcf9ff;
+#notif-list {
+    .unread {
+        background-color: @notifs-unread-bg-color;
+        color: @notifs-unread-color;
+    }
+
+    .lv-item {
+        padding: 10px 5px;
+        
+        &not(.unread) {
+            &:hover {
+                background: none;
+            }
+        }
+        
+        .media-body {
+            padding: 0 5px 0 10px;
+        }
+    }
 }
 
 #header #notif-list a .mark-read {
@@ -34,9 +51,20 @@
     }
 
     .listview {
-        .lv-item .lv-small {
-            color: @body-color;
-            white-space: normal;
+        .lv-item {
+            .lv-small {
+                white-space: normal;
+            }
+            
+            [component="notifications/item/link"] {
+                color: @topic-title-color;
+            }
+            
+            &.unread {
+                [component="notifications/item/link"] {
+                    color: @anchor-color;
+                }   
+            }
         }
 
         .lv-footer {
@@ -85,12 +113,12 @@
 .notifications {
     .no-notifs {
         cursor: default;
-        color: #000;
+        color: @body-color;
         text-align: center;
     }
 }
 
 .listview a.lv-item.no-notifs:hover {
     background: none;
-    color: #000;
+    color: @body-color;
 }
