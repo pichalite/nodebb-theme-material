@@ -5,6 +5,7 @@
 
     li {
     	padding: 10px;
+    	margin-bottom: 2px;
     	cursor: pointer;
 
     	&.unread {
@@ -13,6 +14,11 @@
 
     	a {
     		color: inherit;
+    		white-space: nowrap;
+    		display: block;
+    		overflow: hidden;
+    		text-overflow: ellipsis;
+    
 
     		.status {
     			position: relative;
