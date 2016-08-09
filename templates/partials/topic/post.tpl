@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="post-header">
-                    <a class="pull-left visible-xs" href="{config.relative_path}/user/{posts.user.userslug}">
+                    <a class="pull-left visible-xs user-profile-link" href="{config.relative_path}/user/{posts.user.userslug}">
                         <!-- IF posts.user.picture -->
                         <img src="{posts.user.picture}" class="post-user-picture" title="{posts.user.username}"/>
                         <!-- ELSE -->

@@ -46,7 +46,7 @@
 						<td>
 							<a href="{config.relative_path}/user/{group.members.userslug}">
 								<!-- IF group.members.picture -->
-								<img src="{group.members.picture}" />
+								<img class="user-avatar" src="{group.members.picture}" />
 								<!-- ELSE -->
 								<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
 								<!-- ENDIF group.members.picture -->
@@ -108,7 +108,7 @@
 						<td>
 							<a href="{config.relative_path}/user/{group.pending.userslug}">
 								<!-- IF group.pending.picture -->
-								<img src="{group.pending.picture}" />
+								<img class="user-avatar" src="{group.pending.picture}" />
 								<!-- ELSE -->
 								<div class="user-icon" style="background-color: {group.pending.icon:bgColor};">{group.pending.icon:text}</div>
 								<!-- ENDIF group.pending.picture -->
@@ -151,7 +151,7 @@
 						<td>
 							<a href="{config.relative_path}/user/{group.invited.userslug}">
 								<!-- IF group.invited.picture -->
-								<img src="{group.invited.picture}" />
+								<img class="user-avatar" src="{group.invited.picture}" />
 								<!-- ELSE -->
 								<div class="user-icon" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
 								<!-- ENDIF group.invited.picture -->

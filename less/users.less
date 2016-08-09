@@ -6,17 +6,14 @@
         text-align: center;
         vertical-align: top;
         width: 104px;
-        margin: 0px 4px 10px;
+        margin: 0 4px 10px;
 
         @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-            margin: 0px 0px 10px;  
+            margin: 0 0 10px;  
         }
 
         .user-picture {
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
-            font-size: 3rem;
+            .user-icon(80px, 3rem);
             margin: 0 auto 5px;
             border: 2px solid #fff;
         }
@@ -31,20 +28,23 @@
 }
 
 #user_label .user-picture {
-    width: 30px;
-    height: 30px;
-}
-
-.user-picture {
-  	border-radius: 50%;
+    .user-avatar(30px);
 }
 
 .users {
     .users-box .user-info {
-  	     font-size: 13px;
-     }
+  	    font-size: 13px;
+  	    
+  	    >div {
+  	        max-width: 94px;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+  	    }
+    }
 
-     .input-group-addon {
+    .input-group-addon {
         &.label-success {
             background-color: @material-success;
             vertical-align: middle;
@@ -67,13 +67,6 @@
     }
 }
 
-.user-icon {
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-}
-
 .user-icon.pv-main {
     font-size: 7.5rem;
     line-height: 130px;
@@ -81,18 +74,22 @@
 
 .poster-avatar {
     .user-icon {
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-        font-size: 2.5rem;
+        .user-icon(45px, 2.5rem);
     }
 }
 
-.lv-avatar {
+/*.lv-avatar {
     .user-icon {
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 2rem;
+        .user-icon(35px, 2rem);
     }
+}*/
+
+
+//mixins
+.user-icon {
+    .user-icon(35px, 1.9rem);
+}
+
+.user-avatar {
+    .user-avatar(35px);
 }

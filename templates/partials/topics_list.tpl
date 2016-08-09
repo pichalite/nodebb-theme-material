@@ -18,9 +18,9 @@
 			<!-- ELSE -->
         	<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">
             	<!-- IF topics.user.picture -->
-                <img src="{topics.user.picture}" class="lv-img" title="{topics.user.username}" />
+                <img class="user-avatar" src="{topics.user.picture}" class="lv-img" title="{topics.user.username}" />
                 <!-- ELSE -->
-                <div class="user-icon lv-img" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
+                <div class="user-icon" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
                 <!-- ENDIF topics.user.picture -->
         	</a>
         	<!-- ENDIF topics.thumb -->

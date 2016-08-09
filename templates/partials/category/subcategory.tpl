@@ -84,9 +84,9 @@
 					<div class="pull-left hidden-xs user-avatar">
 				    	<a href="{config.relative_path}/user/{children.posts.user.userslug}">
 				        	<!-- IF children.posts.user.picture -->
-  							<img class="user-picture" src="{children.posts.user.picture}" title="{children.posts.user.username}" />
+  							<img class="user-avatar" src="{children.posts.user.picture}" title="{children.posts.user.username}" />
 							<!-- ELSE -->
-							<div class="user-picture user-icon" title="{children.posts.user.username}" style="background-color: {children.posts.user.icon:bgColor}">{children.posts.user.icon:text}</div>
+							<div class="user-icon user-icon" title="{children.posts.user.username}" style="background-color: {children.posts.user.icon:bgColor}">{children.posts.user.icon:text}</div>
 							<!-- ENDIF children.posts.user.picture -->
 				    	</a>
 					</div>

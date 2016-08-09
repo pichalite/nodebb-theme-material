@@ -1,7 +1,7 @@
 .groups {
 	.input-group {
 		#search-button {
-			padding-left: 0px;
+			padding-left: 0;
 			position: relative;
 		    left: -20px;
 		    z-index: 2;
@@ -10,22 +10,20 @@
 	}
 
 	.fg-line {
-		padding-right: 0px;
+		padding-right: 0;
 	}
 
 	&.list {
 		.members {
 			padding-left: 0;
-			margin-bottom: 0px;
-
-			img {
-				width: 32px;
-				height: 32px;
-				border-radius: 50%;
-			}
+			margin-bottom: 0;
 
 			li {
 				display: inline;
+			}
+			
+			.user-icon, .user-avatar {
+				.user-icon(32px, 1.4rem);
 			}
 		}
 
@@ -46,15 +44,9 @@
 	}
 
 	&.details {
-		.members img, .pending img, .invited img {
-			width: 32px;
-			height: 32px;
-			line-height: 32px;
-			border-radius: 50%;
-		}
 		
 		.table {
-			margin-bottom: 0px;
+			margin-bottom: 0;
 			
 			>tbody {
 				>tr:not(:first-child)>td {
@@ -71,7 +63,7 @@
 
 .group-details {
 	h2 {
-		margin-top: 0px;
+		margin-top: 0;
 		font-size: 25px;
 	}
 
@@ -82,7 +74,7 @@
 
 [component="groups/activity"] {
 	&.card-body.card-padding {
-		padding-top: 0px;
+		padding-top: 0;
 	}
 }
 
@@ -100,7 +92,7 @@
 
 	.row.groups .col-xs-5 {
 		padding-right: 5px;
-  		padding-left: 0px;
+  		padding-left: 0;
 	}
 
 	.row.groups .col-xs-7 {

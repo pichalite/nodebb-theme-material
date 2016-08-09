@@ -20,3 +20,15 @@
 	-o-border-radius: @radius;
 	border-radius: @radius;
 }
+
+.user-avatar (@size) {
+	width: @size;
+	height: @size;
+	.border-radius(50%);
+}
+
+.user-icon (@size, @font-size) {
+	.user-avatar(@size);
+	line-height: @size;
+	font-size: @font-size;
+}

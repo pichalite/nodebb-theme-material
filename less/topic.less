@@ -8,6 +8,7 @@
 
 		a {
 			margin-right: 10px;
+			display: inline-block;
 		}
 
 		i {
@@ -33,13 +34,10 @@
 		}
 
 		.post-user-picture {
-			width: 30px;
-			height: 30px;
-			border-radius: 50%;
 			margin-left: -5px;
 			margin-right: 5px;
 			margin-top: 5px;
-			line-height: 30px;
+			.user-icon(30px, 1.9rem);
 		}
 	}
 
@@ -75,16 +73,15 @@
 
 [component="topic"] {
 	&.lv-item.media {
-		padding-top: 0px;
+		padding-top: 0;
 	}
 }
 
 [component="posts"] {
 	&.card-body.card-padding {
-		padding-top: 0px;
+		padding-top: 0;
 	}
 }
-
 
 .topic .card {
 	background-color: inherit;
@@ -106,7 +103,7 @@
 	}
 
 	.lv-body {
-		padding: 0px;
+		padding: 0;
 
 		.post-block {
 		    position: relative;
@@ -201,7 +198,7 @@
 				display: inline-block;
 
 				>a {
-					padding: 0px 5px;
+					padding: 0 5px;
 					color: @action-items-color;
 
 					@media (max-width: @screen-xs-max) {
@@ -234,9 +231,7 @@
 		}
 
 		.user-picture {
-			width: 45px;
-			height: 45px;
-			border-radius: 50%;
+			.user-icon(45px, 2.5rem);
 		}
 
 		.post-edit {
@@ -247,8 +242,8 @@
 
 		.post-bar {
 			@media (min-width: @screen-sm-min) {
-				padding: 15px 0px 20px 0px;
-				margin: 20px 0px 0px 60px;
+				padding: 15px 0 20px 0;
+				margin: 20px 0 0 60px;
 	  		}
 
 	  		@media (max-width: @screen-xs-max) {
@@ -258,7 +253,7 @@
   			
 			.post-count, .view-count {
 				text-align: center;
-				padding: 0px 5px;
+				padding: 0 5px;
 				vertical-align: sub;
 			}
 
@@ -277,14 +272,10 @@
 				}
 
 				.loading-indicator {
-					padding: 10px 10px 0px 0px;
+					padding: 10px 10px 0 0;
 				}
 
-				.reply-button {
-					vertical-align: text-bottom;
-				}
-
-				.unread-button {
+				.reply-button, .unread-button {
 					vertical-align: text-bottom;
 				}
 
@@ -348,10 +339,99 @@
     top: -20px;
     background-color: @material-success;
     color: #fff;
-    padding: 0px 5px;
+    padding: 0 5px;
     
     @media (max-width: @screen-xs-max) {
     	right: initial;
     	left: 0;
     }
+}
+
+.fork-thread-card {
+	position: fixed;
+	bottom: 10%;
+	right: 2rem;
+	z-index: 1;
+	
+	box-shadow: 0 5px 20px rgba(0, 0, 0, .31);
+	color: @modal-text-color;
+    background-color: @modal-bg-color;
+    
+    .panel-heading {
+    	border-bottom: 1px solid @border-color;
+    }
+    
+    .panel-footer {
+    	color: @modal-text-color;
+    	background-color: @modal-bg-color;
+    	border-top: 1px solid @border-color;
+    }
+    
+    input {
+    	color: @body-color;
+    }
+    
+    .panel-footer .btn.btn-default {
+	    box-shadow: none !important;
+	    background-color: initial;
+	    color: @body-color;
+	
+	    &:hover {
+	        background-color: @body-bg-color;
+	    }
+	}
+	
+	.panel-footer .btn.btn-primary {
+	    box-shadow: none !important;
+	    color: @material-primary;
+	    background-color: initial;
+	    
+	    &:hover {
+	        background-color: @body-bg-color;
+	    }
+	}
+}
+
+@media screen and (min-width: @screen-sm-min) {
+	.fork-thread-card {
+		max-width: 33%;
+	}
+}
+
+[component="post"] {
+	
+	.poster-avatar>a, .post-user-picture {
+		opacity: 1;
+	}
+	
+	.poster-avatar:before, .user-profile-link:before {
+		opacity: 0;
+	}
+	
+	&.bg-success {
+		background-color: initial;
+		
+		.poster-avatar:before, .user-profile-link:before {
+			border: 1px solid @body-color;
+    		color: @body-color;
+    		-webkit-transition: .2s ease-in-out all;
+    		transition: .2s ease-in-out all;
+    		content: "\f00c";
+    		padding: 14px;
+		    border-radius: 50%;
+		    opacity: 1;
+		    position: absolute;
+		    display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		}
+		
+		.user-profile-link:before {
+			margin-left: -5px;
+			padding: 8px;
+		}
+		
+		.poster-avatar>a, .post-user-picture {
+			opacity: 0;
+		}
+	}
 }

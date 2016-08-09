@@ -23,14 +23,14 @@
 #header #notif-list a .mark-read {
     color: #777;
     margin-right: -5px;
-    padding-left: 0px;
+    padding-left: 0;
 
     &:after {
         font-family: "FontAwesome";
         content: "\f10c";
         padding: 4px 1rem;
         position: relative;
-        top: 0px;
+        top: 0;
     }
 
     &:hover:after {
@@ -80,9 +80,7 @@
     }
 
     .user-picture {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
+        .user-icon(32px, 2rem);
         padding: 0 !important;
     }
 }

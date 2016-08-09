@@ -2,7 +2,7 @@
     <div class="lv-avatar <!-- IF messages.self -->pull-right<!-- ELSE -->pull-left<!-- ENDIF messages.self -->">
         <!-- IF messages.newSet -->
         <!-- IF messages.fromUser.picture -->
-        <img src="{messages.fromUser.picture}">
+        <img class="user-avatar" src="{messages.fromUser.picture}">
         <!-- ELSE -->
         <div class="user-icon" style="background-color: {messages.fromUser.icon:bgColor};">{messages.fromUser.icon:text}</div>
         <!-- ENDIF messages.fromUser.picture -->

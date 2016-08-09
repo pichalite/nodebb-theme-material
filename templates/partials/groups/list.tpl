@@ -12,7 +12,7 @@
                 <li>
                     <a href="{config.relative_path}/user/{groups.members.userslug}">
                         <!-- IF groups.members.picture -->
-                        <img src="{groups.members.picture}" title="{groups.members.userslug}" />
+                        <img class="user-avatar" src="{groups.members.picture}" title="{groups.members.userslug}" />
                         <!-- ELSE -->
                         <div class="user-icon" style="background-color: {groups.members.icon:bgColor};">{groups.members.icon:text}</div>
                         <!-- ENDIF groups.members.picture -->

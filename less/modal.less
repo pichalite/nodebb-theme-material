@@ -1,5 +1,5 @@
 .modal-content {
-    box-shadow: 0 5px 20px rgba(0,0,0,.31);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .31);
     border-radius: 2px;
     border: 0;
     color: @modal-text-color;
@@ -10,7 +10,7 @@
     padding: 23px 26px;
     
     h3, h4 {
-        margin: 0px;
+        margin: 0;
     }
     
     .close {
@@ -40,9 +40,7 @@
     }
 
     .profile-image.small {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
+        .user-icon(32px, 1.9rem);
     }
     
     .close {
@@ -115,15 +113,11 @@
     }
 
     .user-icon {
-        width: 46px;
-        height: 46px;
-        line-height: 46px;
+        .user-icon(46px, 2.5rem);
     }
 
     .media-object {
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
+        .user-icon(46px, 2.5rem);
     }
     
     .modal-footer {
