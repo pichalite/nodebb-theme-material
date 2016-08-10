@@ -85,10 +85,14 @@
 
 .composer-container .btn.btn-info {
     box-shadow: none !important;
-    color: #00bcd4;
-    background-color: #fff;
+    color: @body-color;
+    background-color: @composer-bg-color;
     &:hover, &:active, &:focus, &:visited {
-        background-color: #eee;
+        background-color: @composer-bg-color;
+    }
+    
+    .caret {
+    	color: @body-color;
     }
 }
 
