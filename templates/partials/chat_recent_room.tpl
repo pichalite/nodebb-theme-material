@@ -3,7 +3,7 @@
     <!-- IF rooms.lastUser.uid -->
 	<div class="lv-avatar pull-left" data-username="{rooms.lastUser.username}" data-uid="{rooms.lastUser.uid}">
 		<!-- IF rooms.lastUser.picture -->
-		<img src="{rooms.lastUser.picture}">
+		<img class="user-avatar" src="{rooms.lastUser.picture}">
 		<!-- ELSE -->
 		<div class="user-icon" style="background-color: {rooms.lastUser.icon:bgColor};">{rooms.lastUser.icon:text}</div>
 		<!-- ENDIF rooms.lastUser.picture -->
