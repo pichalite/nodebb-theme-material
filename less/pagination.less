@@ -9,13 +9,22 @@
 		>a, >span {
 			border-radius: 0!important;
 			padding: 0;
-			width: 40px;
-			height: 40px;
-			line-height: 38px;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
 			text-align: center;
 			font-size: 14px;
 			z-index: 1;
 			position: relative;
+			color: @anchor-color;
+			background-color: @body-bg-color;
+			border-color: @border-color;
+			
+			&:hover {
+				color: #fff;
+				background-color: @anchor-color;
+				border-color: @border-color;
+			}
 			
 			@media (max-width: @screen-xs-max) {
 				padding-left: 15px;
@@ -71,6 +80,14 @@
 			opacity: .5;
 			filter: alpha(opacity=50);
 		}
+		
+		&.active {
+			a, a:hover {
+				color: #fff;
+				background-color: @anchor-color;
+				border-color: @border-color;
+			}
+		}
 	}
 }
 
@@ -78,7 +95,7 @@
 	width: 100%;
 	text-align: center;
 	padding: 10px 0;
-	border-top: 1px solid #F0F0F0;
+	//border-top: 1px solid #F0F0F0;
 	margin-top: 0;
 	margin-bottom: 0;
 }

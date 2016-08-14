@@ -142,10 +142,10 @@
 				font-size: 20px;
 
 				@media (max-width: @screen-xs-max) {
-					color: #000;
+					color: @body-color;
 					margin-top: 10px;
 					font-size: 16px;
-					text-align: left;
+					text-align: center;
 					margin-bottom: 2px;
 				}
 			}
@@ -155,18 +155,17 @@
 
 				@media (max-width: @screen-xs-max) {
 					font-size: 11px;
-					text-align: left;
+					text-align: center;
 					margin-top: 0;
 					margin-bottom: 0;
 				}
 			}
 
 			@media (max-width: @screen-xs-max) {
-			    position: absolute;
-			    top: 25px;
-			    left: ~"calc(50% - 30px)";
-				min-width: 120px;
+			    position: relative;
+			    top: -190px;
 				margin-left: 0;
+				float: none;
 			}
 		}
 

@@ -4,15 +4,19 @@
     white-space: nowrap;
     margin: 0;
     overflow: auto;
-    //box-shadow: inset 0 -2px 0 0 @border-color;
 
     >li {
 	    display: inline-block;
 	    vertical-align: top;
 	    font-size: 14px;
+	    box-shadow: inset 0 -2px 0 0 @border-color;
 
 	    @media (max-width: @screen-xs-max) {
 			font-size: 11px;
+		}
+		
+		+li {
+			margin-left: 0;	
 		}
 
 	    >a {
@@ -31,6 +35,7 @@
 
 			&:hover, &:focus, &:active {
 				text-decoration: none;
+				background-color: transparent;
 			}
 
 			&:after {
@@ -62,7 +67,7 @@
 		}
 
 		&.active>a {
-			color:#000;
+			color: #000;
 
 			&:after {
 				-webkit-transform:scale(1);
@@ -74,7 +79,7 @@
 	}
 
 	&:not([data-tab-color])>li>a:after {
-		background: @material-primary;
+		background: @anchor-color;
 	}
 }
 
