@@ -3,6 +3,38 @@
 <div class="account account-info">
 	<!-- IMPORT partials/account/header.tpl -->
 
+	<!-- IF sessions.length -->
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="card">
+	        	<div class="card-header ch-alt">
+	        		[[global:sessions]]
+	        	</div>
+	        	<div class="card-body card-padding">
+	        		<ul class="list-group" component="user/sessions">
+						<!-- BEGIN sessions -->
+						<li class="list-group-item" data-uuid="{../uuid}">
+							<div class="pull-right">
+								<!-- IF !../current -->
+								<button class="btn btn-xs btn-danger" type="button" data-action="revokeSession">Revoke Session</button>
+								<!-- ENDIF !../current -->
+								{function.userAgentIcons}
+								<i class="fa fa-circle text-<!-- IF ../current -->success<!-- ELSE -->muted<!-- ENDIF ../current -->"></i>
+							</div>
+							{../browser} {../version} on {../platform}<br />
+							<small class="timeago text-muted" title="{../datetimeISO}"></small>
+							<ul>
+								<li><strong>[[global:ip_address]]</strong>: {../ip}</li>
+							</ul>
+						</li>
+						<!-- END sessions -->
+					</ul>
+	        	</div>
+	        </div>
+		</div>
+	</div>
+	<!-- ENDIF sessions.length -->
+	
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="card">
@@ -29,7 +61,7 @@
 						<!-- BEGIN history.flags -->
 						<li>
 							<p>
-								<a class="title" href="{config.relative_path}/post/{../value}">{../title}</a><br />
+								<a class="title" href="{config.relative_path}/post/{../pid}">{../title}</a><br />
 								<span class="timestamp">Flagged <span class="timeago" title="{../timestampISO}"></span> ({../timestampReadable})</span>
 							</p>
 						</li>

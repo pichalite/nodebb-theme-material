@@ -18,6 +18,8 @@
 					<!-- ENDIF !users.length -->
 				</div>
 			</div>
+			
+			<!-- IMPORT partials/paginator.tpl -->
 		</div>
 	</div>
 </div>

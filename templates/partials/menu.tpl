@@ -120,7 +120,7 @@
                 <div class="dropdown-menu dropdown-menu-md pull-right" aria-labelledby="chat_dropdown">
                     <div class="listview">
                         <div class="lv-body c-overflow chat-list" component="chat/list">
-                            <a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a> 
+                            <i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]
                         </div>
                         <div class="lv-footer">
                             <a href="#" class="mark-all-read" component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a>
