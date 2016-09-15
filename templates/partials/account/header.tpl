@@ -18,6 +18,11 @@
 	        <!-- ENDIF picture -->
 	        <span component="user/status" class="status {status}" title="[[global:{status}]]"></span>
         </div>
+        
+        <div class="user-info">
+	        <h3 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h3>
+			<h4 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h4>
+		</div>
 
         <!-- IF template.account/profile -->
 		<div class="account-stats">
@@ -65,11 +70,6 @@
 		<!-- ENDIF template.account/profile -->
 		
 		<!-- IMPORT partials/account/menu.tpl -->
-
-		<div class="user-info">
-	        <h3 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h3>
-			<h4 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h4>
-		</div>
 		
 	</div>
 </div>

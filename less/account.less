@@ -112,7 +112,7 @@
 			padding: inherit;
 
 			hr {
-				margin-top: 80px;
+				margin-top: 20px;
 			}
 		}
 
@@ -132,10 +132,6 @@
 		}
 
 		.user-info {
-			float: left;
-			position: absolute;
-    		top: -50px;
-    		margin-left: 150px;
 
 			h3 {
 				color: #fff;
@@ -162,10 +158,13 @@
 			}
 
 			@media (max-width: @screen-xs-max) {
-			    position: relative;
-			    top: -190px;
-				margin-left: 0;
-				float: none;
+			    margin-top: 40px;
+			}
+			
+			@media (min-width: @screen-md-min) {
+				position: absolute;
+			    top: -50px;
+			    left: 175px;
 			}
 		}
 
@@ -192,7 +191,7 @@
 			}
 
 			@media (max-width: @screen-xs-max) {
-				margin-top: 80px;
+				margin-top: 20px;
 				margin-bottom: 10px;
 			}
 		}
