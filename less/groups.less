@@ -114,28 +114,43 @@
 		position: relative;
 		margin-bottom: 1em;
 
-		.change {
-			visibility: hidden;
+	&:hover {
+		.controls {
+			.opacity(0.8);
+		}
+	}
+
+	.controls {
+		text-align: center;
+		height: 200px;
+		line-height: 200px;
+		.opacity(0);
+		.transition(opacity .15s linear);
+		cursor: pointer;
+		pointer-events: none;
+
+		> * {
+			pointer-events: all;
 		}
 
-		&.initialised:hover {
-			.change {
-				.opacity(1);
-				visibility: visible;
-			}
+		.fa {
+			color: white;
+			background-color: #333;
+			opacity: 1;
+			margin: 15px;
+			padding: 5px;
 		}
+	}
 
-		&.active {
+	&.active {
 			&:hover {
 				cursor: move;
 			}
 
-			.instructions {
-				.opacity(1);
-			}
-
-			.change {
-				display: none;
+			.controls {
+				> * {
+					display: none;
+				}
 			}
 
 			.save {
@@ -153,25 +168,20 @@
 			}
 		}
 
-		.change, .save, .indicator {
+		.save, .indicator {
 			display: inline-block;
 			position: absolute;
 			top: 1em;
-			right: 1em;
-			background: rgba(0, 0, 0, 0.2);
+			right: 2em;
+			opacity: 1;
+			background-color: @brand-primary;
 			color: #eee;
 			padding: 0.5em;
-			border-radius: 5px;
 			font-weight: bold;
 
 			&:hover {
 				cursor: pointer;
 			}
-		}
-
-		.change {
-			.opacity(0);
-			.transition(opacity .15s linear);
 		}
 
 		.save {
@@ -180,20 +190,6 @@
 
 		.indicator {
 			display: none;
-		}
-
-		.instructions {
-			display: inline-block;
-			position: absolute;
-			right: 1em;
-			bottom: 1em;
-			background: rgba(0, 0, 0, 0.2);
-			color: #eee;
-			padding: 0.5em;
-			border-radius: 5px;
-			margin-top: 2em;
-			.opacity(0);
-			.transition(opacity .15s linear);
 		}
 	}
 	
