@@ -125,7 +125,7 @@
                         <div class="lv-footer">
                             <a href="#" class="mark-all-read" component="chats/mark-all-read">[[modules:chat.mark_all_read]]</a>
                             <hr />
-                            <a href="{relative_path}/chats">[[modules:chat.see_all]]</a>
+                            <a href="{relative_path}/user/{user.userslug}/chats">[[modules:chat.see_all]]</a>
                         </div>
                     </div>
                 </div>

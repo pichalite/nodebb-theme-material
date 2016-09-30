@@ -49,6 +49,39 @@
 					</ul>
 				</div>
 			</div>
+			
+			<div class="card">
+				<div class="card-header ch-alt">
+					[[user:info.username-history]]
+				</div>
+				<div class="card-body card-padding">
+					<ul class="list-group">
+						<!-- BEGIN usernames -->
+						<li class="list-group-item">
+							{../value}
+							<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
+						</li>
+						<!-- END usernames -->
+					</ul>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-header ch-alt">
+					[[user:info.email-history]]
+				</div>
+				<div class="card-body card-padding">
+					<ul class="list-group">
+						<!-- BEGIN emails -->
+						<li class="list-group-item">
+							{../value}
+							<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
+						</li>
+						<!-- END emails -->
+					</ul>
+				</div>
+			</div>
+			
 		</div>
 		<div class="col-sm-6">
 			<div class="card">
@@ -85,10 +118,11 @@
 							<p>
 								<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
 								<!-- IF ../until -->
-								<span class="expiry">[[user:info.banned-until, {../untilReadable}]]</span>
+								<span class="expiry">[[user:info.banned-until, {../untilReadable}]]</span><br />
 								<!-- ELSE -->
-								<span class="expiry">[[user:info.banned-permanently]]</span>
+								<span class="expiry">[[user:info.banned-permanently]]</span><br />
 								<!-- ENDIF ../until -->
+								<span class="reason"><strong>[[user:info.banned-reason-label]]</strong>: {../reason}</span>
 							</p>
 						</li>
 						<!-- END history.bans -->
@@ -98,6 +132,19 @@
 					<!-- ENDIF history.bans.length -->
 				</div>
 			</div>
+			
+			<!-- IF isAdminOrGlobalModerator -->
+			<div class="card">
+				<div class="card-header ch-alt">
+					[[user:info.moderation-note]]
+				</div>
+				<div class="card-body card-padding">
+					<textarea component="account/moderation-note" class="form-control">{moderationNote}</textarea>
+					<br/>
+					<button class="btn btn-sm btn-success" component="account/save-moderation-note">[[global:save]]</button>
+				</div>
+			</div>
+			<!-- ENDIF isAdminOrGlobalModerator -->
 		</div>
 	</div>
 </div>

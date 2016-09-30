@@ -1,4 +1,4 @@
-<li component="chat/message" class="lv-item media<!-- IF messages.self --> right<!-- ENDIF messages.self -->" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}">
+<li component="chat/message" class="lv-item media<!-- IF messages.self --> right<!-- ENDIF messages.self -->" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}">
     <div class="lv-avatar <!-- IF messages.self -->pull-right<!-- ELSE -->pull-left<!-- ENDIF messages.self -->">
         <!-- IF messages.newSet -->
         <!-- IF messages.fromUser.picture -->
