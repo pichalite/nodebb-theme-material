@@ -1,4 +1,7 @@
 .topic {
+	margin-left: -10px;
+    margin-right: -10px;
+    
 	.post-tools {
 		text-transform: lowercase;
 		margin: 3px;
@@ -428,5 +431,12 @@
 		.poster-avatar>a, .post-user-picture {
 			opacity: 0;
 		}
+	}
+}
+
+@media (max-width: @screen-sm-max) {
+	.popular, .recent, .unread {
+		margin-left: -10px;
+	    margin-right: -10px;
 	}
 }

@@ -9,7 +9,7 @@
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-fw fa-user"></i></span>
                 <div class="fg-line">
-                    <input class="form-control" type="text" name="username" id="username" placeholder="{allowLoginWith}" autocorrect="off" autocapitalize="off" value="{username}" <!-- IF username -->readonly<!-- ENDIF username -->/>
+                    <input class="form-control" type="text" name="username" id="username" placeholder="{allowLoginWith}" autocorrect="off" autocapitalize="off" value="{username}" />
                 </div>
             </div>
             

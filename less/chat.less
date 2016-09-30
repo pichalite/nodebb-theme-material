@@ -18,8 +18,7 @@
     		display: block;
     		overflow: hidden;
     		text-overflow: ellipsis;
-    
-
+    		
     		.status {
     			position: relative;
 			    left: -10px;
@@ -31,10 +30,12 @@
 
     img {
 	    .user-avatar(32px);
+	    margin-right: 5px;
 	}
 
 	.user-icon {
 		.user-icon(32px, 1.3rem);
+		margin-right: 5px;
 	}
 }
 
@@ -96,7 +97,7 @@
 		  	padding-right: 15px;
 		  	
 		  	&:not(:last-child) {
-		  		border-bottom: 1px solid @border-color;
+		  		border-bottom: 1px solid @chat-list-border;
 		  	}
 
 			&.bg-primary {
@@ -736,5 +737,12 @@
 				}
 			}
 		}
+	}
+}
+
+@media (max-width: @screen-sm-max) {
+	.chats {
+		margin-left: -10px;
+	    margin-right: -10px;
 	}
 }

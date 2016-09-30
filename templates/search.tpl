@@ -113,6 +113,7 @@
 								<div class="col-md-6">
 									<div class="fg-line">
 										<select id="post-sort-by" class="form-control">
+											<option value=""></option>
 											<option value="timestamp">[[search:post-time]]</option>
 											<option value="teaser.timestamp">[[search:last-reply-time]]</option>
 											<option value="topic.title">[[search:topic-title]]</option>
@@ -151,8 +152,8 @@
 							</div>
 						</div>
 
-						<a id="save-preferences" href="#">[[search:save-preferences]]</a>
-						<a id="clear-preferences" href="#">[[search:clear-preferences]]</a>
+						<a id="save-preferences" class="btn btn-sm btn-default" href="#">[[search:save-preferences]]</a>
+						<a id="clear-preferences" class="btn btn-sm btn-default" href="#">[[search:clear-preferences]]</a>
 					</div>
 				</div>
 			</form>
