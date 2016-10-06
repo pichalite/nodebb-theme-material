@@ -14,6 +14,6 @@
     <!-- ENDIF rooms.lastUser.uid -->
     <div class="media-body">
         <span class="lv-title">{rooms.usernames}</span>
-	    <span class="lv-small">{rooms.teaser.content}</span>
+	    <span class="lv-small">{rooms.teaser.user.username}: {rooms.teaser.content}</span>
     </div>
 </li>

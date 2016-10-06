@@ -62,10 +62,8 @@
                     </div>
                 </div>
                 
-                <span class="since-bar hidden-xs"><a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
-                
                 <ul class="lv-body chat-content">
-                <!-- IMPORT partials/chat_messages.tpl -->
+                    <!-- IMPORT partials/chat_messages.tpl -->
                 </ul>
                 
                 <div class="lv-footer ms-reply">

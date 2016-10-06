@@ -9,10 +9,8 @@
  				</div>
 			</div>
 			<div class="modal-body">
-				<span class="since-bar">
-				<a href="#" class="selected" data-since="recent">[[recent:title]]</a> &bull; <a href="#" data-since="week">[[modules:chat.seven_days]]</a> &bull; <a href="#" data-since="month">[[modules:chat.thirty_days]]</a> &bull; <a href="#" data-since="threemonths">[[modules:chat.three_months]]</a></span>
 				<ul class="chat-content lv-body" component="chat/messages">
-					
+					<!-- IMPORT partials/chat_messages.tpl -->
 				</ul>
 
 				<div class="chat-footer input-group">
