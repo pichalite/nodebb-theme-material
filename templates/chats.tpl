@@ -11,7 +11,7 @@
             </div>
             <ul component="chat/recent" class="listview lv-user chats-list">
                 <!-- BEGIN rooms -->
-                <!-- IMPORT partials/chat_recent_room.tpl -->
+                <!-- IMPORT partials/chats/recent_room.tpl -->
                 <!-- END rooms -->
             </ul>
         </div>
@@ -63,7 +63,7 @@
                 </div>
                 
                 <ul class="lv-body chat-content">
-                    <!-- IMPORT partials/chat_messages.tpl -->
+                    <!-- IMPORT partials/chats/messages.tpl -->
                 </ul>
                 
                 <div class="lv-footer ms-reply">

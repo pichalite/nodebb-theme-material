@@ -14,7 +14,38 @@
 					<!-- ELSE -->
 					<a href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 					<!-- ENDIF loggedIn -->
+				
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><i class="fa fa-fw {selectedCategory.icon}"></i><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
+							[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation" class="category">
+								<a role="menu-item" href="{config.relative_path}/{selectedFilter.url}"><i class="fa fa-fw <!-- IF !selectedCategory -->fa-check<!-- ENDIF !selectedCategory -->"></i> [[unread:all_categories]]</a>
+							</li>
+							<!-- BEGIN categories -->
+							<li role="presentation" class="category" data-cid="{categories.cid}">
+								<a role="menu-item" href="{config.relative_path}/{selectedFilter.url}?cid={categories.cid}"><i class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i>{categories.level}<!-- IF categories.icon --><i class="fa fa-fw {categories.icon}"></i><!-- ENDIF categories.icon --> {categories.name}</a>
+							</li>
+							<!-- END categories -->
+						</ul>
+					</div>
+			
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						{selectedFilter.name} <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<!-- BEGIN filters -->
+							<li role="presentation" class="category">
+								<a role="menu-item" href="{config.relative_path}/{filters.url}{querystring}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
+							</li>
+							<!-- END filters -->
+						</ul>
+					</div>
 				</div>
+				
 		    </div>
 		    <!-- IF !topics.length -->
 			<div class="alert alert-warning" id="category-no-topics">

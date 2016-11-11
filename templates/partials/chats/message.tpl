@@ -14,12 +14,15 @@
             <!-- IF messages.edited -->
             <small class="text-muted chat-edit" title="[[global:edited]] {messages.editedISO}"><i class="fa fa-edit"></i></span></small>
             <!-- ENDIF messages.edited -->
+            
+            <!-- IF !config.disableChatMessageEditing -->
             <!-- IF messages.self -->
             <div class="chat-controls">
                 <button class="btn btn-xs btn-link" data-action="edit"><i class="fa fa-pencil"></i></button>
                 <button class="btn btn-xs btn-link" data-action="delete"><i class="fa fa-times"></i></button>
             </div>
             <!-- ENDIF messages.self -->
+            <!-- ENDIF !config.disableChatMessageEditing -->
             {messages.content}
         </div>
     </div>

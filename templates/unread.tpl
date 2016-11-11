@@ -9,6 +9,12 @@
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-header-alt <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
 				<div class="title">
+					<!-- IF loggedIn -->
+					<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
+					<!-- ELSE -->
+					<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
+					<!-- ENDIF loggedIn -->
+					
 					<div class="markread btn-group <!-- IF !topics.length -->hidden<!-- ENDIF !topics.length -->">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 							[[unread:mark_as_read]] <span class="caret"></span>

@@ -10,7 +10,7 @@
 			</div>
 			<div class="modal-body">
 				<ul class="chat-content lv-body" component="chat/messages">
-					<!-- IMPORT partials/chat_messages.tpl -->
+					<!-- IMPORT partials/chats/messages.tpl -->
 				</ul>
 
 				<div class="chat-footer input-group">
