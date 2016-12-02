@@ -67,8 +67,8 @@
                 </ul>
                 
                 <div class="lv-footer ms-reply">
-                    <textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="chat-input"></textarea>
-                    <button data-action="send"><i class="fa fa-send"></i></button>
+                    <textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="chat-input" <!-- IF !canReply -->readonly<!-- ENDIF !canReply -->></textarea>
+                    <button data-action="send" <!-- IF !canReply -->disabled<!-- ENDIF !canReply -->><i class="fa fa-send"></i></button>
                 </div>
             </div>
         </div>
