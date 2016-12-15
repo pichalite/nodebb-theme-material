@@ -271,12 +271,16 @@
 	            </div>
 	        </div>
 
-          <!-- BEGIN customSettings -->
-          <div class="card">
-            <div class="card-header">{customSettings.title}</div>
-            <div class="card-body card-padding">{customSettings.content}</div>
-          </div>
-          <!-- END customSettings -->
+			<!-- BEGIN customSettings -->
+			<div class="card">
+				<div class="card-header">
+					{customSettings.title}
+				</div>
+				<div class="card-body card-padding">
+					{customSettings.content}
+				</div>
+			</div>
+			<!-- END customSettings -->
 		</div>
 		<div class="col-xs-12">
 			<button id="submitBtn" class="btn btn-primary btn-lg">[[global:save_changes]]</button>

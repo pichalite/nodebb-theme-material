@@ -27,6 +27,7 @@
 			</a>
 			<div class="category-card-footer">
 				<!-- BEGIN posts -->
+				<!-- IF @first -->
 				<div component="category/posts">
 					<div class="pull-left hidden-xs user-avatar">
 				    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
@@ -41,6 +42,7 @@
 						<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}">{categories.posts.topic.title}</a>
 					</div>
 				</div>
+				<!-- ENDIF @first -->
 				<!-- END posts -->
 			</div>
 		</div>
@@ -87,6 +89,7 @@
 					</div>
 					<div class="col-md-3 hidden-xs last-post">
 						<!-- BEGIN posts -->
+						<!-- IF @first -->
 						<div component="category/posts">
 							<div class="pull-left hidden-xs user-avatar">
 						    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
@@ -104,6 +107,7 @@
 								</div>
 							</div>
 						</div>
+						<!-- ENDIF @first -->
 						<!-- END posts -->
 					</div>
 					<!-- IF config.listSubcategories -->
@@ -140,6 +144,7 @@
 							</div>
 							<div class="col-md-3 hidden-xs last-post">
 								<!-- BEGIN posts -->
+								<!-- IF @first -->
 								<div component="category/posts">
 									<div class="pull-left hidden-xs user-avatar">
 								    	<a href="{config.relative_path}/user/{categories.children.posts.user.userslug}">
@@ -157,6 +162,7 @@
 										</div>
 									</div>
 								</div>
+								<!-- ENDIF @first -->
 								<!-- END posts -->
 							</div>
 						</div>
