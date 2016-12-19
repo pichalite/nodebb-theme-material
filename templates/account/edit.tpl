@@ -123,8 +123,21 @@
 				</div>
 				</form>
 			</div>
-
-			<hr class="visible-xs visible-sm"/>
+			
+			<!-- IF sso.length -->
+			<div class="card">
+				<div class="card-header">[[user:sso.title]]</div>
+				<div class="card-body card-padding">
+					<!-- BEGIN sso -->
+					<a class="list-group-item" href="{../url}" target="<!-- IF ../associated -->_blank<!-- ELSE -->_top<!-- ENDIF ../associated -->">
+						<!-- IF ../icon --><i class="fa {../icon}"></i><!-- ENDIF ../icon -->
+						<!-- IF ../associated -->[[user:sso.associated]]<!-- ELSE -->[[user:sso.not-associated]]<!-- ENDIF ../associated -->
+						{../name}
+					</a>
+					<!-- END sso -->
+				</div>
+			</div>
+			<!-- ENDIF sso.length -->
 		</div>
 
 	</div>
