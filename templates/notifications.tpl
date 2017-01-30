@@ -7,7 +7,7 @@
 
 	<div class="card">
 		<div class="listview lv-bordered lv-lg">
-			<div class="lv-body notifications-list">
+			<div class="lv-body notifications-list" data-nextstart="{nextStart}">
 				<!-- BEGIN notifications -->
 				<div class="lv-item media {notifications.readClass}" data-nid="{notifications.nid}" component="notifications/item">
 			    	<div class="pull-left">
