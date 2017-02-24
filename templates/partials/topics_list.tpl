@@ -1,7 +1,7 @@
 <div class="lv-body" component="category" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}">
 	<meta itemprop="itemListOrder" content="descending">
 	<!-- BEGIN topics -->
-	<div component="category/topic" class="lv-item media row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
+	<div component="category/topic" class="lv-item media row clearfix category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{function.stripTags, title}">
 		<!-- IF showSelect -->
         <div class="checkbox pull-left" component="topic/select">
@@ -38,7 +38,7 @@
 
 			<!-- IF template.category -->
 			<small>
-            	[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> | 
+            	[[global:posts]] <span class="human-readable-number" title="{topics.postcount}"></span> | [[global:views]] <span class="human-readable-number" title="{topics.viewcount}"></span> |
             	<!-- IF topics.user.uid -->
 				<a href="{config.relative_path}/user/{topics.user.userslug}"><strong>{topics.user.username}</strong></a>
 				<!-- ELSE -->
@@ -54,7 +54,7 @@
 				<strong>{topics.user.username}</strong> <a href="{config.relative_path}/category/{topics.category.slug}">[[global:posted_in, {topics.category.name}]] <i class="fa {topics.category.icon}"></i></a> <span class="timeago" title="{topics.timestampISO}"></span>
 			</small>
 			<!-- ENDIF !template.category -->
-			
+
 			<ul class="lv-attrs hidden-xs">
                 <!-- IF topics.tags.length -->
 				<!-- BEGIN tags -->

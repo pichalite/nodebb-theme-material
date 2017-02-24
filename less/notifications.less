@@ -7,13 +7,13 @@
     .lv-item {
         padding: 5px;
         margin-bottom: 2px;
-        
+
         &:not(.unread) {
             &:hover {
                 background: none;
             }
         }
-        
+
         .media-body {
             padding: 0 5px 0 10px;
         }
@@ -56,15 +56,15 @@
             .lv-small {
                 white-space: normal;
             }
-            
+
             [component="notifications/item/link"] {
                 color: @topic-title-color;
             }
-            
+
             &.unread {
                 [component="notifications/item/link"] {
                     color: @anchor-color;
-                }   
+                }
             }
         }
 
@@ -100,13 +100,13 @@
 @media (min-width: @screen-xs-min) {
     .notifications .listview.lv-lg .lv-item {
           padding: 10px 35px 10px 25px;
-    }   
+    }
 }
 
 @media (max-width: @screen-sm-max) {
     .notifications .listview.lv-lg .lv-item {
           padding: 10px 35px 10px 25px;
-    }   
+    }
 }
 
 .notifications {

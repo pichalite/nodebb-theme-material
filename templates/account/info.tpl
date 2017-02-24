@@ -16,7 +16,9 @@
 						<li class="list-group-item" data-uuid="{../uuid}">
 							<div class="pull-right">
 								<!-- IF !../current -->
-								<button class="btn btn-xs btn-danger" type="button" data-action="revokeSession">Revoke Session</button>
+								<!-- IF isSelfOrAdminOrGlobalModerator -->
+									<button class="btn btn-xs btn-danger" type="button" data-action="revokeSession">Revoke Session</button>
+								<!-- ENDIF isSelfOrAdminOrGlobalModerator -->
 								<!-- ENDIF !../current -->
 								{function.userAgentIcons}
 								<i class="fa fa-circle text-<!-- IF ../current -->success<!-- ELSE -->muted<!-- ENDIF ../current -->"></i>
@@ -34,7 +36,7 @@
 		</div>
 	</div>
 	<!-- ENDIF sessions.length -->
-	
+
 	<div class="row">
 		<div class="col-sm-6">
 			<div class="card">
@@ -49,7 +51,7 @@
 					</ul>
 				</div>
 			</div>
-			
+
 			<div class="card">
 				<div class="card-header ch-alt">
 					[[user:info.username-history]]
@@ -65,7 +67,7 @@
 					</ul>
 				</div>
 			</div>
-			
+
 			<div class="card">
 				<div class="card-header ch-alt">
 					[[user:info.email-history]]
@@ -81,7 +83,7 @@
 					</ul>
 				</div>
 			</div>
-			
+
 		</div>
 		<div class="col-sm-6">
 			<div class="card">
@@ -132,7 +134,7 @@
 					<!-- ENDIF history.bans.length -->
 				</div>
 			</div>
-			
+
 			<!-- IF isAdminOrGlobalModerator -->
 			<div class="card">
 				<div class="card-header ch-alt">

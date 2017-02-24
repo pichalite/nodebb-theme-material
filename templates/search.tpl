@@ -61,6 +61,13 @@
 						</div>
 
 						<div class="form-group post-search-item">
+							<label>[[search:has-tags]]</label>
+							<div class="fg-line">
+								<input type="text" class="form-control" id="has-tags">
+							</div>
+						</div>
+
+						<div class="form-group post-search-item">
 							<label>[[search:reply-count]]</label>
 							<div class="row">
 								<div class="col-md-6">
@@ -113,7 +120,7 @@
 								<div class="col-md-6">
 									<div class="fg-line">
 										<select id="post-sort-by" class="form-control">
-											<option value=""></option>
+											<option value="relevance">[[search:relevance]]</option>
 											<option value="timestamp">[[search:post-time]]</option>
 											<option value="teaser.timestamp">[[search:last-reply-time]]</option>
 											<option value="topic.title">[[search:topic-title]]</option>
@@ -141,7 +148,7 @@
 							<div id="show-results-as">
 								<label class="radio radio-inline active">
 									<input type="radio" name="options" id="show-as-posts" autocomplete="off" checked>
-									<i class="input-helper"></i> 
+									<i class="input-helper"></i>
 									[[global:posts]]
 								</label>
 								<label class="radio radio-inline">
