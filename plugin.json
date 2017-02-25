@@ -12,7 +12,13 @@
 			"hook": "filter:config.get", "method": "getConfig"
 		},
 		{
-			"hook": "static:assets.prepare", "method": "modifyLessVar"
+			"hook": "filter:user.customSettings", "method": "customSettings"
+		},
+		{
+			"hook": "action:user.saveSettings", "method": "saveSettings"
+		},
+		{
+			"hook": "filter:user.getSettings", "method": "getSettings"
 		}
 	],
 	"scripts": [
