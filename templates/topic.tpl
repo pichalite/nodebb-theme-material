@@ -4,7 +4,7 @@
 		<div class="col-md-12">
 			<div class="card">
 				<div class="listview lv-lg">
-					<div class="lv-header-alt" component="post/header" itemprop="name">
+					<div class="lv-header-alt" component="post/header">
 						<div class="title">
 							<i class="fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
 							<ul class="lv-actions actions">
@@ -22,7 +22,7 @@
 							<!-- ENDIF !posts.index -->
 						<!-- END posts -->
 						</div>
-						
+
 						<div class="post-bar">
 							<!-- IMPORT partials/post_bar.tpl -->
 						</div>

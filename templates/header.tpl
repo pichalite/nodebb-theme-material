@@ -3,7 +3,9 @@
 <head>
 	<title>{browserTitle}</title>
 	<!-- BEGIN metaTags -->
+	<!-- IF metaTags.content -->
 	{function.buildMetaTag}
+	<!-- ENDIF metaTags.content -->
 	<!-- END metaTags -->
 	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/stylesheet.css?{config.cache-buster}" />
 	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->

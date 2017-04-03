@@ -7,7 +7,7 @@
         <div class="poster-avatar hidden-xs">
             <a href="{config.relative_path}/user/{posts.user.userslug}">
                 <!-- IF posts.user.picture -->
-                <img src="{posts.user.picture}" class="user-picture" title="{posts.user.username}"/>
+                <img class="user-picture" src="{posts.user.picture}" alt="{posts.user.username}" title="{posts.user.username}"/>
                 <!-- ELSE -->
                 <div class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
                 <!-- ENDIF posts.user.picture -->
@@ -17,7 +17,7 @@
 
         <div class="post-content">
             <div class="post-body">
-                <div class="post-actions pull-right">
+                <ul class="post-actions pull-right">
                     <li class="votes">
                         <!-- IF !reputation:disabled -->
                         <a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
@@ -32,12 +32,12 @@
                         <!-- ENDIF !reputation:disabled -->
                     </li>
                     <!-- IMPORT partials/topic/post-menu.tpl -->
-                </div>
+                </ul>
 
                 <div class="post-header">
                     <a class="pull-left visible-xs user-profile-link" href="{config.relative_path}/user/{posts.user.userslug}">
                         <!-- IF posts.user.picture -->
-                        <img src="{posts.user.picture}" class="post-user-picture" title="{posts.user.username}"/>
+                        <img class="post-user-picture" src="{posts.user.picture}" alt="{posts.user.username}" title="{posts.user.username}"/>
                         <!-- ELSE -->
                         <div class="user-icon post-user-picture" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
                         <!-- ENDIF posts.user.picture -->
@@ -58,7 +58,7 @@
                 </div>
 
                 <div component="post/content" itemprop="text">
-                    <p>{posts.content}</p>
+                    {posts.content}
                 </div>
 
                 <!-- IF posts.user.signature -->

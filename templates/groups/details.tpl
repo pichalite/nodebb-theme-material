@@ -24,7 +24,7 @@
 			</div>
 			<div class="card-body card-padding group-details">
 				<div><h2>{group.displayName}</h2></div>
-				<div><p>{group.descriptionParsed}</p></div>
+				<div>{group.descriptionParsed}</div>
 				<!-- IF isAdmin -->
 				<div class="pull-right">
 					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a>
@@ -43,46 +43,48 @@
 			</div>
 			<div class="card-body card-padding group-members">
 				<div class="fg-line">
-				<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
+					<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
 				</div>
 				<table component="groups/members" class="table members" data-nextstart="{group.membersNextStart}">
-					<!-- BEGIN members -->
-					<tr data-uid="{group.members.uid}">
-						<td>
-							<a href="{config.relative_path}/user/{group.members.userslug}">
-								<!-- IF group.members.picture -->
-								<img class="user-avatar" src="{group.members.picture}" />
-								<!-- ELSE -->
-								<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
-								<!-- ENDIF group.members.picture -->
-							</a>
-						</td>
-						<td class="member-name">
-							<a href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a> <i title="[[groups:owner]]" class="fa fa-star text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>
-						</td>
-						<!-- IF group.isOwner -->
-						<td>
-							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									[[global:more]] <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="#" data-ajaxify="false" data-action="toggleOwnership">
-											[[groups:details.grant]]
-										</a>
-									</li>
-									<li>
-										<a href="#" data-ajaxify="false" data-action="kick">
-											[[groups:details.kick]]
-										</a>
-									</li>
-								</ul>
-							</div>
-						</td>
-						<!-- ENDIF group.isOwner -->
-					</tr>
-					<!-- END members -->
+					<tbody>
+						<!-- BEGIN members -->
+						<tr data-uid="{group.members.uid}">
+							<td>
+								<a href="{config.relative_path}/user/{group.members.userslug}">
+									<!-- IF group.members.picture -->
+									<img class="user-avatar" src="{group.members.picture}" alt="{group.members.username}" />
+									<!-- ELSE -->
+									<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
+									<!-- ENDIF group.members.picture -->
+								</a>
+							</td>
+							<td class="member-name">
+								<a href="{config.relative_path}/user/{group.members.userslug}">{group.members.username}</a> <i title="[[groups:owner]]" class="fa fa-star text-warning <!-- IF !group.members.isOwner -->invisible<!-- ENDIF !group.members.isOwner -->"></i>
+							</td>
+							<!-- IF group.isOwner -->
+							<td>
+								<div class="btn-group pull-right">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+										[[global:more]] <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+										<li>
+											<a href="#" data-ajaxify="false" data-action="toggleOwnership">
+												[[groups:details.grant]]
+											</a>
+										</li>
+										<li>
+											<a href="#" data-ajaxify="false" data-action="kick">
+												[[groups:details.kick]]
+											</a>
+										</li>
+									</ul>
+								</div>
+							</td>
+							<!-- ENDIF group.isOwner -->
+						</tr>
+						<!-- END members -->
+					</tbody>
 				</table>
 			</div>
 		</div>
@@ -103,38 +105,39 @@
 				<!-- ENDIF group.pending.length -->
 			</div>
 			<div class="card-body card-padding">
+				<!-- IF !group.pending.length -->
+				<div class="alert alert-info">[[groups:pending.none]]</div>
+				<!-- ENDIF !group.pending.length -->
 				<table component="groups/pending" class="table pending">
-					<!-- IF !group.pending.length -->
-					<div class="alert alert-info">[[groups:pending.none]]</div>
-					<!-- ENDIF !group.pending.length -->
-					
-					<!-- BEGIN pending -->
-					<tr data-uid="{group.pending.uid}">
-						<td>
-							<a href="{config.relative_path}/user/{group.pending.userslug}">
-								<!-- IF group.pending.picture -->
-								<img class="user-avatar" src="{group.pending.picture}" />
-								<!-- ELSE -->
-								<div class="user-icon" style="background-color: {group.pending.icon:bgColor};">{group.pending.icon:text}</div>
-								<!-- ENDIF group.pending.picture -->
-							</a>
-						</td>
-						<td class="member-name">
-							<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
-						</td>
-						<td>
-							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									[[global:more]] <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#" data-ajaxify="false" data-action="accept">[[groups:pending.accept]]</a></li>
-									<li><a href="#" data-ajaxify="false" data-action="reject">[[groups:pending.reject]]</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<!-- END pending -->
+					<tbody>
+						<!-- BEGIN pending -->
+						<tr data-uid="{group.pending.uid}">
+							<td>
+								<a href="{config.relative_path}/user/{group.pending.userslug}">
+									<!-- IF group.pending.picture -->
+									<img class="user-avatar" src="{group.pending.picture}" alt="{group.pending.username}" />
+									<!-- ELSE -->
+									<div class="user-icon" style="background-color: {group.pending.icon:bgColor};">{group.pending.icon:text}</div>
+									<!-- ENDIF group.pending.picture -->
+								</a>
+							</td>
+							<td class="member-name">
+								<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
+							</td>
+							<td>
+								<div class="btn-group pull-right">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+										[[global:more]] <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="#" data-ajaxify="false" data-action="accept">[[groups:pending.accept]]</a></li>
+										<li><a href="#" data-ajaxify="false" data-action="reject">[[groups:pending.reject]]</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<!-- END pending -->
+					</tbody>
 				</table>
 			</div>
 		</div>
@@ -145,40 +148,42 @@
 			</div>
 			<div class="card-body card-padding members-invited">
 				<div class="fg-line">
-				<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
+					<input class="form-control" type="text" component="groups/members/invite" placeholder="[[groups:invited.search]]"/>
 				</div>
 				<textarea class="form-control" component="groups/members/bulk-invite" placeholder="[[groups:bulk-invite-instructions]]"></textarea>
 				<button class="btn btn-default btn-sm pull-right" component="groups/members/bulk-invite-button">[[groups:bulk-invite]]</button><br/><br/>
+				<!-- IF !group.invited.length -->
+				<div class="alert alert-info">[[groups:invited.none]]</div>
+				<!-- ENDIF !group.invited.length -->
 				<table component="groups/invited" class="table invited">
-					<!-- IF !group.invited.length -->
-					<div class="alert alert-info">[[groups:invited.none]]</div>
-					<!-- ENDIF !group.invited.length -->
-					<!-- BEGIN invited -->
-					<tr data-uid="{group.invited.uid}">
-						<td>
-							<a href="{config.relative_path}/user/{group.invited.userslug}">
-								<!-- IF group.invited.picture -->
-								<img class="user-avatar" src="{group.invited.picture}" />
-								<!-- ELSE -->
-								<div class="user-icon" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
-								<!-- ENDIF group.invited.picture -->
-							</a>
-						</td>
-						<td class="member-name">
-							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
-						</td>
-						<td>
-							<div class="btn-group pull-right">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-									[[global:more]] <span class="caret"></span>
-								</button>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="#" data-ajaxify="false" data-action="rescindInvite">[[groups:invited.uninvite]]</a></li>
-								</ul>
-							</div>
-						</td>
-					</tr>
-					<!-- END invited -->
+					<tbody>
+						<!-- BEGIN invited -->
+						<tr data-uid="{group.invited.uid}">
+							<td>
+								<a href="{config.relative_path}/user/{group.invited.userslug}">
+									<!-- IF group.invited.picture -->
+									<img class="user-avatar" src="{group.invited.picture}" alt="{group.invited.username}" />
+									<!-- ELSE -->
+									<div class="user-icon" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
+									<!-- ENDIF group.invited.picture -->
+								</a>
+							</td>
+							<td class="member-name">
+								<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>
+							</td>
+							<td>
+								<div class="btn-group pull-right">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+										[[global:more]] <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" role="menu">
+										<li><a href="#" data-ajaxify="false" data-action="rescindInvite">[[groups:invited.uninvite]]</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<!-- END invited -->
+					</tbody>
 				</table>
 			</div>
 		</div>
@@ -190,27 +195,27 @@
 		<div class="card">
 			<div class="card-header ch-alt pointer" data-toggle="collapse" data-target=".options">
 				<i class="fa fa-caret-down pull-right"></i>
-				<i class="fa fa-cogs"></i> [[groups:details.owner_options]]			
+				<i class="fa fa-cogs"></i> [[groups:details.owner_options]]
 			</div>
 
 			<div class="card-body card-padding options collapse">
 				<form component="groups/settings" role="form">
 					<div class="form-group">
 						<div class="fg-line">
-						<label for="name">[[groups:details.group_name]]</label>
-						<input class="form-control" name="name" id="name" type="text" value="{group.displayName}" />
+							<label for="name">[[groups:details.group_name]]</label>
+							<input class="form-control" name="name" id="name" type="text" value="{group.displayName}" />
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="fg-line">
-						<label for="name">[[groups:details.description]]</label>
-						<textarea class="form-control" name="description" id="description" type="text" maxlength="255">{group.description}</textarea>
+							<label for="name">[[groups:details.description]]</label>
+							<textarea class="form-control" name="description" id="description" type="text" maxlength="255">{group.description}</textarea>
 						</div>
 					</div>
 					<div class="form-group user-title-option">
 						<div class="fg-line">
-						<label for="userTitle">[[groups:details.badge_text]]</label>
-						<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" maxlength="40" value="{group.userTitle}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
+							<label for="userTitle">[[groups:details.badge_text]]</label>
+							<input component="groups/userTitleOption" class="form-control" name="userTitle" id="userTitle" type="text" maxlength="40" value="{group.userTitle}"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled --> />
 						</div>
 					</div>
 					<div class="form-group user-title-option">
@@ -233,14 +238,14 @@
 					<hr />
 					<div class="checkbox">
 						<label>
-							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->> 
+							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->>
 							<i class="input-helper"></i>
 							[[groups:details.userTitleEnabled]]
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->> 
+							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->>
 							<i class="input-helper"></i>
 							[[groups:details.private]]
 						</label>
@@ -289,13 +294,12 @@
 						</div>
 						<span class="timeline-date"><a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]] <i class="fa {posts.category.icon}"></i></a> <span class="timeago" title="{posts.timestampISO}"></span></span>
 						<div class="timeline-content">
-							<p>{posts.content}</p>
+							{posts.content}
 						</div>
 					</div>
 				</div>
 				<!-- END posts -->
 			</div>
 		</div>
-		<div widget-area="right"></div>
 	</div>
 </div>
