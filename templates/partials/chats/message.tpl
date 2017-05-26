@@ -1,4 +1,4 @@
-<li component="chat/message" class="lv-item media<!-- IF messages.self --> right<!-- ENDIF messages.self -->" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}">
+<li component="chat/message" class="lv-item media<!-- IF messages.self --> right<!-- ENDIF messages.self -->" data-index="{messages.index}" data-mid="{messages.messageId}" data-uid="{messages.fromuid}" data-self="{messages.self}" data-break="{messages.newSet}" data-timestamp="{messages.timestamp}">
     <div class="lv-avatar <!-- IF messages.self -->pull-right<!-- ELSE -->pull-left<!-- ENDIF messages.self -->">
         <!-- IF messages.fromUser.picture -->
         <img class="user-avatar" src="{messages.fromUser.picture}">
@@ -14,7 +14,7 @@
             <!-- IF messages.edited -->
             <small class="text-muted chat-edit" title="[[global:edited]] {messages.editedISO}"><i class="fa fa-edit"></i></span></small>
             <!-- ENDIF messages.edited -->
-            
+
             <!-- IF !config.disableChatMessageEditing -->
             <!-- IF messages.self -->
             <div class="chat-controls">

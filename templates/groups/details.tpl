@@ -203,7 +203,7 @@
 					<div class="form-group">
 						<div class="fg-line">
 							<label for="name">[[groups:details.group_name]]</label>
-							<input class="form-control" name="name" id="name" type="text" value="{group.displayName}" />
+							<input class="form-control" name="name" id="name" type="text" value="{group.displayName}" <!-- IF group.system -->readonly<!-- ENDIF group.system --> />
 						</div>
 					</div>
 					<div class="form-group">

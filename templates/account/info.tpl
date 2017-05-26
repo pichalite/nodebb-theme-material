@@ -141,9 +141,38 @@
 					[[user:info.moderation-note]]
 				</div>
 				<div class="card-body card-padding">
-					<textarea component="account/moderation-note" class="form-control">{moderationNote}</textarea>
-					<br/>
-					<button class="btn btn-sm btn-success" component="account/save-moderation-note">[[global:save]]</button>
+					<div class="form-group">
+						<div class="fg-line">
+							<textarea component="account/moderation-note" class="form-control" rows="5"></textarea>
+						</div>
+					</div>
+
+					<button class="btn btn-sm btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
+					<hr>
+					<div class="moderation-history" component="account/moderation-note/list">
+						<!-- BEGIN moderationNotes -->
+						<div class="timeline single">
+							<div class="frame">
+								<div class="timeline-badge">
+									<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">
+	 									<!-- IF moderationNotes.user.picture -->
+	 									<img class="user-avatar" component="user/picture" data-uid="{moderationNotes.user.uid}" src="{moderationNotes.user.picture}" align="left" itemprop="image" />
+	 									<!-- ELSE -->
+	 									<div component="user/picture" data-uid="{moderationNotes.user.uid}" class="user-icon" style="background-color: {moderationNotes.user.icon:bgColor};">{moderationNotes.user.icon:text}</div>
+	 									<!-- ENDIF moderationNotes.user.picture -->
+	 								</a>
+								</div>
+								<span class="timeline-date">
+									<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->" itemprop="author" data-username="{moderationNotes.user.username}" data-uid="{moderationNotes.user.uid}">{moderationNotes.user.username}</a> <span class="timeago" title="{moderationNotes.timestampISO}"></span>
+								</span>
+								<div class="timeline-content">
+									{moderationNotes.note}
+								</div>
+							</div>
+						</div>
+						<!-- END moderationNotes -->
+					</div>
+					<!-- IMPORT partials/paginator.tpl -->
 				</div>
 			</div>
 			<!-- ENDIF isAdminOrGlobalModerator -->
