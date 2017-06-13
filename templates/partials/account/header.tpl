@@ -18,7 +18,7 @@
 	        <!-- ENDIF picture -->
 	        <span component="user/status" class="status {status}" title="[[global:{status}]]"></span>
         </div>
-        
+
         <div class="user-info">
 	        <h3 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h3>
 			<h4 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h4>
@@ -57,19 +57,19 @@
 		<!-- IF !isSelf -->
 		<!-- IF !banned -->
 		<!-- IF !config.disableChat -->
-		<a component="account/chat" href="#" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-comment-o"></i> Chat</a>
+		<a component="account/chat" href="#" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-comment-o"></i> [[user:chat]]</a>
 		<!-- ENDIF !config.disableChat -->
 		<a id="follow-btn" component="account/follow" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->">[[user:follow]]</a>
 		<a id="unfollow-btn" component="account/unfollow" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->">[[user:unfollow]]</a>
 		<!-- ENDIF !banned -->
 		<!-- ENDIF !isSelf -->
 		<!-- ENDIF loggedIn -->
-		
+
 		<!-- ELSE -->
 		<hr/>
 		<!-- ENDIF template.account/profile -->
-		
+
 		<!-- IMPORT partials/account/menu.tpl -->
-		
+
 	</div>
 </div>
