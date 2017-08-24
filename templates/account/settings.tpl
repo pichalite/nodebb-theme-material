@@ -22,7 +22,7 @@
 						</div>
 					</div>
 					<small>[[user:homepage_description]]</small>
-					
+
 					<div id="homePageCustom" class="form-group" style="display: none;">
 						<div class="fg-line">
 							<label for="homePageCustom">[[user:custom_route]]</label>
@@ -79,6 +79,7 @@
 	            	[[global:privacy]]
 	            </div>
 	            <div class="card-body card-padding">
+	            	<!-- IF !hideEmail -->
 	            	<div class="checkbox">
 	                    <label>
 	                        <input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->>
@@ -86,6 +87,8 @@
 	                        [[user:show_email]]
 	                    </label>
 	                </div>
+	                <!-- ENDIF !hideEmail -->
+	                <!-- IF !hideFullname -->
 	                <div class="checkbox">
 	                    <label>
 	                        <input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->>
@@ -93,6 +96,7 @@
 	                        [[user:show_fullname]]
 	                    </label>
 	                </div>
+	                <!-- ENDIF !hideFullname -->
 	                <div class="checkbox">
 	                    <label>
 	                        <input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->>
@@ -186,7 +190,7 @@
                             <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}">
                         </div>
                     </div>
-	                
+
 	            </div>
 	        </div>
 
@@ -213,7 +217,7 @@
 							<button type="button" class="btn btn-sm btn-primary" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
 						</div>
 					</div>
-					
+
 					<div class="row">
 	            		<div class="col-xs-10">
 			            	<div class="form-group fg-line">
@@ -232,7 +236,7 @@
 							<button type="button" class="btn btn-sm btn-primary" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
 						</div>
 					</div>
-					
+
 					<div class="row">
 	            		<div class="col-xs-10">
 			            	<div class="form-group fg-line">

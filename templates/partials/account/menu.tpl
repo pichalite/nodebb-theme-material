@@ -13,6 +13,12 @@
 		<!-- ENDIF showHidden -->
 
 		<!-- IF !isSelf -->
+		<!-- IF !banned -->
+		<li>
+  			<a component="account/flag" href="#">[[user:flag-profile]]</a>
+  		</li>
+		<!-- ENDIF !banned -->
+
 		<!-- IF canBan -->
 		<li class="<!-- IF banned -->hide<!-- ENDIF banned -->">
 			<a component="account/ban" href="#"><i class="fa fa-fw fa-ban"></i> [[user:ban_account]]</a>
