@@ -15,7 +15,6 @@
 		<div class="profile-pic">
 	        <div class="user-icon profile-header-img" style="<!-- IF picture -->background-image: url({picture});  background-size: cover; background-repeat: no-repeat; background-position: center center;<!-- ELSE -->background-color: {icon:bgColor};<!-- ENDIF picture -->"><!-- IF !picture -->{icon:text}<!-- ENDIF !picture -->
 	        </div>
-	        <!-- ENDIF picture -->
 	        <span component="user/status" class="status {status}" title="[[global:{status}]]"></span>
         </div>
 
