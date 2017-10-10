@@ -19,7 +19,7 @@
 			<i class="fa fa-clock"></i>
 			<span class="timeago" title="{users.joindateISO}"></span>
 		</div>
-		<!-- section_joindate -->
+		<!-- ENDIF section_joindate -->
 
 		<!-- IF section_sort-reputation -->
 		<div title="reputation" class="reputation">
