@@ -48,12 +48,8 @@
 							<li role="presentation" class="category" data-cid="{categories.cid}">
 								<a role="menu-item" href="{config.relative_path}/unread?cid={categories.cid}"><i class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i>{categories.level}<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
 							</li>
-  				<!-- END categories -->
-  			</ul>
-
-							</li>
-							<!-- END categories -->
-						</ul>
+  							<!-- END categories -->
+  						</ul>
 					</div>
 				</div>
 			</div>
