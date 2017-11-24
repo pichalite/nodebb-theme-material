@@ -21,7 +21,7 @@
             <!-- ENDIF brand:logo -->
 
             <!-- IF config.showSiteTitle -->
-			<a class="title" href="{relative_path}/">
+			<a class="title" href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
 				{title}
 			</a>
 			<!-- ENDIF config.showSiteTitle -->

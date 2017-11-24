@@ -2,7 +2,7 @@
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<!-- IMPORT partials/category/subcategory.tpl -->
-	
+
 	<div class="card">
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-header-alt">
@@ -26,12 +26,17 @@
 				[[category:no_topics]]
 			</div>
 			<!-- ENDIF !topics.length -->
+
+			<a href="{url}">
+				<div class="alert alert-warning hide" id="new-topics-alert"></div>
+			</a>
+
 			<!-- IMPORT partials/topics_list.tpl -->
 		</div>
 	</div>
 	<!-- IF config.usePagination -->
 		<!-- IMPORT partials/paginator.tpl -->
-	<!-- ENDIF config.usePagination -->	
+	<!-- ENDIF config.usePagination -->
 </div>
 
 <!-- IMPORT partials/move_thread_modal.tpl -->

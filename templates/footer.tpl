@@ -11,7 +11,7 @@
 			<button type="button" class="btn btn-default next"><i class="fa fa-fw fa-angle-down"></i></button>
 		</div>
 	</div>
-	
+
 	<div component="toaster/tray" class="alert-window">
 		<div id="reconnect-alert" class="alert alert-dismissable alert-warning clearfix hide" component="toaster/toast">
 			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -19,9 +19,24 @@
 		</div>
 	</div>
 
+	<script defer src="{relative_path}/assets/nodebb.min.js?{config.cache-buster}"></script>
+
+	<!-- BEGIN scripts -->
+	<script defer type="text/javascript" src="{scripts.src}"></script>
+	<!-- END scripts -->
+
 	<script>
-		require(['forum/footer']);
+		window.addEventListener('load', function () {
+			require(['forum/footer']);
+
+			<!-- IF useCustomJS -->
+			{{customJS}}
+			<!-- ENDIF useCustomJS -->
+		});
 	</script>
 
+	<div class="hide">
+	<!-- IMPORT 500-embed.tpl -->
+	</div>
 </body>
 </html>

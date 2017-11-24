@@ -43,9 +43,7 @@
 
 <li class="divider"></li>
 
-<!-- IF config.loggedIn -->
-<!-- IF !posts.selfPost -->
+<!-- IF posts.display_flag_tools -->
 <li><a component="post/flag" href="#">[[topic:flag_title]]</a></li>
-<!-- ENDIF !posts.selfPost -->
-<!-- ENDIF config.loggedIn -->
+<!-- ENDIF posts.display_flag_tools -->
 <!-- ENDIF !posts.deleted -->

@@ -110,7 +110,7 @@
 				<!-- ENDIF !group.pending.length -->
 				<table component="groups/pending" class="table pending">
 					<tbody>
-						<!-- BEGIN pending -->
+						<!-- BEGIN group.pending -->
 						<tr data-uid="{group.pending.uid}">
 							<td>
 								<a href="{config.relative_path}/user/{group.pending.userslug}">
@@ -136,7 +136,7 @@
 								</div>
 							</td>
 						</tr>
-						<!-- END pending -->
+						<!-- END group.pending -->
 					</tbody>
 				</table>
 			</div>
@@ -157,7 +157,7 @@
 				<!-- ENDIF !group.invited.length -->
 				<table component="groups/invited" class="table invited">
 					<tbody>
-						<!-- BEGIN invited -->
+						<!-- BEGIN group.invited -->
 						<tr data-uid="{group.invited.uid}">
 							<td>
 								<a href="{config.relative_path}/user/{group.invited.userslug}">
@@ -182,7 +182,7 @@
 								</div>
 							</td>
 						</tr>
-						<!-- END invited -->
+						<!-- END group.invited -->
 					</tbody>
 				</table>
 			</div>
