@@ -124,20 +124,6 @@
 						</div>
 					</div>
 					<small>[[user:digest_description]]</small>
-	            	<div class="checkbox">
-	                    <label>
-	                        <input type="checkbox" data-property="sendChatNotifications" <!-- IF settings.sendChatNotifications -->checked<!-- ENDIF settings.sendChatNotifications -->>
-	                        <i class="input-helper"></i>
-	                        [[user:send_chat_notifications]]
-	                    </label>
-	                </div>
-	                <div class="checkbox">
-	                    <label>
-	                        <input type="checkbox" data-property="sendPostNotifications" <!-- IF settings.sendPostNotifications -->checked<!-- ENDIF settings.sendPostNotifications -->>
-	                        <i class="input-helper"></i>
-	                        [[user:send_post_notifications]]
-	                    </label>
-	                </div>
 	            </div>
 	        </div>
 	        <!-- ENDIF !disableEmailSubscriptions -->
@@ -199,6 +185,41 @@
 	            	[[user:notifications_and_sounds]]
 	            </div>
 	            <div class="card-body card-padding">
+	            	<!-- BEGIN notificationSettings -->
+	            	<div class="row">
+	            		<div class="col-xs-12">
+	            			<div class="form-group fg-line">
+				            	<div class="select">
+				            		<label for="notification">{notificationSettings.label}</label>
+									<select class="form-control" data-property="{notificationSettings.name}">
+										<option value="none" <!-- IF notificationSettings.none -->selected<!-- ENDIF notificationSettings.none -->>[[notifications:none]]</option>
+										<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification_only]]</option>
+										<option value="email" <!-- IF notificationSettings.email -->selected<!-- ENDIF notificationSettings.email -->>[[notifications:email_only]]</option>
+										<option value="notificationemail" <!-- IF notificationSettings.notificationemail -->selected<!-- ENDIF notificationSettings.notificationemail -->>[[notifications:notification_and_email]]</option>
+									</select>
+								</div>
+							</div>
+	            		</div>
+	            	</div>
+	            	<!-- END notificationSettings -->
+
+					<div class="row">
+	            		<div class="col-xs-12">
+	            			<div class="form-group fg-line">
+				            	<div class="select">
+				            		<label for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
+									<select class="form-control" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
+										<!-- BEGIN upvoteNotifFreq -->
+										<option value="{upvoteNotifFreq.name}" <!-- IF upvoteNotifFreq.selected -->selected<!-- ENDIF upvoteNotifFreq.selected -->>
+											[[user:upvote-notif-freq.{upvoteNotifFreq.name}]]
+										</option>
+										<!-- END upvoteNotifFreq -->
+									</select>
+								</div>
+							</div>
+	            		</div>
+	            	</div>
+
 	            	<div class="row">
 	            		<div class="col-xs-10">
 			            	<div class="form-group fg-line">

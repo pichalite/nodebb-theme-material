@@ -23,7 +23,7 @@
 	{{customHTML}}
  	<!-- ENDIF useCustomHTML -->
 	<!-- IF useCustomCSS -->
-	<style type="text/css">{{customCSS}}</style>
+	<style>{{customCSS}}</style>
 	<!-- ENDIF useCustomCSS -->
 </head>
 

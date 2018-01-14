@@ -22,9 +22,11 @@
 				</div>
 			</div>
 			<!-- IF !topics.length -->
+			<!-- IF privileges.topics:create -->
 			<div class="alert alert-warning" id="category-no-topics">
 				[[category:no_topics]]
 			</div>
+			<!-- ENDIF privileges.topics:create -->
 			<!-- ENDIF !topics.length -->
 
 			<a href="{url}">

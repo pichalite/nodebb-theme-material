@@ -7,7 +7,7 @@
         <!-- ENDIF messages.fromUser.picture -->
     </div>
     <!-- IF messages.newSet -->
-    <div><small class="ms-date"><i class="fa fa-clock-o"></i> <span class="timeago" title="{messages.timestampISO}"></span></small></div>
+    <div><small class="ms-date"><i class="fa fa-clock-o"></i> <span class="chat-timestamp timeago" title="{messages.timestampISO}"></span></small></div>
     <!-- ENDIF messages.newSet -->
     <div class="media-body">
         <div component="chat/message/body" class="ms-item">
