@@ -64,12 +64,14 @@
 							</div>
 						</div>
 
+						<!-- IF allowWebsite -->
 						<div class="form-group">
 							<div class="fg-line">
 								<label>[[user:website]]</label>
 								<input class="form-control" type="text" id="inputWebsite" value="{website}">
 							</div>
 						</div>
+						<!-- ENDIF allowWebsite -->
 
 						<div class="form-group">
 							<div class="fg-line">
@@ -99,13 +101,16 @@
 							</div>
 						</div>
 
+						<!-- IF allowAboutMe -->
 						<div class="form-group">
 							<div class="fg-line">
 								<label>[[user:aboutme]]</label> <small><label id="aboutMeCharCountLeft"></label></small>
 								<textarea class="form-control" id="inputAboutMe" rows="5">{aboutme}</textarea>
 							</div>
 						</div>
+						<!-- ENDIF allowAboutMe -->
 
+						<!-- IF allowSignature -->
 						<!-- IF !disableSignatures -->
 						<div class="form-group">
 							<div class="fg-line">
@@ -114,6 +119,7 @@
 							</div>
 						</div>
 						<!-- ENDIF !disableSignatures -->
+						<!-- ENDIF allowSignature -->
 
 						<input type="hidden" id="inputUID" value="{uid}"><br />
 

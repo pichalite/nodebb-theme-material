@@ -109,6 +109,10 @@
 			  	cursor: pointer;
 			}
 
+			&.bg-info {
+				background: @chat-active-bg-color;
+			}
+
 			.status {
 				width: 12px;
 				height: 12px;
@@ -308,6 +312,13 @@
 		  		font-size: 20px;
 		  		width: 50px;
 		  	}
+		}
+
+		[component="chat/message/remaining"] {
+			position: absolute;
+			right: 3.25em;
+			z-index: 2;
+			bottom: 10px;
 		}
 	}
 
@@ -544,7 +555,7 @@
 
 	.lv-message .lv-item {
 
-		padding: 1px 0;
+		padding: 1px 5px;
 
 		&.right {
 			text-align: right;
@@ -675,7 +686,7 @@
 	    padding: 5px 10px;
 
 	    .close {
-	        margin-top: 10px;
+	        margin-top: 5px;
 	        padding: 0 10px;
 	        font-size: 18px;
 	        text-shadow: none;
@@ -702,6 +713,10 @@
 		&:hover {
 			cursor: pointer;
 		}
+
+		img {
+	    	.user-avatar(35px);
+		}
 	}
 }
 
@@ -720,7 +735,7 @@
 
 			.modal-content {
 				.modal-header {
-					padding: 5px;
+					padding: 15px 5px;
 
 					.users-tag-container {
 						max-width: ~"calc(100% - 75px)";
@@ -736,11 +751,20 @@
 					}
 
 					.chat-footer {
+						display: flex;
 						padding-top: 10px;
 						background-color: @chat-footer-bg-color;
 
-						#chat-message-send-btn:hover {
-							background-color: initial;
+						[component="chat/input"] {
+							padding-bottom: 10px;
+						}
+
+						[component="chat/message/remaining"] {
+							position: absolute;
+							right: 4.5em;
+							z-index: 2;
+							bottom: 10px;
+							color: #aaa;
 						}
 					}
 				}

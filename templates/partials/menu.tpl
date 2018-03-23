@@ -177,6 +177,27 @@
 							<i class="fa fa-fw fa-gear"></i><span> [[user:settings]]</span>
 						</a>
 					</li>
+
+					<!-- IF showModMenu -->
+					<li role="presentation" class="divider"></li>
+					<li class="dropdown-header">[[pages:moderator-tools]]</li>
+					<li>
+						<a href="{relative_path}/flags">
+							<i class="fa fa-fw fa-flag"></i> <span>[[pages:flagged-content]]</span>
+						</a>
+					</li>
+					<li>
+						<a href="{relative_path}/post-queue">
+							<i class="fa fa-fw fa-list-alt"></i> <span>[[pages:post-queue]]</span>
+						</a>
+					</li>
+					<li>
+						<a href="{relative_path}/ip-blacklist">
+							<i class="fa fa-fw fa-ban"></i> <span>[[pages:ip-blacklist]]</span>
+						</a>
+					</li>
+					<!-- ENDIF showModMenu -->
+
 					<li role="presentation" class="divider"></li>
                     <li component="user/logout">
                         <a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>

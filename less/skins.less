@@ -120,6 +120,7 @@ body {
         //input
         .form-control {
         	border-bottom: @form-control-border-dark;
+        	color: @body-color-dark;
         }
 
         .fg-line {
@@ -431,6 +432,10 @@ body {
         			&:not(.bg-primary):hover {
         			  	background: @chat-active-bg-color-dark;
         			  	cursor: pointer;
+        			}
+
+        			&.bg-info {
+        			    background: @chat-active-bg-color-dark;
         			}
         		}
         	}

@@ -296,6 +296,27 @@
 	            </div>
 	        </div>
 
+	        <!-- IF isAdmin -->
+	        <!-- IF isSelf -->
+	        <div class="card">
+	            <div class="card-header">
+	            	[[user:acp_language]]
+	            </div>
+	            <div class="card-body card-padding">
+	            	<div class="form-group fg-line">
+		            	<div class="select">
+							<select data-property="acpLang" class="form-control">
+								<!-- BEGIN acpLanguages -->
+								<option value="{acpLanguages.code}" <!-- IF acpLanguages.selected -->selected<!-- ENDIF acpLanguages.selected -->>{acpLanguages.name} ({acpLanguages.code})</option>
+								<!-- END acpLanguages -->
+							</select>
+						</div>
+					</div>
+	            </div>
+	        </div>
+	        <!-- ENDIF isSelf -->
+	        <!-- ENDIF isAdmin -->
+
 			<!-- BEGIN customSettings -->
 			<div class="card">
 				<div class="card-header">

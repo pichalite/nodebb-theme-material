@@ -14,9 +14,33 @@
 </li>
 <!-- END posts.tools -->
 
+<!-- IF posts.display_history -->
+<li>
+	<a component="post/view-history" role="menuitem" tabindex="-1" href="#">
+		<span class="menu-icon"><i class="fa fa-history"></i></span> [[topic:view-history]]
+	</a>
+</li>
+<!-- END -->
+
 <!-- IF posts.display_move_tools -->
 <li><a component="post/move" href="#"><i class="fa fa-arrows"></i> [[topic:move]]</a></li>
 <!-- ENDIF posts.display_move_tools -->
+
+<!-- IF posts.ip -->
+<li>
+	<a component="post/copy-ip" role="menuitem" tabindex="-1" href="#" data-clipboard-text="{posts.ip}">
+		<span class="menu-icon" ><i class="fa fa-copy"></i></span> [[topic:copy-ip]] {posts.ip}
+	</a>
+</li>
+<!-- IF posts.display_ip_ban -->
+<li>
+	<a component="post/ban-ip" role="menuitem" tabindex="-1" href="#" data-ip="{posts.ip}">
+		<span class="menu-icon"><i class="fa fa-ban"></i></span> [[topic:ban-ip]] {posts.ip}
+	</a>
+</li>
+<!-- ENDIF posts.display_ip_ban -->
+<!-- ENDIF posts.ip -->
+
 <li class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
 

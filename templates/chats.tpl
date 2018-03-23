@@ -1,7 +1,7 @@
-<div class="chats">
+<div class="chats chats-full">
     <!-- IMPORT partials/breadcrumbs.tpl -->
     <div class="card chat-card" id="messages-main">
-        <div class="ms-menu">
+        <div component="chat/nav-wrapper" data-loaded="<!-- IF roomId -->1<!-- ELSE -->0<!-- END -->" class="ms-menu">
             <div class="listview lv-message hidden-xs">
                 <div class="lv-header-alt clearfix">
                     <div class="new-chat pull-left" title="New Chat">
