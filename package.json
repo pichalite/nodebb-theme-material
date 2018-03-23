@@ -1,6 +1,6 @@
 {
   "name": "nodebb-theme-material",
-  "version": "2.11.9",
+  "version": "2.12.0",
   "nbbpm": {
     "compatibility": "^1.8.0"
   },
