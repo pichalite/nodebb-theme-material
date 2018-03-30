@@ -1,4 +1,4 @@
-<ul class="pagination lv-pagination hidden-xs">
+<ul class="pagination lv-pagination hidden-xs <!-- IF !pagination.pages.length -->hidden<!-- ENDIF !pagination.pages.length -->">
     <!-- IF !pagination.prev.active -->
     <li class="disabled">
         <a href="#" aria-label="Previous">
@@ -41,7 +41,7 @@
 </ul>
 
 
-<ul class="pagination lv-pagination visible-xs">
+<ul class="pagination lv-pagination visible-xs <!-- IF !pagination.pages.length -->hidden<!-- ENDIF !pagination.pages.length -->">
     <!-- IF !pagination.prev.active -->
     <li class="first disabled">
 		<a href="#"><i class="fa fa-fast-backward"></i> </a>
