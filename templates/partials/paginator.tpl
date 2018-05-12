@@ -13,7 +13,7 @@
     </li>
     <!-- ENDIF !pagination.prev.active -->
 
-    <!-- BEGIN pages -->
+    <!-- BEGIN pagination.pages -->
         <!-- IF pagination.pages.separator -->
 		<li component="pagination/select-page" class="page select-page">
 			<a href="#"><i class="fa fa-ellipsis-h"></i></a>
@@ -23,7 +23,7 @@
             <a href="?{pagination.pages.qs}" data-page="{pagination.pages.page}">{pagination.pages.page}</a>
         </li>
         <!-- ENDIF pagination.pages.separator -->
-    <!-- END pages -->
+    <!-- END pagination.pages -->
 
     <!-- IF !pagination.next.active -->
     <li class="disabled">
@@ -52,7 +52,7 @@
         </a>
     </li>
 	<!-- ENDIF !pagination.prev.active -->
-	
+
 	<!-- IF pagination.prev.active -->
 	<li class="first">
 		<a href="?page=1" data-page="1"><i class="fa fa-fast-backward"></i> </a>
@@ -63,12 +63,12 @@
         </a>
     </li>
 	<!-- ENDIF pagination.prev.active -->
- 
-    
+
+
     <li component="pagination/select-page" class="page select-page">
 		<a href="#">{pagination.currentPage} / {pagination.pageCount}</a>
 	</li>
-    
+
     <!-- IF !pagination.next.active -->
     <li class="disabled">
         <a href="#" aria-label="Next">
@@ -79,7 +79,7 @@
 		<a href="#"><i class="fa fa-fast-forward"></i> </a>
 	</li>
 	<!-- ENDIF !pagination.next.active -->
-	
+
 	<!-- IF pagination.next.active -->
 	<li>
         <a href="?{pagination.next.qs}" data-page="{pagination.next.page}" aria-label="Next">

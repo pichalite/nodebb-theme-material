@@ -3,7 +3,7 @@
 <!-- ENDIF !notifications.length -->
 
 <!-- BEGIN notifications -->
-<a class="lv-item {notifications.readClass}" href="{config.relative_path}{notifications.path}" data-nid="{notifications.nid}">
+<a class="lv-item media {notifications.readClass}" href="{config.relative_path}{notifications.path}" data-nid="{notifications.nid}" data-path="{config.relative_path}{notifications.path}" <!-- IF notifications.pid --> data-pid="{notifications.pid}"<!-- ENDIF notifications.pid --><!-- IF notifications.tid --> data-tid="{notifications.tid}"<!-- ENDIF notifications.tid -->>
     <div class="pull-left">
         <!-- IF notifications.image -->
 		<!-- IF notifications.from -->

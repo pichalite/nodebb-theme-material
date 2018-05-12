@@ -31,8 +31,8 @@
             color: #fff;
         }
 
-        small {
-            font-size: 12px;
+        .category-description {
+            font-size: 13px;
         }
 
         .category-counts {
@@ -80,36 +80,36 @@
 }
 
 .category {
-    
+
     margin-left: -10px;
     margin-right: -10px;
-    
+
     .category-card {
         height: 200px;
     }
-    
+
     [component="topic/select"] {
         &:before {
 			content: "";
 			display: none;
 		}
     }
-    
+
     .listview {
         .user-avatar {
             .user-avatar(40px);
         }
-        
+
         .user-icon {
             .user-icon(40px, 2rem);
         }
     }
-    
+
     .category-card {
         .user-avatar {
             .user-avatar(35px);
         }
-        
+
         .user-icon {
             .user-icon(35px, 1.9rem);
         }
@@ -121,7 +121,7 @@
         .user-avatar {
             .user-avatar(40px);
         }
-        
+
         .user-icon {
             .user-icon(40px, 2rem);
         }
@@ -132,11 +132,11 @@
     .topic-title {
         color: @topic-title-color;
     }
-    
+
     &.unread {
         .topic-title {
             color: @anchor-color;
-        }   
+        }
     }
 }
 
@@ -206,28 +206,28 @@
         padding: 0;
         margin-right: 15px;
     }
-    
+
     .lv-body {
         .lv-item {
             padding: 15px 20px 10px 20px;
-            
+
             @media (max-width: @screen-sm-max) {
                 padding: 10px 0;
             }
-            
+
             &.media {
                 .stat {
                     text-align: center;
-                    
+
                     .human-readable-number {
                         font-size: 15px;
                     }
-                    
+
                     span {
                         font-size: 12px;
                     }
                 }
-                
+
                 .icon {
                     font-size: 16px;
                     line-height: 17px;
@@ -237,28 +237,28 @@
                     min-width: 46px;
                     min-height: 46px;
                 }
-                
+
                 .category-title {
                     font-size: 17px;
                     line-height: 22px;
-                    
+
                     .lv-small {
                         font-weight: 300;
-                        
+
                         p {
                             margin-bottom: 0;
                         }
                     }
                 }
             }
-            
+
             .last-post {
                 height: 53px;
                 overflow: hidden;
             }
-            
+
             [component="category/posts"] {
-                
+
                 .user-avatar {
                     margin-right: 10px;
                     margin-top: 5px;
@@ -266,7 +266,7 @@
                         .user-icon(32px, 1.5rem);
                     }
                 }
-                
+
                 .topic-content {
                     display: block;
                     font-size: 12px;
@@ -274,7 +274,7 @@
             }
         }
     }
-    
+
     .subcategories {
         &.lv-item {
             &.media {
@@ -289,13 +289,13 @@
                     font-size: 12px;
                     margin-left: 15px;
                 }
-                
+
                 .category-title {
                     font-size: 13px;
-                    
+
                     .lv-small {
                         font-weight: 300;
-                        
+
                         p {
                             margin-bottom: 0;
                         }

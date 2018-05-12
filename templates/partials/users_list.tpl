@@ -2,7 +2,7 @@
 <li class="users-box registered-user" data-uid="{users.uid}">
 	<a href="{config.relative_path}/user/{users.userslug}">
 		<!-- IF users.picture -->
-		<img class="user-picture" src="{users.picture}" />
+		<img class="user-picture" src="{users.picture}" alt="{users.username}" />
 		<!-- ELSE -->
 		<div class="user-icon user-picture" style="background-color: {users.icon:bgColor};">{users.icon:text}</div>
 		<!-- ENDIF users.picture -->
@@ -19,7 +19,7 @@
 			<i class="fa fa-clock"></i>
 			<span class="timeago" title="{users.joindateISO}"></span>
 		</div>
-		<!-- section_joindate -->
+		<!-- ENDIF section_joindate -->
 
 		<!-- IF section_sort-reputation -->
 		<div title="reputation" class="reputation">
@@ -34,7 +34,7 @@
 			<span class="formatted-number">{users.postcount}</span>
 		</div>
 		<!-- ENDIF section_sort-posts -->
-		
+
 		<!-- IF section_flagged -->
 		<div title="flag count" class="flag-count">
 			<i class="fa fa-flag"></i>

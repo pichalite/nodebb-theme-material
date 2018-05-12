@@ -21,7 +21,7 @@
             <!-- ENDIF brand:logo -->
 
             <!-- IF config.showSiteTitle -->
-			<a class="title" href="{relative_path}/">
+			<a class="title" href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
 				{title}
 			</a>
 			<!-- ENDIF config.showSiteTitle -->
@@ -29,11 +29,11 @@
 
         <!-- IF config.menuInHeader -->
         <li class="hidden-xs">
-            <ul class="header-menu" id="main-nav"> 
+            <ul class="header-menu" id="main-nav">
                 <!-- BEGIN navigation -->
                 <!-- IF function.displayMenuItem, @index -->
                 <li class="{navigation.class}">
-                    <a href="{navigation.route}" title="{navigation.title}" id="{navigation.id}"<!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
+                    <a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
                         <!-- IF navigation.iconClass -->
                         <i class="fa fa-fw {navigation.iconClass}"></i>
                         <!-- ENDIF navigation.iconClass -->
@@ -64,7 +64,9 @@
                     </div>
 
                     <ul class="dropdown-menu" role="menu">
-                        <input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+                        <li>
+                            <input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -76,7 +78,7 @@
             </li>
             <!-- IF config.searchEnabled -->
             <li>
-                <form id="search-form" class="hidden-xs" role="search" method="GET" action="">
+                <form id="search-form" class="hidden-xs" role="search" method="GET">
                     <div class="hidden" id="search-fields">
                         <div class="form-group">
                             <div class="fg-line">
@@ -89,7 +91,7 @@
                 </form>
             </li>
             <!-- ENDIF config.searchEnabled -->
-			
+
 			<!-- IF config.loggedIn -->
             <li class="notifications dropdown" component="notifications">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown">
@@ -166,15 +168,36 @@
                     </li>
                     <li role="presentation" class="divider"></li>
                     <li>
-						<a href="{relative_path}/user/{user.userslug}/edit">
+						<a component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
 							<i class="fa fa-fw fa-edit"></i><span> [[user:edit-profile]]</span>
 						</a>
 					</li>
 					<li>
-						<a href="{relative_path}/user/{user.userslug}/settings">
+						<a component="header/profilelink/settings" href="{relative_path}/user/{user.userslug}/settings">
 							<i class="fa fa-fw fa-gear"></i><span> [[user:settings]]</span>
 						</a>
 					</li>
+
+					<!-- IF showModMenu -->
+					<li role="presentation" class="divider"></li>
+					<li class="dropdown-header">[[pages:moderator-tools]]</li>
+					<li>
+						<a href="{relative_path}/flags">
+							<i class="fa fa-fw fa-flag"></i> <span>[[pages:flagged-content]]</span>
+						</a>
+					</li>
+					<li>
+						<a href="{relative_path}/post-queue">
+							<i class="fa fa-fw fa-list-alt"></i> <span>[[pages:post-queue]]</span>
+						</a>
+					</li>
+					<li>
+						<a href="{relative_path}/ip-blacklist">
+							<i class="fa fa-fw fa-ban"></i> <span>[[pages:ip-blacklist]]</span>
+						</a>
+					</li>
+					<!-- ENDIF showModMenu -->
+
 					<li role="presentation" class="divider"></li>
                     <li component="user/logout">
                         <a href="#"><i class="fa fa-fw fa-sign-out"></i><span> [[global:logout]]</span></a>
@@ -198,21 +221,21 @@
             </ul>
         </li>
     </ul>
-    
+
 </header>
 </div>
-<section id="main" class="<!-- IF menuInHeader -->visible-xs<!-- ENDIF menuInHeader -->">
+<section id="main" <!-- IF menuInHeader -->class="visible-xs"<!-- ENDIF menuInHeader -->>
     <aside id="sidebar">
         <div class="sidebar-inner">
             <div class="si-inner">
-                <ul class="main-menu" id="main-nav">
+                <ul class="main-menu">
                     <li id="toggle-width" class="hidden-xs">
                         <div class="toggle-switch">
                             <input id="tw-switch" type="checkbox" hidden="hidden">
                             <label for="tw-switch" class="ts-helper"></label>
                         </div>
                     </li>
-                    <!-- IF !config.loggedIn -->  
+                    <!-- IF !config.loggedIn -->
                     <!-- IF allowRegistration -->
                     <li class="visible-xs">
                         <a href="{relative_path}/register">
@@ -236,7 +259,7 @@
 					<!-- BEGIN navigation -->
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
-						<a href="{navigation.route}" title="{navigation.title}" id="{navigation.id}" target="{navigation.properties.target}">
+						<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
 							<!-- IF navigation.iconClass -->
 							<i class="fa fa-fw {navigation.iconClass}"></i>
 							<!-- ENDIF navigation.iconClass -->

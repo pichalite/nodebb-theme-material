@@ -14,19 +14,43 @@
 </li>
 <!-- END posts.tools -->
 
+<!-- IF posts.display_history -->
+<li>
+	<a component="post/view-history" role="menuitem" tabindex="-1" href="#">
+		<span class="menu-icon"><i class="fa fa-history"></i></span> [[topic:view-history]]
+	</a>
+</li>
+<!-- END -->
+
 <!-- IF posts.display_move_tools -->
 <li><a component="post/move" href="#"><i class="fa fa-arrows"></i> [[topic:move]]</a></li>
 <!-- ENDIF posts.display_move_tools -->
+
+<!-- IF posts.ip -->
+<li>
+	<a component="post/copy-ip" role="menuitem" tabindex="-1" href="#" data-clipboard-text="{posts.ip}">
+		<span class="menu-icon" ><i class="fa fa-copy"></i></span> [[topic:copy-ip]] {posts.ip}
+	</a>
+</li>
+<!-- IF posts.display_ip_ban -->
+<li>
+	<a component="post/ban-ip" role="menuitem" tabindex="-1" href="#" data-ip="{posts.ip}">
+		<span class="menu-icon"><i class="fa fa-ban"></i></span> [[topic:ban-ip]] {posts.ip}
+	</a>
+</li>
+<!-- ENDIF posts.display_ip_ban -->
+<!-- ENDIF posts.ip -->
+
 <li class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
 
 <!-- IF !posts.deleted -->
 <!-- IF config.loggedIn -->
 <li>
-	<a component="post/favourite" href="#" data-favourited="{posts.favourited}">[[topic:favourite]]
-	<span component="post/favourite-count" class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>&nbsp;
-	<i component="post/favourite/on" class="fa fa-heart <!-- IF !posts.favourited -->hidden<!-- ENDIF !posts.favourited -->"></i>
-	<i component="post/favourite/off" class="fa fa-heart-o <!-- IF posts.favourited -->hidden<!-- ENDIF posts.favourited -->"></i>
+	<a component="post/bookmark" href="#" data-bookmarked="{posts.bookmarked}">[[topic:bookmark]]
+	<span component="post/bookmark-count" class="bookmarkCount" data-bookmarks="{posts.bookmarks}">{posts.bookmarks}</span>&nbsp;
+	<i component="post/bookmark/on" class="fa fa-heart <!-- IF !posts.bookmarked -->hidden<!-- ENDIF !posts.bookmarked -->"></i>
+	<i component="post/bookmark/off" class="fa fa-heart-o <!-- IF posts.bookmarked -->hidden<!-- ENDIF posts.bookmarked -->"></i>
 	</a>
 </li>
 <!-- ENDIF config.loggedIn -->
@@ -43,9 +67,7 @@
 
 <li class="divider"></li>
 
-<!-- IF config.loggedIn -->
-<!-- IF !posts.selfPost -->
+<!-- IF posts.display_flag_tools -->
 <li><a component="post/flag" href="#">[[topic:flag_title]]</a></li>
-<!-- ENDIF !posts.selfPost -->
-<!-- ENDIF config.loggedIn -->
+<!-- ENDIF posts.display_flag_tools -->
 <!-- ENDIF !posts.deleted -->

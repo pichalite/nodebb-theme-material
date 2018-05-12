@@ -4,9 +4,9 @@
 	<div component="categories/category" data-cid="{categories.cid}" class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="category-card" style="{function.generateCategoryBackground}">
 			<!-- IF categories.link -->
-				<a href="{categories.link}" itemprop="url" target="_blank" >
+			<a href="{categories.link}" itemprop="url" target="_blank">
 			<!-- ELSE -->
-				<a href="{config.relative_path}/category/{categories.slug}" itemprop="url" >
+			<a href="{config.relative_path}/category/{categories.slug}">
 			<!-- ENDIF categories.link -->
 				<div class="category-card-body">
 					<ul class="category-counts pull-right">
@@ -22,11 +22,12 @@
 								<i class="fa {categories.icon} fa-fw"></i>
 								<!-- ENDIF categories.icon -->
 					</h4>
-					<small>{categories.descriptionParsed}</small>
+					<div class="category-description">{categories.descriptionParsed}</div>
 				</div>
 			</a>
 			<div class="category-card-footer">
 				<!-- BEGIN posts -->
+				<!-- IF @first -->
 				<div component="category/posts">
 					<div class="pull-left hidden-xs user-avatar">
 				    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
@@ -41,6 +42,7 @@
 						<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}">{categories.posts.topic.title}</a>
 					</div>
 				</div>
+				<!-- ENDIF @first -->
 				<!-- END posts -->
 			</div>
 		</div>
@@ -87,6 +89,7 @@
 					</div>
 					<div class="col-md-3 hidden-xs last-post">
 						<!-- BEGIN posts -->
+						<!-- IF @first -->
 						<div component="category/posts">
 							<div class="pull-left hidden-xs user-avatar">
 						    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
@@ -104,6 +107,7 @@
 								</div>
 							</div>
 						</div>
+						<!-- ENDIF @first -->
 						<!-- END posts -->
 					</div>
 					<!-- IF config.listSubcategories -->
@@ -140,6 +144,7 @@
 							</div>
 							<div class="col-md-3 hidden-xs last-post">
 								<!-- BEGIN posts -->
+								<!-- IF @first -->
 								<div component="category/posts">
 									<div class="pull-left hidden-xs user-avatar">
 								    	<a href="{config.relative_path}/user/{categories.children.posts.user.userslug}">
@@ -157,6 +162,7 @@
 										</div>
 									</div>
 								</div>
+								<!-- ENDIF @first -->
 								<!-- END posts -->
 							</div>
 						</div>

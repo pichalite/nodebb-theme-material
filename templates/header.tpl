@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-<html lang="{function.localeToHTML, defaultLang}">
+<html lang="{function.localeToHTML, userLang, defaultLang}" <!-- IF languageDirection -->data-dir="{languageDirection}" style="direction: {languageDirection};" <!-- ENDIF languageDirection -->>
 <head>
 	<title>{browserTitle}</title>
 	<!-- BEGIN metaTags -->
+	<!-- IF metaTags.content -->
 	{function.buildMetaTag}
+	<!-- ENDIF metaTags.content -->
 	<!-- END metaTags -->
-	<link rel="stylesheet" type="text/css" href="{relative_path}/stylesheet.css?{config.cache-buster}" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/stylesheet.css?{config.cache-buster}" />
 	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
-
-	<!--[if lt IE 9]>
-  		<script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.3.0/es5-shim.min.js"></script>
-  		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
-  		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-  		<script>__lt_ie_9__ = 1;</script>
-	<![endif]-->
 
 	<script>
 		var RELATIVE_PATH = "{relative_path}";
@@ -23,21 +18,16 @@
 			user: JSON.parse('{{userJSON}}')
 		};
 	</script>
-	<script src="{relative_path}/nodebb.min.js?{config.cache-buster}"></script>
-	
-	<!-- BEGIN scripts -->
- 	<script type="text/javascript" src="{scripts.src}"></script>
- 	<!-- END scripts -->
 
-	<!-- IF useCustomJS -->
-	{{customJS}}
- 	<!-- ENDIF useCustomJS -->
+	<!-- IF useCustomHTML -->
+	{{customHTML}}
+ 	<!-- ENDIF useCustomHTML -->
 	<!-- IF useCustomCSS -->
-	<style type="text/css">{{customCSS}}</style>
+	<style>{{customCSS}}</style>
 	<!-- ENDIF useCustomCSS -->
 </head>
 
-<body class="{bodyClass}">
+<body class="{bodyClass} skin-{config.selectedSkin}">
     <!-- IMPORT partials/menu.tpl -->
 
 	<div class="container" id="content">

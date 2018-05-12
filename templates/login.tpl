@@ -1,5 +1,5 @@
 <div class="login">
-    <form class="form-horizontal" role="form" method="post" target="login" id="login-form">
+    <form class="form-horizontal" method="post" target="login" id="login-form">
         <div class="login-block">
             <div class="alert alert-danger" id="login-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -12,14 +12,14 @@
                     <input class="form-control" type="text" name="username" id="username" placeholder="{allowLoginWith}" autocorrect="off" autocapitalize="off" value="{username}" />
                 </div>
             </div>
-            
+
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-fw fa-lock"></i></span>
                 <div class="fg-line">
                     <input class="form-control" type="password" name="password" id="password" placeholder="[[user:password]]" />
                 </div>
             </div>
-            
+
             <div class="checkbox">
                 <label>
                     <input type="checkbox" name="remember" id="remember" checked>
@@ -27,7 +27,7 @@
                     [[login:remember_me]]
                 </label>
             </div>
-            
+
             <button class="btn btn-primary btn-lg btn-block" id="login" type="submit">[[global:login]]</button>
 
             <div class="login-options">
@@ -36,7 +36,7 @@
                 <!-- ENDIF allowRegistration -->
                 &nbsp; <a id="reset-link" href="{config.relative_path}/reset">[[login:forgot_password]]</a>
             </div>
-            
+
         </div>
     </form>
     <!-- IF alternate_logins -->

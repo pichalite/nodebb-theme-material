@@ -8,17 +8,17 @@
         </a>
         <div class="card-body card-padding">
             <ul class="members">
-                <!-- BEGIN members -->
+                <!-- BEGIN groups.members -->
                 <li>
                     <a href="{config.relative_path}/user/{groups.members.userslug}">
                         <!-- IF groups.members.picture -->
-                        <img class="user-avatar" src="{groups.members.picture}" title="{groups.members.userslug}" />
+                        <img class="user-avatar" src="{groups.members.picture}" alt="{groups.members.username}" title="{groups.members.username}" />
                         <!-- ELSE -->
                         <div class="user-icon" style="background-color: {groups.members.icon:bgColor};">{groups.members.icon:text}</div>
                         <!-- ENDIF groups.members.picture -->
                     </a>
                 </li>
-                <!-- END members -->
+                <!-- END groups.members -->
                 <!-- IF groups.truncated -->
                 <li class="truncated"><i class="fa fa-ellipsis-h"></i></li>
                 <!-- ENDIF groups.truncated -->

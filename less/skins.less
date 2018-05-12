@@ -1,0 +1,766 @@
+body {
+    &.skin-dark {
+        color: @body-color-dark;
+        background-color: @body-bg-color-dark;
+
+        a, a:hover, a:active, a:focus, a:visited {
+        	color: @anchor-color-dark;
+        }
+
+        //buttons
+        .btn-icon {
+            &.btn-default:hover {
+                background: @btn-default-bg-color-dark;
+            }
+        }
+
+        .dropdown-menu {
+            background-color: @dropdown-bg-color-dark;
+
+            .divider {
+                background-color: @border-color-dark;
+            }
+
+            >li>a {
+                color: @dropdown-color-dark;
+            }
+        }
+
+        .btn-link {
+            color: #fff;
+        }
+
+        .btn-info {
+            color: #fff;
+        }
+
+        .btn-default {
+            background-color: @btn-default-bg-color-dark;
+        }
+
+        .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open>.dropdown-toggle.btn-default {
+            background-color: @btn-default-bg-color-dark;
+        }
+
+        a.btn-primary, a.btn-danger, a.btn-success {
+            color: #fff;
+        }
+
+        //header
+        #header {
+	        background: @header-bg-color-dark;
+        }
+
+        .header-inner {
+            .dropdown-menu {
+        		background-color: @dropdown-bg-color-dark;
+        	}
+        }
+
+        //menu
+        .header-menu {
+        	>li {
+        		>a {
+        			color: #fff;
+        		}
+        	}
+        }
+
+        .top-menu {
+            >li {
+        		>a {
+        			color: #fff;
+        		}
+        	}
+
+            .chats.dropdown {
+        		.lv-footer {
+                    hr {
+                        border-top: @lv-item-border-dark;
+                    }
+                }
+        	}
+        }
+
+        #user-control-list {
+        	li>a {
+        		color: @body-color-dark;
+        	}
+        }
+
+        //sidebar
+        #sidebar {
+        	background: @sidebar-bg-color-dark;
+
+        	.main-menu {
+        		>li {
+        			>a {
+        				color: @body-color-dark;
+        				&:hover {
+        					color: @body-color-dark;
+        					background-color: @body-bg-color-dark;
+        				}
+        			}
+
+        			&.active>a {
+        				color: @body-color-dark;
+        				background-color: @body-bg-color-dark;
+        			}
+        		}
+        	}
+        }
+
+        //login, register
+        div.login, div.register {
+        	.input-group-addon {
+        		color: @body-color-dark;
+        	}
+        }
+
+        //input
+        .form-control {
+        	border-bottom: @form-control-border-dark;
+        	color: @body-color-dark;
+        }
+
+        .fg-line {
+        	.form-control {
+        		&:not(:disabled) {
+        			color: @body-color-dark;
+        		}
+        	}
+
+        	&:not([class*=has-]):after {
+        		background: @fg-line-color-dark;
+        	}
+        }
+
+        .fg-float {
+        	.form-control {
+        		&::-moz-placeholder {
+        			color: @placeholder-color-dark;
+        			opacity: 1;
+        		}
+
+        		&:-ms-input-placeholder {
+        			color: @placeholder-color-dark;
+        		}
+
+        		&::-webkit-input-placeholder {
+        			color: @placeholder-color-dark;
+        		}
+        	}
+        }
+
+        .checkbox .input-helper:after {
+            border-bottom: 2px solid @checkbox-check-color-dark;
+            border-left: 2px solid @checkbox-check-color-dark;
+        }
+
+        .radio .input-helper:after {
+        	background: @anchor-color-dark;
+        }
+
+        [component="category/topic"] {
+            .checkbox .input-helper:after {
+        	    border-bottom: 2px solid @checkbox-check-color-dark;
+        	    border-left: 2px solid @checkbox-check-color-dark;
+        	}
+        }
+
+        select.form-control option {
+        	color: @body-color-dark;
+        	background-color: @body-bg-color-dark;
+        }
+
+        //card
+        .card {
+        	background: @card-bg-color-dark;
+        	box-shadow: @card-box-shadow-dark;
+
+        	.card-header {
+        		&.ch-alt {
+        			&:not([class*=bgm-]) {
+        				background-color: @lv-header-alt-bg-color-dark;
+        			}
+        		}
+        	}
+        }
+
+        //actions
+        .actions {
+            >li {
+                >span {
+                    >i {
+                      color: @action-items-color-dark;
+                    }
+                }
+            }
+        }
+
+        //listview
+        .listview {
+            a.lv-item:hover {
+        		background: @chat-active-bg-color-dark;
+        	}
+
+        	.lv-header {
+        		color: @body-color-dark;
+        	}
+
+        	.lv-header-alt {
+        		background: @lv-header-alt-bg-color-dark;
+        		border-bottom: 1px solid @border-color-dark;
+        	}
+
+        	.lv-footer {
+        		border-top: 1px solid @border-color-dark;
+        	}
+
+            &.lv-bordered .lv-item:not(:last-child) {
+        		border-bottom: @lv-item-border-dark;
+        	}
+        }
+
+        .list-group-item {
+        	background-color: @list-group-item-bg-color-dark;
+        	border: 1px solid @border-color-dark;
+        }
+
+        //dropdown
+
+        .dropdown-menu {
+            &:not([class*=bgm-])>li>a {
+        		color: @dropdown-color-dark;
+        	}
+
+        	&:not([class*=bgm-])>li>a:hover {
+        		color: @dropdown-color-dark;
+        	}
+        }
+
+        //breadcrumb
+        .breadcrumb {
+        	border: @breadcrumb-border-dark;
+        	background-color: @breadcrumb-bg-color-dark;
+
+        	>.active {
+        		color: @breadcrumb-active-color-dark;
+        	}
+        }
+
+        //notifications
+        #notif-list {
+            .unread {
+                background-color: @notifs-unread-bg-color-dark;
+                color: @notifs-unread-color-dark;
+            }
+        }
+
+        .notifications {
+            .relTime {
+                color: #555;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .lv-title>a {
+                font-size: 14px;
+            }
+
+            .listview {
+                .lv-item {
+                    [component="notifications/item/link"] {
+                        color: @topic-title-color-dark;
+                    }
+
+                    &.unread {
+                        [component="notifications/item/link"] {
+                            color: @anchor-color-dark;
+                        }
+                    }
+                }
+
+                .lv-footer {
+                    hr {
+                        border-top: @lv-item-border-dark;
+                    }
+                }
+            }
+        }
+
+        .notifications {
+            .no-notifs {
+                color: @body-color-dark;
+            }
+        }
+
+        .listview a.lv-item.no-notifs:hover {
+            color: @body-color-dark;
+        }
+
+        //modal
+        .modal-content {
+            color: @modal-text-color-dark;
+            background-color: @modal-bg-color-dark;
+        }
+
+        .modal-header {
+            .close {
+                color: @body-color-dark;
+            }
+
+            .bootstrap-tagsinput {
+                background-color: @body-bg-color-dark;
+        		border: 1px solid @border-color-dark;
+
+        		.ui-autocomplete-input {
+        			color: @body-color-dark !important;
+        		}
+        	}
+        }
+
+        .modal-body {
+            .close {
+                color: @body-color-dark;
+            }
+
+            .well {
+                background-color: @body-bg-color-dark;
+                border: 1px solid @border-color-dark;
+            }
+        }
+
+        .modal-footer .btn.btn-default {
+            color: @body-color-dark;
+
+            &:hover {
+                background-color: @body-bg-color-dark;
+            }
+        }
+
+        .modal-footer .btn.btn-primary, .chat-footer .btn.btn-primary {
+            &:hover {
+                background-color: @body-bg-color-dark;
+            }
+        }
+
+        .picture-switcher {
+            .modal-footer {
+                .btn-link {
+                    color: @body-color-dark;
+
+                    &:hover {
+                        color: @body-bg-color-dark;
+                    }
+                }
+            }
+        }
+
+        //tabs
+        .tab-nav {
+            >li {
+        	    box-shadow: inset 0 -2px 0 0 @border-color-dark;
+            }
+
+            &:not([data-tab-color])>li>a:after {
+        		background: @anchor-color-dark;
+        	}
+        }
+
+        .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+        	color: @nav-pills-active-color-dark;
+        }
+
+        //pagination
+        .pagination {
+        	border-radius: 0;
+
+        	>li {
+        		>a, >span {
+        			color: @anchor-color-dark;
+        			background-color: @body-bg-color-dark;
+        			border-color: @border-color-dark;
+
+        			&:hover {
+        				background-color: @anchor-color-dark;
+        				border-color: @border-color-dark;
+        				color: #fff;
+        			}
+        		}
+
+        		&.active {
+        			a, a:hover {
+        				background-color: @anchor-color-dark;
+        				border-color: @border-color-dark;
+        				color: #fff;
+        			}
+        		}
+        	}
+        }
+
+        //chat
+        .chat-list {
+            li {
+            	&.unread {
+            		background-color: @chat-unread-bg-color-dark;
+            	}
+
+            	a {
+            	    color: inherit;
+            	}
+            }
+        }
+
+        #messages-main {
+        	.ms-menu {
+        		background: @chat-main-bg-color-dark;
+        		border-right: 1px solid @border-color-dark;
+
+        		.lv-item {
+        		  	&:not(:last-child) {
+        		  		border-bottom: 1px solid @chat-list-border-dark;
+        		  	}
+
+        			&.bg-primary {
+        			  	background: @chat-active-bg-color-dark;
+        				color: @body-color-dark;
+        			}
+
+        			&:not(.bg-primary):hover {
+        			  	background: @chat-active-bg-color-dark;
+        			  	cursor: pointer;
+        			}
+
+        			&.bg-info {
+        			    background: @chat-active-bg-color-dark;
+        			}
+        		}
+        	}
+
+        	.chat-search-menu {
+        		background: @chat-main-bg-color-dark;
+        		border: 1px solid @border-color-dark;
+        	}
+
+        	.ms-body {
+        		background-color: @chat-content-bg-color-dark;
+        	}
+
+        	.bootstrap-tagsinput {
+        		background-color: @body-bg-color-dark;
+        		border: 1px solid @border-color-dark;
+
+        		.ui-autocomplete-input {
+        			color: @body-color-dark !important;
+        		}
+        	}
+
+        	.ms-reply {
+        		textarea {
+        			background-color: @body-bg-color-dark;
+        			color: @body-color-dark;
+        		}
+
+        		button {
+        		  	color: @anchor-color-dark;
+        		}
+        	}
+
+        	.lv-message {
+        		.lv-item {
+        			&:not(.right) {
+        				.ms-item {
+        				  	background-color: @chat-message-bg-color-dark;
+        				  	color: @chat-message-color-dark;
+        				}
+        			}
+        		}
+        	}
+
+        	.listview {
+        		.lv-footer {
+        			background-color: @chat-footer-bg-color-dark;
+        		}
+        	}
+        }
+
+        .chat-modal {
+        	@media (max-width: @screen-xs-max) {
+        		.chat-footer {
+        			border-top: 1px solid @border-color-dark;
+        		    background-color: @chat-footer-bg-color-dark;
+        		}
+        	}
+
+        	.lv-message .lv-item {
+        		&.right {
+        			.ms-item {
+        				background: @chat-message-right-bg-color-dark;
+        				color: @chat-message-right-color-dark;
+        			}
+        		}
+
+        		&:not(.right) {
+        			.ms-item {
+        				background: @chat-message-bg-color-dark;
+        				color: @chat-message-color-dark;
+        			}
+        		}
+        	}
+        }
+
+        @media (min-width: @screen-sm-min) {
+        	.chat-modal {
+        		.modal-dialog {
+        			.modal-content {
+        				.modal-body {
+        					.chat-footer {
+        						background-color: @chat-footer-bg-color-dark;
+        					}
+        				}
+        			}
+        		}
+        	}
+        }
+
+        //categories
+        [component="category/topic"] {
+            .topic-title {
+                color: @topic-title-color-dark;
+            }
+
+            &.unread {
+                .topic-title {
+                    color: @anchor-color-dark;
+                }
+            }
+        }
+
+        //groups
+        .groups {
+            &.details {
+        		.table {
+        			>tbody {
+        				>tr:not(:first-child)>td {
+        					border-top: 1px solid @border-color-dark;
+        				}
+        			}
+        		}
+        	}
+        }
+
+        //account
+        .account.settings {
+        	.form-control {
+        		border-bottom: @input-border-bottom-dark;
+        	}
+        }
+
+        .user-profile-view {
+        	.card-footer {
+        		hr {
+        			border: @account-hr-border-dark;
+        		}
+
+        		.user-info {
+        			h3 {
+        				@media (max-width: @screen-xs-max) {
+        					color: @body-color-dark;
+        				}
+        			}
+        		}
+        	}
+        }
+
+        //topic
+        .topic .card {
+            background-color: inherit;
+            box-shadow: none;
+
+        	.lv-header-alt {
+        		background-color: @lv-header-alt-bg-color-dark;
+        		border: none;
+        	}
+
+        	.lv-body {
+        		.post-content {
+        		    background-color: @post-content-bg-color-dark;
+        		    border: 1px solid @border-color-dark;
+
+        			&:after {
+        			    border-right-color: @post-content-bg-color-dark;
+        			}
+
+        			&:before {
+        			    border-right-color: @border-color-dark;
+        			}
+        		}
+
+        		.post-actions {
+        			>li {
+        				>a {
+        					color: @action-items-color-dark;
+        				}
+        			}
+        		}
+
+        		.post-bar {
+        			.tags {
+        				.tag-container {
+        					background-color: @tag-container-bg-color-dark;
+        				}
+        			}
+        		}
+        	}
+        }
+
+        [component="post"].highlight .post-body {
+        	border-bottom: 1px solid @post-highlight-color-dark;
+        }
+
+        .fork-thread-card {
+        	color: @modal-text-color-dark;
+            background-color: @modal-bg-color-dark;
+
+            .panel-heading {
+            	border-bottom: 1px solid @border-color-dark;
+            }
+
+            .panel-footer {
+            	color: @modal-text-color-dark;
+            	background-color: @modal-bg-color-dark;
+            	border-top: 1px solid @border-color-dark;
+            }
+
+            input {
+            	color: @body-color-dark;
+            }
+
+            .panel-footer .btn.btn-default {
+        	    color: @body-color-dark;
+
+        	    &:hover {
+        	        background-color: @body-bg-color-dark;
+        	    }
+        	}
+
+        	.panel-footer .btn.btn-primary {
+        	    &:hover {
+        	        background-color: @body-bg-color-dark;
+        	    }
+        	}
+        }
+
+
+        [component="post"] {
+        	&.bg-success {
+        		.poster-avatar:before, .user-profile-link:before {
+        			border: 1px solid @body-color-dark;
+            		color: @body-color-dark;
+        		}
+        	}
+        }
+
+        //tags
+        .tag-container {
+        	border: 1px solid @tag-container-border-color-dark;
+
+        	.tag-topic-count {
+        		border-left: 2px solid @border-color-dark;
+        	}
+        }
+
+        //composer
+        .composer {
+        	background-color: @composer-bg-color-dark !important;
+
+        	.title-container .title, .tags-container .bootstrap-tagsinput {
+        		background-color: @composer-bg-color-dark !important;
+        	}
+
+        	.formatting-bar .formatting-group li {
+        		color: @body-color-dark !important;
+        	}
+
+        	.write-preview-container .write {
+        		background-color: @composer-bg-color-dark !important;
+        		border: 1px solid @border-color-dark !important;
+        	}
+
+        	.preview.well {
+        		background-color: @composer-preview-bg-color-dark;
+        		border: 1px solid @border-color-dark !important;
+        	}
+
+        	.mobile-navbar {
+        		background: @composer-navbar-bg-color-dark !important;
+        	}
+        }
+
+        .composer-container {
+        	background: @composer-bg-color-dark !important;
+
+        	.btn-group {
+        		.composer-discard {
+        			box-shadow: none !important;
+        			color: @body-color-dark;
+        			background-color: @composer-bg-color-dark;
+
+        			&:hover {
+        				color: @body-color-dark;
+        				background-color: @body-bg-color-dark;
+        			}
+        		}
+
+        		.btn.btn-primary {
+        		    background-color: @composer-bg-color-dark;
+
+        		    &:hover {
+        		        background-color: @body-bg-color-dark;
+        		    }
+        		}
+        	}
+
+        	.mobile-navbar {
+        		border-bottom: 1px solid @border-color-dark;
+        	}
+
+        	.form-control {
+        		color: @body-color-dark;
+        		background-color: @composer-bg-color-dark;
+        	}
+
+        	.resizer {
+        		.trigger {
+        			background-color: @body-color-dark !important;
+
+        			i {
+        				color: @composer-bg-color-dark !important;
+        			}
+        		}
+        	}
+
+        	.bootstrap-tagsinput {
+        		.ui-autocomplete-input {
+        			color: @body-color-dark !important;
+        		}
+        	}
+        }
+
+        .composer-container .btn.btn-info {
+            color: @body-color-dark;
+            background-color: @composer-bg-color-dark;
+
+            &:hover, &:active, &:focus, &:visited {
+                background-color: @composer-bg-color-dark;
+            }
+
+            .caret {
+            	color: @body-color-dark;
+            }
+        }
+    }
+}

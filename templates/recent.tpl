@@ -1,10 +1,10 @@
 <div class="recent">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-		
+
 	<a href="{config.relative_path}/recent">
 		<div class="alert alert-warning hide" id="new-topics-alert"></div>
 	</a>
-    
+
     <div class="card">
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-header-alt">
@@ -14,8 +14,39 @@
 					<!-- ELSE -->
 					<a href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 					<!-- ENDIF loggedIn -->
+
+					<div class="btn-group">
+						<button component="category/dropdown" type="button" class="btn btn-default dropdown-toggle <!-- IF !categories.length -->hidden<!-- ENDIF !categories.length -->" data-toggle="dropdown">
+							<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><<span class="fa-stack"><i style="color: {selectedCategory.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
+							[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
+						</button>
+						<ul component="category/list" class="dropdown-menu">
+							<li class="category">
+								<a href="{config.relative_path}/{selectedFilter.url}"><i class="fa fa-fw <!-- IF !selectedCategory -->fa-check<!-- ENDIF !selectedCategory -->"></i> [[unread:all_categories]]</a>
+							</li>
+							<!-- BEGIN categories -->
+							<li class="category" data-cid="{categories.cid}" data-parent-cid="{categories.parentCid}">
+								<a href="{config.relative_path}/{selectedFilter.url}?cid={categories.cid}"><i class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i>{categories.level}<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
+							</li>
+							<!-- END categories -->
+						</ul>
+					</div>
+
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->" data-toggle="dropdown">
+						{selectedFilter.name} <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<!-- BEGIN filters -->
+							<li class="category">
+								<a href="{config.relative_path}/{filters.url}{querystring}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
+							</li>
+							<!-- END filters -->
+						</ul>
+					</div>
 				</div>
 		    </div>
+
 		    <!-- IF !topics.length -->
 			<div class="alert alert-warning" id="category-no-topics">
 				[[recent:no_recent_topics]]

@@ -22,7 +22,7 @@
 						</div>
 					</div>
 					<small>[[user:homepage_description]]</small>
-					
+
 					<div id="homePageCustom" class="form-group" style="display: none;">
 						<div class="fg-line">
 							<label for="homePageCustom">[[user:custom_route]]</label>
@@ -79,6 +79,7 @@
 	            	[[global:privacy]]
 	            </div>
 	            <div class="card-body card-padding">
+	            	<!-- IF !hideEmail -->
 	            	<div class="checkbox">
 	                    <label>
 	                        <input type="checkbox" data-property="showemail" <!-- IF settings.showemail -->checked <!-- ENDIF settings.showemail -->>
@@ -86,6 +87,8 @@
 	                        [[user:show_email]]
 	                    </label>
 	                </div>
+	                <!-- ENDIF !hideEmail -->
+	                <!-- IF !hideFullname -->
 	                <div class="checkbox">
 	                    <label>
 	                        <input type="checkbox" data-property="showfullname" <!-- IF settings.showfullname -->checked<!-- ENDIF settings.showfullname -->>
@@ -93,6 +96,7 @@
 	                        [[user:show_fullname]]
 	                    </label>
 	                </div>
+	                <!-- ENDIF !hideFullname -->
 	                <div class="checkbox">
 	                    <label>
 	                        <input type="checkbox" data-property="restrictChat" <!-- IF settings.restrictChat -->checked<!-- ENDIF settings.restrictChat -->>
@@ -120,20 +124,6 @@
 						</div>
 					</div>
 					<small>[[user:digest_description]]</small>
-	            	<div class="checkbox">
-	                    <label>
-	                        <input type="checkbox" data-property="sendChatNotifications" <!-- IF settings.sendChatNotifications -->checked<!-- ENDIF settings.sendChatNotifications -->>
-	                        <i class="input-helper"></i>
-	                        [[user:send_chat_notifications]]
-	                    </label>
-	                </div>
-	                <div class="checkbox">
-	                    <label>
-	                        <input type="checkbox" data-property="sendPostNotifications" <!-- IF settings.sendPostNotifications -->checked<!-- ENDIF settings.sendPostNotifications -->>
-	                        <i class="input-helper"></i>
-	                        [[user:send_post_notifications]]
-	                    </label>
-	                </div>
 	            </div>
 	        </div>
 	        <!-- ENDIF !disableEmailSubscriptions -->
@@ -175,18 +165,18 @@
 
 					<div class="form-group">
                         <div class="fg-line">
-                        	<label>[[user:topics_per_page]]</label>
+                        	<label>[[user:topics_per_page]] ([[user:max_items_per_page, {maxTopicsPerPage}]])</label>
                             <input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="fg-line">
-                        	<label>[[user:posts_per_page]]</label>
+                        	<label>[[user:posts_per_page]] ([[user:max_items_per_page, {maxPostsPerPage}]])</label>
                             <input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}">
                         </div>
                     </div>
-	                
+
 	            </div>
 	        </div>
 
@@ -195,6 +185,41 @@
 	            	[[user:notifications_and_sounds]]
 	            </div>
 	            <div class="card-body card-padding">
+	            	<!-- BEGIN notificationSettings -->
+	            	<div class="row">
+	            		<div class="col-xs-12">
+	            			<div class="form-group fg-line">
+				            	<div class="select">
+				            		<label for="notification">{notificationSettings.label}</label>
+									<select class="form-control" data-property="{notificationSettings.name}">
+										<option value="none" <!-- IF notificationSettings.none -->selected<!-- ENDIF notificationSettings.none -->>[[notifications:none]]</option>
+										<option value="notification" <!-- IF notificationSettings.notification -->selected<!-- ENDIF notificationSettings.notification -->>[[notifications:notification_only]]</option>
+										<option value="email" <!-- IF notificationSettings.email -->selected<!-- ENDIF notificationSettings.email -->>[[notifications:email_only]]</option>
+										<option value="notificationemail" <!-- IF notificationSettings.notificationemail -->selected<!-- ENDIF notificationSettings.notificationemail -->>[[notifications:notification_and_email]]</option>
+									</select>
+								</div>
+							</div>
+	            		</div>
+	            	</div>
+	            	<!-- END notificationSettings -->
+
+					<div class="row">
+	            		<div class="col-xs-12">
+	            			<div class="form-group fg-line">
+				            	<div class="select">
+				            		<label for="upvote-notif-freq">[[user:upvote-notif-freq]]</label>
+									<select class="form-control" id="upvote-notif-freq" name="upvote-notif-freq" data-property="upvoteNotifFreq">
+										<!-- BEGIN upvoteNotifFreq -->
+										<option value="{upvoteNotifFreq.name}" <!-- IF upvoteNotifFreq.selected -->selected<!-- ENDIF upvoteNotifFreq.selected -->>
+											[[user:upvote-notif-freq.{upvoteNotifFreq.name}]]
+										</option>
+										<!-- END upvoteNotifFreq -->
+									</select>
+								</div>
+							</div>
+	            		</div>
+	            	</div>
+
 	            	<div class="row">
 	            		<div class="col-xs-10">
 			            	<div class="form-group fg-line">
@@ -213,7 +238,7 @@
 							<button type="button" class="btn btn-sm btn-primary" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
 						</div>
 					</div>
-					
+
 					<div class="row">
 	            		<div class="col-xs-10">
 			            	<div class="form-group fg-line">
@@ -232,7 +257,7 @@
 							<button type="button" class="btn btn-sm btn-primary" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
 						</div>
 					</div>
-					
+
 					<div class="row">
 	            		<div class="col-xs-10">
 			            	<div class="form-group fg-line">
@@ -271,6 +296,37 @@
 	            </div>
 	        </div>
 
+	        <!-- IF isAdmin -->
+	        <!-- IF isSelf -->
+	        <div class="card">
+	            <div class="card-header">
+	            	[[user:acp_language]]
+	            </div>
+	            <div class="card-body card-padding">
+	            	<div class="form-group fg-line">
+		            	<div class="select">
+							<select data-property="acpLang" class="form-control">
+								<!-- BEGIN acpLanguages -->
+								<option value="{acpLanguages.code}" <!-- IF acpLanguages.selected -->selected<!-- ENDIF acpLanguages.selected -->>{acpLanguages.name} ({acpLanguages.code})</option>
+								<!-- END acpLanguages -->
+							</select>
+						</div>
+					</div>
+	            </div>
+	        </div>
+	        <!-- ENDIF isSelf -->
+	        <!-- ENDIF isAdmin -->
+
+			<!-- BEGIN customSettings -->
+			<div class="card">
+				<div class="card-header">
+					{customSettings.title}
+				</div>
+				<div class="card-body card-padding">
+					{customSettings.content}
+				</div>
+			</div>
+			<!-- END customSettings -->
 		</div>
 		<div class="col-xs-12">
 			<button id="submitBtn" class="btn btn-primary btn-lg">[[global:save_changes]]</button>
