@@ -17,7 +17,7 @@
 
 					<!-- IF websiteName -->
 					<div class="profile-label">[[user:website]]</div>
-					<div><a href="{websiteLink}">{websiteName}</a></div>
+					<div><a href="{websiteLink}" rel="nofollow noopener noreferrer">{websiteName}</a></div>
 					<!-- ENDIF websiteName -->
 
 					<!-- IF location -->

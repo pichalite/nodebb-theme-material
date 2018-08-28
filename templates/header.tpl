@@ -27,7 +27,7 @@
 	<!-- ENDIF useCustomCSS -->
 </head>
 
-<body class="{bodyClass} skin-{config.selectedSkin}">
+<body class="{bodyClass} theme-{config.selectedSkin}">
     <!-- IMPORT partials/menu.tpl -->
 
 	<div class="container" id="content">

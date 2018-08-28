@@ -18,7 +18,9 @@
 					</button>
 
 					<ul class="dropdown-menu dropdown-menu-right">
+						<!-- IF allowProfilePicture -->
 						<li><a id="changePictureBtn" href="#">[[user:change_picture]]</a></li>
+						<!-- ENDIF allowProfilePicture -->
 						<!-- IF !username:disableEdit -->
 						<li><a href="{config.relative_path}/user/{userslug}/edit/username">[[user:change_username]]</a></li>
 						<!-- ENDIF !username:disableEdit -->

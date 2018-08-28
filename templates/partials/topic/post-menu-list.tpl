@@ -6,14 +6,6 @@
 <li><a component="post/purge" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->"><i class="fa fa-eraser"></i> [[topic:purge]]</a></li>
 <li><a component="topic/delete/posts" href="#"><i class="fa fa-trash-o"></i> [[topic:thread_tools.delete-posts]]</a></li>
 
-<!-- BEGIN posts.tools -->
-<li>
-	<a component="{posts.tools.action}" href="#">
-		<i class="fa {posts.tools.icon}"></i> {{posts.tools.html}}
-	</a>
-</li>
-<!-- END posts.tools -->
-
 <!-- IF posts.display_history -->
 <li>
 	<a component="post/view-history" role="menuitem" tabindex="-1" href="#">
@@ -40,9 +32,18 @@
 </li>
 <!-- ENDIF posts.display_ip_ban -->
 <!-- ENDIF posts.ip -->
-
-<li class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
+
+<!-- BEGIN posts.tools -->
+<li role="presentation">
+	<a component="{posts.tools.action}" role="menuitem" tabindex="-1" href="#">
+		<span class="menu-icon"><i class="fa {posts.tools.icon}"></i></span> {{posts.tools.html}}
+	</a>
+</li>
+<!-- END posts.tools -->
+<!-- IF posts.toolsVisible -->
+<li class="divider"></li>
+<!-- ENDIF posts.toolsVisible -->
 
 <!-- IF !posts.deleted -->
 <!-- IF config.loggedIn -->
