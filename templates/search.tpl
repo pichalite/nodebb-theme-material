@@ -61,9 +61,10 @@
 						<div class="form-group post-search-item">
 							<label>[[search:in-categories]]</label>
 							<div class="fg-line">
-								<select multiple class="form-control" id="posted-in-categories">
-									<option value="all">All Categories</option>
-									<option value="watched">Watched Categories</option>
+								<select multiple class="form-control" id="posted-in-categories" size="{categoriesCount}">
+									<!-- BEGIN categories -->
+									<option value="{categories.value}">{categories.text}</option>
+									<!-- END categories -->
 								</select>
 							</div>
 							<div class="checkbox">
