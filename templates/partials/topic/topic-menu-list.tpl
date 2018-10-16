@@ -35,6 +35,11 @@
 		<i class="fa fa-fw fa-code-fork"></i> [[topic:thread_tools.fork]]
 	</a>
 </li>
+<li>
+	<a component="topic/move-posts" href="#">
+		<i class="fa fa-fw fa-arrows"></i> [[topic:thread_tools.move-posts]]
+	</a>
+</li>
 <li class="divider"></li>
 <!-- ENDIF privileges.editable -->
 

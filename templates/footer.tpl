@@ -1,4 +1,4 @@
-	</div><!-- END container -->
+	</div><!-- /.container#content -->
 
 	<div class="hide">
 	<!-- IMPORT 500-embed.tpl -->

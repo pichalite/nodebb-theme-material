@@ -27,7 +27,7 @@
 				<div>{group.descriptionParsed}</div>
 				<!-- IF isAdmin -->
 				<div class="pull-right">
-					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-info"><i class="fa fa-gear"></i> [[user:edit]]</a>
+					<a href="{config.relative_path}/admin/manage/groups/{group.nameEncoded}" target="_blank" class="btn btn-primary"><i class="fa fa-gear"></i> [[user:edit]]</a>
 				</div>
 				<!-- ENDIF isAdmin -->
 				<!-- IF loggedIn -->
@@ -42,12 +42,19 @@
 				<i class="fa fa-users"></i> [[groups:details.members]]
 			</div>
 			<div class="card-body card-padding group-members">
-				<div class="fg-line">
-					<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
+				<!-- IF group.isOwner -->
+				<div class="col-lg-2">
+					<button component="groups/members/add" type="button" class="btn btn-primary" title="[[groups:details.add-member]]"><i class="fa fa-user-plus"></i></button>
+				</div>
+				<!-- ENDIF group.isOwner -->
+				<div class="<!-- IF group.isOwner -->col-lg-10<!-- ELSE -->col-lg-12<!-- ENDIF group.isOwner -->">
+					<div class="fg-line input-group">
+						<input class="form-control" type="text" component="groups/members/search" placeholder="[[global:search]]"/>
+					</div>
 				</div>
 				<table component="groups/members" class="table members" data-nextstart="{group.membersNextStart}">
 					<tbody>
-						<!-- BEGIN members -->
+						<!-- BEGIN group.members -->
 						<tr data-uid="{group.members.uid}">
 							<td>
 								<a href="{config.relative_path}/user/{group.members.userslug}">
@@ -83,7 +90,7 @@
 							</td>
 							<!-- ENDIF group.isOwner -->
 						</tr>
-						<!-- END members -->
+						<!-- END group.members -->
 					</tbody>
 				</table>
 			</div>

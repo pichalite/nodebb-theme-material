@@ -22,7 +22,7 @@
  			<!-- ENDIF inviteOnly -->
 		</div>
 		<div class="col-lg-3">
-			<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
+			<!-- IF displayUserSearch -->
 			<div class="search">
  				<div class="input-group">
  					<div class="fg-line">
@@ -30,7 +30,7 @@
  					</div>
  				</div>
  			</div>
-			<!-- ENDIF function.displayUserSearch -->
+			<!-- ENDIF displayUserSearch -->
 		</div>
 	</div>
 	<br />

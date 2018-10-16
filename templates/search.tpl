@@ -37,18 +37,34 @@
 					</div>
 					<div class="card-body card-padding search-options collapse <!-- IF expandSearch -->in<!-- ENDIF expandSearch -->">
 						<div class="form-group post-search-item">
-							<label>[[search:posted-by]]</label>
-							<div class="fg-line">
-							<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
+							<div class="row">
+								<div class="col-md-3">
+									<label>[[search:match-words]]</label>
+									<div class="fg-line">
+										<select id="match-words-filter" class="form-control">
+											<option value="all">[[search:all]]</option>
+											<option value="any">[[search:any]]</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<label>[[search:posted-by]]</label>
+									<input type="text" class="form-control" id="posted-by-user" placeholder="[[search:posted-by]]">
+								</div>
+								<div class="col-md-6">
+									<label>[[search:has-tags]]</label>
+									<input type="text" class="form-control" id="has-tags">
+								</div>
 							</div>
 						</div>
 
 						<div class="form-group post-search-item">
 							<label>[[search:in-categories]]</label>
 							<div class="fg-line">
-								<select multiple class="form-control" id="posted-in-categories">
-									<option value="all">All Categories</option>
-									<option value="watched">Watched Categories</option>
+								<select multiple class="form-control" id="posted-in-categories" size="{categoriesCount}">
+									<!-- BEGIN categories -->
+									<option value="{categories.value}">{categories.text}</option>
+									<!-- END categories -->
 								</select>
 							</div>
 							<div class="checkbox">
@@ -58,13 +74,6 @@
 			                        [[search:search-child-categories]]
 			                    </label>
 			                </div>
-						</div>
-
-						<div class="form-group post-search-item">
-							<label>[[search:has-tags]]</label>
-							<div class="fg-line">
-								<input type="text" class="form-control" id="has-tags">
-							</div>
 						</div>
 
 						<div class="form-group post-search-item">
