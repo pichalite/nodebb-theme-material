@@ -16,7 +16,7 @@
 		<li>
   			<a component="account/flag" href="#">[[user:flag-profile]]</a>
   		</li>
-  		<li>
+  	<li>
 			<a component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
 		</li>
 		<!-- ENDIF !banned -->

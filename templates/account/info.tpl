@@ -7,11 +7,11 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="card">
-	        	<div class="card-header ch-alt">
-	        		[[global:sessions]]
-	        	</div>
-	        	<div class="card-body card-padding">
-	        		<ul class="list-group" component="user/sessions">
+				<div class="card-header ch-alt">
+					[[global:sessions]]
+				</div>
+				<div class="card-body card-padding">
+					<ul class="list-group" component="user/sessions">
 						<!-- BEGIN sessions -->
 						<li class="list-group-item" data-uuid="{../uuid}">
 							<div class="pull-right">
@@ -31,8 +31,8 @@
 						</li>
 						<!-- END sessions -->
 					</ul>
-	        	</div>
-	        </div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- ENDIF sessions.length -->
@@ -118,6 +118,13 @@
 						<!-- BEGIN history.bans -->
 						<li>
 							<p>
+								<a href="{config.relative_path}/user/{history.bans.user.userslug}">
+									<!-- IF history.bans.user.picture -->
+									<img title="{history.bans.user.username}" class="avatar avatar-sm avatar-rounded" src="{history.bans.user.picture}" />
+									<!-- ELSE -->
+									<span title="{history.bans.user.username}" class="avatar avatar-sm avatar-rounded user-icon" style="background-color: {history.bans.user.icon:bgColor};">{history.bans.user.icon:text}</span>
+									<!-- ENDIF history.bans.user.picture -->
+								</a>
 								<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
 								<!-- IF ../until -->
 								<span class="expiry">[[user:info.banned-until, {../untilReadable}]]</span><br />

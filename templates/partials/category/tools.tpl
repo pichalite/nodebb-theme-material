@@ -1,8 +1,8 @@
 <!-- IF privileges.editable -->
 <li class="dropdown thread-tools">
-    <span data-toggle="dropdown" aria-expanded="true"><i class="fa fa-cog"></i></span>
-    <ul class="dropdown-menu pull-right">
-    	<li>
+  <span data-toggle="dropdown" aria-expanded="true"><i class="fa fa-cog"></i></span>
+  <ul class="dropdown-menu pull-right">
+    <li>
 			<a component="topic/mark-unread-for-all" href="#">
 				<i class="fa fa-fw fa-inbox"></i> [[topic:thread_tools.markAsUnreadForAll]]
 			</a>
@@ -70,6 +70,6 @@
 			<a href="#" class="{thread_tools.class}"><i class="fa fa-fw {thread_tools.icon}"></i> {thread_tools.title}</a>
 		</li>
 		<!-- END thread_tools -->
-    </ul>
+  </ul>
 </li>
 <!-- ENDIF privileges.editable -->

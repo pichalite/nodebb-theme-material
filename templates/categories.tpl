@@ -10,18 +10,18 @@
 			<!-- ENDIF categories.link -->
 				<div class="category-card-body">
 					<ul class="category-counts pull-right">
-	                    <li>
-	                        <i class="fa fa-book"></i><span class="human-readable-number" title="{categories.totalTopicCount}"></span>
-	                    </li>
-	                    <li>
-	                        <i class="fa fa-pencil"></i><span class="human-readable-number" title="{categories.totalPostCount}"></span>
-	                    </li>
-	                </ul>
-					<h4>
-						{categories.name} <!-- IF categories.icon -->
-								<i class="fa {categories.icon} fa-fw"></i>
-								<!-- ENDIF categories.icon -->
-					</h4>
+						<li>
+							<i class="fa fa-book"></i><span class="human-readable-number" title="{categories.totalTopicCount}"></span>
+						</li>
+						<li>
+							<i class="fa fa-pencil"></i><span class="human-readable-number" title="{categories.totalPostCount}"></span>
+						</li>
+					</ul>
+						<h4>
+							{categories.name} <!-- IF categories.icon -->
+							<i class="fa {categories.icon} fa-fw"></i>
+							<!-- ENDIF categories.icon -->
+						</h4>
 					<div class="category-description">{categories.descriptionParsed}</div>
 				</div>
 			</a>
@@ -30,13 +30,13 @@
 				<!-- IF @first -->
 				<div component="category/posts">
 					<div class="pull-left hidden-xs user-avatar">
-				    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
-				        	<!-- IF categories.posts.user.picture -->
-		                    <img class="user-avatar" src="{categories.posts.user.picture}" alt="{categories.posts.user.username}" title="{categories.posts.user.username}"/>
-		                    <!-- ELSE -->
-		                    <div class="user-icon" title="{categories.posts.user.username}" style="background-color: {categories.posts.user.icon:bgColor};">{categories.posts.user.icon:text}</div>
-		                    <!-- ENDIF categories.posts.user.picture -->
-				    	</a>
+						<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
+							<!-- IF categories.posts.user.picture -->
+							<img class="user-avatar" src="{categories.posts.user.picture}" alt="{categories.posts.user.username}" title="{categories.posts.user.username}"/>
+							<!-- ELSE -->
+							<div class="user-icon" title="{categories.posts.user.username}" style="background-color: {categories.posts.user.icon:bgColor};">{categories.posts.user.icon:text}</div>
+							<!-- ENDIF categories.posts.user.picture -->
+						</a>
 					</div>
 					<div class="topic-title">
 						<a href="{config.relative_path}/topic/{categories.posts.topic.slug}/{categories.posts.index}">{categories.posts.topic.title}</a>
@@ -60,20 +60,21 @@
 				<div class="lv-item media row clearfix" component="categories/category" data-cid="{categories.cid}">
 					<div class="col-xs-12 col-sm-8 col-md-7">
 						<div class="icon pull-left" style="{function.generateCategoryBackground}">
-				        	<i class="fa fa-fw {categories.icon}"></i>
-				    	</div>
-				    	<div class="media-body">
-				    		<div class="lv-title category-title">
-				    			<!-- IF categories.link -->
+				      <i class="fa fa-fw {categories.icon}"></i>
+				    </div>
+						<div class="media-body">
+							<div class="lv-title category-title">
+								<!-- IF categories.link -->
 								<a href="{categories.link}" itemprop="url" target="_blank">
 								<!-- ELSE -->
 								<a href="{config.relative_path}/category/{categories.slug}" itemprop="url">
 								<!-- ENDIF categories.link -->
-								{categories.name}
-								</a><br />
+									{categories.name}
+								</a>
+								<br />
 								<small class="lv-small">{categories.descriptionParsed}</small>
-				    		</div>
-				    	</div>
+							</div>
+						</div>
 					</div>
 					<div class="col-md-1 hidden-xs hidden-sm">
 						<div class="stat">
@@ -92,13 +93,13 @@
 						<!-- IF @first -->
 						<div component="category/posts">
 							<div class="pull-left hidden-xs user-avatar">
-						    	<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
-						        	<!-- IF categories.posts.user.picture -->
-				                    <img src="{categories.posts.user.picture}" alt="{categories.posts.user.username}"/>
-				                    <!-- ELSE -->
-				                    <div class="user-icon" style="background-color: {categories.posts.user.icon:bgColor};">{categories.posts.user.icon:text}</div>
-				                    <!-- ENDIF categories.posts.user.picture -->
-						    	</a>
+								<a href="{config.relative_path}/user/{categories.posts.user.userslug}">
+									<!-- IF categories.posts.user.picture -->
+									<img src="{categories.posts.user.picture}" alt="{categories.posts.user.username}"/>
+									<!-- ELSE -->
+									<div class="user-icon" style="background-color: {categories.posts.user.icon:bgColor};">{categories.posts.user.icon:text}</div>
+									<!-- ENDIF categories.posts.user.picture -->
+								</a>
 							</div>
 							<div class="media-body">
 								<div class="topic-title">
@@ -115,20 +116,21 @@
 						<div class="subcategories lv-item media row">
 							<div class="col-xs-12 col-sm-8 col-md-7 sub-category">
 								<div class="icon pull-left" style="{function.generateCategoryBackground}">
-						        	<i class="fa fa-fw {categories.icon}"></i>
-						    	</div>
-						    	<div class="media-body">
-						    		<div class="lv-title category-title">
-						    			<!-- IF categories.children.link -->
+						      <i class="fa fa-fw {categories.icon}"></i>
+						    </div>
+								<div class="media-body">
+									<div class="lv-title category-title">
+										<!-- IF categories.children.link -->
 										<a href="{categories.children.link}" itemprop="url" target="_blank">
 										<!-- ELSE -->
 										<a href="{config.relative_path}/category/{categories.children.slug}" itemprop="url">
 										<!-- ENDIF categories.children.link -->
-										{categories.children.name}
-										</a><br />
+											{categories.children.name}
+										</a>
+										<br />
 										<small class="lv-small">{categories.children.descriptionParsed}</small>
-						    		</div>
-						    	</div>
+									</div>
+								</div>
 							</div>
 							<div class="col-md-1 hidden-xs hidden-sm">
 								<div class="stat">
@@ -147,13 +149,13 @@
 								<!-- IF @first -->
 								<div component="category/posts">
 									<div class="pull-left hidden-xs user-avatar">
-								    	<a href="{config.relative_path}/user/{categories.children.posts.user.userslug}">
-								        	<!-- IF categories.children.posts.user.picture -->
-						                    <img src="{categories.children.posts.user.picture}" alt="{categories.children.posts.user.username}"/>
-						                    <!-- ELSE -->
-						                    <div class="user-icon" style="background-color: {categories.children.posts.user.icon:bgColor};">{categories.children.posts.user.icon:text}</div>
-						                    <!-- ENDIF categories.children.posts.user.picture -->
-								    	</a>
+										<a href="{config.relative_path}/user/{categories.children.posts.user.userslug}">
+											<!-- IF categories.children.posts.user.picture -->
+											<img src="{categories.children.posts.user.picture}" alt="{categories.children.posts.user.username}"/>
+											<!-- ELSE -->
+											<div class="user-icon" style="background-color: {categories.children.posts.user.icon:bgColor};">{categories.children.posts.user.icon:text}</div>
+											<!-- ENDIF categories.children.posts.user.picture -->
+										</a>
 									</div>
 									<div class="media-body">
 										<div class="topic-title">
