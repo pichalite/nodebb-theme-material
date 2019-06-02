@@ -1,6 +1,6 @@
 .topic {
 	margin-left: -10px;
-    margin-right: -10px;
+	margin-right: -10px;
 
 	.post-tools {
 		text-transform: lowercase;
@@ -142,58 +142,58 @@
 		}
 
 		.poster-avatar {
-		    position: absolute;
-		    top: 0;
-		    left: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
 
-		    .status {
-		    	position: absolute;
-			    left: 35px;
-			    top: 30px;
-			    border: 1px solid #fff;
-		    }
+			.status {
+				position: absolute;
+				left: 35px;
+				top: 30px;
+				border: 1px solid #fff;
+			}
 		}
 
 		.post-content {
-		    position: relative;
-		    background-color: @post-content-bg-color;
-		    border-radius: 2px;
-		    border: 1px solid @border-color;
+			position: relative;
+			background-color: @post-content-bg-color;
+			border-radius: 2px;
+			border: 1px solid @border-color;
 
-		    @media (min-width: @screen-sm-min) {
-		        margin-left: 60px;
-		    }
+			@media (min-width: @screen-sm-min) {
+				margin-left: 60px;
+			}
 
-		    p {
-			    margin: 15px 0;
-			    line-height: 1.6;
+			p {
+				margin: 15px 0;
+				line-height: 1.6;
 			}
 
 			@media (min-width: @screen-sm-min) {
 				&:after, &:before {
-				    right: 100%;
-				    top: 20px;
-				    border: solid transparent;
-				    content: " ";
-				    height: 0;
-				    width: 0;
-				    position: absolute;
-				    pointer-events: none;
+					right: 100%;
+					top: 20px;
+					border: solid transparent;
+					content: " ";
+					height: 0;
+					width: 0;
+					position: absolute;
+					pointer-events: none;
 				}
 			}
 
 			&:after {
-			    border-color: transparent;
-			    border-right-color: @post-content-bg-color;
-			    border-width: 10px;
-			    margin-top: -10px;
+				border-color: transparent;
+				border-right-color: @post-content-bg-color;
+				border-width: 10px;
+				margin-top: -10px;
 			}
 
 			&:before {
-			    border-color: transparent;
-			    border-right-color: @border-color;
-			    border-width: 11px;
-			    margin-top: -11px;
+				border-color: transparent;
+				border-right-color: @border-color;
+				border-width: 11px;
+				margin-top: -11px;
 			}
 		}
 
@@ -202,7 +202,6 @@
 		}
 
 		.post-actions {
-
 			@media (max-width: @screen-xs-max) {
 				margin-right: -10px;
 			}
@@ -251,12 +250,12 @@
 			@media (min-width: @screen-sm-min) {
 				padding: 15px 0 20px 0;
 				margin: 20px 0 0 60px;
-	  		}
+	  	}
 
-	  		@media (max-width: @screen-xs-max) {
-	  			margin-top: 20px;
-	  			padding-bottom: 30px;
-	  		}
+			@media (max-width: @screen-xs-max) {
+				margin-top: 20px;
+				padding-bottom: 30px;
+			}
 
 			.post-count, .view-count {
 				text-align: center;
@@ -340,18 +339,18 @@
 }
 
 [component="post"].isSolved .post-body:before {
-    content: "answer";
-    position: absolute;
-    right: 0;
-    top: -20px;
-    background-color: @material-success;
-    color: #fff;
-    padding: 0 5px;
+	content: "answer";
+	position: absolute;
+	right: 0;
+	top: -20px;
+	background-color: @material-success;
+	color: #fff;
+	padding: 0 5px;
 
-    @media (max-width: @screen-xs-max) {
-    	right: initial;
-    	left: 0;
-    }
+	@media (max-width: @screen-xs-max) {
+		right: initial;
+		left: 0;
+	}
 }
 
 .fork-thread-card {
@@ -362,40 +361,40 @@
 
 	box-shadow: 0 5px 20px rgba(0, 0, 0, .31);
 	color: @modal-text-color;
-    background-color: @modal-bg-color;
+	background-color: @modal-bg-color;
 
-    .panel-heading {
-    	border-bottom: 1px solid @border-color;
-    }
+	.panel-heading {
+		border-bottom: 1px solid @border-color;
+	}
 
-    .panel-footer {
-    	color: @modal-text-color;
-    	background-color: @modal-bg-color;
-    	border-top: 1px solid @border-color;
-    }
+	.panel-footer {
+		color: @modal-text-color;
+		background-color: @modal-bg-color;
+		border-top: 1px solid @border-color;
+	}
 
-    input {
-    	color: @body-color;
-    }
+	input {
+		color: @body-color;
+	}
 
-    .panel-footer .btn.btn-default {
-	    box-shadow: none !important;
-	    background-color: initial;
-	    color: @body-color;
+	.panel-footer .btn.btn-default {
+		box-shadow: none !important;
+		background-color: initial;
+		color: @body-color;
 
-	    &:hover {
-	        background-color: @body-bg-color;
-	    }
+		&:hover {
+				background-color: @body-bg-color;
+		}
 	}
 
 	.panel-footer .btn.btn-primary {
-	    box-shadow: none !important;
-	    color: @material-primary;
-	    background-color: initial;
+		box-shadow: none !important;
+		color: @material-primary;
+		background-color: initial;
 
-	    &:hover {
-	        background-color: @body-bg-color;
-	    }
+		&:hover {
+			background-color: @body-bg-color;
+		}
 	}
 }
 
@@ -406,7 +405,6 @@
 }
 
 [component="post"] {
-
 	.poster-avatar>a, .post-user-picture {
 		opacity: 1;
 	}
@@ -420,16 +418,16 @@
 
 		.poster-avatar:before, .user-profile-link:before {
 			border: 1px solid @body-color;
-    		color: @body-color;
-    		-webkit-transition: .2s ease-in-out all;
-    		transition: .2s ease-in-out all;
-    		content: "\f00c";
-    		padding: 14px;
-		    border-radius: 50%;
-		    opacity: 1;
-		    position: absolute;
-		    display: inline-block;
-		    font: normal normal normal 14px/1 FontAwesome;
+			color: @body-color;
+			-webkit-transition: .2s ease-in-out all;
+			transition: .2s ease-in-out all;
+			content: "\f00c";
+			padding: 14px;
+			border-radius: 50%;
+			opacity: 1;
+			position: absolute;
+			display: inline-block;
+			font: normal normal normal 14px/1 FontAwesome;
 		}
 
 		.user-profile-link:before {

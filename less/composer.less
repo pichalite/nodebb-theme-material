@@ -22,6 +22,12 @@
 	.mobile-navbar {
 		background: @composer-navbar-bg-color !important;
 	}
+
+	.resizer {
+		.trigger {
+			background-color: initial !important;
+		}
+	}
 }
 
 .composer-container {
@@ -42,13 +48,13 @@
 		}
 
 		.btn.btn-primary {
-		    box-shadow: none !important;
-		    color: @material-primary;
-		    background-color: @composer-bg-color;
+			box-shadow: none !important;
+			color: @material-primary;
+			background-color: @composer-bg-color;
 
-		    &:hover {
-		        background-color: @body-bg-color;
-		    }
+			&:hover {
+				background-color: @body-bg-color;
+			}
 		}
 	}
 
@@ -68,9 +74,8 @@
 
 	.resizer {
 		.trigger {
-			background-color: @body-color !important;
-
 			i {
+				background-color: @body-color !important;
 				color: @composer-bg-color !important;
 			}
 		}
@@ -85,22 +90,22 @@
 	[component="category-selector"] {
 		.category-dropdown-menu {
 			overflow-x: hidden;
-    		overflow-y: auto;
+    	overflow-y: auto;
 		}
 	}
 }
 
 .composer-container .btn.btn-info {
-    box-shadow: none !important;
-    color: @body-color;
-    background-color: @composer-bg-color;
-    &:hover, &:active, &:focus, &:visited {
-        background-color: @composer-bg-color;
-    }
+	box-shadow: none !important;
+	color: @body-color;
+	background-color: @composer-bg-color;
+	&:hover, &:active, &:focus, &:visited {
+		background-color: @composer-bg-color;
+	}
 
-    .caret {
-    	color: @body-color;
-    }
+	.caret {
+		color: @body-color;
+	}
 }
 
 .dropdown-menu.textcomplete-dropdown {

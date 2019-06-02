@@ -59,10 +59,10 @@
 			position: relative;
 			z-index: 1;
 			color: #fff;
-		    padding: 6px 10px;
-		    font-size: 14px;
+			padding: 6px 10px;
+			font-size: 14px;
 
-		    &:hover, &:active, &:focus {
+		  &:hover, &:active, &:focus {
 				text-decoration: none;
 			}
 		}
@@ -105,10 +105,10 @@
 			position: relative;
 			z-index: 1;
 			color: #fff;
-		    padding: 6px 10px;
-		    font-size: 16px;
+			padding: 6px 10px;
+			font-size: 16px;
 
-		    &:hover, &:active, &:focus {
+		  &:hover, &:active, &:focus {
 				text-decoration: none;
 			}
 		}
@@ -128,17 +128,16 @@
 	
 	.chats.dropdown {
 		.lv-footer {
-
-            hr {
-                margin-top: 10px;
-                margin-bottom: 10px;
-                border-top: @lv-item-border;
-            }
-        }
+			hr {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				border-top: @lv-item-border;
+			}
+		}
         
-        .dropdown-menu {
-        	padding: 0;
-        }
+		.dropdown-menu {
+			padding: 0;
+		}
 	}
 }
 
@@ -200,60 +199,60 @@
 }
 
 .line-wrap {
-    width: 18px;
-    height: 12px;
-    -webkit-transition: all;
-    -moz-transition: all;
-    -o-transition: all;
-    transition: all;
-    -webkit-transition-duration: 300ms;
-    transition-duration: 300ms;
-    margin: 10px 20px;
+	width: 18px;
+	height: 12px;
+	-webkit-transition: all;
+	-moz-transition: all;
+	-o-transition: all;
+	transition: all;
+	-webkit-transition-duration: 300ms;
+	transition-duration: 300ms;
+	margin: 10px 20px;
 
-    .line {
-	    width: 18px;
-	    height: 2px;
-	    -webkit-transition: all;
-	    -moz-transition: all;
-	    -o-transition: all;
-	    transition: all;
-	    -webkit-transition-duration: 300ms;
-	    transition-duration: 300ms;
+	.line {
+		width: 18px;
+		height: 2px;
+		-webkit-transition: all;
+		-moz-transition: all;
+		-o-transition: all;
+		transition: all;
+		-webkit-transition-duration: 300ms;
+		transition-duration: 300ms;
 	}
 
 	.line.center {
-	    margin: 3px 0;
+		margin: 3px 0;
 	}
 }
 
 .open .line-wrap {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
 
-    .line.top {
-	    width: 12px;
-	    transform: translateX(8px) translateY(1px) rotate(45deg);
-	    -webkit-transform: translateX(8px) translateY(1px) rotate(45deg);
+	.line.top {
+		width: 12px;
+		transform: translateX(8px) translateY(1px) rotate(45deg);
+		-webkit-transform: translateX(8px) translateY(1px) rotate(45deg);
 	}
 
 	.line.bottom {
-	    width: 12px;
-	    transform: translateX(8px) translateY(-1px) rotate(-45deg);
-	    -webkit-transform: translateX(8px) translateY(-1px) rotate(-45deg);
+		width: 12px;
+		transform: translateX(8px) translateY(-1px) rotate(-45deg);
+		-webkit-transform: translateX(8px) translateY(-1px) rotate(-45deg);
 	}
 }
 
 .unread-count:after {
 	content: attr(data-content);
-  	position: relative;
+  position: relative;
 	color: #fff;
 	font-style: normal;
 	background: @material-danger;
 	padding: 3px 6px;
-    border-radius: 10px;
-    left: -8px;
+	border-radius: 10px;
+	left: -8px;
 	top: -14px;
 	font-size: 11px;
 	font-weight: bold;
