@@ -137,7 +137,7 @@ html:not(.ie9) .select.fg-line:before {
 		display: inline-block;
 		width: 100%;
 	}
-	
+
 	.form-control[readonly] {
 		background-color: inherit;
 	}
@@ -457,7 +457,7 @@ html:not(.ie9) .select.fg-line:before {
 			background: #fafafa;
 			box-shadow: 0 2px 8px rgba(0, 0, 0, .28);
 			border-radius: 50%;
-			webkit-transition: left .28s cubic-bezier(0.4, 0, .2, 1), background .28s cubic-bezier(0.4, 0, .2, 1), box-shadow .28s cubic-bezier(0.4, 0, .2, 1);
+			-webkit-transition: left .28s cubic-bezier(0.4, 0, .2, 1), background .28s cubic-bezier(0.4, 0, .2, 1), box-shadow .28s cubic-bezier(0.4, 0, .2, 1);
 			transition: left .28s cubic-bezier(0.4, 0, .2, 1), background .28s cubic-bezier(0.4, 0, .2, 1), box-shadow .28s cubic-bezier(0.4, 0, .2, 1);
 		}
 	}
@@ -507,12 +507,12 @@ html:not(.ie9) .select.fg-line:before {
 
 //topic-select
 [component="category/topic"] {
-	
+
 	.checkbox label  {
 		padding-left: 0;
 		position: relative;
 	}
-	
+
 	.checkbox .select {
 		top: 0;
 		left: 0;
@@ -522,7 +522,7 @@ html:not(.ie9) .select.fg-line:before {
 		filter: alpha(opacity=0);
 		margin-top: 0;
 	}
-	
+
 	.checkbox .input-helper:before, .checkbox .input-helper:after {
 		-webkit-transition: all;
 		-moz-transition: all;
@@ -536,22 +536,22 @@ html:not(.ie9) .select.fg-line:before {
 		position: absolute;
 		content: "";
 	}
-	
+
 	.checkbox .input-helper:before {
 		left: 0;
 		border: 1px solid #ccc;
 	}
-	
+
 	.checkbox.disabled {
 		opacity: .6;
 		filter: alpha(opacity=60);
 	}
-	
+
 	.checkbox .select {
 		width: 17px;
 		height: 17px;
 	}
-	
+
 	&.selected {
 		.checkbox .input-helper:before {
 			-webkit-transform: scale(0);
@@ -559,7 +559,7 @@ html:not(.ie9) .select.fg-line:before {
 			-o-transform: scale(0);
 			transform: scale(0);
 		}
-		
+
 		.checkbox .input-helper:after {
 			-webkit-transform: scale(1) rotate(-50deg);
 			-ms-transform: scale(1) rotate(-50deg);
@@ -569,13 +569,13 @@ html:not(.ie9) .select.fg-line:before {
 			filter: alpha(opacity=100);
 		}
 	}
-	
+
 	.checkbox .input-helper:before {
 		top: 0;
 		width: 17px;
 		height: 17px;
 	}
-	
+
 	.checkbox .input-helper:after {
 		opacity: 0;
 		filter: alpha(opacity=0);
