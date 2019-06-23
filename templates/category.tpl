@@ -14,6 +14,11 @@
 						<a href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 						<!-- ENDIF !loggedIn -->
 					<!-- ENDIF privileges.topics:create -->
+
+					<a href="{url}">
+						<div class="alert alert-warning hide" id="new-topics-alert"></div>
+					</a>
+
 					<ul class="lv-actions actions" component="category/controls">
 						<!-- IMPORT partials/category/watch.tpl -->
 						<!-- IMPORT partials/category/tools.tpl -->
@@ -29,10 +34,6 @@
 			<!-- ENDIF privileges.topics:create -->
 			<!-- ENDIF !topics.length -->
 
-			<a href="{url}">
-				<div class="alert alert-warning hide" id="new-topics-alert"></div>
-			</a>
-
 			<!-- IMPORT partials/topics_list.tpl -->
 		</div>
 	</div>
@@ -41,7 +42,6 @@
 	<!-- ENDIF config.usePagination -->
 </div>
 
-<!-- IMPORT partials/move_thread_modal.tpl -->
 <!-- IF !config.usePagination -->
 <noscript>
 	<!-- IMPORT partials/paginator.tpl -->

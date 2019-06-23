@@ -227,11 +227,13 @@
 					</div>
 					<div class="form-group user-title-option">
 						<label>[[groups:details.badge_preview]]</label><br />
-						<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="background-color: {group.labelColor}"><i class="fa<!-- IF group.icon --> {group.icon}<!-- ENDIF group.icon --> icon"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.displayName}<!-- ENDIF group.userTitle --></span>
+						<span class="label<!-- IF !group.userTitleEnabled --> hide<!-- ENDIF !group.userTitleEnabled -->" style="color: {group.textColor}; background-color: {group.labelColor}"><i class="fa<!-- IF group.icon --> {group.icon}<!-- ENDIF group.icon --> icon"></i> <!-- IF group.userTitle -->{group.userTitle}<!-- ELSE -->{group.displayName}<!-- ENDIF group.userTitle --></span>
 
 						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="icon-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_icon]]</button>
-						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_colour]]</button>
+						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="label-color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_label_colour]]</button>
+						<button component="groups/userTitleOption" type="button" class="btn btn-default btn-sm" data-action="text-color-select"<!-- IF !group.userTitleEnabled --> disabled<!-- ENDIF !group.userTitleEnabled -->>[[groups:details.change_text_colour]]</button>
 						<input type="hidden" name="labelColor" value="<!-- IF group.labelColor -->{group.labelColor}<!-- ENDIF group.labelColor -->" />
+						<input type="hidden" name="textColor" value="<!-- IF group.textColor -->{group.textColor}<!-- ENDIF group.textColor -->" />
 						<input type="hidden" name="icon" value="<!-- IF group.icon -->{group.icon}<!-- ENDIF group.icon -->" />
 						<div id="icons" class="hidden">
 							<div class="icon-container">
@@ -262,19 +264,19 @@
 					<!-- ENDIF !allowPrivateGroups -->
 					<small class="help-block">[[groups:details.private_help]]</small>
 					<div class="checkbox">
-	                    <label>
-	                        <input name="disableJoinRequests" type="checkbox"<!-- IF group.disableJoinRequests --> checked<!-- ENDIF group.disableJoinRequests -->>
-	                        <i class="input-helper"></i>
-	                        [[groups:details.disableJoinRequests]]
-	                    </label>
-	                </div>
+						<label>
+							<input name="disableJoinRequests" type="checkbox"<!-- IF group.disableJoinRequests --> checked<!-- ENDIF group.disableJoinRequests -->>
+							<i class="input-helper"></i>
+							[[groups:details.disableJoinRequests]]
+						</label>
+					</div>
 					<div class="checkbox">
-	                    <label>
-	                        <input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->>
-	                        <i class="input-helper"></i>
-	                        [[groups:details.hidden]]
-	                    </label>
-	                </div>
+						<label>
+							<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->>
+							<i class="input-helper"></i>
+							[[groups:details.hidden]]
+						</label>
+					</div>
 					<small class="help-block">[[groups:details.hidden_help]]</small>
 
 					<button class="btn btn-link btn-xs pull-right" type="button" data-action="delete">[[groups:details.delete_group]]</button>

@@ -3,9 +3,9 @@
 		#search-button {
 			padding-left: 0;
 			position: relative;
-		    left: -20px;
-		    z-index: 2;
-		    vertical-align: middle;
+			left: -20px;
+			z-index: 2;
+			vertical-align: middle;
 		}
 	}
 
@@ -21,7 +21,7 @@
 			li {
 				display: inline;
 			}
-			
+
 			.user-icon, .user-avatar {
 				.user-icon(32px, 1.4rem);
 			}
@@ -44,15 +44,15 @@
 	}
 
 	&.details {
-		
+
 		.table {
 			margin-bottom: 0;
-			
+
 			>tbody {
 				>tr:not(:first-child)>td {
 					border-top: 1px solid @border-color;
 				}
-				
+
 				>tr:first-child>td {
 					border: none;
 				}
@@ -92,21 +92,20 @@
 
 	.row.groups .col-xs-5 {
 		padding-right: 5px;
-  		padding-left: 0;
+		padding-left: 0;
 	}
 
 	.row.groups .col-xs-7 {
-  		padding-left: 5px;
-	}	
+		padding-left: 5px;
+	}
 }
 
 [component="groups/container"] {
-	
 	.card.user-profile-view {
 		margin-right: 15px;
 		margin-left: 15px;
 	}
-	
+
 	[component="groups/cover"] {
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -114,35 +113,35 @@
 		position: relative;
 		margin-bottom: 1em;
 
-	&:hover {
+		&:hover {
+			.controls {
+				.opacity(0.8);
+			}
+		}
+
 		.controls {
-			.opacity(0.8);
+			text-align: center;
+			height: 200px;
+			line-height: 200px;
+			.opacity(0);
+			.transition(opacity .15s linear);
+			cursor: pointer;
+			pointer-events: none;
+
+			> * {
+				pointer-events: all;
+			}
+
+			.fa {
+				color: white;
+				background-color: #333;
+				opacity: 1;
+				margin: 15px;
+				padding: 5px;
+			}
 		}
-	}
 
-	.controls {
-		text-align: center;
-		height: 200px;
-		line-height: 200px;
-		.opacity(0);
-		.transition(opacity .15s linear);
-		cursor: pointer;
-		pointer-events: none;
-
-		> * {
-			pointer-events: all;
-		}
-
-		.fa {
-			color: white;
-			background-color: #333;
-			opacity: 1;
-			margin: 15px;
-			padding: 5px;
-		}
-	}
-
-	&.active {
+		&.active {
 			&:hover {
 				cursor: move;
 			}
@@ -192,7 +191,7 @@
 			display: none;
 		}
 	}
-	
+
 	.card-body.card-padding {
 		@media (min-width: @screen-md-min) {
 			padding: 18px;

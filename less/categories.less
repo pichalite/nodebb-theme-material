@@ -1,307 +1,305 @@
 .subcategory {
-    .media .pull-left {
-        width: 43px;
-        height: 43px;
-        border-radius: 50%;
-        display: block;
-        padding: 12px;
-        margin-right: 15px;
-    }
+	.media .pull-left {
+		width: 43px;
+		height: 43px;
+		border-radius: 50%;
+		display: block;
+		padding: 12px;
+		margin-right: 15px;
+	}
 
-    .listview .lv-item .lv-actions {
-        @media (max-width: @screen-sm-max) {
-            right: 7px;
-            top: 10px;
-        }
-    }
+	.listview .lv-item .lv-actions {
+		@media (max-width: @screen-sm-max) {
+			right: 7px;
+			top: 10px;
+		}
+	}
 }
 
 .category-card {
-    margin-bottom: 15px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
-    height: 245px;
-    position: relative;
+	margin-bottom: 15px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+	height: 245px;
+	position: relative;
 
-    .category-card-body {
-        padding: 15px;
-        height: 200px;
-        color: #fff;
+	.category-card-body {
+		padding: 15px;
+		height: 200px;
+		color: #fff;
 
-        a {
-            color: #fff;
-        }
+		a {
+			color: #fff;
+		}
 
-        .category-description {
-            font-size: 13px;
-        }
+		.category-description {
+			font-size: 13px;
+		}
 
-        .category-counts {
-            display: flex;
-            position: absolute;
-            right: 5px;
-            top: 5px;
-            font-size: 12px;
+		.category-counts {
+			display: flex;
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			font-size: 12px;
 
-            li>span {
-                margin: 0 5px;
-            }
-        }
+			li>span {
+				margin: 0 5px;
+			}
+		}
 
-        >a {
-            display: block;
-        }
-    }
+		>a {
+			display: block;
+		}
+	}
 
-    .category-card-footer {
-        background-color: rgba(17, 17, 17, .7);
-        border: 0;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 10px;
+	.category-card-footer {
+		background-color: rgba(17, 17, 17, .7);
+		border: 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 10px;
 
-        a {
-            color: #fff;
-        }
+		a {
+			color: #fff;
+		}
 
-        .topic-content>a{
-            padding-left: 15px;
-        }
+		.topic-content>a{
+			padding-left: 15px;
+		}
 
-        .user-avatar {
-            margin-right: 10px;
-        }
+		.user-avatar {
+			margin-right: 10px;
+		}
 
-        .topic-title {
-            display: flex;
-        }
-    }
+		.topic-title {
+			display: flex;
+		}
+	}
 }
 
 .category {
+	margin-left: -10px;
+	margin-right: -10px;
 
-    margin-left: -10px;
-    margin-right: -10px;
+	.category-card {
+		height: 200px;
+	}
 
-    .category-card {
-        height: 200px;
-    }
-
-    [component="topic/select"] {
-        &:before {
+  [component="topic/select"] {
+    &:before {
 			content: "";
 			display: none;
 		}
-    }
+  }
 
-    .listview {
-        .user-avatar {
-            .user-avatar(40px);
-        }
+	.listview {
+		.user-avatar {
+			.user-avatar(40px);
+		}
 
-        .user-icon {
-            .user-icon(40px, 2rem);
-        }
-    }
+		.user-icon {
+			.user-icon(40px, 2rem);
+		}
+	}
 
-    .category-card {
-        .user-avatar {
-            .user-avatar(35px);
-        }
+	.category-card {
+		.user-avatar {
+			.user-avatar(35px);
+		}
 
-        .user-icon {
-            .user-icon(35px, 1.9rem);
-        }
-    }
+		.user-icon {
+			.user-icon(35px, 1.9rem);
+		}
+	}
 }
 
 .recent {
-    .listview {
-        .user-avatar {
-            .user-avatar(40px);
-        }
+	.listview {
+		.user-avatar {
+			.user-avatar(40px);
+		}
 
-        .user-icon {
-            .user-icon(40px, 2rem);
-        }
-    }
+		.user-icon {
+			.user-icon(40px, 2rem);
+		}
+	}
 }
 
 [component="category/topic"] {
-    .topic-title {
-        color: @topic-title-color;
-    }
+	.topic-title {
+		color: @topic-title-color;
+	}
 
-    &.unread {
-        .topic-title {
-            color: @anchor-color;
-        }
-    }
+	&.unread {
+		.topic-title {
+			color: @anchor-color;
+		}
+	}
 }
 
 /*-- Display animation -------------------------------- */
 .display-animation > * {
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	transform: scale(0);
 }
 .display-animation > .animated {
-    -webkit-animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
-    -o-animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
-    animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+	-webkit-animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+	-o-animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
+	animation: display 0.5s cubic-bezier(0.55, 0, 0.1, 1) forwards;
 }
 .no-js .display-animation > * {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
 }
 
 @keyframes display {
-    from {
+  from {
     transform: scale(0);
-    }
-    to {
+  }
+  to {
     transform: scale(1);
-    }
+  }
 }
 @-o-keyframes display {
-    from {
+  from {
     -o-transform: scale(0);
-    }
-    to {
+  }
+  to {
     -o-transform: scale(1);
-    }
+  }
 }
 @-ms-keyframes display {
-    from {
+  from {
     -ms-transform: scale(0);
-    }
-    to {
+  }
+  to {
     -ms-transform: scale(1);
-    }
+  }
 }
 @-moz-keyframes display {
-    from {
+  from {
     -moz-transform: scale(0);
-    }
-    to {
+  }
+  to {
     -moz-transform: scale(1);
-    }
+  }
 }
 @-webkit-keyframes display {
-    from {
+  from {
     -webkit-transform: scale(0);
-    }
-    to {
+  }
+  to {
     -webkit-transform: scale(1);
-    }
+  }
 }
 
 
 .categories {
-    .media>.pull-left {
-        padding: 0;
-        margin-right: 15px;
-    }
+	.media>.pull-left {
+		padding: 0;
+		margin-right: 15px;
+	}
 
-    .lv-body {
-        .lv-item {
-            padding: 15px 20px 10px 20px;
+	.lv-body {
+		.lv-item {
+			padding: 15px 20px 10px 20px;
 
-            @media (max-width: @screen-sm-max) {
-                padding: 10px 0;
-            }
+			@media (max-width: @screen-sm-max) {
+				padding: 10px 0;
+			}
 
-            &.media {
-                .stat {
-                    text-align: center;
+			&.media {
+				.stat {
+					text-align: center;
 
-                    .human-readable-number {
-                        font-size: 15px;
-                    }
+					.human-readable-number {
+						font-size: 15px;
+					}
 
-                    span {
-                        font-size: 12px;
-                    }
-                }
+					span {
+						font-size: 12px;
+					}
+				}
 
-                .icon {
-                    font-size: 16px;
-                    line-height: 17px;
-                    padding: 13px;
-                    border-radius: 50%;
-                    margin-right: 15px;
-                    min-width: 46px;
-                    min-height: 46px;
-                }
+				.icon {
+					font-size: 16px;
+					line-height: 17px;
+					padding: 13px;
+					border-radius: 50%;
+					margin-right: 15px;
+					min-width: 46px;
+					min-height: 46px;
+				}
 
-                .category-title {
-                    font-size: 17px;
-                    line-height: 22px;
+				.category-title {
+					font-size: 17px;
+					line-height: 22px;
 
-                    .lv-small {
-                        font-weight: 300;
+					.lv-small {
+						font-weight: 300;
 
-                        p {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
+						p {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
 
-            .last-post {
-                height: 53px;
-                overflow: hidden;
-            }
+			.last-post {
+				height: 53px;
+				overflow: hidden;
+			}
 
-            [component="category/posts"] {
+			[component="category/posts"] {
+				.user-avatar {
+					margin-right: 10px;
+					margin-top: 5px;
+					img, .user-icon {
+						.user-icon(32px, 1.5rem);
+					}
+				}
 
-                .user-avatar {
-                    margin-right: 10px;
-                    margin-top: 5px;
-                    img, .user-icon {
-                        .user-icon(32px, 1.5rem);
-                    }
-                }
+				.topic-content {
+					display: block;
+					font-size: 12px;
+				}
+			}
+		}
+	}
 
-                .topic-content {
-                    display: block;
-                    font-size: 12px;
-                }
-            }
-        }
-    }
+	.subcategories {
+		&.lv-item {
+			&.media {
+				top: 20px;
+				padding: 15px 0 10px;
 
-    .subcategories {
-        &.lv-item {
-            &.media {
-                top: 20px;
-                padding: 15px 0 10px;
+				.icon {
+					min-width: 32px;
+					min-height: 32px;
+					padding: 9px;
+					line-height: 12px;
+					font-size: 12px;
+					margin-left: 15px;
+				}
 
-                .icon {
-                    min-width: 32px;
-                    min-height: 32px;
-                    padding: 9px;
-                    line-height: 12px;
-                    font-size: 12px;
-                    margin-left: 15px;
-                }
+				.category-title {
+					font-size: 13px;
 
-                .category-title {
-                    font-size: 13px;
+					.lv-small {
+						font-weight: 300;
 
-                    .lv-small {
-                        font-weight: 300;
-
-                        p {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
+						p {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
 }

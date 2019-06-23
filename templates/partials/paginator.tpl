@@ -60,7 +60,7 @@
 
 	<!-- IF pagination.prev.active -->
 	<li class="first">
-		<a href="?page=1" data-page="1"><i class="fa fa-fast-backward"></i> </a>
+		<a href="?{pagination.first.qs}" data-page="1"><i class="fa fa-fast-backward"></i> </a>
 	</li>
 	<li>
         <a href="?{pagination.prev.qs}" data-page="{pagination.prev.page}" aria-label="Previous">
@@ -94,7 +94,7 @@
         </a>
     </li>
 	<li class="last">
-		<a href="?page={pagination.pageCount}" data-page="{pagination.pageCount}"><i class="fa fa-fast-forward"></i> </a>
+		<a href="?{pagination.last.qs}" data-page="{pagination.pageCount}"><i class="fa fa-fast-forward"></i> </a>
 	</li>
 	<!-- ENDIF pagination.next.active -->
 	<!-- ENDIF pagination.pages -->

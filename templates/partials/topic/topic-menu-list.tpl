@@ -4,22 +4,22 @@
 		<i class="fa fa-fw fa-inbox"></i> [[topic:thread_tools.markAsUnreadForAll]]
 	</a>
 </li>
-<li>
+<li <!-- IF pinned -->hidden<!-- ENDIF pinned -->>
 	<a component="topic/pin" href="#" class="<!-- IF pinned -->hidden<!-- ENDIF pinned -->">
 		<i class="fa fa-fw fa-thumb-tack"></i> [[topic:thread_tools.pin]]
 	</a>
 </li>
-<li>
+<li <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->>
 	<a component="topic/unpin" href="#" class="<!-- IF !pinned -->hidden<!-- ENDIF !pinned -->">
 		<i class="fa fa-fw fa-thumb-tack fa-rotate-90"></i> [[topic:thread_tools.unpin]]
 	</a>
 </li>
-<li>
+<li <!-- IF locked -->hidden<!-- ENDIF locked -->>
 	<a component="topic/lock" href="#" class="<!-- IF locked -->hidden<!-- ENDIF locked -->">
 		<i class="fa fa-fw fa-lock"></i> [[topic:thread_tools.lock]]
 	</a>
 </li>
-<li>
+<li <!-- IF !locked -->hidden<!-- ENDIF !locked -->>
 	<a component="topic/unlock" href="#" class="<!-- IF !locked -->hidden<!-- ENDIF !locked -->">
 		<i class="fa fa-fw fa-unlock"></i> [[topic:thread_tools.unlock]]
 	</a>
@@ -44,21 +44,23 @@
 <!-- ENDIF privileges.editable -->
 
 <!-- IF privileges.deletable -->
-<li>
+<li <!-- IF deleted -->hidden<!-- ENDIF deleted -->>
 	<a component="topic/delete" href="#" class="<!-- IF deleted -->hidden<!-- ENDIF deleted -->">
 		<i class="fa fa-fw fa-trash-o"></i> [[topic:thread_tools.delete]]
 	</a>
 </li>
-<li>
+<li <!-- IF !deleted -->hidden<!-- ENDIF !deleted -->>
 	<a component="topic/restore" href="#" class="<!-- IF !deleted -->hidden<!-- ENDIF !deleted -->">
 		<i class="fa fa-fw fa-history"></i> [[topic:thread_tools.restore]]
 	</a>
 </li>
-<li>
+<!-- IF privileges.purge -->
+<li <!-- IF !deleted -->hidden<!-- ENDIF !deleted -->>
 	<a component="topic/purge" href="#" class="<!-- IF !deleted -->hidden<!-- ENDIF !deleted -->">
 		<i class="fa fa-fw fa-eraser"></i> [[topic:thread_tools.purge]]
 	</a>
 </li>
+<!-- END -->
 <!-- IF privileges.isAdminOrMod -->
 <li>
 	<a component="topic/delete/posts" href="#">

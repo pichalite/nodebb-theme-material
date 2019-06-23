@@ -11,7 +11,6 @@
 		</div>
 	</div>
 
-
 	<div class="row">
 		<div class="col-sm-6">
 			<!-- IF gdpr_consent -->
