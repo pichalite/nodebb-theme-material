@@ -69,8 +69,10 @@
 	<div class="register-options">
 		<ul class="alternate-auth">
 			<!-- BEGIN authentication -->
-			<li class="{authentication.name}"><a rel="nofollow noopener noreferrer" target="_top"
-					href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-2x"></i></a></li>
+			<li class="{authentication.name}">
+				<a rel="nofollow noopener noreferrer" target="_top"
+					href="{config.relative_path}{authentication.url}"><i class="fa {authentication.icon} fa-2x"></i></a>
+			</li>
 			<!-- END authentication -->
 		</ul>
 	</div>

@@ -55,7 +55,7 @@
 				</div>
 				<div class="card-body card-padding">
 					<div component="aboutme" class="text-center">
-					{aboutme}
+						{aboutme}
 					</div>
 				</div>
 			</div>
@@ -72,13 +72,11 @@
 				<!-- ENDIF !posts.length -->
 				<!-- IMPORT partials/posts_list.tpl -->
 				<!-- IF config.usePagination -->
-					<!-- IMPORT partials/paginator.tpl -->
+				<!-- IMPORT partials/paginator.tpl -->
 				<!-- ENDIF config.usePagination -->
 			</div>
-
 		</div>
 	</div>
 	<br/>
 	<div id="user-action-alert" class="alert alert-success hide"></div>
-
 </div>

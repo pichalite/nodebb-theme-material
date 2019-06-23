@@ -58,7 +58,6 @@
 			<div class="card">
 				<form class="form-horizontal" role="form">
 					<div class="card-body card-padding">
-
 						<div class="form-group">
 							<div class="fg-line">
 								<label>[[user:fullname]]</label>
@@ -152,6 +151,5 @@
 			</div>
 			<!-- ENDIF sso.length -->
 		</div>
-
 	</div>
 </div>

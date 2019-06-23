@@ -112,7 +112,7 @@
 				<!-- IF !config.disableChat -->
 				<li class="chats dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chat_dropdown" component="chat/dropdown">
-							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i>
+						<i component="chat/icon" class="fa fa-comment-o fa-fw"></i>
 					</a>
 					<div class="dropdown-menu dropdown-menu-md pull-right" aria-labelledby="chat_dropdown">
 						<div class="listview">

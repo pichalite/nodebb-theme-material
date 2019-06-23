@@ -5,7 +5,7 @@
 		<div class="alert alert-warning hide" id="new-topics-alert"></div>
 	</a>
 
-    <div class="card">
+  <div class="card">
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-header-alt">
 				<div class="title">
@@ -29,9 +29,8 @@
 							<!-- END filters -->
 						</ul>
 					</div>
-
 				</div>
-		    </div>
+		  </div>
 
 		  <!-- IF !topics.length -->
 			<div class="alert alert-warning" id="category-no-topics">

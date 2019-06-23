@@ -30,19 +30,19 @@
 						<!-- IF edit -->
 						<!-- BEGIN edit -->
 						<table class="table">
-						<tr>
-							<td>
-								<a href="{config.relative_path}/uid/{../uid}">
-									<!-- IF ../picture -->
-									<img class="user-picture" component="user/picture" src="{../picture}" itemprop="image" />
-									<!-- ELSE -->
-									<div class="user-icon user-picture" component="user/picture" style="background-color: {../icon:bgColor};">{../icon:text}</div><!-- END -->{../username}
-								</a>
-							</td>
-							<td>
-								<button class="btn btn-sm btn-primary pull-right" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
-							</td>
-						</tr>
+							<tr>
+								<td>
+									<a href="{config.relative_path}/uid/{../uid}">
+										<!-- IF ../picture -->
+										<img class="user-picture" component="user/picture" src="{../picture}" itemprop="image" />
+										<!-- ELSE -->
+										<div class="user-icon user-picture" component="user/picture" style="background-color: {../icon:bgColor};">{../icon:text}</div><!-- END -->{../username}
+									</a>
+								</td>
+								<td>
+									<button class="btn btn-sm btn-primary pull-right" data-uid="{../uid}" data-action="toggle">[[user:block_toggle]]</button>
+								</td>
+							</tr>
 						</table>
 						<!-- END -->
 						<!-- END -->

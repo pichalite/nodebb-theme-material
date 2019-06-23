@@ -1,9 +1,5 @@
 		</div><!-- /.container#content -->
 
-		<div class="hide">
-		<!-- IMPORT 500-embed.tpl -->
-		</div>
-
 		<!-- IF !isSpider -->
 		<div class="topic-search hidden">
 			<div class="btn-group">

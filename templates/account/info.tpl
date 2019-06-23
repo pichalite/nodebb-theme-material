@@ -17,7 +17,7 @@
 							<div class="pull-right">
 								<!-- IF !../current -->
 								<!-- IF isSelfOrAdminOrGlobalModerator -->
-									<button class="btn btn-xs btn-danger" type="button" data-action="revokeSession">Revoke Session</button>
+								<button class="btn btn-xs btn-danger" type="button" data-action="revokeSession">Revoke Session</button>
 								<!-- ENDIF isSelfOrAdminOrGlobalModerator -->
 								<!-- ENDIF !../current -->
 								{function.userAgentIcons}

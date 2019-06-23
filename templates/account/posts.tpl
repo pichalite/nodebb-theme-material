@@ -4,7 +4,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 	<!-- IF !posts.length -->
-		<div class="alert alert-warning">{noItemsFoundKey}</div>
+	<div class="alert alert-warning">{noItemsFoundKey}</div>
 	<!-- ELSE -->
 	<div class="row">
 		<div class="col-md-12">
@@ -19,7 +19,7 @@
 	<!-- ENDIF !posts.length -->
 
 	<!-- IF config.usePagination -->
-		<!-- IMPORT partials/paginator.tpl -->
+	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
-	
+
 </div>

@@ -26,9 +26,9 @@
 <body class="{bodyClass} theme-{config.selectedSkin}">
 		<div id="header-menu">
 			<div class="material-load-bar">
-					<div class="material-bar"></div>
-					<div class="material-bar"></div>
-					<div class="material-bar"></div>
+				<div class="material-bar"></div>
+				<div class="material-bar"></div>
+				<div class="material-bar"></div>
 			</div>
 			<div class="container">
 				<!-- IMPORT partials/menu.tpl -->

@@ -36,12 +36,10 @@
 							<!-- END filters -->
 						</ul>
 					</div>
-
 					<!-- IMPORT partials/category-filter.tpl -->
-
-		      </div>
 		    </div>
-		    <!-- IF !topics.length -->
+		  </div>
+		  <!-- IF !topics.length -->
 			<div class="alert alert-warning" id="category-no-topics">
 				[[recent:no_popular_topics]]
 			</div>

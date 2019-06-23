@@ -50,7 +50,6 @@
 					</div>
 					<span component="chat/message/remaining">{maximumChatMessageLength}</span>
 				</div>
-
 			</div>
 		</div>
 	</div>

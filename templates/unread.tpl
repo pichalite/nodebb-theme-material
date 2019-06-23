@@ -32,10 +32,10 @@
 					</div>
 
 					<!-- IMPORT partials/category-filter.tpl -->
-					
+
 					<div class="btn-group pull-right">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-						{selectedFilter.name} <span class="caret"></span>
+							{selectedFilter.name} <span class="caret"></span>
 						</button>
 						<ul class="dropdown-menu" role="menu">
 							<!-- BEGIN filters -->
@@ -57,7 +57,7 @@
 			<!-- IMPORT partials/topics_list.tpl -->
 			<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
 			<!-- IF config.usePagination -->
-				<!-- IMPORT partials/paginator.tpl -->
+			<!-- IMPORT partials/paginator.tpl -->
 			<!-- ENDIF config.usePagination -->
 
 		</div>
