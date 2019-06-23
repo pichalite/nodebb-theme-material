@@ -39,8 +39,8 @@
 		</li>
 		<!-- ENDIF config.menuInHeader -->
 
-    <li class="pull-right">
-      <ul class="top-menu">
+		<li class="pull-right">
+			<ul class="top-menu">
 				<li class="nav navbar-nav pagination-block visible-lg visible-md">
 					<div class="dropdown">
 						<i class="fa fa-angle-double-up pointer fa-fw pagetop"></i>
@@ -217,10 +217,10 @@
 						<span>[[global:login]]</span>
 					</a>
 				</li>
-        <!-- ENDIF config.loggedIn -->
-      </ul>
-    </li>
-  </ul>
+				<!-- ENDIF config.loggedIn -->
+			</ul>
+		</li>
+	</ul>
 </header>
 
 <section id="main" <!-- IF menuInHeader -->class="visible-xs"<!-- ENDIF menuInHeader -->>

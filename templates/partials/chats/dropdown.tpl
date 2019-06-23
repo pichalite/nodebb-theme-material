@@ -1,8 +1,8 @@
 <!-- IF rooms.length -->
 <!-- BEGIN rooms -->
 <li class="<!-- IF rooms.unread -->unread<!-- ENDIF rooms.unread -->" data-roomId="{rooms.roomId}">
-  <a data-ajaxify="false">
-    <!-- IF rooms.lastUser -->
+	<a data-ajaxify="false">
+		<!-- IF rooms.lastUser -->
 		<!-- IF rooms.lastUser.picture -->
 		<img class="user-picture" src="{rooms.lastUser.picture}" title="{rooms.lastUser.username}" />
 		<!-- ELSE -->
@@ -15,7 +15,7 @@
 		<!-- ELSE -->
 		[[modules:chat.no-users-in-room]]
 		<!-- ENDIF rooms.lastUser -->
-  </a>
+	</a>
 </li>
 <!-- END rooms -->
 <!-- ELSE -->

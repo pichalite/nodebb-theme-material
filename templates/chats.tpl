@@ -28,14 +28,12 @@
 				</div>
 			</div>
       <div class="form-group">
-     		<div class="fg-line">
-     			<input class="form-control" component="chat/search" type="text" placeholder="[[users:enter_username]]"/>
-     		</div>
-     	</div>
-      <ul component="chat/search/list" class="chat-search-list">
-    	</ul>
+				<div class="fg-line">
+					<input class="form-control" component="chat/search" type="text" placeholder="[[users:enter_username]]"/>
+				</div>
+			</div>
+			<ul component="chat/search/list" class="chat-search-list"></ul>
     </div>
-
 		<div class="ms-body expanded-chat" component="chat/main-wrapper">
 			<!-- IMPORT partials/chats/message-window.tpl -->
 		</div>

@@ -34,5 +34,3 @@
 	<!-- IMPORT partials/topic/watch.tpl -->
 	<!-- IMPORT partials/thread_tools.tpl -->
 </ul>
-
-

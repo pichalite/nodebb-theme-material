@@ -83,18 +83,18 @@
 
 .user-icon.profile-header-img {
 	position: absolute;
-    left: 46px;
-    top: -90px;
-    height: 120px;
-    width: 120px;
-    font-size: 5rem;
-    border: 3px solid #fff;
-    line-height: 120px;
+	left: 46px;
+	top: -90px;
+	height: 120px;
+	width: 120px;
+	font-size: 5rem;
+	border: 3px solid #fff;
+	line-height: 120px;
 
-    @media (max-width: @screen-xs-max) {
-    	left: 50%;
-    	margin-left: -60px;
-    }
+	@media (max-width: @screen-xs-max) {
+		left: 50%;
+		margin-left: -60px;
+	}
 }
 
 .user-profile-view {
@@ -118,17 +118,17 @@
 
 		.status {
 			left: 140px;
-		    position: absolute;
-		    top: 0;
-		    border: 1px solid #fff;
-		    height: 18px;
-		    width: 18px;
-		    border-radius: 50%;
+			position: absolute;
+			top: 0;
+			border: 1px solid #fff;
+			height: 18px;
+			width: 18px;
+			border-radius: 50%;
 
-		    @media (max-width: @screen-xs-max) {
-		    	left: 50%;
-		    	margin-left: 35px;
-		    }
+			@media (max-width: @screen-xs-max) {
+				left: 50%;
+				margin-left: 35px;
+			}
 		}
 
 		.user-info {
@@ -163,8 +163,8 @@
 
 			@media (min-width: @screen-md-min) {
 				position: absolute;
-			    top: -50px;
-			    left: 175px;
+				top: -50px;
+				left: 175px;
 			}
 		}
 
@@ -239,54 +239,54 @@
 	}
 
 	&.active {
-			&:hover {
-				cursor: move;
-			}
-
-			.controls {
-				> * {
-					display: none;
-				}
-			}
-
-			.save {
-				display: inline-block;
-			}
+		&:hover {
+			cursor: move;
 		}
 
-		&.saving {
-			.save {
+		.controls {
+			> * {
 				display: none;
 			}
-
-			.indicator {
-				display: inline-block;
-			}
 		}
 
-		.save, .indicator {
+		.save {
 			display: inline-block;
-			position: absolute;
-			top: 1em;
-			right: 2em;
-			opacity: 1;
-			background-color: @brand-primary;
-			color: #eee;
-			padding: 0.5em;
-			font-weight: bold;
-
-			&:hover {
-				cursor: pointer;
-			}
 		}
+	}
 
+	&.saving {
 		.save {
 			display: none;
 		}
 
 		.indicator {
-			display: none;
+			display: inline-block;
 		}
+	}
+
+	.save, .indicator {
+		display: inline-block;
+		position: absolute;
+		top: 1em;
+		right: 2em;
+		opacity: 1;
+		background-color: @brand-primary;
+		color: #eee;
+		padding: 0.5em;
+		font-weight: bold;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.save {
+		display: none;
+	}
+
+	.indicator {
+		display: none;
+	}
 }
 
 .account-fab {

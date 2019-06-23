@@ -2,7 +2,7 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 	<div class="row">
-	  <div class="col-md-12">
+		<div class="col-md-12">
 			<div class="card">
 				<div class="card-header ch-alt">
 					<h4>{title}</h4>
@@ -18,7 +18,7 @@
 					<div class="alert alert-warning text-center">[[uploads:no-uploads-found]]</div>
 					<!-- ELSE -->
 					<div class="col-xs-12">
-            <table class="table table-striped">
+						<table class="table table-striped">
 							<thead>
 								<tr>
 									<th></th>
@@ -39,12 +39,12 @@
 								</tr>
 								<!-- END uploads -->
 							</tbody>
-            </table>
-            <!-- IMPORT partials/paginator.tpl -->
-          </div>
-          <!-- ENDIF !uploads.length -->
-        </div>
-	    </div>
-	  </div>
+						</table>
+						<!-- IMPORT partials/paginator.tpl -->
+					</div>
+					<!-- ENDIF !uploads.length -->
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

@@ -3,8 +3,8 @@
 	<meta itemprop="datePublished" content="{posts.relativeTime}">
 	<meta itemprop="dateModified" content="{posts.relativeEditTime}">
 
-  <div class="post-block">
-    <div class="poster-avatar hidden-xs">
+	<div class="post-block">
+		<div class="poster-avatar hidden-xs">
 			<a href="{config.relative_path}/user/{posts.user.userslug}">
 				<!-- IF posts.user.picture -->
 				<img class="user-picture" src="{posts.user.picture}" alt="{posts.user.username}" title="{posts.user.username}"/>
@@ -13,12 +13,12 @@
 				<!-- ENDIF posts.user.picture -->
 				<span component="user/status" class="status {posts.user.status}" title="[[global:{posts.user.status}]]"></span>
 			</a>
-    </div>
+		</div>
 
-    <div class="post-content">
-      <div class="post-body">
-        <ul class="post-actions pull-right">
-          <li class="votes">
+		<div class="post-content">
+			<div class="post-body">
+				<ul class="post-actions pull-right">
+					<li class="votes">
 						<!-- IF !reputation:disabled -->
 						<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
 							<i class="fa fa-thumbs-o-up"></i>
@@ -31,10 +31,10 @@
 						<!-- ENDIF !downvote:disabled -->
 						<!-- ENDIF !reputation:disabled -->
 					</li>
-          <!-- IMPORT partials/topic/post-menu.tpl -->
-        </ul>
+					<!-- IMPORT partials/topic/post-menu.tpl -->
+				</ul>
 
-        <div class="post-header">
+				<div class="post-header">
 					<a class="pull-left visible-xs user-profile-link" href="{config.relative_path}/user/{posts.user.userslug}">
 						<!-- IF posts.user.picture -->
 						<img class="post-user-picture" src="{posts.user.picture}" alt="{posts.user.username}" title="{posts.user.username}"/>
@@ -55,7 +55,7 @@
 							<a component="post/quote" href="#" class="<!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>[[topic:quote]]</a>
 						</span>
 					</span>
-        </div>
+				</div>
 
 				<div component="post/content" itemprop="text">
 					{posts.content}
@@ -69,7 +69,7 @@
 					<small component="post/editor" class="<!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"><strong><a href="{config.relative_path}/user/{posts.editor.userslug}">[[global:last_edited_by, {posts.editor.username}]]</a></strong> <span class="timeago" title="{posts.editedISO}"></span></small>
 				</div>
 				{posts.reactions}
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
 </div>

@@ -15,16 +15,16 @@
 
 	<div class="card-footer">
 		<div class="profile-pic">
-	    <div class="user-icon profile-header-img" style="<!-- IF picture -->background-image: url({picture});  background-size: cover; background-repeat: no-repeat; background-position: center center;<!-- ELSE -->background-color: {icon:bgColor};<!-- ENDIF picture -->"><!-- IF !picture -->{icon:text}<!-- ENDIF !picture --></div>
-	    <span component="user/status" class="status {status}" title="[[global:{status}]]"></span>
-    </div>
+			<div class="user-icon profile-header-img" style="<!-- IF picture -->background-image: url({picture});  background-size: cover; background-repeat: no-repeat; background-position: center center;<!-- ELSE -->background-color: {icon:bgColor};<!-- ENDIF picture -->"><!-- IF !picture -->{icon:text}<!-- ENDIF !picture --></div>
+			<span component="user/status" class="status {status}" title="[[global:{status}]]"></span>
+		</div>
 
-    <div class="user-info">
-	    <h3 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h3>
+		<div class="user-info">
+			<h3 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h3>
 			<h4 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h4>
 		</div>
 
-    <!-- IF template.account/profile -->
+		<!-- IF template.account/profile -->
 		<div class="account-stats">
 			<!-- IF !reputation:disabled -->
 			<div class="stat">
@@ -70,6 +70,5 @@
 		<!-- ENDIF template.account/profile -->
 
 		<!-- IMPORT partials/account/menu.tpl -->
-
 	</div>
 </div>

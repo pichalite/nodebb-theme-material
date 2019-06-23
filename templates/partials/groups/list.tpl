@@ -1,11 +1,11 @@
 <!-- BEGIN groups -->
 <div class="col-lg-4 col-md-6 col-sm-12" data-slug="{groups.slug}">
-  <div class="card">
+	<div class="card">
 		<div class="card-header ch-alt">
 			<div>{groups.displayName}</div>
 		</div>
-    <a href="{config.relative_path}/groups/{groups.slug}" class="card-body group-cover list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->"></a>
-    <div class="card-body card-padding">
+		<a href="{config.relative_path}/groups/{groups.slug}" class="card-body group-cover list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->"></a>
+		<div class="card-body card-padding">
 			<ul class="members">
 				<!-- BEGIN groups.members -->
 				<li>
@@ -26,6 +26,6 @@
 		<div class="card-footer">
 			{groups.memberCount} member(s)
 		</div>
-  </div>
+	</div>
 </div>
 <!-- END groups -->

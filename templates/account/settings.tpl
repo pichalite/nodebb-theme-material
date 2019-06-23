@@ -6,13 +6,13 @@
 
 			<!-- IF allowUserHomePage -->
 			<div class="card">
-	      <div class="card-header">
-	        [[user:select-homepage]]
-	      </div>
-	      <div class="card-body card-padding">
-	        <div class="form-group fg-line">
-		        <div class="select">
-			        <label for="dailyDigestFreq">[[user:homepage]]</label>
+				<div class="card-header">
+					[[user:select-homepage]]
+				</div>
+				<div class="card-body card-padding">
+					<div class="form-group fg-line">
+						<div class="select">
+							<label for="dailyDigestFreq">[[user:homepage]]</label>
 							<select class="form-control" id="homePageRoute" data-property="homePageRoute">
 								<option value="none">None</option>
 								<!-- BEGIN homePageRoutes -->
@@ -30,43 +30,43 @@
 						</div>
 						<small>[[user:custom_route_help]]</small>
 					</div>
-	      </div>
-	    </div>
+				</div>
+			</div>
 			<!-- ENDIF allowUserHomePage -->
 
 			<div class="card">
-	      <div class="card-header">
-	        [[user:browsing]]
-	      </div>
-	      <div class="card-body card-padding">
-	        <div class="checkbox">
-	          <label>
-							<input type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->>
+				<div class="card-header">
+					[[user:browsing]]
+				</div>
+				<div class="card-body card-padding">
+					<div class="checkbox">
+						<label>
+						<input type="checkbox" data-property="openOutgoingLinksInNewTab" <!-- IF settings.openOutgoingLinksInNewTab -->checked<!-- ENDIF settings.openOutgoingLinksInNewTab -->>
 							<i class="input-helper"></i>
 							[[user:open_links_in_new_tab]]
 						</label>
-	        </div>
-	        <!-- IF inTopicSearchAvailable -->
-	        <div class="checkbox">
+					</div>
+					<!-- IF inTopicSearchAvailable -->
+					<div class="checkbox">
 						<label>
 							<input type="checkbox" data-property="topicSearchEnabled" <!-- IF settings.topicSearchEnabled -->checked<!-- ENDIF settings.topicSearchEnabled -->>
 							<i class="input-helper"></i>
 							[[user:enable_topic_searching]]
 						</label>
-	        </div>
-	        <small class="help-block">[[user:topic_search_help]]</small>
-	        <!-- ENDIF inTopicSearchAvailable -->
-	        <div class="checkbox">
-	          <label>
-	            <input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->>
-	            <i class="input-helper"></i>
-	            [[user:scroll_to_my_post]]
-	          </label>
-	        </div>
-	      </div>
-	    </div>
+					</div>
+					<small class="help-block">[[user:topic_search_help]]</small>
+					<!-- ENDIF inTopicSearchAvailable -->
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" data-property="scrollToMyPost" <!-- IF settings.scrollToMyPost -->checked<!-- ENDIF settings.scrollToMyPost -->>
+							<i class="input-helper"></i>
+							[[user:scroll_to_my_post]]
+						</label>
+					</div>
+				</div>
+			</div>
 
-	    <div class="card">
+			<div class="card">
 				<div class="card-header">
 					[[global:privacy]]
 				</div>
@@ -79,7 +79,7 @@
 							[[user:show_email]]
 						</label>
 					</div>
-	        <!-- ENDIF !hideEmail -->
+					<!-- ENDIF !hideEmail -->
 					<!-- IF !hideFullname -->
 					<div class="checkbox">
 						<label>
@@ -98,10 +98,10 @@
 						</label>
 					</div>
 					<!-- ENDIF !config.disableChat -->
-	      </div>
-	    </div>
+				</div>
+			</div>
 
-	    <!-- IF !disableEmailSubscriptions -->
+			<!-- IF !disableEmailSubscriptions -->
 			<div class="card">
 				<div class="card-header">
 					[[global:email]]
@@ -118,15 +118,15 @@
 						</div>
 					</div>
 					<small>[[user:digest_description]]</small>
-	      </div>
-	    </div>
-	    <!-- ENDIF !disableEmailSubscriptions -->
+				</div>
+			</div>
+			<!-- ENDIF !disableEmailSubscriptions -->
 
-	    <div class="card">
+			<div class="card">
 				<div class="card-header">
 					[[topic:watch]]
 				</div>
-	      <div class="card-body card-padding">
+				<div class="card-body card-padding">
 					<div class="checkbox">
 						<label>
 							<input type="checkbox" data-property="followTopicsOnCreate" <!-- IF settings.followTopicsOnCreate -->checked <!-- ENDIF settings.followTopicsOnCreate -->>
@@ -142,7 +142,7 @@
 						</label>
 					</div>
 					<div class="form-group fg-line">
-				    <div class="select">
+						<div class="select">
 							<label>[[user:default-category-watch-state]]</label>
 							<select class="form-control" data-property="categoryWatchState">
 								<option value="watching" <!-- IF categoryWatchState.watching -->selected<!-- ENDIF categoryWatchState.watching -->>[[category:watching]]</option>
@@ -151,14 +151,14 @@
 							</select>
 						</div>
 					</div>
-	      </div>
-	    </div>
+				</div>
+			</div>
 
-	    <div class="card">
+			<div class="card">
 				<div class="card-header">
 					[[global:pagination]]
 				</div>
-	      <div class="card-body card-padding">
+				<div class="card-body card-padding">
 					<div class="checkbox">
 						<label>
 							<input type="checkbox" data-property="usePagination" <!-- IF settings.usePagination -->checked<!-- ENDIF settings.usePagination -->>
@@ -172,7 +172,7 @@
 							<label>[[user:topics_per_page]] ([[user:max_items_per_page, {maxTopicsPerPage}]])</label>
 							<input type="text" class="form-control" data-property="topicsPerPage" value="{settings.topicsPerPage}">
 						</div>
-          </div>
+					</div>
 
 					<div class="form-group">
 						<div class="fg-line">
@@ -180,8 +180,8 @@
 							<input type="text" class="form-control" data-property="postsPerPage" value="{settings.postsPerPage}">
 						</div>
 					</div>
-	      </div>
-	    </div>
+				</div>
+			</div>
 
 			<div class="card">
 				<div class="card-header">
@@ -202,9 +202,9 @@
 									</select>
 								</div>
 							</div>
-	          </div>
-	        </div>
-	        <!-- END notificationSettings -->
+						</div>
+					</div>
+					<!-- END notificationSettings -->
 
 					<div class="row">
 						<div class="col-xs-12">
@@ -220,10 +220,10 @@
 									</select>
 								</div>
 							</div>
-	          </div>
-	        </div>
+						</div>
+					</div>
 
-	        <div class="row">
+					<div class="row">
 						<div class="col-xs-10">
 							<div class="form-group fg-line">
 								<div class="select">
@@ -241,7 +241,7 @@
 							<button type="button" class="btn btn-sm btn-primary" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
 						</div>
 					</div>
-					
+
 					<!-- IF !config.disableChat -->
 					<div class="row">
 						<div class="col-xs-10">
@@ -281,8 +281,8 @@
 							<button type="button" class="btn btn-sm btn-primary" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
 						</div>
 					</div>
-	      </div>
-	    </div>
+				</div>
+			</div>
 
 			<div class="card">
 				<div class="card-header">
@@ -298,8 +298,8 @@
 							</select>
 						</div>
 					</div>
-	      </div>
-	    </div>
+				</div>
+			</div>
 
 			<!-- IF isAdmin -->
 			<!-- IF isSelf -->

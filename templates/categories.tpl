@@ -17,11 +17,11 @@
 							<i class="fa fa-pencil"></i><span class="human-readable-number" title="{categories.totalPostCount}"></span>
 						</li>
 					</ul>
-						<h4>
-							{categories.name} <!-- IF categories.icon -->
-							<i class="fa {categories.icon} fa-fw"></i>
-							<!-- ENDIF categories.icon -->
-						</h4>
+					<h4>
+						{categories.name} <!-- IF categories.icon -->
+						<i class="fa {categories.icon} fa-fw"></i>
+						<!-- ENDIF categories.icon -->
+					</h4>
 					<div class="category-description">{categories.descriptionParsed}</div>
 				</div>
 			</a>
@@ -60,8 +60,8 @@
 				<div class="lv-item media row clearfix" component="categories/category" data-cid="{categories.cid}">
 					<div class="col-xs-12 col-sm-8 col-md-7">
 						<div class="icon pull-left" style="{function.generateCategoryBackground}">
-				      <i class="fa fa-fw {categories.icon}"></i>
-				    </div>
+							<i class="fa fa-fw {categories.icon}"></i>
+						</div>
 						<div class="media-body">
 							<div class="lv-title category-title">
 								<!-- IF categories.link -->
@@ -116,8 +116,8 @@
 						<div class="subcategories lv-item media row">
 							<div class="col-xs-12 col-sm-8 col-md-7 sub-category">
 								<div class="icon pull-left" style="{function.generateCategoryBackground}">
-						      <i class="fa fa-fw {categories.icon}"></i>
-						    </div>
+									<i class="fa fa-fw {categories.icon}"></i>
+								</div>
 								<div class="media-body">
 									<div class="lv-title category-title">
 										<!-- IF categories.children.link -->
