@@ -26,7 +26,7 @@
 				</div>
 			</a>
 			<div class="category-card-footer">
-				<!-- BEGIN posts -->
+				{{{each posts}}}
 				<!-- IF @first -->
 				<div component="category/posts">
 					<div class="pull-left hidden-xs user-avatar">
@@ -43,7 +43,7 @@
 					</div>
 				</div>
 				<!-- ENDIF @first -->
-				<!-- END posts -->
+				{{{end}}}
 			</div>
 		</div>
 	</div>
