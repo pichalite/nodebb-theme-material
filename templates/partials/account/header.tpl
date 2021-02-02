@@ -58,12 +58,9 @@
 		<!-- IF !config.disableChat -->
 		<a component="account/chat" href="#" class="btn btn-primary btn-sm"><i class="fa fa-fw fa-comment-o"></i> [[user:chat]]</a>
 		<!-- ENDIF !config.disableChat -->
-
-		<!-- IF isFollowing -->
-		<a component="account/unfollow" href="#" class="btn btn-warning btn-sm">[[user:unfollow]]</a>
-		<!-- ELSE -->
-		<a component="account/follow" href="#" class="btn btn-success btn-sm">[[user:follow]]</a>
-		<!-- ENDIF isFollowing -->
+		
+		<a id="follow-btn" component="account/follow" href="#" class="btn btn-success btn-sm <!-- IF isFollowing -->hide<!-- ENDIF isFollowing -->"><i class="fa fa-fw fa-heart-o"></i> [[user:follow]]</a>
+		<a id="unfollow-btn" component="account/unfollow" href="#" class="btn btn-warning btn-sm <!-- IF !isFollowing -->hide<!-- ENDIF !isFollowing -->"><i class="fa fa-fw fa-heart"></i> [[user:unfollow]]</a>
 		<!-- ENDIF !banned -->
 		<!-- ENDIF !isSelf -->
 		<!-- ENDIF loggedIn -->
