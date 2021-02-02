@@ -1,6 +1,6 @@
 <!-- IF !config.categoriesAsList -->
 <div class="categories row <!-- IF !config.removeCategoriesAnimation --> display-animation<!-- ENDIF !config.removeCategoriesAnimation -->">
-	<!-- BEGIN categories -->
+	{{{ each categories }}}
 	<div component="categories/category" data-cid="{categories.cid}" class="<!-- IF categories.class -->{categories.class}<!-- ELSE -->col-md-3 col-sm-6 col-xs-12<!-- ENDIF categories.class -->">
 		<div class="category-card" style="{function.generateCategoryBackground}">
 			<!-- IF categories.link -->
@@ -47,7 +47,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- END categories -->
+	{{{ end }}}
 </div>
 <!-- ENDIF !config.categoriesAsList -->
 
@@ -56,7 +56,7 @@
 	<div class="card">
 		<div class="listview lv-bordered lv-lg">
 			<div class="lv-body">
-				<!-- BEGIN categories -->
+				{{{ each categories }}}
 				<div class="lv-item media row clearfix" component="categories/category" data-cid="{categories.cid}">
 					<div class="col-xs-12 col-sm-8 col-md-7">
 						<div class="icon pull-left" style="{function.generateCategoryBackground}">
@@ -89,7 +89,7 @@
 						</div>
 					</div>
 					<div class="col-md-3 hidden-xs last-post">
-						<!-- BEGIN posts -->
+						{{{ each posts }}}
 						<!-- IF @first -->
 						<div component="category/posts">
 							<div class="pull-left hidden-xs user-avatar">
@@ -109,10 +109,10 @@
 							</div>
 						</div>
 						<!-- ENDIF @first -->
-						<!-- END posts -->
+						{{{ end }}}
 					</div>
 					<!-- IF config.listSubcategories -->
-						<!-- BEGIN categories.children -->
+						{{{ each categories.children }}}
 						<div class="subcategories lv-item media row">
 							<div class="col-xs-12 col-sm-8 col-md-7 sub-category">
 								<div class="icon pull-left" style="{function.generateCategoryBackground}">
@@ -145,7 +145,7 @@
 								</div>
 							</div>
 							<div class="col-md-3 hidden-xs last-post">
-								<!-- BEGIN posts -->
+								{{{ each posts }}}
 								<!-- IF @first -->
 								<div component="category/posts">
 									<div class="pull-left hidden-xs user-avatar">
@@ -165,13 +165,13 @@
 									</div>
 								</div>
 								<!-- ENDIF @first -->
-								<!-- END posts -->
+								{{{ end }}}
 							</div>
 						</div>
-						<!-- END categories.children -->
+						{{{ end }}}
 					<!-- ENDIF config.listSubcategories -->
 				</div>
-				<!-- END categories -->
+				{{{ end }}}
 			</div>
 		</div>
 	</div>
