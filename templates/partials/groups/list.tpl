@@ -1,4 +1,4 @@
-<!-- BEGIN groups -->
+{{{ each groups }}}
 <div class="col-lg-4 col-md-6 col-sm-12" data-slug="{groups.slug}">
 	<div class="card">
 		<div class="card-header ch-alt">
@@ -7,7 +7,7 @@
 		<a href="{config.relative_path}/groups/{groups.slug}" class="card-body group-cover list-cover" style="<!-- IF groups.cover:thumb:url -->background-image: url({groups.cover:thumb:url});<!-- ENDIF groups.cover:thumb:url -->"></a>
 		<div class="card-body card-padding">
 			<ul class="members">
-				<!-- BEGIN groups.members -->
+				{{{ each groups.members }}}
 				<li>
 					<a href="{config.relative_path}/user/{groups.members.userslug}">
 						<!-- IF groups.members.picture -->
@@ -17,7 +17,7 @@
 						<!-- ENDIF groups.members.picture -->
 					</a>
 				</li>
-				<!-- END groups.members -->
+				{{{ end }}}
 				<!-- IF groups.truncated -->
 				<li class="truncated"><i class="fa fa-ellipsis-h"></i></li>
 				<!-- ENDIF groups.truncated -->
@@ -28,4 +28,4 @@
 		</div>
 	</div>
 </div>
-<!-- END groups -->
+{{{ end }}}

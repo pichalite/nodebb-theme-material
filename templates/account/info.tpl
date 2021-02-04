@@ -45,9 +45,9 @@
 				</div>
 				<div class="card-body card-padding">
 					<ul>
-						<!-- BEGIN ips -->
-						<li>@value</li>
-						<!-- END ips -->
+						{{{each ips}}}
+						<li>{ips}</li>
+						{{{end}}}
 					</ul>
 				</div>
 			</div>

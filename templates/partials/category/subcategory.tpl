@@ -80,7 +80,7 @@
 				</div>
 			</a>
 			<div class="category-card-footer">
-				<!-- BEGIN posts -->
+				{{{each posts}}}
 				<div component="category/posts">
 					<div class="pull-left hidden-xs user-avatar">
 						<a href="{config.relative_path}/user/{children.posts.user.userslug}">
@@ -95,7 +95,7 @@
 						<a href="{config.relative_path}/topic/{children.posts.topic.slug}">{children.posts.topic.title}</a>
 					</div>
 				</div>
-				<!-- END posts -->
+				{{{end}}}
 			</div>
 		</div>
 	</div>
