@@ -195,7 +195,7 @@
 			</div>
 		</div>
 		<!-- ENDIF group.isOwner -->
-		<div widget-area="left"></div>
+		<div data-widget-area="left"></div>
 	</div>
 	<div class="col-lg-7 col-xs-12">
 		<!-- IF group.isOwner -->
