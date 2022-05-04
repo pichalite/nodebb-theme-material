@@ -5,15 +5,15 @@
 
 	<!-- IF sessions.length -->
 	<div class="card">
-    <div class="card-header ch-alt">
-	    [[global:sessions]]
-	  </div>
-    <div class="card-body card-padding">
-      <p>[[user:sessions.description]]</p>
-      <ul class="list-group" component="user/sessions">
-        <!-- BEGIN sessions -->
-        <li class="list-group-item" data-uuid="{../uuid}">
-          <div class="pull-right">
+		<div class="card-header ch-alt">
+			[[global:sessions]]
+		</div>
+		<div class="card-body card-padding">
+			<p>[[user:sessions.description]]</p>
+			<ul class="list-group" component="user/sessions">
+				<!-- BEGIN sessions -->
+				<li class="list-group-item" data-uuid="{../uuid}">
+					<div class="pull-right">
 						<!-- IF isSelfOrAdminOrGlobalModerator -->
 						<!-- IF !../current -->
 						<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>
@@ -33,4 +33,4 @@
     </div>
 	</div>
 	<!-- ENDIF sessions.length -->
-</div> 
+</div>

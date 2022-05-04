@@ -10,9 +10,9 @@
 					<!-- IF privileges.topics:create -->
 					<button id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
 					<!-- ELSE -->
-						<!-- IF !loggedIn -->
-						<a href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
-						<!-- ENDIF !loggedIn -->
+					<!-- IF !loggedIn -->
+					<a href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
+					<!-- ENDIF !loggedIn -->
 					<!-- ENDIF privileges.topics:create -->
 
 					<a href="{url}">
@@ -38,7 +38,7 @@
 		</div>
 	</div>
 	<!-- IF config.usePagination -->
-		<!-- IMPORT partials/paginator.tpl -->
+	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 </div>
 

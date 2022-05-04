@@ -1,5 +1,5 @@
 <li component="chat/recent/room" data-roomid="{rooms.roomId}" class="lv-item media <!-- IF ../unread -->unread<!-- ENDIF ../unread -->">
-  <!-- IF rooms.lastUser.uid -->
+	<!-- IF rooms.lastUser.uid -->
 	<div class="lv-avatar pull-left" data-username="{rooms.lastUser.username}" data-uid="{rooms.lastUser.uid}">
 		<!-- IF rooms.lastUser.picture -->
 		<img class="user-avatar" src="{rooms.lastUser.picture}">

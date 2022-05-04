@@ -9,11 +9,11 @@
 		<div class="row">
 			<div class="col-xs-5 pull-right form-group">
 				<div class="fg-line">
-				<select class="form-control" id="search-sort">
-					<option value="alpha">[[groups:details.group_name]]</option>
-					<option value="count">[[groups:details.member_count]]</option>
-					<option value="date">[[groups:details.creation_date]]</option>
-				</select>
+					<select class="form-control" id="search-sort">
+						<option value="alpha">[[groups:details.group_name]]</option>
+						<option value="count">[[groups:details.member_count]]</option>
+						<option value="date">[[groups:details.creation_date]]</option>
+					</select>
 				</div>
 			</div>
 			<div class="col-xs-7 text-left pull-right">

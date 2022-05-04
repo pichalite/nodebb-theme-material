@@ -1,10 +1,10 @@
 <div class="tags hidden-xs">
-	<!-- BEGIN tags -->
+	{{{each tags}}}
 	<div class="pull-left tag-container">
 		<a href="{config.relative_path}/tags/{tags.value}">
 		<span class="tag-item" data-tag="{tags.value}" style="<!-- IF tags.color -->color: {tags.color};<!-- ENDIF tags.color --><!-- IF tags.bgColor -->background-color: {tags.bgColor};<!-- ENDIF tags.bgColor -->">{tags.value}</span><span class="tag-topic-count">{tags.score}</span></a>
 	</div>
-	<!-- END tags -->
+	{{{end}}}
 </div>
 
 <ul class="postbar-actions pull-right">
@@ -26,13 +26,11 @@
 	<!-- IF loggedIn -->
 	<li class="unread-button">
 	 	<button component="topic/mark-unread" class="btn btn-md btn-default">
-	 	<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:mark_unread]]</span>
-		<span class="visible-xs-inline"><i class="fa fa-fw fa-inbox"></i></span>
+			<span class="visible-sm-inline visible-md-inline visible-lg-inline">[[topic:mark_unread]]</span>
+			<span class="visible-xs-inline"><i class="fa fa-fw fa-inbox"></i></span>
 	 	</button>
  	</li>
  	<!-- ENDIF loggedIn -->
 	<!-- IMPORT partials/topic/watch.tpl -->
 	<!-- IMPORT partials/thread_tools.tpl -->
 </ul>
-
-

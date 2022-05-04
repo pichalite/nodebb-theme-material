@@ -39,8 +39,8 @@
 		</li>
 		<!-- ENDIF config.menuInHeader -->
 
-    <li class="pull-right">
-      <ul class="top-menu">
+		<li class="pull-right">
+			<ul class="top-menu">
 				<li class="nav navbar-nav pagination-block visible-lg visible-md">
 					<div class="dropdown">
 						<i class="fa fa-angle-double-up pointer fa-fw pagetop"></i>
@@ -112,7 +112,7 @@
 				<!-- IF !config.disableChat -->
 				<li class="chats dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="chat_dropdown" component="chat/dropdown">
-							<i component="chat/icon" class="fa fa-comment-o fa-fw"></i>
+						<i component="chat/icon" class="fa fa-comment-o fa-fw"></i>
 					</a>
 					<div class="dropdown-menu dropdown-menu-md pull-right" aria-labelledby="chat_dropdown">
 						<div class="listview">
@@ -217,10 +217,10 @@
 						<span>[[global:login]]</span>
 					</a>
 				</li>
-        <!-- ENDIF config.loggedIn -->
-      </ul>
-    </li>
-  </ul>
+				<!-- ENDIF config.loggedIn -->
+			</ul>
+		</li>
+	</ul>
 </header>
 
 <section id="main" <!-- IF menuInHeader -->class="visible-xs"<!-- ENDIF menuInHeader -->>

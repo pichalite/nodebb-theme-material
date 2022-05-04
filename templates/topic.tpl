@@ -42,11 +42,11 @@
 		</div>
 	</div>
 	<!-- IF config.usePagination -->
-		<!-- IMPORT partials/paginator.tpl -->
+	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 </div>
 <!-- IF !config.usePagination -->
-	<noscript>
-	<!-- IMPORT partials/paginator.tpl -->
-	</noscript>
+<noscript>
+<!-- IMPORT partials/paginator.tpl -->
+</noscript>
 <!-- ENDIF !config.usePagination -->

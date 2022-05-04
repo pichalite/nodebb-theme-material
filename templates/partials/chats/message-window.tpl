@@ -1,7 +1,7 @@
 <!-- IF roomId -->
 <div component="chat/messages" data-roomid="{roomId}">
-  <div class="listview lv-message">
-    <div component="chat/header" class="lv-header-alt clearfix">
+	<div class="listview lv-message">
+		<div component="chat/header" class="lv-header-alt clearfix">
 			<div id="ms-menu-trigger">
 				<div class="line-wrap">
 					<div class="line top"></div>
@@ -10,10 +10,10 @@
 				</div>
 			</div>
 
-      <ul class="lv-actions actions">
-        <li class="dropdown">
-          <span data-toggle="dropdown" component="chat/controlsToggle" aria-expanded="true"><i class="fa fa-cog"></i></span>
-          <ul class="dropdown-menu dropdown-menu-right pull-right" component="chat/controls">
+			<ul class="lv-actions actions">
+				<li class="dropdown">
+					<span data-toggle="dropdown" component="chat/controlsToggle" aria-expanded="true"><i class="fa fa-cog"></i></span>
+					<ul class="dropdown-menu dropdown-menu-right pull-right" component="chat/controls">
 						<!-- IF users.length -->
 						<li class="dropdown-header">[[modules:chat.in-room]]</li>
 						<!-- BEGIN users -->
@@ -38,15 +38,15 @@
 						<li>
 							<a href="#" data-action="leave"><i class="fa fa-fw fa-sign-out"></i> [[modules:chat.leave]]</a>
 						</li>
-        	</ul>
-        </li>
+					</ul>
+				</li>
 				<li data-action="pop-out">
 					<i class="fa fa-compress"></i>
 				</li>
-        <li data-action="close">
-          <i class="fa fa-close"></i>
-        </li>
-      </ul>
+				<li data-action="close">
+					<i class="fa fa-close"></i>
+				</li>
+			</ul>
 
 			<span class="members">
 				[[modules:chat.chatting_with]]:
@@ -54,7 +54,7 @@
 				<a href="{config.relative_path}/uid/{../uid}">{../username}</a><!-- IF !@last -->,<!-- END -->
 				<!-- END -->
 			</span>
-    </div>
+		</div>
 
 		<ul class="lv-body chat-content">
 			<!-- IMPORT partials/chats/messages.tpl -->
@@ -65,7 +65,7 @@
 			<button data-action="send" <!-- IF !canReply -->disabled<!-- ENDIF !canReply -->><i class="fa fa-send"></i></button>
 			<span component="chat/message/remaining">{maximumChatMessageLength}</span>
 		</div>
-  </div>
+	</div>
 </div>
 <!-- ELSE -->
 <div>

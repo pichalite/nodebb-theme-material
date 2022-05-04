@@ -58,7 +58,6 @@
 			<div class="card">
 				<form class="form-horizontal" role="form">
 					<div class="card-body card-padding">
-
 						<div class="form-group">
 							<div class="fg-line">
 								<label>[[user:fullname]]</label>
@@ -90,8 +89,8 @@
 						</div>
 
 						<div class="form-group fg-line">
-			        <div class="select">
-				        <label for="grouptitle">[[user:grouptitle]]</label>
+							<div class="select">
+								<label for="grouptitle">[[user:grouptitle]]</label>
 								<select class="form-control" id="groupTitle" data-property="groupTitle" <!-- IF allowMultipleBadges --> multiple<!-- ENDIF allowMutlipleBadges -->>
 									<option value="">[[user:no-group-title]]</option>
 									<!-- BEGIN groups -->
@@ -152,6 +151,5 @@
 			</div>
 			<!-- ENDIF sso.length -->
 		</div>
-
 	</div>
 </div>

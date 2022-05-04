@@ -9,7 +9,7 @@
 						<div class="col-md-6">
 							<label>[[global:search]]</label>
 							<div class="fg-line">
-							<input type="text" class="form-control" id="search-input" placeholder="[[global:search]]">
+								<input type="text" class="form-control" id="search-input" placeholder="[[global:search]]">
 							</div>
 						</div>
 						<div class="col-md-2">
@@ -81,7 +81,7 @@
 											</div>
 										</div>
 									</div>
-									
+
 									<div class="form-group post-search-item">
 										<label>[[search:reply-count]]</label>
 										<div class="row">
@@ -175,15 +175,12 @@
 											</label>
 										</div>
 									</div>
-
 								</div>
 							</div>
 						</div>
-
 						<button type="submit" class="btn btn-sm btn-primary">[[global:search]]</button>
 						<a id="save-preferences" class="btn btn-sm btn-primary" href="#">[[search:save-preferences]]</a>
 						<a id="clear-preferences" class="btn btn-sm btn-primary" href="#">[[search:clear-preferences]]</a>
-						
 					</div>
 				</div>
 			</form>
@@ -202,46 +199,46 @@
 
 			<!-- BEGIN posts -->
 			<div class="card">
-			<div class="card-body card-padding">
-				<div class="listview">
-					<div class="lv-header-alt">
-					<a href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}" class="search-result-text">
-						<h4>{posts.topic.title}</h4>
-					</a>
-					</div>
-
-					<div class="lv-body">
-						<div class="lv-item media">
-					<!-- IF showAsPosts -->
-					<div class="search-result-text">
-						{posts.content}
-						<p class="fade-out"></p>
-					</div>
-					<!-- ENDIF showAsPosts -->
-					</div>
-					</div>
-					<div class="lv-footer">
-					<div class="lv-actions">
-						<li class="lv-small">
-							<a href="{config.relative_path}/user/{posts.user.userslug}">
-								<!-- IF posts.user.picture -->
-								<img class="user-picture" title="{posts.user.username}" src="{posts.user.picture}"/>
-								<!-- ELSE -->
-								<div class="user-icon" title="{posts.user.username}" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
-								<!-- ENDIF posts.user.picture -->
+				<div class="card-body card-padding">
+					<div class="listview">
+						<div class="lv-header-alt">
+							<a href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}" class="search-result-text">
+								<h4>{posts.topic.title}</h4>
 							</a>
-							<a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]] <i class="fa {posts.category.icon}"></i></a> <span class="timeago" title="{posts.timestampISO}"></span>
-						</li>
-					</div>
+						</div>
+
+						<div class="lv-body">
+							<div class="lv-item media">
+								<!-- IF showAsPosts -->
+								<div class="search-result-text">
+									{posts.content}
+									<p class="fade-out"></p>
+								</div>
+								<!-- ENDIF showAsPosts -->
+							</div>
+						</div>
+						<div class="lv-footer">
+							<div class="lv-actions">
+								<li class="lv-small">
+									<a href="{config.relative_path}/user/{posts.user.userslug}">
+										<!-- IF posts.user.picture -->
+										<img class="user-picture" title="{posts.user.username}" src="{posts.user.picture}"/>
+										<!-- ELSE -->
+										<div class="user-icon" title="{posts.user.username}" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
+										<!-- ENDIF posts.user.picture -->
+									</a>
+									<a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]] <i class="fa {posts.category.icon}"></i></a> <span class="timeago" title="{posts.timestampISO}"></span>
+								</li>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
 			</div>
 			<!-- END posts -->
 
 			<!-- IF users.length -->
 			<ul id="users-container" class="users-container">
-			<!-- IMPORT partials/users_list.tpl -->
+				<!-- IMPORT partials/users_list.tpl -->
 			</ul>
 			<!-- ENDIF users.length -->
 
