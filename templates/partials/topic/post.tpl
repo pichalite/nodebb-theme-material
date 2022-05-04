@@ -68,7 +68,7 @@
 				<div class="post-edit">
 					<small component="post/editor" class="<!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"><strong><a href="{config.relative_path}/user/{posts.editor.userslug}">[[global:last_edited_by, {posts.editor.username}]]</a></strong> <span class="timeago" title="{posts.editedISO}"></span></small>
 				</div>
-				{posts.reactions}
+				<!-- IMPORT partials/topic/reactions.tpl -->
       </div>
     </div>
   </div>
